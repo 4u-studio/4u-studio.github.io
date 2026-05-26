@@ -1,38 +1,1503 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>合同会社4U｜小規模事業者のためのホームページ制作</title>
-<meta name="description" content="合同会社4Uは、小規模事業者・個人事業主向けに、AIを活用したスピーディーで伝わるホームページ制作を行います。店舗HP、LP、既存サイト改善、制作サンプル掲載。" />
-<meta name="theme-color" content="#111827" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<title>合同会社4U｜ちゃんと伝わるHPを、小さなお店にも。</title>
+<meta name="description" content="群馬県沼田市周辺の個人事業主・小規模事業者向けに、HP/LP制作を中心としたWeb制作を行う合同会社4U。AIを活用しながら、人の目で構成・文章・導線を整えます。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#f7f8fb;--paper:#fff;--ink:#111827;--muted:#667085;--sub:#475467;--line:#e5e7eb;--line2:#eef0f4;--brand:#2563eb;--brand2:#06b6d4;--brand3:#10b981;--navy:#0f172a;--dark:#111827;--shadow:0 24px 70px rgba(15,23,42,.10);--shadow2:0 14px 36px rgba(15,23,42,.08)}
-  *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:86px}body{font-family:"Inter","Noto Sans JP",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;letter-spacing:.02em;overflow-x:hidden;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}::selection{background:var(--brand);color:#fff}.wrap{max-width:1180px;margin:0 auto;padding:0 28px}.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid rgba(37,99,235,.16);background:rgba(37,99,235,.06);color:var(--brand);border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.08em}.dot{width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand2))}.section{padding:104px 0}.section-head{max-width:760px;margin:0 auto 46px;text-align:center}.eyebrow{color:var(--brand);font-weight:800;font-size:12px;letter-spacing:.20em;text-transform:uppercase;margin-bottom:12px}h1,h2,h3{line-height:1.35;letter-spacing:.01em}h2{font-size:clamp(30px,4.5vw,48px);font-weight:800}.lead{color:var(--muted);font-size:15.5px;margin-top:16px}.btns{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:14px 22px;border-radius:999px;font-weight:800;font-size:14px;transition:.25s ease}.btn-primary{background:linear-gradient(135deg,var(--brand),#1d4ed8);color:#fff;box-shadow:0 14px 28px rgba(37,99,235,.25)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 20px 36px rgba(37,99,235,.32)}.btn-line{background:#fff;border:1px solid var(--line);color:var(--dark)}.btn-line:hover{transform:translateY(-2px);border-color:#cbd5e1;box-shadow:var(--shadow2)}.arrow{transition:transform .25s}.btn:hover .arrow{transform:translateX(3px)}
-  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,248,251,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(229,231,235,.75)}.head-inner{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy)}.brand-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;color:#fff;font-weight:900;background:linear-gradient(135deg,var(--navy),var(--brand));box-shadow:0 14px 30px rgba(37,99,235,.20)}.brand-text{line-height:1.2}.brand-text small{display:block;color:var(--muted);font-size:10px;letter-spacing:.16em;font-weight:700;margin-top:2px}nav{display:flex;align-items:center;gap:24px}nav a{font-size:13px;color:var(--sub);font-weight:700;transition:color .2s}nav a:hover{color:var(--brand)}.nav-cta{background:var(--navy);color:#fff!important;padding:11px 18px;border-radius:999px}.burger{display:none;background:#fff;border:1px solid var(--line);width:44px;height:44px;border-radius:999px;cursor:pointer}.burger span{display:block;width:18px;height:2px;background:var(--navy);margin:4px auto;border-radius:2px;transition:.25s}body.menu-open .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}body.menu-open .burger span:nth-child(2){opacity:0}body.menu-open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}.mobile{position:fixed;inset:76px 18px auto;z-index:99;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:16px;display:none}.mobile a{display:block;padding:14px 10px;border-bottom:1px solid var(--line2);font-weight:800;color:var(--navy)}.mobile a:last-child{border-bottom:0}body.menu-open .mobile{display:block}
-  .hero{position:relative;padding:148px 0 88px;overflow:hidden;background:radial-gradient(circle at 12% 16%,rgba(37,99,235,.16),transparent 30%),radial-gradient(circle at 88% 8%,rgba(6,182,212,.14),transparent 28%),radial-gradient(circle at 70% 78%,rgba(16,185,129,.13),transparent 32%),var(--bg)}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(15,23,42,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(15,23,42,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(to bottom,#000,transparent 85%);pointer-events:none}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}.hero h1{font-size:clamp(42px,6.6vw,76px);font-weight:900;color:var(--navy);margin:24px 0 20px;letter-spacing:-.04em}.hero h1 span{background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy p{font-size:16.5px;color:var(--sub);max-width:620px;margin-bottom:30px}.hero-note{margin-top:22px;color:var(--muted);font-size:12.5px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.hero-card{position:relative;background:rgba(255,255,255,.78);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.8);border-radius:34px;padding:24px;box-shadow:var(--shadow)}.browser{background:#0b1220;border-radius:24px;overflow:hidden;color:#fff;box-shadow:0 18px 44px rgba(15,23,42,.22)}.browser-top{height:44px;display:flex;align-items:center;gap:7px;padding:0 16px;background:#111827}.browser-top i{width:10px;height:10px;border-radius:50%;background:#ef4444}.browser-top i:nth-child(2){background:#f59e0b}.browser-top i:nth-child(3){background:#22c55e}.browser-body{padding:26px;background:linear-gradient(160deg,#101827,#172554)}.mock-title{font-size:28px;font-weight:900;line-height:1.25;margin:14px 0}.mock-p{color:#cbd5e1;font-size:13px}.mock-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.mock-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.10);border-radius:16px;padding:14px}.mock-card b{display:block;font-size:12px;margin-bottom:4px}.mock-card span{font-size:11px;color:#cbd5e1}.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;text-align:center}.stat b{display:block;font-size:22px;color:var(--brand)}.stat span{font-size:11px;color:var(--muted);font-weight:700}
-  .problems,.samples,.pricing{background:#fff}.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.problem{padding:26px;border:1px solid var(--line);border-radius:24px;background:#fff;box-shadow:0 10px 28px rgba(15,23,42,.04)}.problem .num{font-weight:900;color:var(--brand);font-size:13px;margin-bottom:12px}.problem h3{font-size:19px;margin-bottom:10px}.problem p{color:var(--muted);font-size:14px}.services{background:linear-gradient(180deg,#f7f8fb,#eef5ff)}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.service{background:#fff;border:1px solid rgba(229,231,235,.85);border-radius:26px;padding:26px;box-shadow:var(--shadow2)}.icon{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;margin-bottom:18px;background:linear-gradient(135deg,rgba(37,99,235,.10),rgba(6,182,212,.10));font-size:22px}.service h3{font-size:18px;margin-bottom:10px}.service p{color:var(--muted);font-size:14px}
-  .sample-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.sample{position:relative;overflow:hidden;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow2);transition:.25s ease}.sample:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.thumb{min-height:170px;padding:22px;display:flex;align-items:flex-end;color:#fff;background:linear-gradient(135deg,#0f172a,#2563eb)}.thumb.izakaya{background:radial-gradient(circle at 80% 20%,#c89742,transparent 28%),linear-gradient(135deg,#15100d,#7c1c12)}.thumb.cafe{background:radial-gradient(circle at 80% 20%,#94a37c,transparent 32%),linear-gradient(135deg,#3c4831,#bd8054)}.thumb.shigyo{background:radial-gradient(circle at 80% 20%,#9c7c41,transparent 30%),linear-gradient(135deg,#15243a,#1d3047)}.thumb.kissaten{background:radial-gradient(circle at 80% 20%,#d89a4d,transparent 30%),linear-gradient(135deg,#44301f,#c5402f)}.thumb.seitai{background:radial-gradient(circle at 80% 20%,#10b981,transparent 30%),linear-gradient(135deg,#5d4a2e,#8bb174)}.thumb .t{font-weight:900;font-size:26px;line-height:1.25;text-shadow:0 10px 20px rgba(0,0,0,.18)}.sample-body{padding:22px}.sample-body h3{font-size:19px;margin-bottom:8px}.sample-body p{font-size:13.5px;color:var(--muted);min-height:72px}.sample-link{display:inline-flex;margin-top:16px;color:var(--brand);font-weight:900;font-size:13px}
-  .process{background:var(--navy);color:#fff;position:relative;overflow:hidden}.process:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 10%,rgba(37,99,235,.45),transparent 30%),radial-gradient(circle at 85% 85%,rgba(6,182,212,.28),transparent 30%)}.process .wrap{position:relative;z-index:1}.process .eyebrow{color:#93c5fd}.process h2{color:#fff}.process .lead{color:#cbd5e1}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:42px}.flow-item{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:22px}.flow-item b{display:block;color:#93c5fd;font-size:13px;margin-bottom:10px}.flow-item h3{font-size:17px;margin-bottom:8px}.flow-item p{font-size:13px;color:#cbd5e1}
-  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.price{border:1px solid var(--line);border-radius:28px;padding:30px;background:#fff;box-shadow:var(--shadow2)}.price.featured{border-color:rgba(37,99,235,.35);box-shadow:0 22px 60px rgba(37,99,235,.14);position:relative}.badge{position:absolute;top:18px;right:18px;background:var(--brand);color:#fff;font-size:11px;font-weight:900;padding:6px 10px;border-radius:999px}.price h3{font-size:20px;margin-bottom:8px}.price .yen{font-size:34px;font-weight:900;color:var(--navy);margin:12px 0}.price .yen small{font-size:14px;color:var(--muted)}.price p,.price li{color:var(--muted);font-size:14px}.price ul{list-style:none;margin-top:18px}.price li{padding:8px 0;border-top:1px solid var(--line2)}.price li:before{content:"✓";color:var(--brand);font-weight:900;margin-right:8px}.about{background:linear-gradient(180deg,#f7f8fb,#fff)}.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:30px;align-items:start}.about-card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow2)}.company-row{display:flex;gap:20px;padding:15px 0;border-bottom:1px solid var(--line2)}.company-row:last-child{border-bottom:0}.company-row b{min-width:110px;color:var(--navy)}.company-row span{color:var(--sub)}.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}details{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px}summary{cursor:pointer;font-weight:900;color:var(--navy)}details p{margin-top:10px;color:var(--muted);font-size:14px}.cta{padding:84px 0;background:linear-gradient(135deg,var(--brand),var(--navy));color:#fff;text-align:center}.cta h2{color:#fff}.cta p{color:#dbeafe;max-width:620px;margin:16px auto 26px}.cta .btn-line{background:#fff;color:var(--navy);border:0}footer{background:#0b1220;color:#94a3b8;padding:42px 0}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.foot b{color:#fff}
-  @media(max-width:980px){nav{display:none}.burger{display:block}.hero-grid,.about-grid{grid-template-columns:1fr}.service-grid,.sample-grid,.price-grid{grid-template-columns:1fr 1fr}.flow{grid-template-columns:1fr 1fr}.problem-grid{grid-template-columns:1fr}}@media(max-width:640px){.wrap{padding:0 20px}.section{padding:76px 0}.head-inner{height:68px}.mobile{inset:68px 12px auto}.hero{padding:118px 0 70px}.hero h1{font-size:40px}.btns{display:grid;grid-template-columns:1fr;width:100%}.service-grid,.sample-grid,.price-grid,.flow,.faq-grid{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr}.company-row{display:block}.company-row b{display:block;margin-bottom:4px}}
+/* ============ RESET / BASE ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  color-scheme:light;
+  --bg:#FBFAF6;
+  --surface:#FFFFFF;
+  --surface-2:#F3F2EC;
+  --line:#E6E4DB;
+  --ink:#1B2533;
+  --ink-soft:#56616F;
+  --ink-mute:#8B94A1;
+  --navy:#21426B;
+  --navy-deep:#152740;
+  --cyan:#1C9CB8;
+  --cyan-deep:#147E97;
+  --cyan-soft:#E7F3F5;
+  --green:#4E9C77;
+  --amber:#C9883A;
+  --radius:18px;
+  --radius-s:12px;
+  --shadow-s:0 2px 10px rgba(21,39,64,.05);
+  --shadow-m:0 14px 34px -16px rgba(21,39,64,.18);
+  --shadow-l:0 30px 60px -28px rgba(21,39,64,.32);
+  --maxw:1140px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:#FBFAF6}
+body{
+  font-family:"Zen Kaku Gothic New","Noto Sans JP",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.8;
+  font-size:16px;
+  letter-spacing:.01em;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+
+/* ============ LAYOUT ============ */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+section{position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:"Outfit",sans-serif;font-weight:600;
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cyan-deep);
+}
+.eyebrow::before{
+  content:"";width:26px;height:1.5px;background:var(--cyan);display:inline-block;
+}
+.sec-head{margin-bottom:46px}
+.sec-title{
+  font-family:"Zen Old Mincho",serif;font-weight:700;
+  font-size:clamp(1.65rem,4.6vw,2.5rem);
+  line-height:1.5;color:var(--ink);margin-top:14px;letter-spacing:.02em;
+}
+.sec-lead{margin-top:16px;color:var(--ink-soft);max-width:640px;font-size:.97rem}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:.96rem;padding:16px 30px;border-radius:999px;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  white-space:nowrap;
+}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-primary{
+  background:linear-gradient(135deg,var(--cyan) 0%,var(--cyan-deep) 100%);
+  color:#fff;box-shadow:0 12px 26px -10px rgba(20,126,151,.7);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 34px -12px rgba(20,126,151,.8)}
+.btn-navy{background:var(--navy);color:#fff;box-shadow:0 12px 26px -12px rgba(33,66,107,.6)}
+.btn-navy:hover{transform:translateY(-3px);background:var(--navy-deep)}
+.btn-ghost{
+  background:var(--surface);color:var(--navy);border:1.5px solid var(--line);
+}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--cyan);color:var(--cyan-deep)}
+.btn-lg{padding:19px 38px;font-size:1.02rem}
+
+/* ============ HEADER ============ */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(251,250,246,.82);backdrop-filter:blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s,background .3s;
+}
+header.scrolled{border-bottom-color:var(--line);box-shadow:0 4px 20px -12px rgba(21,39,64,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:700}
+.logo-mark{
+  width:38px;height:38px;border-radius:10px;
+  background:linear-gradient(140deg,var(--navy) 0%,var(--cyan-deep) 100%);
+  display:grid;place-items:center;color:#fff;
+  font-family:"Outfit",sans-serif;font-weight:700;font-size:1.05rem;
+  letter-spacing:.02em;box-shadow:0 6px 16px -8px rgba(33,66,107,.7);
+}
+.logo-text{font-family:"Zen Old Mincho",serif;font-size:1.12rem;letter-spacing:.04em}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a:not(.btn){
+  font-size:.92rem;font-weight:500;color:var(--ink-soft);position:relative;padding:4px 0;
+  transition:color .2s;
+}
+.nav-links a:not(.btn):hover{color:var(--ink)}
+.nav-links a:not(.btn)::after{
+  content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;
+  background:var(--cyan);transition:width .25s ease;
+}
+.nav-links a:not(.btn):hover::after{width:100%}
+.nav-cta{padding:11px 22px;font-size:.88rem}
+.burger{
+  display:none;width:44px;height:44px;border-radius:11px;
+  background:var(--surface);border:1px solid var(--line);
+  flex-direction:column;align-items:center;justify-content:center;gap:5px;
+}
+.burger span{width:20px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* mobile drawer */
+.drawer{
+  position:fixed;inset:72px 0 auto 0;z-index:99;
+  background:var(--bg);border-bottom:1px solid var(--line);
+  padding:14px 22px 30px;
+  transform:translateY(-130%);transition:transform .4s cubic-bezier(.4,0,.2,1);
+  box-shadow:var(--shadow-m);
+}
+.drawer.open{transform:translateY(0)}
+.drawer a:not(.btn){
+  display:block;padding:15px 6px;font-size:1.02rem;font-weight:500;
+  border-bottom:1px solid var(--line);color:var(--ink);
+}
+.drawer .btn{width:100%;margin-top:20px}
+
+/* ============ HERO ============ */
+.hero{padding:140px 0 90px;position:relative;overflow:hidden;background:var(--bg)}
+.hero::before{
+  content:"";position:absolute;top:-180px;right:-160px;width:560px;height:560px;
+  background:radial-gradient(circle,rgba(28,156,184,.16),transparent 66%);
+  border-radius:50%;z-index:0;
+}
+.hero::after{
+  content:"";position:absolute;bottom:-220px;left:-180px;width:520px;height:520px;
+  background:radial-gradient(circle,rgba(33,66,107,.1),transparent 66%);
+  border-radius:50%;z-index:0;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;
+  position:relative;z-index:1;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--surface);border:1px solid var(--line);
+  padding:8px 16px;border-radius:999px;font-size:.8rem;font-weight:500;
+  color:var(--ink-soft);box-shadow:var(--shadow-s);
+}
+.hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+.hero h1{
+  font-family:"Zen Old Mincho",serif;font-weight:900;color:var(--ink);
+  font-size:clamp(2.15rem,6.4vw,3.5rem);line-height:1.42;
+  letter-spacing:.02em;margin:22px 0 0;
+}
+.hero h1 .accent{
+  background:linear-gradient(transparent 62%,rgba(28,156,184,.26) 62%);
+  padding:0 .05em;
+}
+.hero-sub{margin-top:24px;color:var(--ink-soft);font-size:1.02rem;max-width:480px}
+.hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.hero-mini{
+  margin-top:30px;display:flex;gap:22px;flex-wrap:wrap;
+  font-size:.84rem;color:var(--ink-mute);
+}
+.hero-mini span{display:flex;align-items:center;gap:7px}
+.hero-mini svg{width:15px;height:15px;color:var(--cyan)}
+
+/* hero visual : stacked browser cards */
+.hero-visual{position:relative;height:420px}
+.mock{
+  position:absolute;border-radius:14px;background:#fff;
+  box-shadow:var(--shadow-l);overflow:hidden;border:1px solid var(--line);
+}
+.mock-bar{
+  height:30px;display:flex;align-items:center;gap:5px;padding:0 12px;
+  background:var(--surface-2);border-bottom:1px solid var(--line);
+}
+.mock-bar i{width:8px;height:8px;border-radius:50%;background:#D6D3C8;display:block}
+.mock-bar i:nth-child(1){background:#E89B8B}
+.mock-bar i:nth-child(2){background:#E8C98B}
+.mock-bar i:nth-child(3){background:#9CCBA8}
+.mock-1{width:74%;top:14px;right:0;z-index:3;animation:float1 7s ease-in-out infinite}
+.mock-2{width:56%;bottom:18px;left:0;z-index:2;animation:float2 8s ease-in-out infinite}
+.mock-body{padding:16px}
+.mb-hero{height:46px;border-radius:7px;background:linear-gradient(120deg,var(--navy),var(--cyan-deep));margin-bottom:11px}
+.mb-line{height:8px;border-radius:4px;background:var(--surface-2);margin-bottom:7px}
+.mb-line.s{width:55%}
+.mb-line.m{width:78%}
+.mb-chip{height:20px;width:64px;border-radius:6px;background:var(--cyan);margin-top:11px}
+.mock-2 .mb-hero{background:linear-gradient(120deg,var(--amber),#E2B36B);height:34px}
+.mock-2 .mb-chip{background:var(--green)}
+.float-badge{
+  position:absolute;background:#fff;border:1px solid var(--line);
+  border-radius:13px;box-shadow:var(--shadow-m);padding:11px 15px;
+  display:flex;align-items:center;gap:10px;z-index:4;
+}
+.float-badge .ico{
+  width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+  background:var(--cyan-soft);color:var(--cyan-deep);flex:none;
+}
+.float-badge .ico svg{width:17px;height:17px}
+.float-badge b{font-size:.82rem;display:block}
+.float-badge small{font-size:.68rem;color:var(--ink-mute)}
+.fb-1{top:-6px;left:-14px;animation:float2 7.5s ease-in-out infinite}
+.fb-2{bottom:34px;right:-20px;animation:float1 8.5s ease-in-out infinite}
+@keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(12px)}}
+
+/* ============ CONCEPT ============ */
+.concept{padding:88px 0;background:var(--navy-deep);color:#fff;overflow:hidden;position:relative}
+.concept::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 85% 15%,rgba(28,156,184,.22),transparent 45%),
+    radial-gradient(circle at 10% 90%,rgba(78,156,119,.16),transparent 42%);
+}
+.concept .wrap{position:relative;z-index:1}
+.concept .eyebrow{color:#5FCEDF}
+.concept .eyebrow::before{background:#5FCEDF}
+.concept-copy{
+  font-family:"Zen Old Mincho",serif;font-weight:700;
+  font-size:clamp(1.6rem,4.8vw,2.55rem);line-height:1.6;margin-top:16px;
+}
+.concept-copy .hl{color:#6FD3E3}
+.concept-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
+.concept-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius);padding:28px 26px;backdrop-filter:blur(4px);
+}
+.concept-card .num{
+  font-family:"Outfit",sans-serif;font-weight:600;font-size:.78rem;
+  letter-spacing:.18em;color:#6FD3E3;
+}
+.concept-card h3{font-family:"Zen Old Mincho",serif;font-size:1.22rem;margin:10px 0 9px}
+.concept-card p{font-size:.92rem;color:rgba(255,255,255,.74);line-height:1.8}
+
+/* ============ WORRIES ============ */
+.worries{padding:90px 0;background:var(--bg)}
+.worry-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.worry-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px 22px;text-align:center;transition:transform .3s,box-shadow .3s;
+}
+.worry-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-m)}
+.worry-ico{
+  width:54px;height:54px;margin:0 auto 16px;border-radius:14px;
+  background:var(--cyan-soft);display:grid;place-items:center;color:var(--cyan-deep);
+}
+.worry-ico svg{width:26px;height:26px}
+.worry-card p{font-size:.95rem;font-weight:500;color:var(--ink)}
+.worry-bridge{
+  text-align:center;margin-top:40px;font-family:"Zen Old Mincho",serif;
+  font-size:clamp(1.15rem,3.4vw,1.5rem);font-weight:600;line-height:1.7;
+}
+.worry-bridge .u{
+  background:linear-gradient(transparent 60%,rgba(28,156,184,.24) 60%);padding:0 .1em;
+}
+
+/* ============ SERVICES ============ */
+.services{padding:90px 0;background:var(--surface-2)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 26px;position:relative;transition:transform .3s,box-shadow .3s,border-color .3s;
+}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-m);border-color:#D4E8EC}
+.svc-card.lead{
+  background:linear-gradient(155deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff;
+  border-color:transparent;
+}
+.svc-tag{
+  position:absolute;top:20px;right:20px;font-family:"Outfit",sans-serif;
+  font-size:.62rem;font-weight:600;letter-spacing:.14em;
+  background:var(--cyan);color:#fff;padding:5px 11px;border-radius:999px;
+}
+.svc-ico{
+  width:50px;height:50px;border-radius:13px;display:grid;place-items:center;
+  background:var(--cyan-soft);color:var(--cyan-deep);margin-bottom:16px;
+}
+.svc-card.lead .svc-ico{background:rgba(255,255,255,.12);color:#6FD3E3}
+.svc-ico svg{width:24px;height:24px}
+.svc-card h3{font-family:"Zen Old Mincho",serif;font-size:1.2rem;margin-bottom:9px}
+.svc-card p{font-size:.9rem;color:var(--ink-soft);line-height:1.8}
+.svc-card.lead p{color:rgba(255,255,255,.78)}
+
+/* ============ SAMPLES ============ */
+.samples{padding:90px 0;background:var(--bg)}
+.sample-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.sample-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;
+}
+.sample-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-l)}
+/* mini browser preview */
+.preview{position:relative}
+.preview-bar{
+  height:32px;display:flex;align-items:center;gap:5px;padding:0 12px;
+  background:var(--surface-2);border-bottom:1px solid var(--line);
+}
+.preview-bar i{width:8px;height:8px;border-radius:50%;background:#D6D3C8}
+.preview-url{
+  margin-left:8px;flex:1;height:16px;border-radius:5px;background:#fff;
+  border:1px solid var(--line);font-size:.58rem;color:var(--ink-mute);
+  display:flex;align-items:center;padding:0 8px;overflow:hidden;white-space:nowrap;
+  font-family:"Outfit",sans-serif;
+}
+.preview-screen{height:200px;padding:18px;display:flex;flex-direction:column;gap:9px}
+.ps-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
+.ps-logo{height:11px;width:58px;border-radius:3px}
+.ps-menu{display:flex;gap:6px}
+.ps-menu span{height:6px;width:20px;border-radius:3px;background:rgba(255,255,255,.55)}
+.ps-hero{flex:1;border-radius:9px;display:flex;flex-direction:column;justify-content:center;padding:0 16px;gap:7px}
+.ps-h-title{height:13px;width:62%;border-radius:4px;background:rgba(255,255,255,.92)}
+.ps-h-sub{height:7px;width:44%;border-radius:3px;background:rgba(255,255,255,.6)}
+.ps-h-btn{height:18px;width:74px;border-radius:5px;margin-top:5px}
+.ps-cards{display:flex;gap:8px}
+.ps-cards div{flex:1;height:34px;border-radius:7px}
+/* theme : izakaya */
+.t-izakaya .preview-screen{background:#241C18}
+.t-izakaya .ps-logo{background:#E0A95C}
+.t-izakaya .ps-hero{background:linear-gradient(135deg,#3A2A1E,#5A2E22);box-shadow:inset 0 0 0 1px rgba(224,169,92,.25)}
+.t-izakaya .ps-h-btn{background:#E0A95C}
+.t-izakaya .ps-cards div{background:#3A2A1E;border:1px solid rgba(224,169,92,.3)}
+/* theme : cafe */
+.t-cafe .preview-screen{background:#F3EBDF}
+.t-cafe .ps-logo{background:#9C7A55}
+.t-cafe .ps-menu span{background:rgba(156,122,85,.4)}
+.t-cafe .ps-hero{background:linear-gradient(135deg,#C9AC86,#A98D66)}
+.t-cafe .ps-h-btn{background:#5C4632}
+.t-cafe .ps-cards div{background:#E3D4BE}
+/* theme : shigyo */
+.t-shigyo .preview-screen{background:#F4F6F9}
+.t-shigyo .ps-logo{background:#22436C}
+.t-shigyo .ps-menu span{background:rgba(34,67,108,.35)}
+.t-shigyo .ps-hero{background:linear-gradient(135deg,#22436C,#34598A)}
+.t-shigyo .ps-h-btn{background:#C7A86B}
+.t-shigyo .ps-cards div{background:#E4E9F0}
+/* theme : kissaten */
+.t-kissaten .preview-screen{background:#EFE3D2}
+.t-kissaten .ps-logo{background:#8A4B2A}
+.t-kissaten .ps-menu span{background:rgba(138,75,42,.4)}
+.t-kissaten .ps-hero{background:linear-gradient(135deg,#A85F33,#7B3F22)}
+.t-kissaten .ps-h-btn{background:#3D2A1C}
+.t-kissaten .ps-cards div{background:#E0CFB4}
+/* theme : seitai */
+.t-seitai .preview-screen{background:#EEF4EF}
+.t-seitai .ps-logo{background:#3E7B5C}
+.t-seitai .ps-menu span{background:rgba(62,123,92,.35)}
+.t-seitai .ps-hero{background:linear-gradient(135deg,#5BA37D,#3E7B5C)}
+.t-seitai .ps-h-btn{background:#2C5E42}
+.t-seitai .ps-cards div{background:#DDEBE1}
+.sample-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
+.sample-kind{
+  font-family:"Outfit",sans-serif;font-size:.66rem;font-weight:600;
+  letter-spacing:.16em;color:var(--cyan-deep);text-transform:uppercase;
+}
+.sample-body h3{font-family:"Zen Old Mincho",serif;font-size:1.2rem;margin:7px 0 9px}
+.sample-body p{font-size:.88rem;color:var(--ink-soft);line-height:1.78;flex:1}
+.sample-link{
+  margin-top:16px;display:inline-flex;align-items:center;gap:7px;
+  font-weight:700;font-size:.88rem;color:var(--navy);transition:gap .2s,color .2s;
+}
+.sample-link svg{width:15px;height:15px}
+.sample-link:hover{color:var(--cyan-deep);gap:11px}
+.sample-disclaimer{
+  margin-top:30px;background:var(--cyan-soft);border-radius:var(--radius-s);
+  padding:16px 20px;font-size:.82rem;color:var(--cyan-deep);
+  display:flex;gap:10px;align-items:flex-start;
+}
+.sample-disclaimer svg{width:18px;height:18px;flex:none;margin-top:2px}
+.center-cta{text-align:center;margin-top:40px}
+
+/* ============ FREE DEMO ============ */
+.demo{padding:90px 0;background:var(--surface-2)}
+.demo-hero{
+  background:linear-gradient(155deg,var(--navy) 0%,var(--navy-deep) 100%);
+  color:#fff;border-radius:var(--radius);padding:46px 44px;
+  position:relative;overflow:hidden;
+}
+.demo-hero::before{
+  content:"";position:absolute;top:-110px;right:-90px;width:340px;height:340px;
+  background:radial-gradient(circle,rgba(28,156,184,.32),transparent 66%);
+}
+.demo-hero::after{
+  content:"";position:absolute;bottom:-130px;left:-90px;width:300px;height:300px;
+  background:radial-gradient(circle,rgba(78,156,119,.2),transparent 66%);
+}
+.demo-hero-inner{position:relative;z-index:1}
+.demo-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(111,211,227,.16);border:1px solid rgba(111,211,227,.4);
+  color:#9FE3EE;font-weight:700;font-size:.78rem;letter-spacing:.06em;
+  padding:7px 16px;border-radius:999px;
+}
+.demo-badge svg{width:14px;height:14px}
+.demo-hero h2{
+  font-family:"Zen Old Mincho",serif;font-weight:900;
+  font-size:clamp(1.7rem,4.8vw,2.45rem);line-height:1.5;margin:16px 0 14px;
+}
+.demo-hero h2 .hl{color:#6FD3E3}
+.demo-hero .lead{
+  color:rgba(255,255,255,.82);font-size:.98rem;max-width:620px;line-height:1.9;
+}
+.demo-steps{
+  position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,1fr);
+  gap:18px;margin-top:30px;
+}
+.demo-step-box{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--radius-s);padding:24px 24px;backdrop-filter:blur(4px);
+}
+.demo-step-box .tag{
+  display:inline-flex;align-items:center;gap:7px;
+  font-family:"Outfit",sans-serif;font-weight:600;font-size:.72rem;
+  letter-spacing:.12em;text-transform:uppercase;
+}
+.demo-step-box.free .tag{color:#7FD8A3}
+.demo-step-box.paid .tag{color:#6FD3E3}
+.demo-step-box .tag .pill{
+  font-size:.62rem;padding:3px 9px;border-radius:999px;letter-spacing:.04em;
+}
+.demo-step-box.free .tag .pill{background:rgba(127,216,163,.18);color:#9FE6BA}
+.demo-step-box.paid .tag .pill{background:rgba(111,211,227,.18);color:#9FE3EE}
+.demo-step-box h3{font-family:"Zen Old Mincho",serif;font-size:1.12rem;margin:11px 0 13px}
+.demo-step-box ul{display:flex;flex-direction:column;gap:9px}
+.demo-step-box li{
+  display:flex;gap:9px;font-size:.88rem;color:rgba(255,255,255,.8);align-items:flex-start;
+}
+.demo-step-box li svg{width:16px;height:16px;flex:none;margin-top:3px}
+.demo-step-box.free li svg{color:#7FD8A3}
+.demo-step-box.paid li svg{color:#6FD3E3}
+.demo-arrow{
+  position:relative;z-index:1;text-align:center;margin:18px 0;
+  font-family:"Outfit",sans-serif;font-size:.78rem;letter-spacing:.16em;
+  color:rgba(255,255,255,.5);text-transform:uppercase;
+  display:flex;align-items:center;gap:12px;justify-content:center;
+}
+.demo-arrow::before,.demo-arrow::after{
+  content:"";height:1px;width:50px;background:rgba(255,255,255,.2);
+}
+.demo-notes{
+  position:relative;z-index:1;margin-top:26px;
+  border-top:1px solid rgba(255,255,255,.12);padding-top:20px;
+}
+.demo-notes p{
+  font-size:.8rem;color:rgba(255,255,255,.62);display:flex;gap:8px;margin-bottom:8px;
+}
+.demo-notes p:last-child{margin-bottom:0}
+.demo-notes svg{width:13px;height:13px;flex:none;margin-top:4px;color:#6FD3E3}
+.demo-cta{position:relative;z-index:1;margin-top:28px}
+.demo-cta .btn-primary{background:#fff;color:var(--navy-deep)}
+.demo-cta .btn-primary:hover{background:#EAF6F8}
+
+/* ============ REASONS ============ */
+.reasons{padding:90px 0;background:var(--surface-2)}
+.reason-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.reason-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px 26px;display:flex;gap:18px;transition:transform .3s,box-shadow .3s;
+}
+.reason-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-m)}
+.reason-num{
+  font-family:"Outfit",sans-serif;font-weight:700;font-size:1.5rem;
+  color:var(--cyan);flex:none;line-height:1;width:48px;height:48px;
+  border-radius:12px;background:var(--cyan-soft);display:grid;place-items:center;
+}
+.reason-card h3{font-family:"Zen Old Mincho",serif;font-size:1.12rem;margin-bottom:7px}
+.reason-card p{font-size:.89rem;color:var(--ink-soft);line-height:1.8}
+
+/* ============ FLOW ============ */
+.flow{padding:90px 0;background:var(--bg)}
+.flow-list{position:relative;margin-top:10px}
+.flow-list::before{
+  content:"";position:absolute;left:27px;top:24px;bottom:24px;width:2px;
+  background:linear-gradient(var(--cyan),var(--line));
+}
+.flow-step{
+  position:relative;display:flex;gap:26px;padding:18px 0;
+}
+.flow-dot{
+  width:56px;height:56px;border-radius:50%;flex:none;z-index:1;
+  background:var(--surface);border:2px solid var(--cyan);
+  display:grid;place-items:center;font-family:"Outfit",sans-serif;
+  font-weight:700;font-size:1.25rem;color:var(--cyan-deep);
+  box-shadow:0 0 0 6px var(--bg);
+}
+.flow-content{padding-top:6px}
+.flow-content h3{font-family:"Zen Old Mincho",serif;font-size:1.18rem;margin-bottom:5px}
+.flow-content p{font-size:.91rem;color:var(--ink-soft)}
+
+/* ============ PRICING ============ */
+.pricing{padding:90px 0;background:var(--surface-2)}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+.price-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px 28px;position:relative;transition:transform .3s,box-shadow .3s;
+}
+.price-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-m)}
+.price-card.featured{
+  border:2px solid var(--cyan);box-shadow:var(--shadow-l);
+  transform:scale(1.03);
+}
+.price-card.featured:hover{transform:scale(1.03) translateY(-6px)}
+.price-ribbon{
+  position:absolute;top:-15px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--cyan),var(--cyan-deep));color:#fff;
+  font-weight:700;font-size:.78rem;padding:7px 22px;border-radius:999px;
+  white-space:nowrap;box-shadow:0 8px 18px -8px rgba(20,126,151,.8);
+}
+.price-name{font-family:"Outfit",sans-serif;font-weight:600;letter-spacing:.1em;
+  font-size:.82rem;color:var(--cyan-deep);text-transform:uppercase}
+.price-jp{font-family:"Zen Old Mincho",serif;font-size:1.18rem;font-weight:700;margin-top:3px}
+.price-val{margin:16px 0 4px;display:flex;align-items:baseline;gap:3px}
+.price-val .num{
+  font-family:"Outfit",sans-serif;font-weight:700;font-size:2.5rem;color:var(--ink);
+  line-height:1;
+}
+.price-val .yen{font-size:1rem;font-weight:700}
+.price-val .from{font-size:.92rem;color:var(--ink-mute);font-weight:500}
+.price-pos{font-size:.85rem;color:var(--ink-soft);min-height:48px;
+  padding-bottom:18px;border-bottom:1px solid var(--line)}
+.price-feat{margin:18px 0;display:flex;flex-direction:column;gap:11px}
+.price-feat li{display:flex;gap:9px;font-size:.87rem;align-items:flex-start}
+.price-feat li svg{width:17px;height:17px;flex:none;margin-top:3px;color:var(--green)}
+.price-feat li.no{color:var(--ink-mute)}
+.price-feat li.no svg{color:var(--ink-mute)}
+.price-extra{font-size:.74rem;color:var(--ink-mute);margin-bottom:18px}
+.price-card .btn{width:100%}
+.price-notes{
+  margin-top:30px;background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--radius-s);padding:22px 24px;
+}
+.price-notes p{font-size:.83rem;color:var(--ink-soft);display:flex;gap:9px;margin-bottom:9px}
+.price-notes p:last-child{margin-bottom:0}
+.price-notes svg{width:15px;height:15px;flex:none;margin-top:4px;color:var(--cyan)}
+
+/* ============ ABOUT ============ */
+.about{padding:90px 0;background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.about-table{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;
+}
+.about-row{display:flex;border-bottom:1px solid var(--line)}
+.about-row:last-child{border-bottom:none}
+.about-row dt{
+  width:118px;flex:none;background:var(--surface-2);padding:16px 18px;
+  font-size:.84rem;font-weight:700;color:var(--navy);
+}
+.about-row dd{padding:16px 18px;font-size:.9rem;color:var(--ink-soft)}
+.profile-card{
+  background:linear-gradient(155deg,var(--navy) 0%,var(--navy-deep) 100%);
+  color:#fff;border-radius:var(--radius);padding:34px 30px;position:relative;
+  overflow:hidden;
+}
+.profile-card::before{
+  content:"";position:absolute;top:-60px;right:-60px;width:200px;height:200px;
+  background:radial-gradient(circle,rgba(28,156,184,.3),transparent 65%);
+}
+.profile-card .eyebrow{color:#6FD3E3;position:relative}
+.profile-card .eyebrow::before{background:#6FD3E3}
+.profile-name{position:relative;margin-top:16px;padding-left:18px}
+.profile-name::before{
+  content:"";position:absolute;left:0;top:4px;bottom:4px;width:3px;
+  border-radius:3px;background:#6FD3E3;
+}
+.profile-name .role{font-size:.74rem;color:rgba(255,255,255,.6);letter-spacing:.1em}
+.profile-name .nm{font-family:"Zen Old Mincho",serif;font-size:1.5rem;font-weight:700;margin-top:2px}
+.profile-card p{
+  position:relative;margin-top:18px;font-size:.91rem;line-height:1.9;
+  color:rgba(255,255,255,.8);
+}
+
+/* ============ FAQ ============ */
+.faq{padding:90px 0;background:var(--surface-2)}
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s);
+  margin-bottom:14px;overflow:hidden;transition:box-shadow .3s,border-color .3s;
+}
+.faq-item.open{box-shadow:var(--shadow-m);border-color:#D4E8EC}
+.faq-q{
+  width:100%;display:flex;align-items:center;gap:14px;text-align:left;
+  padding:21px 22px;font-weight:700;font-size:.97rem;color:var(--ink);
+}
+.faq-q .qm{
+  font-family:"Zen Old Mincho",serif;font-size:1.15rem;color:var(--cyan-deep);flex:none;
+}
+.faq-q .qtext{flex:1}
+.faq-toggle{
+  width:26px;height:26px;flex:none;border-radius:50%;background:var(--cyan-soft);
+  display:grid;place-items:center;transition:transform .3s;
+}
+.faq-toggle svg{width:13px;height:13px;color:var(--cyan-deep)}
+.faq-item.open .faq-toggle{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a-inner{
+  padding:0 22px 22px 56px;font-size:.9rem;color:var(--ink-soft);line-height:1.85;
+}
+
+/* ============ CONTACT ============ */
+.contact-pre{padding:84px 0;background:var(--bg)}
+.contact-pre-box{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+  padding:40px;
+}
+.contact-pre-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.cp-chip{
+  background:var(--surface-2);border-radius:var(--radius-s);padding:16px 18px;
+  display:flex;align-items:center;gap:11px;
+}
+.cp-chip .ci{
+  width:34px;height:34px;border-radius:9px;background:var(--cyan-soft);
+  color:var(--cyan-deep);display:grid;place-items:center;flex:none;
+}
+.cp-chip .ci svg{width:17px;height:17px}
+.cp-chip b{font-size:.88rem;font-weight:500}
+
+/* ============ FINAL CTA ============ */
+.final-cta{padding:96px 0;position:relative;overflow:hidden;
+  background:linear-gradient(155deg,var(--navy) 0%,var(--navy-deep) 100%);color:#fff}
+.final-cta::before{
+  content:"";position:absolute;top:-140px;left:-100px;width:420px;height:420px;
+  background:radial-gradient(circle,rgba(28,156,184,.28),transparent 65%);
+}
+.final-cta::after{
+  content:"";position:absolute;bottom:-160px;right:-120px;width:440px;height:440px;
+  background:radial-gradient(circle,rgba(78,156,119,.2),transparent 65%);
+}
+.final-inner{position:relative;z-index:1;text-align:center;max-width:680px;margin:0 auto}
+.final-inner .eyebrow{color:#6FD3E3}
+.final-inner .eyebrow::before{background:#6FD3E3}
+.final-inner h2{
+  font-family:"Zen Old Mincho",serif;font-weight:900;
+  font-size:clamp(1.8rem,5.4vw,2.85rem);line-height:1.5;margin:18px 0 16px;
+}
+.final-inner p{color:rgba(255,255,255,.78);font-size:1rem;margin-bottom:32px}
+.final-inner .btn-primary{
+  background:#fff;color:var(--navy-deep);box-shadow:0 16px 36px -12px rgba(0,0,0,.5);
+}
+.final-inner .btn-primary:hover{background:#EAF6F8}
+.final-mail{
+  margin-top:20px;font-size:.86rem;color:rgba(255,255,255,.6);
+  font-family:"Outfit",sans-serif;
+}
+
+/* ============ FOOTER ============ */
+footer{background:var(--navy-deep);color:rgba(255,255,255,.62);padding:54px 0 30px}
+.foot-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;
+  padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot-brand .logo-text{color:#fff}
+.foot-brand p{font-size:.84rem;margin-top:14px;max-width:300px;line-height:1.8}
+.foot-nav{display:flex;gap:46px;flex-wrap:wrap}
+.foot-col h4{
+  font-family:"Outfit",sans-serif;font-size:.72rem;letter-spacing:.16em;
+  color:#6FD3E3;margin-bottom:14px;text-transform:uppercase;
+}
+.foot-col a{display:block;font-size:.86rem;padding:5px 0;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{
+  padding-top:24px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:.76rem;
+}
+
+/* ============ REVEAL ANIMATION ============ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal.d1{transition-delay:.08s}
+.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}
+.reveal.d4{transition-delay:.32s}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero-visual{height:340px;max-width:440px;margin:0 auto;width:100%}
+  .concept-grid,.worry-grid,.svc-grid,.sample-grid,.reason-grid,
+  .price-grid,.about-grid,.contact-pre-grid{grid-template-columns:1fr 1fr}
+  .price-card.featured{transform:none}
+  .price-card.featured:hover{transform:translateY(-6px)}
+}
+@media(max-width:680px){
+  body{font-size:15px}
+  .nav-links{display:none}
+  .burger{display:flex}
+  .hero{padding:118px 0 70px}
+  .sec-head{margin-bottom:34px}
+  section{padding-left:0;padding-right:0}
+  .worries,.services,.samples,.reasons,.flow,.pricing,.about,.faq,
+  .concept,.contact-pre,.final-cta,.demo{padding-top:64px;padding-bottom:64px}
+  .concept-grid,.worry-grid,.svc-grid,.sample-grid,.reason-grid,
+  .price-grid,.about-grid,.contact-pre-grid,.demo-steps{grid-template-columns:1fr}
+  .about-grid{gap:26px}
+  .contact-pre-box{padding:26px 20px}
+  .demo-hero{padding:30px 22px}
+  .price-notes{padding:18px}
+  .flow-step{gap:16px}
+  .flow-list::before{left:23px}
+  .flow-dot{width:48px;height:48px;font-size:1.05rem}
+  .hero-cta .btn,.final-inner .btn{width:100%}
+  .hero-cta{gap:11px}
+  .faq-a-inner{padding-left:22px}
+  .foot-top{gap:30px}
+}
+@media(max-width:420px){
+  .hero-visual{height:300px}
+  .wrap{padding:0 18px}
+}
 </style>
 </head>
 <body>
-<header><div class="wrap head-inner"><a class="brand" href="#top" aria-label="合同会社4U"><span class="brand-mark">4U</span><span class="brand-text">合同会社4U<small>WEB DESIGN / LOCAL BUSINESS</small></span></a><nav><a href="#services">できること</a><a href="#samples">制作サンプル</a><a href="#process">制作の流れ</a><a href="#pricing">料金目安</a><a href="#contact" class="nav-cta">相談する</a></nav><button class="burger" aria-label="メニューを開く"><span></span><span></span><span></span></button></div><div class="mobile"><a href="#services">できること</a><a href="#samples">制作サンプル</a><a href="#process">制作の流れ</a><a href="#pricing">料金目安</a><a href="#contact">相談する</a></div></header>
-<main id="top">
-<section class="hero"><div class="wrap hero-grid"><div class="hero-copy"><span class="pill"><span class="dot"></span>AI活用 × 小規模事業者向けHP制作</span><h1>小さなお店の魅力を、<br><span>伝わるHP</span>に。</h1><p>合同会社4Uは、地域の店舗・個人事業主・小規模事業者向けに、ホームページやLPの制作を行っています。AIを活用してスピーディーに、でも「見た目だけ」で終わらない、問い合わせにつながるWebサイトを整えます。</p><div class="btns"><a class="btn btn-primary" href="#samples">制作サンプルを見る <span class="arrow">→</span></a><a class="btn btn-line" href="#pricing">料金目安を見る</a></div><div class="hero-note">● 架空サンプル掲載中　● GitHub Pages公開対応　● スマホ表示重視</div></div><div class="hero-card"><div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-body"><span class="pill" style="background:rgba(255,255,255,.08);color:#bfdbfe;border-color:rgba(255,255,255,.12)">Sample Portfolio</span><div class="mock-title">業種ごとの魅力が伝わる<br>1ページHP制作</div><p class="mock-p">飲食店、整体院、士業、サロン、学習塾など。事業内容に合わせて構成・文章・導線を設計します。</p><div class="mock-cards"><div class="mock-card"><b>Design</b><span>雰囲気づくり</span></div><div class="mock-card"><b>Copy</b><span>文章整理</span></div><div class="mock-card"><b>Mobile</b><span>スマホ最適化</span></div><div class="mock-card"><b>Publish</b><span>公開まで支援</span></div></div></div></div><div class="stat-row"><div class="stat"><b>5+</b><span>サンプル</span></div><div class="stat"><b>1P</b><span>LP/HP対応</span></div><div class="stat"><b>AI</b><span>活用制作</span></div></div></div></div></section>
-<section class="section problems"><div class="wrap"><div class="section-head"><div class="eyebrow">Problem</div><h2>こんなお悩みを、まずはHPから整えます。</h2><p class="lead">小規模事業者にとって、HPは「名刺」でもあり「営業資料」でもあります。最低限ちゃんとして見えるだけで、問い合わせ前の安心感が変わります。</p></div><div class="problem-grid"><div class="problem"><div class="num">01</div><h3>HPが古くて見せづらい</h3><p>スマホで見づらい、情報が古い、雰囲気が伝わらない状態を整理します。</p></div><div class="problem"><div class="num">02</div><h3>何を載せればいいかわからない</h3><p>サービス内容、料金、強み、問い合わせ導線など、必要な構成から一緒に整えます。</p></div><div class="problem"><div class="num">03</div><h3>制作会社に頼むほど大がかりではない</h3><p>まずは1ページから、事業の魅力を伝える小さなHPを作る選択肢があります。</p></div></div></div></section>
-<section class="section services" id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">Service</div><h2>4Uができること</h2><p class="lead">AIを活用しながら、構成・文章・デザイン・公開までを現実的な形に落とし込みます。</p></div><div class="service-grid"><div class="service"><div class="icon">🖥️</div><h3>HP/LP制作</h3><p>店舗・個人事業主向けに、1ページ完結型のホームページを制作します。</p></div><div class="service"><div class="icon">✍️</div><h3>文章・構成整理</h3><p>事業内容や強みをヒアリングし、伝わりやすい見出しや文章に整えます。</p></div><div class="service"><div class="icon">📱</div><h3>スマホ最適化</h3><p>実際に見られることの多いスマホ表示を重視して、見やすく調整します。</p></div><div class="service"><div class="icon">🚀</div><h3>公開サポート</h3><p>GitHub Pagesなどを活用し、サンプル公開や簡易公開まで対応します。</p></div></div></div></section>
-<section class="section samples" id="samples"><div class="wrap"><div class="section-head"><div class="eyebrow">Works</div><h2>制作サンプル</h2><p class="lead">架空店舗・架空事業を題材にしたサンプルです。業種ごとの雰囲気や導線の違いをご確認いただけます。</p></div><div class="sample-grid"><a class="sample" href="https://4u-studio.github.io/demo-izakaya/" target="_blank" rel="noopener"><div class="thumb izakaya"><div class="t">居酒屋<br>サンプル</div></div><div class="sample-body"><h3>居酒屋 天狗</h3><p>地域密着型の飲食店向け。世界観、メニュー、予約導線を重視したサンプル。</p><span class="sample-link">サイトを見る →</span></div></a><a class="sample" href="https://4u-studio.github.io/demo-cafe/" target="_blank" rel="noopener"><div class="thumb cafe"><div class="t">カフェ<br>サンプル</div></div><div class="sample-body"><h3>Green Cafe</h3><p>個人カフェ向け。空間の雰囲気やコンセプトを伝えるデザイン。</p><span class="sample-link">サイトを見る →</span></div></a><a class="sample" href="https://4u-studio.github.io/demo-shigyo/" target="_blank" rel="noopener"><div class="thumb shigyo"><div class="t">士業<br>サンプル</div></div><div class="sample-body"><h3>税務・行政書士事務所</h3><p>信頼感、相談導線、サービス説明を重視した専門職向けサンプル。</p><span class="sample-link">サイトを見る →</span></div></a><a class="sample" href="https://4u-studio.github.io/demo-kissaten/" target="_blank" rel="noopener"><div class="thumb kissaten"><div class="t">喫茶店<br>サンプル</div></div><div class="sample-body"><h3>喫茶店 林檎</h3><p>レトロで温かい雰囲気を表現した店舗HP。店内導線とお品書きを整理。</p><span class="sample-link">サイトを見る →</span></div></a><a class="sample" href="https://4u-studio.github.io/demo-seitai/" target="_blank" rel="noopener"><div class="thumb seitai"><div class="t">整体院<br>サンプル</div></div><div class="sample-body"><h3>ひだまり整体院</h3><p>安心感、施術内容、問い合わせ導線を重視した整体院向けサンプル。</p><span class="sample-link">サイトを見る →</span></div></a></div></div></section>
-<section class="section process" id="process"><div class="wrap"><div class="section-head"><div class="eyebrow">Process</div><h2>制作の流れ</h2><p class="lead">まずは小さく始めて、必要に応じて内容を育てていく進め方ができます。</p></div><div class="flow"><div class="flow-item"><b>STEP 01</b><h3>相談</h3><p>業種、目的、載せたい内容を確認します。</p></div><div class="flow-item"><b>STEP 02</b><h3>構成作成</h3><p>必要なセクションと見せ方を整理します。</p></div><div class="flow-item"><b>STEP 03</b><h3>制作</h3><p>AIも活用しながらHTMLを制作します。</p></div><div class="flow-item"><b>STEP 04</b><h3>修正</h3><p>文章、色、余白、導線を調整します。</p></div><div class="flow-item"><b>STEP 05</b><h3>公開</h3><p>URLで確認できる状態に整えます。</p></div></div></div></section>
-<section class="section pricing" id="pricing"><div class="wrap"><div class="section-head"><div class="eyebrow">Price</div><h2>料金目安</h2><p class="lead">内容やボリュームによって変動します。まずはサンプルを見ながらご相談ください。</p></div><div class="price-grid"><div class="price"><h3>ライト</h3><p>まずは名刺代わりの1ページHPを作りたい方向け。</p><div class="yen">3万円〜<small>税込目安</small></div><ul><li>1ページ構成</li><li>スマホ対応</li><li>基本文章整理</li></ul></div><div class="price featured"><span class="badge">おすすめ</span><h3>スタンダード</h3><p>サービス内容や強みまでしっかり伝えたい方向け。</p><div class="yen">5万円〜<small>税込目安</small></div><ul><li>1ページHP/LP制作</li><li>構成・文章提案</li><li>問い合わせ導線設計</li><li>公開サポート</li></ul></div><div class="price"><h3>改善・修正</h3><p>既存HPの見直しや部分修正をしたい方向け。</p><div class="yen">1万円〜<small>税込目安</small></div><ul><li>文章修正</li><li>デザイン調整</li><li>スマホ表示改善</li></ul></div></div></div></section>
-<section class="section about"><div class="wrap about-grid"><div><div class="eyebrow">About</div><h2 style="margin-top:12px">地域の事業者にとって、相談しやすいWeb制作を。</h2><p class="lead">合同会社4Uは、学習塾運営など地域に根ざした事業を行いながら、小規模事業者向けのWeb制作にも取り組んでいます。事業者の想いや強みが伝わるよう、わかりやすさと実用性を大切にしています。</p></div><div class="about-card"><div class="company-row"><b>会社名</b><span>合同会社4U</span></div><div class="company-row"><b>代表</b><span>土屋 勇士</span></div><div class="company-row"><b>所在地</b><span>群馬県沼田市周辺</span></div><div class="company-row"><b>事業内容</b><span>学習塾運営 / Web制作 / コンテンツ制作</span></div><div class="company-row"><b>対応内容</b><span>HP制作、LP制作、既存サイト改善、制作サンプル作成</span></div></div></div></section>
-<section class="section faq"><div class="wrap"><div class="section-head"><div class="eyebrow">FAQ</div><h2>よくある質問</h2></div><div class="faq-grid"><details open><summary>文章や写真がまだなくても相談できますか？</summary><p>可能です。まずは事業内容や載せたい情報を伺い、文章のたたき台から一緒に整理できます。</p></details><details><summary>公開後の修正もできますか？</summary><p>対応可能です。営業時間、料金、メニュー変更などの小さな修正もご相談ください。</p></details><details><summary>スマホでも見やすく作れますか？</summary><p>はい。小規模店舗ではスマホ閲覧が多いため、スマホ表示を重視して制作します。</p></details><details><summary>AIで作ると安っぽくなりませんか？</summary><p>AIは制作スピードを上げる道具として使い、構成・文章・導線・見た目は人の目で整えます。</p></details></div></div></section>
-<section class="cta" id="contact"><div class="wrap"><h2>まずは、見せたいHPのイメージから。</h2><p>「こんな感じのHPがほしい」「既存サイトを整えたい」など、ざっくりしたご相談からで大丈夫です。</p><div class="btns" style="justify-content:center"><a class="btn btn-line" href="mailto:bm5upssyt@gmail.com">メールで相談する</a><a class="btn btn-primary" href="#samples">サンプルをもう一度見る</a></div></div></section>
-</main><footer><div class="wrap foot"><div><b>合同会社4U</b><br><span>Small Business Web Design</span></div><div>© 2026 4U LLC. All rights reserved.</div></div></footer><script>const burger=document.querySelector('.burger');burger.addEventListener('click',()=>{document.body.classList.toggle('menu-open')});document.querySelectorAll('.mobile a').forEach(a=>{a.addEventListener('click',()=>document.body.classList.remove('menu-open'))});</script>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="logo-mark">4U</span>
+      <span class="logo-text">合同会社4U</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">できること</a>
+      <a href="#samples">制作サンプル</a>
+      <a href="#reasons">選ばれる理由</a>
+      <a href="#pricing">料金</a>
+      <a href="mailto:y.tsuchiya1997@gmail.com" class="btn btn-primary nav-cta">相談する</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="drawer" id="drawer">
+  <a href="#services">できること</a>
+  <a href="#samples">制作サンプル</a>
+  <a href="#demo">無料試作デモ</a>
+  <a href="#reasons">選ばれる理由</a>
+  <a href="#pricing">料金</a>
+  <a href="#faq">よくある質問</a>
+  <a href="#about">会社情報</a>
+  <a href="mailto:y.tsuchiya1997@gmail.com" class="btn btn-primary">無料で相談する</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="hero-tag reveal"><span class="dot"></span>群馬県沼田市・Web制作パートナー</span>
+      <h1 class="reveal d1">ちゃんと伝わるHPを、<br><span class="accent">小さなお店にも。</span></h1>
+      <p class="hero-sub reveal d2">
+        群馬県沼田市周辺の個人事業主・小規模事業者の方へ。
+        お店や事業の魅力が「ちゃんと伝わる」HP・LPを制作します。
+      </p>
+      <div class="hero-cta reveal d3">
+        <a href="mailto:y.tsuchiya1997@gmail.com?subject=無料試作デモの相談" class="btn btn-primary btn-lg">無料試作を相談する</a>
+        <a href="#samples" class="btn btn-ghost btn-lg">制作サンプルを見る</a>
+      </div>
+      <div class="hero-mini reveal d4">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>スマホ表示を最優先</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>AI活用＋人の目で調整</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>オンライン全国対応</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal d2">
+      <div class="mock mock-1">
+        <div class="mock-bar"><i></i><i></i><i></i></div>
+        <div class="mock-body">
+          <div class="mb-hero"></div>
+          <div class="mb-line m"></div>
+          <div class="mb-line s"></div>
+          <div class="mb-line m"></div>
+          <div class="mb-chip"></div>
+        </div>
+      </div>
+      <div class="mock mock-2">
+        <div class="mock-bar"><i></i><i></i><i></i></div>
+        <div class="mock-body">
+          <div class="mb-hero"></div>
+          <div class="mb-line s"></div>
+          <div class="mb-line m"></div>
+          <div class="mb-chip"></div>
+        </div>
+      </div>
+      <div class="float-badge fb-1">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+        <div><b>HP / LP 制作</b><small>1ページから対応</small></div>
+      </div>
+      <div class="float-badge fb-2">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        <div><b>まずは相談から</b><small>たたき台を一緒に</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONCEPT ============ -->
+<section class="concept">
+  <div class="wrap">
+    <span class="eyebrow reveal">Concept</span>
+    <p class="concept-copy reveal d1">
+      AIで速く、<span class="hl">人の目でちゃんと整える。</span><br>
+      見た目だけで終わらないHPを。
+    </p>
+    <div class="concept-grid">
+      <div class="concept-card reveal d2">
+        <span class="num">01 — SPEED</span>
+        <h3>AIを「道具」として活用</h3>
+        <p>AIは制作のスピードと提案の幅を広げるために使います。限られた予算や時間でも、ていねいに形にするための手段です。</p>
+      </div>
+      <div class="concept-card reveal d3">
+        <span class="num">02 — HUMAN</span>
+        <h3>最後は人の目で仕上げる</h3>
+        <p>構成・文章・導線・見た目は、人の目で一つずつ調整。事業の強みがきちんと伝わるところまで仕上げます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORRIES ============ -->
+<section class="worries">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Problem</span>
+      <h2 class="sec-title">こんなお悩み、ありませんか？</h2>
+      <p class="sec-lead">大がかりに考えなくて大丈夫です。小さなお店・個人事業の「ちょうどいいHP」から始められます。</p>
+    </div>
+    <div class="worry-grid">
+      <div class="worry-card reveal d1">
+        <div class="worry-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.9" y1="4.9" x2="19.1" y2="19.1"/></svg></div>
+        <p>そもそも<br>ホームページがない</p>
+      </div>
+      <div class="worry-card reveal d2">
+        <div class="worry-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
+        <p>HPが古くて<br>お客さんに見せづらい</p>
+      </div>
+      <div class="worry-card reveal d3">
+        <div class="worry-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12" y2="17"/></svg></div>
+        <p>何を載せればいいか<br>わからない</p>
+      </div>
+      <div class="worry-card reveal d4">
+        <div class="worry-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></div>
+        <p>制作会社に頼むほど<br>大がかりではない</p>
+      </div>
+    </div>
+    <p class="worry-bridge reveal">
+      ひとつでも当てはまったら、<span class="u">まずは気軽に相談する</span>ところから。
+    </p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Services</span>
+      <h2 class="sec-title">4Uができること</h2>
+      <p class="sec-lead">まずはホームページ・LP制作を中心に、必要に応じてAI活用や動画制作まで相談できる制作パートナーです。</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card lead reveal d1">
+        <span class="svc-tag">MAIN</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>HP / LP 制作</h3>
+        <p>事業の「顔」になるHP・LPを1ページから。認知度アップ・信頼感づくり・問い合わせにつながる導線まで整えます。</p>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3>文章・構成の整理</h3>
+        <p>「何を、どの順番で伝えるか」を一緒に整理。文章のたたき台づくりからお手伝いします。</p>
+      </div>
+      <div class="svc-card reveal d3">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2.5"/><line x1="12" y1="18" x2="12" y2="18"/></svg></div>
+        <h3>スマホ最適化</h3>
+        <p>小さなお店ほどスマホで見られる時代。スマホでの見やすさを最優先に制作します。</p>
+      </div>
+      <div class="svc-card reveal d1">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><polyline points="8 11 12 15 16 11"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></div>
+        <h3>公開サポート</h3>
+        <p>サイトの公開から独自ドメイン設定まで。URLで確認できる状態に整えてお渡しします。</p>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 1 3 3v6a3 3 0 0 1-6 0V5a3 3 0 0 1 3-3z"/><path d="M5 10v1a7 7 0 0 0 14 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/></svg></div>
+        <h3>AI活用の相談</h3>
+        <p>業務効率化やAI導入をどう取り入れるか。実務に合った、無理のない活用を一緒に考えます。</p>
+      </div>
+      <div class="svc-card reveal d3">
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <h3>動画 / YouTube 支援</h3>
+        <p>動画制作・編集、YouTube運営支援まで。Webのその先の発信もまとめて相談できます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAMPLES ============ -->
+<section class="samples" id="samples">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Samples</span>
+      <h2 class="sec-title">制作サンプル</h2>
+      <p class="sec-lead">架空の店舗・架空の事業を題材に制作したサンプルです。業種ごとの見せ方や導線の作り方をご覧いただけます。</p>
+    </div>
+    <div class="sample-grid">
+
+      <!-- 居酒屋 -->
+      <article class="sample-card reveal d1">
+        <div class="preview t-izakaya">
+          <div class="preview-bar"><i></i><i></i><i></i>
+            <span class="preview-url">4u-studio.github.io/demo-izakaya/</span></div>
+          <div class="preview-screen">
+            <div class="ps-nav"><div class="ps-logo"></div><div class="ps-menu"><span></span><span></span><span></span></div></div>
+            <div class="ps-hero"><div class="ps-h-title"></div><div class="ps-h-sub"></div><div class="ps-h-btn"></div></div>
+            <div class="ps-cards"><div></div><div></div><div></div></div>
+          </div>
+        </div>
+        <div class="sample-body">
+          <span class="sample-kind">Izakaya</span>
+          <h3>居酒屋サンプル</h3>
+          <p>地域密着型の飲食店向け。世界観、メニュー、予約導線を重視したサンプルです。</p>
+          <a href="https://4u-studio.github.io/demo-izakaya/" target="_blank" rel="noopener" class="sample-link">
+            サイトを見る
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- カフェ -->
+      <article class="sample-card reveal d2">
+        <div class="preview t-cafe">
+          <div class="preview-bar"><i></i><i></i><i></i>
+            <span class="preview-url">4u-studio.github.io/demo-cafe/</span></div>
+          <div class="preview-screen">
+            <div class="ps-nav"><div class="ps-logo"></div><div class="ps-menu"><span></span><span></span><span></span></div></div>
+            <div class="ps-hero"><div class="ps-h-title"></div><div class="ps-h-sub"></div><div class="ps-h-btn"></div></div>
+            <div class="ps-cards"><div></div><div></div><div></div></div>
+          </div>
+        </div>
+        <div class="sample-body">
+          <span class="sample-kind">Cafe</span>
+          <h3>カフェサンプル</h3>
+          <p>個人カフェ向け。空間の雰囲気やコンセプトを伝えることを意識したデザインです。</p>
+          <a href="https://4u-studio.github.io/demo-cafe/" target="_blank" rel="noopener" class="sample-link">
+            サイトを見る
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 士業 -->
+      <article class="sample-card reveal d3">
+        <div class="preview t-shigyo">
+          <div class="preview-bar"><i></i><i></i><i></i>
+            <span class="preview-url">4u-studio.github.io/demo-shigyo/</span></div>
+          <div class="preview-screen">
+            <div class="ps-nav"><div class="ps-logo"></div><div class="ps-menu"><span></span><span></span><span></span></div></div>
+            <div class="ps-hero"><div class="ps-h-title"></div><div class="ps-h-sub"></div><div class="ps-h-btn"></div></div>
+            <div class="ps-cards"><div></div><div></div><div></div></div>
+          </div>
+        </div>
+        <div class="sample-body">
+          <span class="sample-kind">Professional</span>
+          <h3>士業サンプル</h3>
+          <p>信頼感、相談導線、サービス説明を重視した専門職向けのサンプルです。</p>
+          <a href="https://4u-studio.github.io/demo-shigyo/" target="_blank" rel="noopener" class="sample-link">
+            サイトを見る
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 喫茶店 -->
+      <article class="sample-card reveal d1">
+        <div class="preview t-kissaten">
+          <div class="preview-bar"><i></i><i></i><i></i>
+            <span class="preview-url">4u-studio.github.io/demo-kissaten/</span></div>
+          <div class="preview-screen">
+            <div class="ps-nav"><div class="ps-logo"></div><div class="ps-menu"><span></span><span></span><span></span></div></div>
+            <div class="ps-hero"><div class="ps-h-title"></div><div class="ps-h-sub"></div><div class="ps-h-btn"></div></div>
+            <div class="ps-cards"><div></div><div></div><div></div></div>
+          </div>
+        </div>
+        <div class="sample-body">
+          <span class="sample-kind">Kissaten</span>
+          <h3>喫茶店サンプル</h3>
+          <p>レトロで温かい雰囲気を表現した店舗HP。店内導線とお品書きを整理しています。</p>
+          <a href="https://4u-studio.github.io/demo-kissaten/" target="_blank" rel="noopener" class="sample-link">
+            サイトを見る
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- 整体院 -->
+      <article class="sample-card reveal d2">
+        <div class="preview t-seitai">
+          <div class="preview-bar"><i></i><i></i><i></i>
+            <span class="preview-url">4u-studio.github.io/demo-seitai/</span></div>
+          <div class="preview-screen">
+            <div class="ps-nav"><div class="ps-logo"></div><div class="ps-menu"><span></span><span></span><span></span></div></div>
+            <div class="ps-hero"><div class="ps-h-title"></div><div class="ps-h-sub"></div><div class="ps-h-btn"></div></div>
+            <div class="ps-cards"><div></div><div></div><div></div></div>
+          </div>
+        </div>
+        <div class="sample-body">
+          <span class="sample-kind">Seitai</span>
+          <h3>整体院サンプル</h3>
+          <p>安心感、施術内容、問い合わせ導線を重視した整体院向けのサンプルです。</p>
+          <a href="https://4u-studio.github.io/demo-seitai/" target="_blank" rel="noopener" class="sample-link">
+            サイトを見る
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- CTA card -->
+      <article class="sample-card reveal d3" style="background:var(--surface-2);border-style:dashed;justify-content:center;align-items:center;text-align:center;padding:34px 26px;">
+        <div style="font-family:'Zen Old Mincho',serif;font-size:1.15rem;font-weight:700;margin-bottom:8px;">
+          自分の業種だと<br>どう見える？
+        </div>
+        <p style="font-size:.86rem;color:var(--ink-soft);margin-bottom:18px;">
+          業種・やりたいことを教えていただければ、イメージから一緒に考えます。
+        </p>
+        <a href="mailto:y.tsuchiya1997@gmail.com" class="btn btn-primary">サンプルを見て相談する</a>
+      </article>
+
+    </div>
+    <div class="sample-disclaimer reveal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12" y2="16"/></svg>
+      <span>掲載しているものは制作実績ではなく「制作サンプル」です。架空の店舗・架空の事業を題材に、表現や構成の例として制作しています。</span>
+    </div>
+    <div class="center-cta reveal">
+      <a href="mailto:y.tsuchiya1997@gmail.com" class="btn btn-navy btn-lg">サンプルを見て相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FREE DEMO ============ -->
+<section class="demo" id="demo">
+  <div class="wrap">
+    <div class="demo-hero reveal">
+      <div class="demo-hero-inner">
+        <span class="demo-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 2 15 8.5 22 9.5 17 14.5 18.5 21.5 12 18 5.5 21.5 7 14.5 2 9.5 9 8.5z"/></svg>
+          4Uの無料試作デモ
+        </span>
+        <h2>まずは<span class="hl">無料試作デモ</span>から。</h2>
+        <p class="lead">
+          いきなり依頼するのは不安、という方へ。店名・事業内容・載せたい情報をもとに、HPの雰囲気がわかる試作品を無料で作成します。
+          ご確認いただき、気に入った場合のみ正式にご依頼ください。正式制作では、文章・構成・導線を整え、公開までサポートします。
+        </p>
+      </div>
+
+      <div class="demo-steps">
+        <div class="demo-step-box free">
+          <span class="tag">Step 01<span class="pill">無料</span></span>
+          <h3>無料試作デモで対応する範囲</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>簡易ヒアリング</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>初回デモ作成</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>確認用URLの共有</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>方向性の簡単な説明</li>
+          </ul>
+        </div>
+        <div class="demo-step-box paid">
+          <span class="tag">Step 02<span class="pill">正式依頼後</span></span>
+          <h3>正式依頼後に対応する範囲</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>文章や内容の修正</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>スマホ表示の細かな調整</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>問い合わせ導線の整備</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>正式公開</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>独自ドメイン設定サポート</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>問い合わせフォーム設置サポート</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="demo-notes">
+        <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/></svg>無料試作は、正式依頼前に完成イメージを確認していただくためのデモです。</p>
+        <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/></svg>修正対応・正式公開・データ納品は正式依頼後の対応となります。</p>
+        <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/></svg>試作内容の無断利用・転載はご遠慮ください。</p>
+      </div>
+
+      <div class="demo-cta">
+        <a href="mailto:y.tsuchiya1997@gmail.com?subject=無料試作デモの相談" class="btn btn-primary btn-lg">無料試作を相談する</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REASONS ============ -->
+<section class="reasons" id="reasons">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Why 4U</span>
+      <h2 class="sec-title">4Uに頼む理由</h2>
+      <p class="sec-lead">大きな制作会社とも、価格だけのサービスとも違う。地域の小規模事業者に寄り添える距離感を大切にしています。</p>
+    </div>
+    <div class="reason-grid">
+      <div class="reason-card reveal d1">
+        <div class="reason-num">01</div>
+        <div>
+          <h3>地域の事業者に相談しやすい</h3>
+          <p>群馬県沼田市を拠点に、地元の事業者が気軽に相談できる距離感を大切にしています。必要なものをわかりやすく整理してお伝えします。</p>
+        </div>
+      </div>
+      <div class="reason-card reveal d2">
+        <div class="reason-num">02</div>
+        <div>
+          <h3>AI活用でスピーディーに</h3>
+          <p>AIを制作スピードや提案の幅を広げるために活用。限られた予算・時間でも、ていねいに形にできる進め方をしています。</p>
+        </div>
+      </div>
+      <div class="reason-card reveal d3">
+        <div class="reason-num">03</div>
+        <div>
+          <h3>最後は人の目で整える</h3>
+          <p>構成・文章・導線・見た目は人の目で調整。見た目だけで終わらせず、事業内容や強みがきちんと伝わるところまで仕上げます。</p>
+        </div>
+      </div>
+      <div class="reason-card reveal d4">
+        <div class="reason-num">04</div>
+        <div>
+          <h3>Webの先まで相談できる</h3>
+          <p>HP/LP制作だけでなく、動画・YouTube運営支援・AI活用まで。代表が学習塾運営で培った「わかりやすく伝える力」も活かしています。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FLOW ============ -->
+<section class="flow">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Flow</span>
+      <h2 class="sec-title">制作の流れ</h2>
+      <p class="sec-lead">はじめての方でも進めやすいよう、相談から公開まで一つずつ整理しながら進めます。</p>
+    </div>
+    <div class="flow-list">
+      <div class="flow-step reveal d1">
+        <div class="flow-dot">1</div>
+        <div class="flow-content">
+          <h3>相談</h3>
+          <p>業種・目的・載せたい内容をお伺いします。まだ整理できていなくても大丈夫です。</p>
+        </div>
+      </div>
+      <div class="flow-step reveal d1">
+        <div class="flow-dot">2</div>
+        <div class="flow-content">
+          <h3>ヒアリング・構成整理</h3>
+          <p>必要なセクションや文章・導線を整理し、サイトの全体像を一緒に固めます。</p>
+        </div>
+      </div>
+      <div class="flow-step reveal d2">
+        <div class="flow-dot">3</div>
+        <div class="flow-content">
+          <h3>制作</h3>
+          <p>AIも活用しながら、サイトを形にしていきます。</p>
+        </div>
+      </div>
+      <div class="flow-step reveal d2">
+        <div class="flow-dot">4</div>
+        <div class="flow-content">
+          <h3>修正</h3>
+          <p>文章・色・余白・導線を、気になる点まですり合わせて調整します。</p>
+        </div>
+      </div>
+      <div class="flow-step reveal d3">
+        <div class="flow-dot">5</div>
+        <div class="flow-content">
+          <h3>公開</h3>
+          <p>URLで確認できる状態に整えてお渡し。すぐに使い始められます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Price</span>
+      <h2 class="sec-title">料金プラン</h2>
+      <p class="sec-lead">3つのプランをご用意しています。価格は税込目安です。正式な金額はヒアリング後にお見積もりいたします。</p>
+    </div>
+    <div class="price-grid">
+
+      <!-- ライト -->
+      <div class="price-card reveal d1">
+        <div class="price-name">Light</div>
+        <div class="price-jp">ライトプラン</div>
+        <div class="price-val">
+          <span class="num">59,800</span><span class="yen">円</span><span class="from">〜</span>
+        </div>
+        <p class="price-pos">まずは名刺代わりの、簡易的な1ページHPが欲しい方向け。</p>
+        <ul class="price-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>1ページHP制作</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>スマホ対応</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>基本的な文章整理</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>修正1回</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>GitHub Pages等での簡易公開</li>
+          <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"/></svg>独自ドメイン設定</li>
+          <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"/></svg>問い合わせフォーム</li>
+          <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"/></svg>サーバー契約サポート</li>
+          <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"/></svg>ロゴ制作 / 写真撮影</li>
+        </ul>
+        <a href="mailto:y.tsuchiya1997@gmail.com" class="btn btn-ghost">このプランで相談する</a>
+      </div>
+
+      <!-- スタンダード -->
+      <div class="price-card featured reveal d2">
+        <div class="price-ribbon">いちばんおすすめ</div>
+        <div class="price-name">Standard</div>
+        <div class="price-jp">スタンダードプラン</div>
+        <div class="price-val">
+          <span class="num">79,800</span><span class="yen">円</span><span class="from">〜</span>
+        </div>
+        <p class="price-pos">営業用HPとして使いやすい標準プラン。迷ったらこちら。</p>
+        <ul class="price-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>1ページHP / LP制作</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>構成提案</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>文章整理</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>スマホ対応</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>問い合わせ導線設計</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>修正2回</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>GitHub Pages等での公開サポート</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>独自ドメイン設定サポート</li>
+        </ul>
+        <p class="price-extra">※独自ドメイン取得費・更新費は別途実費となります。</p>
+        <a href="mailto:y.tsuchiya1997@gmail.com" class="btn btn-primary">このプランで相談する</a>
+      </div>
+
+      <!-- プレミアム -->
+      <div class="price-card reveal d3">
+        <div class="price-name">Premium</div>
+        <div class="price-jp">プレミアムプラン</div>
+        <div class="price-val">
+          <span class="num">119,800</span><span class="yen">円</span><span class="from">〜</span>
+        </div>
+        <p class="price-pos">見た目・構成・導線までしっかり整えたい方向け。</p>
+        <ul class="price-feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>1ページHP / LP制作</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>構成提案</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>文章整理</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>ブランディング方向性の整理</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>デザイン作り込み</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>修正3回</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>公開サポート</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>独自ドメイン設定サポート</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>問い合わせフォーム設置サポート</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>簡易運用アドバイス</li>
+        </ul>
+        <p class="price-extra">※外部サービス利用料が発生する場合は別途実費となります。</p>
+        <a href="mailto:y.tsuchiya1997@gmail.com" class="btn btn-ghost">このプランで相談する</a>
+      </div>
+
+    </div>
+    <div class="price-notes reveal">
+      <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/></svg>独自ドメイン取得費、サーバー費用、有料フォームサービス利用料などは別途実費となります。</p>
+      <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/></svg>正式な料金は、掲載内容・制作範囲を確認したうえでお見積もりいたします。</p>
+      <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/></svg>複数ページ制作、ロゴ制作、写真撮影、継続的な保守・更新代行は別途ご相談ください。</p>
+    </div>
+    <div class="center-cta reveal">
+      <a href="mailto:y.tsuchiya1997@gmail.com" class="btn btn-navy btn-lg">HP制作について相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">About</span>
+      <h2 class="sec-title">会社情報・代表プロフィール</h2>
+    </div>
+    <div class="about-grid">
+      <dl class="about-table reveal d1">
+        <div class="about-row"><dt>会社名</dt><dd>合同会社4U</dd></div>
+        <div class="about-row"><dt>代表者</dt><dd>土屋 裕二</dd></div>
+        <div class="about-row"><dt>所在地</dt><dd>群馬県沼田市</dd></div>
+        <div class="about-row"><dt>事業内容</dt><dd>ホームページ制作 / ランディングページ制作 / AIツール活用支援 / 動画制作・編集 / YouTubeチャンネル運営支援 / コンテンツ制作</dd></div>
+        <div class="about-row"><dt>対応エリア</dt><dd>群馬県沼田市周辺を中心に対応。オンラインで全国対応も可能です。</dd></div>
+        <div class="about-row"><dt>お問い合わせ</dt><dd><a href="mailto:y.tsuchiya1997@gmail.com" style="color:var(--cyan-deep);font-weight:700;">y.tsuchiya1997@gmail.com</a></dd></div>
+      </dl>
+      <div class="profile-card reveal d2">
+        <span class="eyebrow">Representative</span>
+        <div class="profile-name">
+          <div class="role">代表</div>
+          <div class="nm">土屋 裕二</div>
+        </div>
+        <p>
+          群馬県沼田市を拠点に、学習塾運営や動画制作・YouTube運営支援に取り組んでいます。
+          現在は、地域の個人事業主・小規模事業者に向けたHP/LP制作・AI活用支援が中心です。
+          学習塾で培った「わかりやすく伝える力」を活かし、見た目だけで終わらないWeb制作を心がけています。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="sec-title">よくある質問</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q"><span class="qm">Q</span><span class="qtext">文章や写真がまだなくても相談できますか？</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">可能です。事業内容や載せたい情報を伺い、文章のたたき台から一緒に整理できます。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q"><span class="qm">Q</span><span class="qtext">スマホでも見やすく作れますか？</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">はい。小規模店舗ではスマホ閲覧が多いため、スマホ表示を重視して制作します。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q"><span class="qm">Q</span><span class="qtext">独自ドメインの設定もお願いできますか？</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">スタンダードプラン以上、またはオプションで対応可能です。ドメイン取得費・更新費は別途実費となります。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q"><span class="qm">Q</span><span class="qtext">問い合わせフォームも設置できますか？</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">プレミアムプラン、またはオプションで対応可能です。外部サービスを利用する場合は、利用料が別途発生する場合があります。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q"><span class="qm">Q</span><span class="qtext">AIで作ると安っぽくなりませんか？</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">AIは制作スピードや提案の幅を広げるために活用します。最終的な構成・文章・導線・見た目は人の目で整えます。</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q"><span class="qm">Q</span><span class="qtext">公開後の修正もできますか？</span>
+          <span class="faq-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-a"><div class="faq-a-inner">営業時間や料金、メニュー変更などの小さな修正もご相談ください。内容に応じて別途お見積もりします。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT PRE ============ -->
+<section class="contact-pre">
+  <div class="wrap">
+    <div class="contact-pre-box reveal">
+      <span class="eyebrow">Before Contact</span>
+      <h2 class="sec-title" style="font-size:clamp(1.4rem,3.8vw,1.9rem);">問い合わせ前に伝えてほしいこと</h2>
+      <p class="sec-lead">すべて決まっていなくて大丈夫です。問い合わせの際は、わかる範囲で以下をお伝えいただけるとスムーズです。</p>
+      <div class="contact-pre-grid">
+        <div class="cp-chip"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg></span><b>業種・事業内容</b></div>
+        <div class="cp-chip"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></span><b>HPを作りたい目的</b></div>
+        <div class="cp-chip"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span><b>参考にしたいサイト</b></div>
+        <div class="cp-chip"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></span><b>載せたい内容</b></div>
+        <div class="cp-chip"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><b>希望納期</b></div>
+        <div class="cp-chip"><span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><b>予算感</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final-cta">
+  <div class="wrap">
+    <div class="final-inner">
+      <span class="eyebrow">Contact</span>
+      <h2>まずは、見せたいHPの<br>イメージから。</h2>
+      <p>「こんな感じにしたい」がふんわりした状態でも大丈夫です。お気軽にメールでご相談ください。</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+        <a href="mailto:y.tsuchiya1997@gmail.com?subject=無料試作デモの相談" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2 15 8.5 22 9.5 17 14.5 18.5 21.5 12 18 5.5 21.5 7 14.5 2 9.5 9 8.5z"/></svg>
+          無料試作を相談する
+        </a>
+        <a href="mailto:y.tsuchiya1997@gmail.com" class="btn btn-ghost btn-lg" style="background:transparent;border-color:rgba(255,255,255,.35);color:#fff;">
+          メールで相談する
+        </a>
+      </div>
+      <div class="final-mail">y.tsuchiya1997@gmail.com</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#top" class="logo">
+          <span class="logo-mark">4U</span>
+          <span class="logo-text">合同会社4U</span>
+        </a>
+        <p>ちゃんと伝わるHPを、小さなお店にも。群馬県沼田市周辺の個人事業主・小規模事業者向けのWeb制作パートナーです。</p>
+      </div>
+      <div class="foot-nav">
+        <div class="foot-col">
+          <h4>Menu</h4>
+          <a href="#services">できること</a>
+          <a href="#samples">制作サンプル</a>
+          <a href="#reasons">選ばれる理由</a>
+          <a href="#pricing">料金</a>
+        </div>
+        <div class="foot-col">
+          <h4>Information</h4>
+          <a href="#about">会社情報</a>
+          <a href="#faq">よくある質問</a>
+          <a href="mailto:y.tsuchiya1997@gmail.com">お問い合わせ</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2025 合同会社4U</span>
+      <span>群馬県沼田市 ／ オンライン全国対応</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // ---- header scroll state ----
+  var header=document.getElementById('header');
+  function onScroll(){
+    if(window.scrollY>20)header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  // ---- hamburger / drawer ----
+  var burger=document.getElementById('burger');
+  var drawer=document.getElementById('drawer');
+  function closeDrawer(){burger.classList.remove('open');drawer.classList.remove('open');}
+  burger.addEventListener('click',function(){
+    burger.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',closeDrawer);
+  });
+  document.addEventListener('click',function(e){
+    if(drawer.classList.contains('open')&&!drawer.contains(e.target)&&!burger.contains(e.target)){
+      closeDrawer();
+    }
+  });
+
+  // ---- FAQ accordion ----
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var q=item.querySelector('.faq-q');
+    var a=item.querySelector('.faq-a');
+    q.addEventListener('click',function(){
+      var isOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(it){
+        it.classList.remove('open');
+        it.querySelector('.faq-a').style.maxHeight=null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight=a.scrollHeight+'px';
+      }
+    });
+  });
+
+  // ---- reveal on scroll ----
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});
+  }
+})();
+</script>
 </body>
 </html>
