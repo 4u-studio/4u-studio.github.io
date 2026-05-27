@@ -1011,7 +1011,211 @@
       border-top:1px solid var(--line-soft);
       border-bottom:1px solid var(--line-soft);
     }
+    /* スマホ固定CTAバーの背景を黒の半透明に */
+    .sticky-cta{
+      background:rgba(12,12,13,.92);
+    }
   }
+
+  /* ============================================================
+     ADDITIONS — ナビ現在地 / FAQ / 固定CTA / トップ戻る 他
+     ============================================================ */
+
+  /* --- ナビゲーション現在地表示 --- */
+  .nav-links a.active{ color:var(--ink); }
+  .nav-links a.active::after{ width:100%; }
+
+  /* --- 代表ストーリー：折りたたみ（スマホのみ機能） --- */
+  /* 表示制御は hidden 属性で行う（JSが画面幅に応じて付け外し） */
+  .story-toggle{ display:none; }
+
+  /* --- STEP：順次表示を少し強めに --- */
+  .step.reveal{ transform:translateY(34px); }
+  .step.reveal.in{ transform:none; }
+
+  /* --- 料金カード：相談ボタン --- */
+  .plan-cta{
+    margin-top:24px;
+    width:100%;
+    justify-content:center;
+    font-size:.95rem;
+    padding:14px 22px;
+  }
+  .plan-card{ /* フッターのボタンを下端に揃える */
+    /* （既存 display:flex; flex-direction:column; を活かす） */
+  }
+  .plan-feat{ flex:1; }
+  .plan-cta-ghost{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--ink);
+  }
+  .plan-cta-ghost:hover{ border-color:var(--accent); color:var(--accent-deep); }
+
+  /* スマホ用に内容をまとめた箇条書き（PCでは隠す） */
+  .feat-sp{ display:none; }
+
+  /* --- 料金セクション下部のCTA --- */
+  .pricing-cta{
+    margin-top:40px;
+    text-align:center;
+  }
+
+  /* --- FAQ セクション --- */
+  .faq{ padding:104px 0; }
+  .faq-head{ text-align:center; margin-bottom:48px; }
+  .faq-list{
+    max-width:760px; margin:0 auto;
+    border-top:1px solid var(--line);
+  }
+  .faq-item{
+    border-bottom:1px solid var(--line);
+  }
+  .faq-q{
+    width:100%;
+    background:none; border:none;
+    cursor:pointer;
+    display:flex; align-items:flex-start; gap:16px;
+    padding:24px 4px;
+    text-align:left;
+    font-family:var(--sans);
+    font-size:1.02rem; font-weight:700;
+    color:var(--ink);
+    line-height:1.6;
+  }
+  .faq-q .q-mark{
+    font-family:var(--serif); font-style:italic;
+    color:var(--accent-deep);
+    flex-shrink:0;
+    font-size:1.1rem;
+    line-height:1.5;
+  }
+  .faq-q .q-text{ flex:1; }
+  .faq-q .q-icon{
+    flex-shrink:0;
+    width:22px; height:22px;
+    position:relative;
+    margin-top:4px;
+    transition:transform .3s var(--ease);
+  }
+  .faq-q .q-icon::before,
+  .faq-q .q-icon::after{
+    content:"";
+    position:absolute;
+    background:var(--accent);
+    border-radius:2px;
+  }
+  .faq-q .q-icon::before{
+    top:50%; left:3px; right:3px; height:2px;
+    transform:translateY(-50%);
+  }
+  .faq-q .q-icon::after{
+    left:50%; top:3px; bottom:3px; width:2px;
+    transform:translateX(-50%);
+    transition:opacity .3s var(--ease);
+  }
+  .faq-item.open .q-icon{ transform:rotate(180deg); }
+  .faq-item.open .q-icon::after{ opacity:0; }
+  .faq-a{
+    overflow:hidden;
+    max-height:0;
+    transition:max-height .35s var(--ease);
+  }
+  .faq-a-inner{
+    padding:0 4px 26px 42px;
+    color:var(--ink-soft);
+    font-size:.96rem;
+    line-height:1.85;
+  }
+
+  /* --- スクロールトップボタン --- */
+  .to-top{
+    position:fixed;
+    right:22px; bottom:24px;
+    width:46px; height:46px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 24px -10px rgba(156,86,57,.7);
+    opacity:0; visibility:hidden;
+    transform:translateY(12px);
+    transition:opacity .3s var(--ease), transform .3s var(--ease), background .25s var(--ease);
+    z-index:90;
+  }
+  .to-top.show{ opacity:1; visibility:visible; transform:none; }
+  .to-top:hover{ background:var(--accent-deep); transform:translateY(-3px); }
+  .to-top svg{ width:18px; height:18px; }
+
+  /* --- スマホ固定CTAバー --- */
+  .sticky-cta{
+    display:none;
+    position:fixed;
+    left:0; right:0; bottom:0;
+    z-index:95;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(251,250,248,.94);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-top:1px solid var(--line);
+  }
+  .sticky-cta .btn{
+    width:100%;
+    justify-content:center;
+    padding:15px 22px;
+  }
+
+  /* ============================================================
+     RESPONSIVE — 追加分（スマホ最適化）
+     ============================================================ */
+  @media (max-width:760px){
+    /* 12. セクション余白をやや詰める（窮屈にしない範囲で） */
+    .statement, .founder, .service, .flow, .pricing,
+    .company, .contact, .faq, .naming{
+      padding:62px 0;
+    }
+    .hero{ padding:116px 0 60px; }
+
+    /* 3. 固定CTA表示 + 本文下に余白 */
+    .sticky-cta{ display:block; }
+    body{ padding-bottom:78px; }
+    /* 固定CTAとトップ戻るボタンの重なりを回避 */
+    .to-top{ bottom:84px; }
+
+    /* 2. Googleフォームiframeはスマホで非表示 */
+    .form-card{ display:none; }
+    .form-open{ margin-bottom:0; }
+
+    /* 1. 代表ストーリー折りたたみ */
+    .story-toggle{
+      display:inline-flex;
+      align-items:center; gap:8px;
+      margin-top:6px;
+      background:none; border:none;
+      cursor:pointer;
+      font-family:var(--sans);
+      font-size:.95rem; font-weight:700;
+      color:var(--accent-deep);
+      padding:6px 0;
+    }
+    .story-toggle .chev{
+      transition:transform .3s var(--ease);
+    }
+    .story-toggle[aria-expanded="true"] .chev{
+      transform:rotate(180deg);
+    }
+
+    /* 4. 料金：箇条書きを切り替え（スマホ用のまとめ表示） */
+    .feat-pc{ display:none; }
+    .feat-sp{ display:flex; }
+
+    /* FAQ 余白微調整 */
+    .faq-q{ font-size:.97rem; padding:20px 2px; }
+    .faq-a-inner{ padding:0 2px 22px 38px; }
+  }
+
 </style>
 </head>
 <body>
@@ -1135,9 +1339,16 @@
         <h2 class="reveal d1">「伝え方」で損をする人を、<br />ひとりでも減らしたい。</h2>
         <p class="reveal d1">私が4Uを通じて目指しているのは、資金や専門知識がなくても、自分の事業の魅力をきちんと伝えられる——そんな状態を、地域の事業者に届けることです。きっかけは、ほかでもない私自身の経験でした。個別指導塾 free を立ち上げたとき、最初にぶつかったのが<span class="hl">「どうやって塾を知ってもらうか」</span>という集客の壁。良い授業をする自信はあっても、それを届ける手段がわからなかったのです。</p>
         <p class="reveal d2">開業したばかりで、資金に余裕はありません。ホームページや広告にまとまったお金をかけることはできない。調べてみると、制作会社に頼んだ場合の費用は、想像をはるかに超える高額でした。仕方なく自力でホームページを作ってみたものの、出来上がったのは、どこかで見たようなありきたりのテンプレート。<span class="hl">これでは、自分の塾の良さは何ひとつ伝わらない</span>——そう痛感しました。</p>
-        <div class="founder-quote reveal d2">お金をかけられない人ほど、伝え方で損をする。<br />だったら、その入り口の費用を下げればいい。</div>
-        <p class="reveal d3">そこから、自分で試行錯誤を重ねました。塾で毎日続けてきた「むずかしいことを、わかりやすく伝える」力をWebに応用し、何を載せれば伝わるのかを一つずつ確かめていく。さらにAIを使えば、制作にかかるコストと時間は大きく抑えられる。たどり着いた答えが、長い説明や高い初期費用の前に、まず実際に見て確かめられる<span class="hl">無料の試作デモ</span>という形でした。</p>
-        <p class="reveal d3">いま4Uは、ホームページやランディングページ、動画制作を通して、地域の事業者の「伝える」をお手伝いしています。かつての私と同じように、資金や知識がなくて一歩を踏み出せずにいる方へ。完成イメージを目で見て、納得してから決められる安心を届けたい。良いものを持つ人が、まっすぐ選ばれる地域を、一緒につくっていきます。</p>
+
+        <button class="story-toggle" id="storyToggle" aria-expanded="false" aria-controls="storyMore">
+          代表ストーリーをもっと読む<span class="chev" aria-hidden="true">▾</span>
+        </button>
+
+        <div class="story-more" id="storyMore" hidden>
+          <div class="founder-quote reveal d2">お金をかけられない人ほど、伝え方で損をする。<br />だったら、その入り口の費用を下げればいい。</div>
+          <p class="reveal d3">そこから、自分で試行錯誤を重ねました。塾で毎日続けてきた「むずかしいことを、わかりやすく伝える」力をWebに応用し、何を載せれば伝わるのかを一つずつ確かめていく。さらにAIを使えば、制作にかかるコストと時間は大きく抑えられる。たどり着いた答えが、長い説明や高い初期費用の前に、まず実際に見て確かめられる<span class="hl">無料の試作デモ</span>という形でした。</p>
+          <p class="reveal d3">いま4Uは、ホームページやランディングページ、動画制作を通して、地域の事業者の「伝える」をお手伝いしています。かつての私と同じように、資金や知識がなくて一歩を踏み出せずにいる方へ。完成イメージを目で見て、納得してから決められる安心を届けたい。良いものを持つ人が、まっすぐ選ばれる地域を、一緒につくっていきます。</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1264,13 +1475,19 @@
           <p class="plan-price">59,800<small>円〜</small></p>
           <p class="plan-desc">まずはシンプルにホームページを持ちたい方向け。</p>
           <hr class="plan-divider" />
-          <ul class="plan-feat">
+          <ul class="plan-feat feat-pc">
             <li>1ページ構成</li>
             <li>スマホ対応</li>
             <li>基本情報の掲載</li>
             <li>お問い合わせ導線</li>
             <li>修正1回まで</li>
           </ul>
+          <ul class="plan-feat feat-sp">
+            <li>1ページ構成・スマホ対応</li>
+            <li>基本情報の掲載・お問い合わせ導線</li>
+            <li>修正1回まで</li>
+          </ul>
+          <a href="#contact" class="btn plan-cta plan-cta-ghost">ライトプランで相談する</a>
         </article>
 
         <article class="plan-card featured reveal d1">
@@ -1280,7 +1497,7 @@
           <p class="plan-price">99,800<small>円〜</small></p>
           <p class="plan-desc">事業の魅力やサービス内容をしっかり伝えたい方向け。</p>
           <hr class="plan-divider" />
-          <ul class="plan-feat">
+          <ul class="plan-feat feat-pc">
             <li>1ページ充実構成</li>
             <li>構成提案</li>
             <li>文章整理サポート</li>
@@ -1289,6 +1506,13 @@
             <li>お問い合わせ導線</li>
             <li>修正2回まで</li>
           </ul>
+          <ul class="plan-feat feat-sp">
+            <li>1ページ充実構成・構成提案</li>
+            <li>文章整理サポート</li>
+            <li>スマホ対応・SEO基本設定</li>
+            <li>お問い合わせ導線・修正2回まで</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary plan-cta">スタンダードで相談する<span class="arrow">→</span></a>
         </article>
 
         <article class="plan-card reveal d2">
@@ -1297,7 +1521,7 @@
           <p class="plan-price">179,800<small>円〜</small></p>
           <p class="plan-desc">ブランディングや集客導線まで見据えた本格制作。</p>
           <hr class="plan-divider" />
-          <ul class="plan-feat">
+          <ul class="plan-feat feat-pc">
             <li>複数ページ対応</li>
             <li>導線設計</li>
             <li>文章作成サポート</li>
@@ -1306,6 +1530,14 @@
             <li>SEO基本設定</li>
             <li>修正3回まで</li>
           </ul>
+          <ul class="plan-feat feat-sp">
+            <li>複数ページ対応・導線設計</li>
+            <li>文章作成サポート</li>
+            <li>サービス設計の整理</li>
+            <li>SNS / 動画導線・SEO基本設定</li>
+            <li>修正3回まで</li>
+          </ul>
+          <a href="#contact" class="btn plan-cta plan-cta-ghost">プレミアムで相談する</a>
         </article>
 
       </div>
@@ -1329,6 +1561,10 @@
       </div>
 
       <p class="price-note reveal">※ 表示価格は目安です。内容やページ数、必要なサポート範囲により変動します。詳しい料金は、無料試作デモまたはご相談後にお見積もりいたします。</p>
+
+      <div class="pricing-cta reveal">
+        <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
+      </div>
     </div>
   </section>
 
@@ -1349,6 +1585,74 @@
           <tr><th>お問い合わせ</th><td><a href="#contact" class="link-arrow">お問い合わせフォームへ →</a></td></tr>
         </tbody>
       </table>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="faq-head">
+        <span class="eyebrow center reveal">FAQ</span>
+        <h2 class="section-title reveal d1">よくあるご質問</h2>
+      </div>
+      <div class="faq-list reveal d1">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">無料試作デモは本当に無料ですか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">はい、無料です。デモをご確認いただき、気に入った場合のみ正式にご依頼いただけます。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">パソコンやWebに詳しくなくても大丈夫ですか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">大丈夫です。専門用語をできるだけ使わず、必要な内容を整理しながら進めます。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">写真や文章がまだ用意できていなくても相談できますか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">はい、可能です。まずは現在ある情報をもとに試作し、必要な素材は一緒に整理していきます。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">公開後の修正や管理もお願いできますか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">はい、月額の保守管理プランをご用意しています。軽微な修正や表示確認、サーバー・ドメイン周りの相談にも対応します。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">無理な営業はありませんか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">ありません。試作デモをご覧いただいたうえで、必要ないと感じた場合は断っていただいて大丈夫です。</div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -1425,6 +1729,16 @@
   </div>
 </footer>
 
+<!-- スクロールトップ -->
+<button class="to-top" id="toTop" aria-label="ページ上部へ戻る">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- スマホ固定CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
+</div>
+
 <script>
   /* ---------- header scroll state ---------- */
   const header = document.getElementById('header');
@@ -1456,6 +1770,114 @@
     });
   }, { threshold:0.12, rootMargin:'0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- 制作の流れ：STEPの順次表示 ---------- */
+  const steps = document.querySelectorAll('.flow .step');
+  if (steps.length){
+    const stepIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting){
+          const i = [...steps].indexOf(e.target);
+          const delay = reduceMotion ? 0 : i * 140;
+          setTimeout(() => e.target.classList.add('in'), delay);
+          stepIo.unobserve(e.target);
+        }
+      });
+    }, { threshold:0.2 });
+    steps.forEach(s => stepIo.observe(s));
+  }
+
+  /* ---------- ナビゲーション現在地表示 ---------- */
+  const navLinks = [...document.querySelectorAll('.nav-links a')];
+  const sections = navLinks
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+  if (sections.length){
+    const navIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting){
+          const id = e.target.getAttribute('id');
+          navLinks.forEach(a =>
+            a.classList.toggle('active', a.getAttribute('href') === '#' + id)
+          );
+        }
+      });
+    }, { rootMargin:'-45% 0px -50% 0px' });
+    sections.forEach(s => navIo.observe(s));
+  }
+
+  /* ---------- 代表ストーリー：折りたたみ（スマホのみ） ---------- */
+  const storyToggle = document.getElementById('storyToggle');
+  const storyMore = document.getElementById('storyMore');
+  const mqMobile = window.matchMedia('(max-width: 760px)');
+  if (storyToggle && storyMore){
+    /* 画面幅に応じて初期状態を決める */
+    const syncStory = () => {
+      if (mqMobile.matches){
+        /* スマホ：未操作なら閉じる */
+        if (storyToggle.getAttribute('aria-expanded') !== 'true'){
+          storyMore.setAttribute('hidden', '');
+        }
+      } else {
+        /* PC：常に全表示 */
+        storyMore.removeAttribute('hidden');
+        storyMore.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+      }
+    };
+    syncStory();
+    mqMobile.addEventListener('change', syncStory);
+
+    storyToggle.addEventListener('click', () => {
+      const willOpen = storyMore.hasAttribute('hidden');
+      if (willOpen){
+        storyMore.removeAttribute('hidden');
+        storyToggle.setAttribute('aria-expanded', 'true');
+        storyToggle.firstChild.textContent = '代表ストーリーを閉じる';
+        storyMore.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+      } else {
+        storyMore.setAttribute('hidden', '');
+        storyToggle.setAttribute('aria-expanded', 'false');
+        storyToggle.firstChild.textContent = '代表ストーリーをもっと読む';
+      }
+    });
+  }
+
+  /* ---------- FAQ アコーディオン ---------- */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      if (isOpen){
+        item.classList.remove('open');
+        q.setAttribute('aria-expanded', 'false');
+        a.style.maxHeight = '0px';
+      } else {
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+  /* 画面リサイズ時に開いているFAQの高さを再計算 */
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.faq-item.open .faq-a').forEach(a => {
+      a.style.maxHeight = a.scrollHeight + 'px';
+    });
+  }, { passive:true });
+
+  /* ---------- スクロールトップ & 固定CTA ---------- */
+  const toTop = document.getElementById('toTop');
+  toTop.addEventListener('click', () => {
+    window.scrollTo({ top:0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+  const toggleScrollUi = () => {
+    toTop.classList.toggle('show', window.scrollY > 600);
+  };
+  toggleScrollUi();
+  window.addEventListener('scroll', toggleScrollUi, { passive:true });
 </script>
 
 </body>
