@@ -494,6 +494,126 @@
   }
 
   /* ============================================================
+     CONCERNS（こんなお悩みはありませんか？）
+     ============================================================ */
+  .concerns{ padding:104px 0; }
+  .concerns-head{ text-align:center; margin-bottom:52px; }
+  .concerns-head p{
+    margin-top:18px; color:var(--ink-soft);
+    max-width:34em; margin-left:auto; margin-right:auto;
+  }
+  .concerns-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  .concern-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:30px 28px;
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+  }
+  .concern-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 24px 46px -30px rgba(28,26,23,.3);
+    border-color:var(--accent-tint);
+  }
+  .concern-card .c-check{
+    width:34px; height:34px; border-radius:9px;
+    background:var(--accent-tint);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:16px;
+  }
+  .concern-card .c-check svg{ width:18px; height:18px; stroke:var(--accent-deep); }
+  .concern-card .c-who{
+    font-size:.78rem; font-weight:700; letter-spacing:.04em;
+    color:var(--accent-deep);
+    margin-bottom:8px;
+  }
+  .concern-card .c-text{
+    font-size:1rem; font-weight:700;
+    color:var(--ink);
+    line-height:1.65;
+  }
+
+  /* --- Instagram × ホームページ 比較 --- */
+  .roles{
+    margin-top:64px;
+  }
+  .roles-head{ text-align:center; margin-bottom:36px; }
+  .roles-head h3{
+    font-size:clamp(1.3rem, 1rem + 1.5vw, 1.85rem);
+    line-height:1.6;
+  }
+  .roles-head p{
+    margin-top:16px; color:var(--ink-soft);
+    max-width:36em; margin-left:auto; margin-right:auto;
+    font-size:.98rem;
+  }
+  .roles-pair{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    max-width:880px; margin:0 auto;
+  }
+  .role-card{
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:30px 30px 32px;
+    background:var(--surface);
+  }
+  .role-card.web{
+    border-color:var(--accent);
+    background:var(--accent-tint);
+  }
+  .role-card .r-label{
+    font-family:var(--serif); font-style:italic;
+    font-size:1.15rem;
+    margin-bottom:4px;
+  }
+  .role-card.insta .r-label{ color:var(--ink); }
+  .role-card.web .r-label{ color:var(--accent-deep); }
+  .role-card .r-sub{
+    font-size:.82rem; color:var(--muted);
+    margin-bottom:18px;
+  }
+  .role-card.web .r-sub{ color:var(--accent-deep); }
+  .role-card ul{
+    list-style:none;
+    display:flex; flex-direction:column; gap:11px;
+  }
+  .role-card li{
+    position:relative;
+    padding-left:24px;
+    font-size:.94rem;
+    color:var(--ink);
+    line-height:1.6;
+  }
+  .role-card li::before{
+    content:"";
+    position:absolute; left:0; top:7px;
+    width:13px; height:13px; border-radius:50%;
+    background-repeat:no-repeat; background-position:center;
+  }
+  .role-card.insta li::before{
+    background:var(--bg-panel);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 24 24' fill='none' stroke='%236E6960' stroke-width='4' stroke-linecap='round'%3E%3Cpath d='M5 12h14'/%3E%3C/svg%3E");
+  }
+  .role-card.web li::before{
+    background:var(--accent);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  }
+  .roles-note{
+    text-align:center;
+    margin-top:30px;
+    font-size:.92rem;
+    color:var(--ink-soft);
+    max-width:34em; margin-left:auto; margin-right:auto;
+    line-height:1.85;
+  }
+
+  /* ============================================================
      SERVICE
      ============================================================ */
   .service{ padding:104px 0; background:var(--bg-panel); }
@@ -868,6 +988,7 @@
     .founder-grid{ grid-template-columns:1fr; gap:36px; }
     .founder-aside{ position:static; }
     .service-grid{ grid-template-columns:1fr 1fr; }
+    .concerns-grid{ grid-template-columns:1fr 1fr; }
     .company-grid{ grid-template-columns:1fr; gap:30px; }
   }
 
@@ -904,6 +1025,9 @@
     }
     .mission-pair{ grid-template-columns:1fr; }
     .service-grid{ grid-template-columns:1fr; }
+    .concerns-grid{ grid-template-columns:1fr; }
+    .roles-pair{ grid-template-columns:1fr; gap:14px; }
+    .roles{ margin-top:48px; }
     .steps{ grid-template-columns:1fr; gap:14px; }
     .steps::before{ display:none; }
     .step{
@@ -1173,7 +1297,7 @@
   @media (max-width:760px){
     /* 12. セクション余白をやや詰める（窮屈にしない範囲で） */
     .statement, .founder, .service, .flow, .pricing,
-    .company, .contact, .faq, .naming{
+    .company, .contact, .faq, .naming, .concerns{
       padding:62px 0;
     }
     .hero{ padding:116px 0 60px; }
@@ -1295,7 +1419,7 @@
     <div class="wrap statement-inner">
       <span class="eyebrow center reveal">Vision</span>
       <h2 class="reveal d1">地域の小さな事業者の価値が、<br />必要な人に、きちんと届く社会へ。</h2>
-      <p class="body reveal d2">良いサービス、良い技術、良いお店。地域にはそれが確かにあるのに、「知られていない」というだけで選ばれないことがあります。4Uは、その距離を縮めるためのホームページをつくります。</p>
+      <p class="body reveal d2">沼田市をはじめ、地域には良いお店、良い技術、良いサービスを持つ事業者がたくさんあります。けれど、スマホで調べたときに情報が見つからなかったり、魅力が十分に伝わらなかったりすることで、選ばれる機会を逃してしまうことがあります。4Uは、地域の小さな事業者の魅力が、必要な人にきちんと届くためのWebづくりをお手伝いします。</p>
     </div>
   </section>
 
@@ -1336,16 +1460,17 @@
 
       <div class="founder-body">
         <span class="eyebrow reveal">Founder's Story</span>
-        <h2 class="reveal d1">「伝え方」で損をする人を、<br />ひとりでも減らしたい。</h2>
-        <p class="reveal d1">私が4Uを通じて目指しているのは、資金や専門知識がなくても、自分の事業の魅力をきちんと伝えられる——そんな状態を、地域の事業者に届けることです。きっかけは、ほかでもない私自身の経験でした。個別指導塾 free を立ち上げたとき、最初にぶつかったのが<span class="hl">「どうやって塾を知ってもらうか」</span>という集客の壁。良い授業をする自信はあっても、それを届ける手段がわからなかったのです。</p>
-        <p class="reveal d2">開業したばかりで、資金に余裕はありません。ホームページや広告にまとまったお金をかけることはできない。調べてみると、制作会社に頼んだ場合の費用は、想像をはるかに超える高額でした。仕方なく自力でホームページを作ってみたものの、出来上がったのは、どこかで見たようなありきたりのテンプレート。<span class="hl">これでは、自分の塾の良さは何ひとつ伝わらない</span>——そう痛感しました。</p>
+        <h2 class="reveal d1">良いものがあるのに、伝わらない。<br />そのもったいなさを減らしたい。</h2>
+        <p class="reveal d1">私の地元である沼田市には、良いお店や良いサービスを持つ事業者さんがたくさんいます。一方で、ホームページがなかったり、スマホで見づらかったり、情報が整理されていなかったりすることで、本来の魅力が伝わりきっていない場面もあります。</p>
+        <p class="reveal d1">この想いの出発点は、ほかでもない私自身の経験でした。個別指導塾 free を立ち上げたとき、最初にぶつかったのが<span class="hl">「どうやって塾を知ってもらうか」</span>という集客の壁。良い授業をする自信はあっても、それを届ける手段がわからなかったのです。</p>
+        <p class="reveal d2">開業したばかりで、資金に余裕はありません。ホームページや広告にまとまったお金をかけることはできない。調べてみると、制作会社に頼んだ場合の費用は、想像をはるかに超える高額でした。仕方なく自力でホームページを作ってみたものの、出来上がったのは、どこかで見たようなありきたりのテンプレート。<span class="hl">これでは、自分の塾の良さは何ひとつ伝わらない</span>——そう感じました。</p>
 
         <button class="story-toggle" id="storyToggle" aria-expanded="false" aria-controls="storyMore">
           代表ストーリーをもっと読む<span class="chev" aria-hidden="true">▾</span>
         </button>
 
         <div class="story-more" id="storyMore" hidden>
-          <div class="founder-quote reveal d2">お金をかけられない人ほど、伝え方で損をする。<br />だったら、その入り口の費用を下げればいい。</div>
+          <div class="founder-quote reveal d2">良いものがあるのに、伝わらない。<br />それは、とてももったいないことだと思いました。</div>
           <p class="reveal d3">そこから、自分で試行錯誤を重ねました。塾で毎日続けてきた「むずかしいことを、わかりやすく伝える」力をWebに応用し、何を載せれば伝わるのかを一つずつ確かめていく。さらにAIを使えば、制作にかかるコストと時間は大きく抑えられる。たどり着いた答えが、長い説明や高い初期費用の前に、まず実際に見て確かめられる<span class="hl">無料の試作デモ</span>という形でした。</p>
           <p class="reveal d3">いま4Uは、ホームページやランディングページ、動画制作を通して、地域の事業者の「伝える」をお手伝いしています。かつての私と同じように、資金や知識がなくて一歩を踏み出せずにいる方へ。完成イメージを目で見て、納得してから決められる安心を届けたい。良いものを持つ人が、まっすぐ選ばれる地域を、一緒につくっていきます。</p>
         </div>
@@ -1360,6 +1485,87 @@
       <span class="eyebrow center reveal">Our Name</span>
       <p class="naming-text reveal d1">「4U」という社名は、<em>For You</em>。<br />「あなたのために」という想いを込めています。</p>
       <p class="naming-sub reveal d2">目の前のひとりの事業者のために、できることをする。<br />その姿勢を、これからも変えません。</p>
+    </div>
+  </section>
+
+  <!-- ===================== CONCERNS ===================== -->
+  <section class="concerns" id="concerns">
+    <div class="wrap">
+      <div class="concerns-head">
+        <span class="eyebrow center reveal">Your Concerns</span>
+        <h2 class="section-title reveal d1">こんなお悩みはありませんか？</h2>
+        <p class="reveal d2">開業前・開業直後の方から、今あるホームページを見直したい方まで。4Uは、地域の小さな事業者の「まず整えたいWebまわり」をお手伝いします。</p>
+      </div>
+
+      <div class="concerns-grid">
+
+        <article class="concern-card reveal">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">これから開業する方</p>
+          <p class="c-text">名刺代わりになるページを用意したい</p>
+        </article>
+
+        <article class="concern-card reveal d1">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">開業したばかりの方</p>
+          <p class="c-text">まずは低予算でWeb上の入り口を整えたい</p>
+        </article>
+
+        <article class="concern-card reveal d2">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">自作ホームページの方</p>
+          <p class="c-text">見た目や文章をもう少し整えたい</p>
+        </article>
+
+        <article class="concern-card reveal">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">Instagramだけで発信している方</p>
+          <p class="c-text">料金・サービス・予約方法を分かりやすくまとめたい</p>
+        </article>
+
+        <article class="concern-card reveal d1">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">ホームページが古い方</p>
+          <p class="c-text">今の事業内容に合う形へ見直したい</p>
+        </article>
+
+        <article class="concern-card reveal d2">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">スマホで見づらいサイトの方</p>
+          <p class="c-text">スマホからでも問い合わせしやすい形にしたい</p>
+        </article>
+
+      </div>
+
+      <!-- Instagram × ホームページ の役割比較 -->
+      <div class="roles">
+        <div class="roles-head">
+          <h3 class="reveal">SNSだけでは伝えきれない情報を、<br />ホームページに。</h3>
+          <p class="reveal d1">Instagramは、お店の雰囲気や日々の活動を伝えるのに向いています。一方で、料金・サービス内容・アクセス・予約方法などを整理して伝えるには、ホームページがあると安心です。</p>
+        </div>
+        <div class="roles-pair">
+          <div class="role-card insta reveal d1">
+            <p class="r-label">Instagram</p>
+            <p class="r-sub">日々を届ける</p>
+            <ul>
+              <li>日々の雰囲気を伝える</li>
+              <li>投稿で知ってもらう</li>
+              <li>興味を持ってもらう</li>
+            </ul>
+          </div>
+          <div class="role-card web reveal d2">
+            <p class="r-label">ホームページ</p>
+            <p class="r-sub">情報を整えて置く</p>
+            <ul>
+              <li>サービス内容を整理して伝える</li>
+              <li>必要な情報を固定して置ける</li>
+              <li>予約・問い合わせにつなげる</li>
+            </ul>
+          </div>
+        </div>
+        <p class="roles-note reveal">お店やサービスを探すとき、多くの方はまずスマホで情報を確認します。だからこそホームページは「あるだけ」ではなく、スマホで見やすく、料金やサービス内容、予約や問い合わせまで迷わずたどり着けることが大切だと考えています。</p>
+      </div>
+
     </div>
   </section>
 
