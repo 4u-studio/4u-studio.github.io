@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>合同会社4U｜地域の事業者のためのホームページ制作</title>
-<meta name="description" content="群馬県沼田市の合同会社4U。沼田市・群馬県内の個人事業主・小規模事業者向けに、低価格・短納期のホームページ制作・LP制作・既存サイト改善を行っています。まずは無料の試作デモで完成イメージをご確認ください。" />
+<meta name="description" content="群馬県沼田市の合同会社4U。地域の個人事業主・小規模事業者向けに、AIを活用した低価格・短納期のホームページ制作・LP制作・動画制作を行っています。まずは無料の試作デモからお気軽にご相談ください。" />
 <meta property="og:title" content="合同会社4U｜地域の事業者のためのホームページ制作" />
-<meta property="og:description" content="小さな事業の魅力が、スマホでちゃんと伝わるホームページを。無料の試作デモから始められます。" />
+<meta property="og:description" content="小さな事業者の魅力が、ちゃんと伝わるホームページを。無料の試作デモから始められます。" />
 <meta property="og:type" content="website" />
 <meta name="color-scheme" content="light dark" />
 <meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)" />
@@ -1016,13 +1016,7 @@
       font-size:1rem;
     }
     .mobile-menu .btn{
-      display:flex;
-      width:100%;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      margin-top:18px;
-      padding:16px 22px;
+      width:100%; justify-content:center; margin-top:18px;
     }
 
     .hero{ padding:120px 0 72px; }
@@ -1290,24 +1284,6 @@
     backdrop-filter:blur(12px);
     -webkit-backdrop-filter:blur(12px);
     border-top:1px solid var(--line);
-    opacity:0;
-    visibility:hidden;
-    pointer-events:none;
-    transform:translateY(110%);
-    transition:opacity .3s var(--ease), transform .3s var(--ease), visibility .3s var(--ease);
-  }
-  .sticky-cta.show{
-    opacity:1;
-    visibility:visible;
-    pointer-events:auto;
-    transform:translateY(0);
-  }
-  body.menu-open .sticky-cta,
-  body.menu-open .to-top{
-    opacity:0 !important;
-    visibility:hidden !important;
-    pointer-events:none !important;
-    transform:translateY(110%);
   }
   .sticky-cta .btn{
     width:100%;
@@ -1326,14 +1302,11 @@
     }
     .hero{ padding:116px 0 60px; }
 
-    /* 3. 固定CTAはスクロール後に表示 */
+    /* 3. 固定CTA表示 + 本文下に余白 */
     .sticky-cta{ display:block; }
     body{ padding-bottom:78px; }
     /* 固定CTAとトップ戻るボタンの重なりを回避 */
     .to-top{ bottom:84px; }
-
-    /* 4. スマホでは重複する吹き出しを非表示 */
-    .float-chip{ display:none; }
 
     /* 2. Googleフォームiframeはスマホで非表示 */
     .form-card{ display:none; }
@@ -1367,143 +1340,6 @@
     .faq-a-inner{ padding:0 2px 22px 38px; }
   }
 
-
-  /* ============================================================
-     CONTENT REFINEMENT — 2026 update
-     CTA導線・読みやすさ・情報整理のための追加調整
-     ============================================================ */
-  .nav-links .nav-cta-link{ display:none; }
-
-  .hero-assurance{
-    margin-top:20px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    list-style:none;
-  }
-  .hero-assurance li{
-    font-size:.84rem;
-    font-weight:700;
-    color:var(--ink);
-    background:var(--surface);
-    border:1px solid var(--line);
-    border-radius:999px;
-    padding:7px 14px;
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-  }
-  .hero-assurance li::before{
-    content:"";
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    background:var(--accent);
-  }
-
-  .concerns-grid{
-    grid-template-columns:repeat(4,1fr);
-  }
-  .concern-card .c-who{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:.92rem;
-    letter-spacing:.02em;
-  }
-
-  .roles-section{
-    padding:96px 0;
-    background:var(--bg-panel);
-  }
-  .roles-section .roles{
-    margin-top:0;
-  }
-
-  .story-details{
-    margin-top:10px;
-  }
-  .story-details summary{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    cursor:pointer;
-    font-weight:700;
-    color:var(--accent-deep);
-    padding:8px 0;
-    list-style:none;
-  }
-  .story-details summary::-webkit-details-marker{
-    display:none;
-  }
-  .story-details summary::after{
-    content:"▾";
-    display:inline-block;
-    transition:transform .25s var(--ease);
-  }
-  .story-details[open] summary::after{
-    transform:rotate(180deg);
-  }
-  .story-details .story-more-inner{
-    margin-top:18px;
-  }
-
-  .service-grid{
-    grid-template-columns:repeat(4,1fr);
-  }
-  .section-cta{
-    margin-top:42px;
-    text-align:center;
-    max-width:620px;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  .section-cta p{
-    color:var(--ink-soft);
-    margin-bottom:18px;
-    line-height:1.85;
-  }
-  .section-cta.light p{
-    color:#bdb8b0;
-  }
-
-  .flow-cta{
-    margin-top:42px;
-    text-align:center;
-  }
-
-  .profile-table td .profile-lines{
-    display:block;
-    line-height:1.9;
-  }
-
-  @media (max-width:980px){
-    .concerns-grid,
-    .service-grid{
-      grid-template-columns:1fr 1fr;
-    }
-  }
-
-  @media (max-width:760px){
-    .hero-assurance{
-      gap:8px;
-    }
-    .hero-assurance li{
-      width:100%;
-      justify-content:flex-start;
-    }
-    .concerns-grid,
-    .service-grid{
-      grid-template-columns:1fr;
-    }
-    .roles-section{
-      padding:62px 0;
-    }
-    .section-cta,
-    .flow-cta{
-      margin-top:32px;
-    }
-  }
-
 </style>
 </head>
 <body>
@@ -1517,11 +1353,11 @@
     </a>
     <nav class="nav" aria-label="メインナビゲーション">
       <ul class="nav-links">
-        <li><a href="#concerns">選ばれる理由</a></li>
+        <li><a href="#vision">私たちの想い</a></li>
         <li><a href="#service">サービス</a></li>
         <li><a href="#flow">制作の流れ</a></li>
-        <li><a href="#pricing">料金</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#pricing">料金目安</a></li>
+        <li><a href="#company">会社概要</a></li>
       </ul>
       <a href="#contact" class="btn btn-primary">無料試作デモ<span class="arrow">→</span></a>
     </nav>
@@ -1533,11 +1369,11 @@
 
 <!-- mobile drawer -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#concerns">選ばれる理由</a>
+  <a href="#vision">私たちの想い</a>
   <a href="#service">サービス</a>
   <a href="#flow">制作の流れ</a>
-  <a href="#pricing">料金</a>
-  <a href="#faq">FAQ</a>
+  <a href="#pricing">料金目安</a>
+  <a href="#company">会社概要</a>
   <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
 </div>
 
@@ -1548,23 +1384,17 @@
     <div class="wrap hero-grid">
       <div class="hero-text">
         <p class="hero-eyebrow reveal">Web Production for Local Business</p>
-        <h1 class="reveal d1">小さな事業の魅力が、<br /><span class="em">スマホでちゃんと伝わる</span><br />ホームページを。</h1>
-        <p class="lead reveal d2">合同会社4Uは、沼田市・群馬県内の個人事業主・小規模事業者向けに、低価格・短納期のホームページ制作を行っています。</p>
-        <p class="lead reveal d2" style="margin-top:14px;">まずは無料の試作デモで、完成イメージをご確認ください。</p>
+        <h1 class="reveal d1">小さな事業者の魅力が、<br /><span class="em">ちゃんと伝わる</span><br />ホームページを。</h1>
+        <p class="lead reveal d2">合同会社4Uは、地域の個人事業主・小規模事業者向けに、AIを活用した低価格・短納期のホームページ制作を行っています。まずは無料の試作デモから、お気軽にご相談ください。</p>
         <div class="hero-cta reveal d3">
           <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
           <a href="#service" class="link-arrow">サービスを見る</a>
         </div>
-        <p class="hero-note reveal d3">試作デモは無料です。気に入った場合のみ、正式にご依頼いただけます。</p>
-        <ul class="hero-assurance reveal d3" aria-label="安心材料">
-          <li>スマホ対応込み</li>
-          <li>最短2〜5日でデモ制作</li>
-          <li>しつこい営業なし</li>
-        </ul>
+        <p class="hero-note reveal d3">試作デモは無料。気に入った場合のみ、正式にご依頼いただけます。</p>
       </div>
 
       <div class="hero-visual reveal d2">
-        <div class="float-chip one"><span class="dot"></span>スマホ対応込み</div>
+        <div class="float-chip one"><span class="dot"></span>スマホ対応もすべて込み</div>
         <div class="mock" aria-hidden="true">
           <div class="mock-bar">
             <i></i><i></i><i></i>
@@ -1572,108 +1402,40 @@
           </div>
           <div class="mock-body">
             <span class="mock-tag">YOUR BUSINESS</span>
-            <p class="mock-h">あなたのお店の魅力を、<br />スマホで見やすく。</p>
+            <p class="mock-h">あなたのお店の魅力を、<br />まっすぐ届けるページ。</p>
             <div class="mock-line w70"></div>
             <div class="mock-line w50"></div>
             <span class="mock-btn">ご予約・お問い合わせ</span>
             <div class="mock-grid"><div></div><div></div><div></div></div>
           </div>
         </div>
-        <div class="float-chip two">最短<span class="big">2〜5日</span>でデモ制作</div>
+        <div class="float-chip two">最短<span class="big">2〜5日</span>でデモ完成</div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== CONCERNS ===================== -->
-  <section class="concerns" id="concerns">
-    <div class="wrap">
-      <div class="concerns-head">
-        <span class="eyebrow center reveal">Reasons</span>
-        <h2 class="section-title reveal d1">ホームページ、そろそろ整えたい。<br />でも何から始めればいいか分からない。</h2>
-        <p class="reveal d2">4Uは、地域の小さな事業者の「まず整えたいWebまわり」をお手伝いします。</p>
-      </div>
-
-      <div class="concerns-grid">
-
-        <article class="concern-card reveal">
-          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <p class="c-who">01｜開業前・開業直後</p>
-          <p class="c-text">名刺代わりになるページを、まず低予算で用意したい。</p>
-        </article>
-
-        <article class="concern-card reveal d1">
-          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <p class="c-who">02｜Instagramだけで発信している</p>
-          <p class="c-text">料金・サービス内容・予約方法を、分かりやすくまとめたい。</p>
-        </article>
-
-        <article class="concern-card reveal d2">
-          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <p class="c-who">03｜今のホームページが古い</p>
-          <p class="c-text">スマホで見づらい、情報が古い、今の事業内容と合っていない。</p>
-        </article>
-
-        <article class="concern-card reveal d3">
-          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <p class="c-who">04｜自作サイトを整えたい</p>
-          <p class="c-text">見た目や文章をもう少し整えて、安心感のあるページにしたい。</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SNS / WEBSITE ===================== -->
-  <section class="roles-section" id="sns">
-    <div class="wrap">
-      <div class="roles">
-        <div class="roles-head">
-          <span class="eyebrow center reveal">SNS / Website</span>
-          <h2 class="section-title reveal d1">SNSだけでは伝えきれない情報を、<br />ホームページに。</h2>
-          <p class="reveal d2">Instagramは、お店の雰囲気や日々の活動を伝えるのに向いています。<br />一方で、料金・サービス内容・アクセス・予約方法などを整理して伝えるには、ホームページがあると安心です。</p>
-        </div>
-        <div class="roles-pair">
-          <div class="role-card insta reveal d1">
-            <p class="r-label">Instagram</p>
-            <p class="r-sub">日々を届ける場所</p>
-            <ul>
-              <li>お店の雰囲気を伝える</li>
-              <li>投稿で知ってもらう</li>
-              <li>興味を持ってもらう</li>
-            </ul>
-          </div>
-          <div class="role-card web reveal d2">
-            <p class="r-label">ホームページ</p>
-            <p class="r-sub">情報を整理して置く場所</p>
-            <ul>
-              <li>サービス内容を分かりやすく伝える</li>
-              <li>料金・場所・予約方法を固定して置ける</li>
-              <li>問い合わせや予約につなげる</li>
-            </ul>
-          </div>
-        </div>
-        <p class="roles-note reveal d2">お店やサービスを探すとき、多くの方はまずスマホで情報を確認します。<br />だからこそホームページは「あるだけ」ではなく、スマホで見やすく、迷わず問い合わせできることが大切です。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== VISION / MISSION ===================== -->
+  <!-- ===================== VISION ===================== -->
   <section class="statement" id="vision">
     <div class="wrap statement-inner">
-      <span class="eyebrow center reveal">About 4U</span>
-      <h2 class="reveal d1">地域の小さな事業者の価値が、<br />必要な人にきちんと届くように。</h2>
-      <p class="body reveal d2">沼田市をはじめ、地域には良いお店、良い技術、良いサービスを持つ事業者がたくさんあります。</p>
-      <p class="body reveal d2" style="margin-top:16px;">けれど、スマホで調べたときに情報が見つからなかったり、魅力が十分に伝わらなかったりすることで、選ばれる機会を逃してしまうことがあります。</p>
-      <p class="body reveal d2" style="margin-top:16px;">4Uは、そうした「良いものがあるのに、伝わらない」というもったいなさを減らすために、分かりやすく、相談しやすいWeb制作をお届けします。</p>
+      <span class="eyebrow center reveal">Vision</span>
+      <h2 class="reveal d1">地域の小さな事業者の価値が、<br />必要な人に、きちんと届く社会へ。</h2>
+      <p class="body reveal d2">沼田市をはじめ、地域には良いお店、良い技術、良いサービスを持つ事業者がたくさんあります。けれど、スマホで調べたときに情報が見つからなかったり、魅力が十分に伝わらなかったりすることで、選ばれる機会を逃してしまうことがあります。4Uは、地域の小さな事業者の魅力が、必要な人にきちんと届くためのWebづくりをお手伝いします。</p>
+    </div>
+  </section>
 
+  <!-- ===================== MISSION ===================== -->
+  <section class="statement panel">
+    <div class="wrap statement-inner">
+      <span class="eyebrow center reveal">Mission</span>
+      <h2 class="reveal d1">わかりやすく、相談しやすい<br />Web制作を、あたりまえに。</h2>
       <div class="mission-pair">
         <div class="mission-card reveal d2">
           <p class="num">01</p>
-          <p><b>専門用語を使わず、分かりやすく</b><br />「何から始めればいいか分からない」という状態でも大丈夫です。必要な情報を一緒に整理しながら、伝わる形にしていきます。</p>
+          <p>専門用語を使わず、<b>わかりやすく、相談しやすい</b>Web制作を提供します。「何から始めればいいか分からない」を、安心に変えます。</p>
         </div>
         <div class="mission-card reveal d3">
           <p class="num">02</p>
-          <p><b>低価格・短納期でも、伝わる品質に</b><br />AIを活用することで、制作にかかる時間とコストを抑えます。ただ安く作るのではなく、事業の魅力が伝わる構成・文章・見せ方を大切にします。</p>
+          <p>AIを活用することで、<b>低価格・短納期</b>でも質の高いHP制作を実現します。コストを抑えながら、しっかり伝わる形に。</p>
         </div>
       </div>
     </div>
@@ -1699,18 +1461,19 @@
       <div class="founder-body">
         <span class="eyebrow reveal">Founder's Story</span>
         <h2 class="reveal d1">良いものがあるのに、伝わらない。<br />そのもったいなさを減らしたい。</h2>
-        <p class="reveal d1">私自身、個別指導塾 free を立ち上げたとき、最初にぶつかったのが「どうやって塾を知ってもらうか」という集客の壁でした。</p>
-        <p class="reveal d1">良い授業をする自信はあっても、それを届ける手段が分からない。<br />開業直後で資金に余裕もなく、ホームページや広告に大きなお金をかけることもできませんでした。</p>
+        <p class="reveal d1">私の地元である沼田市には、良いお店や良いサービスを持つ事業者さんがたくさんいます。一方で、ホームページがなかったり、スマホで見づらかったり、情報が整理されていなかったりすることで、本来の魅力が伝わりきっていない場面もあります。</p>
+        <p class="reveal d1">この想いの出発点は、ほかでもない私自身の経験でした。個別指導塾 free を立ち上げたとき、最初にぶつかったのが<span class="hl">「どうやって塾を知ってもらうか」</span>という集客の壁。良い授業をする自信はあっても、それを届ける手段がわからなかったのです。</p>
+        <p class="reveal d2">開業したばかりで、資金に余裕はありません。ホームページや広告にまとまったお金をかけることはできない。調べてみると、制作会社に頼んだ場合の費用は、想像をはるかに超える高額でした。仕方なく自力でホームページを作ってみたものの、出来上がったのは、どこかで見たようなありきたりのテンプレート。<span class="hl">これでは、自分の塾の良さは何ひとつ伝わらない</span>——そう感じました。</p>
 
-        <details class="story-details reveal d2">
-          <summary>もっと読む</summary>
-          <div class="story-more-inner">
-            <p>自力でホームページを作ってみたものの、最初にできたのは、どこかで見たようなテンプレート。<br />「これでは、自分の塾の良さが伝わらない」と感じました。</p>
-            <p>そこから、塾で毎日続けてきた「むずかしいことを、わかりやすく伝える」力をWebに応用し、何を載せれば伝わるのかを一つずつ試していきました。</p>
-            <p>その経験から生まれたのが、完成イメージを見てから判断できる、無料の試作デモです。</p>
-            <p>資金や知識がなくて一歩を踏み出せずにいる方でも、まずは実物を見て、納得してから決められる。<br />4Uは、そんな安心感のあるWeb制作を目指しています。</p>
-          </div>
-        </details>
+        <button class="story-toggle" id="storyToggle" aria-expanded="false" aria-controls="storyMore">
+          代表ストーリーをもっと読む<span class="chev" aria-hidden="true">▾</span>
+        </button>
+
+        <div class="story-more" id="storyMore" hidden>
+          <div class="founder-quote reveal d2">良いものがあるのに、伝わらない。<br />それは、とてももったいないことだと思いました。</div>
+          <p class="reveal d3">そこから、自分で試行錯誤を重ねました。塾で毎日続けてきた「むずかしいことを、わかりやすく伝える」力をWebに応用し、何を載せれば伝わるのかを一つずつ確かめていく。さらにAIを使えば、制作にかかるコストと時間は大きく抑えられる。たどり着いた答えが、長い説明や高い初期費用の前に、まず実際に見て確かめられる<span class="hl">無料の試作デモ</span>という形でした。</p>
+          <p class="reveal d3">いま4Uは、ホームページやランディングページ、動画制作を通して、地域の事業者の「伝える」をお手伝いしています。かつての私と同じように、資金や知識がなくて一歩を踏み出せずにいる方へ。完成イメージを目で見て、納得してから決められる安心を届けたい。良いものを持つ人が、まっすぐ選ばれる地域を、一緒につくっていきます。</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1720,8 +1483,89 @@
     <div class="naming-bg" aria-hidden="true">For You</div>
     <div class="wrap naming-inner">
       <span class="eyebrow center reveal">Our Name</span>
-      <p class="naming-text reveal d1">「4U」は、<em>For You</em>。<br />あなたのために。</p>
-      <p class="naming-sub reveal d2">目の前のひとりの事業者のために、できることをする。<br />その姿勢を、これからも大切にしていきます。</p>
+      <p class="naming-text reveal d1">「4U」という社名は、<em>For You</em>。<br />「あなたのために」という想いを込めています。</p>
+      <p class="naming-sub reveal d2">目の前のひとりの事業者のために、できることをする。<br />その姿勢を、これからも変えません。</p>
+    </div>
+  </section>
+
+  <!-- ===================== CONCERNS ===================== -->
+  <section class="concerns" id="concerns">
+    <div class="wrap">
+      <div class="concerns-head">
+        <span class="eyebrow center reveal">Your Concerns</span>
+        <h2 class="section-title reveal d1">こんなお悩みはありませんか？</h2>
+        <p class="reveal d2">開業前・開業直後の方から、今あるホームページを見直したい方まで。4Uは、地域の小さな事業者の「まず整えたいWebまわり」をお手伝いします。</p>
+      </div>
+
+      <div class="concerns-grid">
+
+        <article class="concern-card reveal">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">これから開業する方</p>
+          <p class="c-text">名刺代わりになるページを用意したい</p>
+        </article>
+
+        <article class="concern-card reveal d1">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">開業したばかりの方</p>
+          <p class="c-text">まずは低予算でWeb上の入り口を整えたい</p>
+        </article>
+
+        <article class="concern-card reveal d2">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">自作ホームページの方</p>
+          <p class="c-text">見た目や文章をもう少し整えたい</p>
+        </article>
+
+        <article class="concern-card reveal">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">Instagramだけで発信している方</p>
+          <p class="c-text">料金・サービス・予約方法を分かりやすくまとめたい</p>
+        </article>
+
+        <article class="concern-card reveal d1">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">ホームページが古い方</p>
+          <p class="c-text">今の事業内容に合う形へ見直したい</p>
+        </article>
+
+        <article class="concern-card reveal d2">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">スマホで見づらいサイトの方</p>
+          <p class="c-text">スマホからでも問い合わせしやすい形にしたい</p>
+        </article>
+
+      </div>
+
+      <!-- Instagram × ホームページ の役割比較 -->
+      <div class="roles">
+        <div class="roles-head">
+          <h3 class="reveal">SNSだけでは伝えきれない情報を、<br />ホームページに。</h3>
+          <p class="reveal d1">Instagramは、お店の雰囲気や日々の活動を伝えるのに向いています。一方で、料金・サービス内容・アクセス・予約方法などを整理して伝えるには、ホームページがあると安心です。</p>
+        </div>
+        <div class="roles-pair">
+          <div class="role-card insta reveal d1">
+            <p class="r-label">Instagram</p>
+            <p class="r-sub">日々を届ける</p>
+            <ul>
+              <li>日々の雰囲気を伝える</li>
+              <li>投稿で知ってもらう</li>
+              <li>興味を持ってもらう</li>
+            </ul>
+          </div>
+          <div class="role-card web reveal d2">
+            <p class="r-label">ホームページ</p>
+            <p class="r-sub">情報を整えて置く</p>
+            <ul>
+              <li>サービス内容を整理して伝える</li>
+              <li>必要な情報を固定して置ける</li>
+              <li>予約・問い合わせにつなげる</li>
+            </ul>
+          </div>
+        </div>
+        <p class="roles-note reveal">お店やサービスを探すとき、多くの方はまずスマホで情報を確認します。だからこそホームページは「あるだけ」ではなく、スマホで見やすく、料金やサービス内容、予約や問い合わせまで迷わずたどり着けることが大切だと考えています。</p>
+      </div>
+
     </div>
   </section>
 
@@ -1730,40 +1574,47 @@
     <div class="wrap">
       <div class="service-head">
         <span class="eyebrow center reveal">Service</span>
-        <h2 class="section-title reveal d1">事業者のための、伝わるWebづくり。</h2>
-        <p class="reveal d2">ホームページ制作を中心に、発信や集客に関わるWebまわりをまとめてご相談いただけます。</p>
+        <h2 class="section-title reveal d1">事業者のための、<br />伝わるWebづくり一式。</h2>
+        <p class="reveal d2">ホームページから動画、AI活用まで。発信に関わる「困った」を、まとめてご相談いただけます。</p>
       </div>
       <div class="service-grid">
 
         <article class="service-card reveal">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
-          <h3>01｜ホームページ制作</h3>
-          <p>会社やお店の魅力を伝える、基本のホームページを制作します。スマートフォン対応まで、すべて込みでご提案します。</p>
+          <h3>ホームページ制作</h3>
+          <p>会社やお店の魅力を伝える、基本のホームページ。スマートフォン対応まで、すべて込みで制作します。</p>
         </article>
 
         <article class="service-card reveal d1">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 7h4M12 17h.01"/></svg></div>
-          <h3>02｜ランディングページ制作</h3>
-          <p>予約やお問い合わせにつなげる、1ページ完結型のページを制作します。キャンペーン、新サービス、体験申込ページなどにおすすめです。</p>
+          <h3>ランディングページ制作</h3>
+          <p>予約やお問い合わせにつなげる、1ページ完結型のページ。キャンペーンや新サービスの告知に。</p>
         </article>
 
         <article class="service-card reveal d2">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0-8-8"/><path d="M4 12V7h5"/><path d="m9 15 3-3"/></svg></div>
-          <h3>03｜既存ホームページの改善</h3>
-          <p>今あるサイトを、見やすく・伝わる形に整えます。「古く見える」「スマホで見づらい」「内容が今と合っていない」といった課題を改善します。</p>
+          <h3>既存ホームページの改善</h3>
+          <p>今あるサイトを、見やすく・伝わる形にリニューアル。「古く見える」「スマホで崩れる」も解決します。</p>
         </article>
 
-        <article class="service-card reveal d3">
+        <article class="service-card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></div>
+          <h3>YouTube / 動画制作サポート</h3>
+          <p>撮影から編集まで、動画での発信をお手伝い。お店の雰囲気や人柄を、動きと声で届けられます。</p>
+        </article>
+
+        <article class="service-card reveal d1">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg></div>
-          <h3>04｜動画・AI活用サポート</h3>
-          <p>YouTubeやショート動画、AIを使った業務効率化もご相談いただけます。少人数でも発信や事務作業が回る仕組みづくりをサポートします。</p>
+          <h3>AI活用サポート</h3>
+          <p>日々の事務作業や情報発信を、AIで効率化するお手伝い。少人数でも回る仕組みづくりをご提案します。</p>
         </article>
 
-      </div>
+        <article class="service-card reveal d2" style="display:flex;flex-direction:column;justify-content:center;background:var(--bg-deep);border-color:var(--bg-deep);">
+          <h3 style="color:#fff;">まずは無料の<br />試作デモから。</h3>
+          <p style="color:#bdb8b0;">どのサービスが合うか分からなくても大丈夫。完成イメージを見ながら一緒に考えます。</p>
+          <a href="#contact" class="link-arrow" style="color:#fff;border-color:rgba(255,255,255,.25);margin-top:16px;align-self:flex-start;">相談してみる →</a>
+        </article>
 
-      <div class="section-cta reveal d2">
-        <p>まずは無料の試作デモから。<br />どのサービスが合うか分からなくても、完成イメージを見ながら一緒に考えられます。</p>
-        <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -1773,8 +1624,8 @@
     <div class="wrap">
       <div class="flow-head">
         <span class="eyebrow center reveal">How it works</span>
-        <h2 class="section-title reveal d1">無料試作デモは、4ステップ。</h2>
-        <p class="reveal d2">むずかしい打ち合わせは不要です。<br />フォームに答えるだけで、完成イメージをご確認いただけます。</p>
+        <h2 class="section-title reveal d1">無料試作デモの、4ステップ。</h2>
+        <p class="reveal d2">むずかしい打ち合わせは不要です。フォームに答えるだけで、完成イメージが手元に届きます。</p>
       </div>
       <div class="steps">
         <div class="step reveal">
@@ -1782,7 +1633,7 @@
           <div>
             <span class="label">STEP 01</span>
             <h3>フォームに回答</h3>
-            <p>業種やご希望を、簡単なフォームでお聞かせください。所要時間は3分ほどです。</p>
+            <p>業種やご希望を、簡単なフォームでお聞かせください。所要時間は数分ほどです。</p>
           </div>
         </div>
         <div class="step reveal d1">
@@ -1798,7 +1649,7 @@
           <div>
             <span class="label">STEP 03</span>
             <h3>デモページを確認</h3>
-            <p>2〜5日後を目安に、完成イメージのデモページをお送りします。</p>
+            <p>2〜5日後を目安に、完成イメージのデモページをご確認いただけます。</p>
           </div>
         </div>
         <div class="step reveal d3">
@@ -1806,12 +1657,9 @@
           <div>
             <span class="label">STEP 04</span>
             <h3>気に入ったら正式依頼</h3>
-            <p>内容に納得いただけた場合のみ、正式なご依頼へ進みます。断っていただいても費用は一切かかりません。</p>
+            <p>内容に納得いただけた場合のみ、正式なご依頼へ。断っていただいても費用は一切かかりません。</p>
           </div>
         </div>
-      </div>
-      <div class="flow-cta reveal d2">
-        <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -1822,7 +1670,7 @@
       <div class="pricing-head">
         <span class="eyebrow center reveal">Price</span>
         <h2 class="section-title reveal d1">小規模事業者向けの料金プラン</h2>
-        <p class="reveal d2">必要なものを、必要なぶんだけ。<br />まずは無料試作デモで、完成イメージをご確認いただけます。</p>
+        <p class="reveal d2">必要なものを、必要なぶんだけ。まずは試作デモで完成イメージをご確認いただけます。</p>
       </div>
 
       <div class="plan-grid">
@@ -1853,7 +1701,7 @@
           <p class="plan-name">スタンダードプラン</p>
           <p class="plan-en">Standard</p>
           <p class="plan-price">99,800<small>円〜</small></p>
-          <p class="plan-desc">事業の魅力やサービス内容を、しっかり伝えたい方向け。<br />4Uのおすすめプランです。</p>
+          <p class="plan-desc">事業の魅力やサービス内容をしっかり伝えたい方向け。</p>
           <hr class="plan-divider" />
           <ul class="plan-feat feat-pc">
             <li>1ページ充実構成</li>
@@ -1877,7 +1725,7 @@
           <p class="plan-name">プレミアムプラン</p>
           <p class="plan-en">Premium</p>
           <p class="plan-price">179,800<small>円〜</small></p>
-          <p class="plan-desc">ブランディングや集客導線まで見据えて整えたい方向け。</p>
+          <p class="plan-desc">ブランディングや集客導線まで見据えた本格制作。</p>
           <hr class="plan-divider" />
           <ul class="plan-feat feat-pc">
             <li>複数ページ対応</li>
@@ -1918,11 +1766,31 @@
         </ul>
       </div>
 
-      <p class="price-note reveal">※ 表示価格は目安です。内容やページ数、必要なサポート範囲により変動します。<br />※ 詳しい料金は、無料試作デモまたはご相談後にお見積もりいたします。</p>
+      <p class="price-note reveal">※ 表示価格は目安です。内容やページ数、必要なサポート範囲により変動します。詳しい料金は、無料試作デモまたはご相談後にお見積もりいたします。</p>
 
       <div class="pricing-cta reveal">
         <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
       </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPANY ===================== -->
+  <section class="company" id="company">
+    <div class="wrap company-grid">
+      <div>
+        <span class="eyebrow reveal">Company</span>
+        <h2 class="reveal d1">会社概要</h2>
+      </div>
+      <table class="profile-table reveal d1">
+        <tbody>
+          <tr><th>会社名</th><td>合同会社4U（フォーユー）</td></tr>
+          <tr><th>代表者</th><td>代表社員 土屋 裕二</td></tr>
+          <tr><th>事業内容</th><td>ホームページ制作／ランディングページ制作／既存サイトの改善・運用／動画制作サポート／AI活用による業務効率化支援</td></tr>
+          <tr><th>所在地</th><td>群馬県沼田市<br /><span class="small">詳しい所在地は、お問い合わせ時にお伝えします。</span></td></tr>
+          <tr><th>対応エリア</th><td>沼田市を中心に群馬県内<br /><span class="small">オンラインでのご相談は、エリアを問わず対応いたします。</span></td></tr>
+          <tr><th>お問い合わせ</th><td><a href="#contact" class="link-arrow">お問い合わせフォームへ →</a></td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -1942,7 +1810,7 @@
             <span class="q-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <div class="faq-a-inner">はい、無料です。<br />デモをご確認いただき、気に入った場合のみ正式にご依頼いただけます。</div>
+            <div class="faq-a-inner">はい、無料です。デモをご確認いただき、気に入った場合のみ正式にご依頼いただけます。</div>
           </div>
         </div>
 
@@ -1953,7 +1821,7 @@
             <span class="q-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <div class="faq-a-inner">大丈夫です。<br />専門用語をできるだけ使わず、必要な内容を整理しながら進めます。</div>
+            <div class="faq-a-inner">大丈夫です。専門用語をできるだけ使わず、必要な内容を整理しながら進めます。</div>
           </div>
         </div>
 
@@ -1964,7 +1832,7 @@
             <span class="q-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <div class="faq-a-inner">はい、可能です。<br />まずは現在ある情報をもとに試作し、必要な素材は一緒に整理していきます。</div>
+            <div class="faq-a-inner">はい、可能です。まずは現在ある情報をもとに試作し、必要な素材は一緒に整理していきます。</div>
           </div>
         </div>
 
@@ -1975,7 +1843,7 @@
             <span class="q-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <div class="faq-a-inner">はい、月額の保守管理プランをご用意しています。<br />軽微な修正や表示確認、サーバー・ドメインまわりの相談にも対応します。</div>
+            <div class="faq-a-inner">はい、月額の保守管理プランをご用意しています。軽微な修正や表示確認、サーバー・ドメイン周りの相談にも対応します。</div>
           </div>
         </div>
 
@@ -1986,31 +1854,11 @@
             <span class="q-icon" aria-hidden="true"></span>
           </button>
           <div class="faq-a">
-            <div class="faq-a-inner">ありません。<br />試作デモをご覧いただいたうえで、必要ないと感じた場合は断っていただいて大丈夫です。</div>
+            <div class="faq-a-inner">ありません。試作デモをご覧いただいたうえで、必要ないと感じた場合は断っていただいて大丈夫です。</div>
           </div>
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <!-- ===================== COMPANY ===================== -->
-  <section class="company" id="company">
-    <div class="wrap company-grid">
-      <div>
-        <span class="eyebrow reveal">Company</span>
-        <h2 class="reveal d1">会社概要</h2>
-      </div>
-      <table class="profile-table reveal d1">
-        <tbody>
-          <tr><th>会社名</th><td>合同会社4U（フォーユー）</td></tr>
-          <tr><th>代表者</th><td>代表社員 土屋 裕二</td></tr>
-          <tr><th>事業内容</th><td><span class="profile-lines">ホームページ制作<br />ランディングページ制作<br />既存サイトの改善・運用<br />動画制作サポート<br />AI活用による業務効率化支援</span></td></tr>
-          <tr><th>所在地</th><td>群馬県沼田市<br /><span class="small">詳しい所在地は、お問い合わせ時にお伝えします。</span></td></tr>
-          <tr><th>対応エリア</th><td>沼田市を中心に群馬県内<br /><span class="small">オンラインでのご相談は、エリアを問わず対応いたします。</span></td></tr>
-          <tr><th>お問い合わせ</th><td><a href="#contact" class="link-arrow">お問い合わせフォームへ →</a></td></tr>
-        </tbody>
-      </table>
     </div>
   </section>
 
@@ -2020,18 +1868,18 @@
       <div class="contact-head">
         <span class="eyebrow center reveal">Contact</span>
         <h2 class="reveal d1">まずは、無料の試作デモから。</h2>
-        <p class="reveal d2">「どんな感じになるか見てみたい」という段階でも大丈夫です。<br />3分ほどのフォーム入力だけで、2〜5日を目安に完成イメージをご提案します。</p>
+        <p class="reveal d2">「どんな感じになるか見てみたい」という段階でも大丈夫です。3分ほどのフォーム入力だけで、2〜5日を目安に完成イメージをご提案します。</p>
       </div>
       <div class="assurance reveal d2">
         <span>試作デモは無料</span>
         <span>気に入った場合のみ正式依頼</span>
-        <span>しつこい営業なし</span>
+        <span>しつこい営業はしません</span>
       </div>
 
       <div class="form-open reveal d2">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeW2J1htSPXWIAFzeyLr_OVemyHssLpFc_5MXznLi2BgF3zUQ/viewform"
            class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-          無料試作デモを申し込む<span class="arrow">→</span>
+          別画面でフォームを開く<span class="arrow">→</span>
         </a>
         <p class="form-open-note">フォームが表示されない場合は、こちらからお申し込みください。</p>
       </div>
@@ -2057,7 +1905,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <span class="mark"><b>4</b>U</span>
-        <p>地域の小さな事業者の魅力が、必要な人にきちんと届くように。<br />合同会社4Uは、わかりやすいWeb制作をお届けします。</p>
+        <p>地域の小さな事業者の魅力が、必要な人にきちんと届くように。合同会社4Uは、わかりやすいWeb制作をお届けします。</p>
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">
         <div>
@@ -2065,14 +1913,14 @@
           <ul>
             <li><a href="#service">ホームページ制作</a></li>
             <li><a href="#service">ランディングページ制作</a></li>
-            <li><a href="#service">既存サイトの改善</a></li>
-            <li><a href="#service">動画・AI活用サポート</a></li>
+            <li><a href="#service">動画制作サポート</a></li>
+            <li><a href="#service">AI活用サポート</a></li>
           </ul>
         </div>
         <div>
           <h4>COMPANY</h4>
           <ul>
-            <li><a href="#vision">4Uについて</a></li>
+            <li><a href="#vision">私たちの想い</a></li>
             <li><a href="#story">代表ストーリー</a></li>
             <li><a href="#company">会社概要</a></li>
             <li><a href="#contact">お問い合わせ</a></li>
@@ -2097,7 +1945,6 @@
   <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
 </div>
 
-
 <script>
   /* ---------- header scroll state ---------- */
   const header = document.getElementById('header');
@@ -2110,12 +1957,10 @@
   const closeMenu = () => {
     document.body.classList.remove('menu-open');
     toggle.setAttribute('aria-expanded','false');
-    if (typeof toggleScrollUi === 'function') toggleScrollUi();
   };
   toggle.addEventListener('click', () => {
     const open = document.body.classList.toggle('menu-open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (typeof toggleScrollUi === 'function') toggleScrollUi();
   });
   document.querySelectorAll('#mobileMenu a').forEach(a =>
     a.addEventListener('click', closeMenu)
@@ -2234,23 +2079,11 @@
   toTop.addEventListener('click', () => {
     window.scrollTo({ top:0, behavior: reduceMotion ? 'auto' : 'smooth' });
   });
-  const stickyCta = document.getElementById('stickyCta');
-  const mqSmall = window.matchMedia('(max-width: 760px)');
   const toggleScrollUi = () => {
-    const scrolledY = window.scrollY;
-    const menuOpen = document.body.classList.contains('menu-open');
-    toTop.classList.toggle('show', scrolledY > 900 && !menuOpen);
-    if (stickyCta){
-      const shouldShowSticky = mqSmall.matches && scrolledY > 520 && !menuOpen;
-      stickyCta.classList.toggle('show', shouldShowSticky);
-    }
+    toTop.classList.toggle('show', window.scrollY > 600);
   };
   toggleScrollUi();
   window.addEventListener('scroll', toggleScrollUi, { passive:true });
-  window.addEventListener('resize', toggleScrollUi, { passive:true });
-  if (mqSmall.addEventListener){
-    mqSmall.addEventListener('change', toggleScrollUi);
-  }
 </script>
 
 </body>
