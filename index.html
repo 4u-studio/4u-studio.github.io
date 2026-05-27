@@ -1010,13 +1010,27 @@
     body.menu-open .mobile-menu{ transform:translateY(0); }
     .mobile-menu a{
       display:block;
-      padding:15px 0;
+      padding:16px 2px;
       font-weight:500;
       border-bottom:1px solid var(--line-soft);
-      font-size:1rem;
+      font-size:1.02rem;
     }
     .mobile-menu .btn{
-      width:100%; justify-content:center; margin-top:18px;
+      display:flex;
+      width:100%;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      margin-top:20px;
+      padding:16px 18px;
+      border-bottom:none;
+    }
+
+    /* メニューを開いている間は固定CTAを隠す（重なり防止） */
+    body.menu-open .sticky-cta{
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
     }
 
     .hero{ padding:120px 0 72px; }
@@ -1135,9 +1149,10 @@
       border-top:1px solid var(--line-soft);
       border-bottom:1px solid var(--line-soft);
     }
-    /* スマホ固定CTAバーの背景を黒の半透明に */
+    /* スマホ固定CTAバーの背景を黒の不透明に */
     .sticky-cta{
-      background:rgba(12,12,13,.92);
+      background:var(--bg);
+      box-shadow:0 -8px 24px -10px rgba(0,0,0,.8);
     }
   }
 
@@ -1280,10 +1295,10 @@
     left:0; right:0; bottom:0;
     z-index:95;
     padding:10px 16px calc(10px + env(safe-area-inset-bottom));
-    background:rgba(251,250,248,.94);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
+    background:var(--bg);
     border-top:1px solid var(--line);
+    box-shadow:0 -8px 24px -12px rgba(28,26,23,.25);
+    transition:opacity .3s var(--ease), visibility .3s var(--ease), transform .3s var(--ease);
   }
   .sticky-cta .btn{
     width:100%;
@@ -1302,8 +1317,18 @@
     }
     .hero{ padding:116px 0 60px; }
 
-    /* 3. 固定CTA表示 + 本文下に余白 */
-    .sticky-cta{ display:block; }
+    /* 3. 固定CTA + 本文下に余白 */
+    .sticky-cta{
+      display:block;
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(100%);
+    }
+    .sticky-cta.show{
+      opacity:1;
+      visibility:visible;
+      transform:none;
+    }
     body{ padding-bottom:78px; }
     /* 固定CTAとトップ戻るボタンの重なりを回避 */
     .to-top{ bottom:84px; }
@@ -1338,6 +1363,73 @@
     /* FAQ 余白微調整 */
     .faq-q{ font-size:.97rem; padding:20px 2px; }
     .faq-a-inner{ padding:0 2px 22px 38px; }
+
+    /* ----------------------------------------------------------
+       スマホ向け 文字組みの最適化（読みやすさ改善）
+       見出しを少し小さく・行間を詰め、本文は行間ゆったり
+       ---------------------------------------------------------- */
+
+    /* 見出し全般：大きすぎる折り返しを抑える */
+    .hero h1{
+      font-size:1.92rem;
+      line-height:1.62;
+      letter-spacing:.002em;
+    }
+    .section-title{
+      font-size:1.5rem;
+      line-height:1.62;
+    }
+    .statement h2{
+      font-size:1.46rem;
+      line-height:1.66;
+    }
+    .founder-body h2{
+      font-size:1.4rem;
+      line-height:1.66;
+      margin-bottom:24px;
+    }
+    .naming-text{
+      font-size:1.28rem;
+      line-height:1.7;
+    }
+    .roles-head h3{
+      font-size:1.3rem;
+      line-height:1.62;
+    }
+
+    /* 本文：行間をゆったりめにして読みやすく */
+    body{ line-height:1.9; }
+    .hero p.lead,
+    .statement .body,
+    .founder-body p,
+    .mission-card p,
+    .service-card p,
+    .concerns-head p,
+    .roles-head p,
+    .roles-note,
+    .faq-a-inner{
+      font-size:.96rem;
+      line-height:1.92;
+    }
+
+    /* セクション説明文の左右に少し余白を持たせて窮屈感を緩和 */
+    .concerns-head p,
+    .service-head p,
+    .flow-head p,
+    .pricing-head p{
+      padding:0 4px;
+    }
+
+    /* 引用：スマホでは少し小さく */
+    .founder-quote{
+      font-size:1.08rem;
+      line-height:1.72;
+      padding:18px 0 18px 20px;
+    }
+
+    /* タップ要素を押しやすく */
+    .link-arrow{ padding:4px 0; }
+    .to-top{ width:48px; height:48px; }
   }
 
 </style>
@@ -2076,11 +2168,17 @@
 
   /* ---------- スクロールトップ & 固定CTA ---------- */
   const toTop = document.getElementById('toTop');
+  const stickyCta = document.getElementById('stickyCta');
   toTop.addEventListener('click', () => {
     window.scrollTo({ top:0, behavior: reduceMotion ? 'auto' : 'smooth' });
   });
   const toggleScrollUi = () => {
-    toTop.classList.toggle('show', window.scrollY > 600);
+    const y = window.scrollY;
+    toTop.classList.toggle('show', y > 600);
+    /* 固定CTA：ヒーローを過ぎたあたりで出す（CTA重複を防ぐ） */
+    if (stickyCta){
+      stickyCta.classList.toggle('show', y > 560);
+    }
   };
   toggleScrollUi();
   window.addEventListener('scroll', toggleScrollUi, { passive:true });
