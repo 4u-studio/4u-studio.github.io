@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>合同会社4U｜地域の事業者のためのホームページ制作</title>
-<meta name="description" content="群馬県沼田市の合同会社4U。地域の個人事業主・小規模事業者向けに、AIを活用した低価格・短納期のホームページ制作・LP制作・動画制作を行っています。まずは無料の試作デモからお気軽にご相談ください。" />
-<meta property="og:title" content="合同会社4U｜地域の事業者のためのホームページ制作" />
-<meta property="og:description" content="小さな事業者の魅力が、ちゃんと伝わるホームページを。無料の試作デモから始められます。" />
+<meta name="description" content="群馬・沼田の小さな事業者向け、無料の試作デモから始められるホームページ制作。AI活用で低価格・短納期。2〜5日で完成イメージをお届けします。HP制作・LP制作・既存サイトの改善まで。" />
+<meta property="og:title" content="合同会社4U｜無料の試作デモから始める、地域の事業者のためのHP制作" />
+<meta property="og:description" content="まずは見てから決められる。無料の試作デモを2〜5日でお届けします。気に入った場合のみ正式依頼。" />
 <meta property="og:type" content="website" />
 <meta name="color-scheme" content="light dark" />
 <meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)" />
@@ -1432,6 +1432,217 @@
     .to-top{ width:48px; height:48px; }
   }
 
+  /* ============================================================
+     ADDITIONS v2 — CV最優先のための追加スタイル
+     （既存スタイルを上書きしない範囲で最小限に追加）
+     ============================================================ */
+
+  /* --- Hero：安心バッジ（誰向け・無料・納期を一瞬で） --- */
+  .hero-trust{
+    margin-top:26px;
+    display:flex; flex-wrap:wrap; gap:8px 10px;
+  }
+  .hero-trust span{
+    font-size:.78rem; font-weight:700;
+    color:var(--accent-deep);
+    background:var(--accent-tint);
+    border-radius:999px;
+    padding:6px 14px;
+    display:inline-flex; align-items:center; gap:7px;
+    line-height:1.3;
+  }
+  .hero-trust span::before{
+    content:""; width:6px; height:6px; border-radius:50%;
+    background:var(--accent);
+  }
+
+  /* Hero リードを箇条書きに（3点で要点を伝える） */
+  .hero-points{
+    margin-top:22px;
+    list-style:none;
+    display:flex; flex-direction:column; gap:8px;
+    max-width:32em;
+  }
+  .hero-points li{
+    position:relative;
+    padding-left:26px;
+    font-size:.98rem;
+    color:var(--ink-soft);
+    line-height:1.75;
+  }
+  .hero-points li::before{
+    content:"";
+    position:absolute; left:0; top:9px;
+    width:14px; height:14px; border-radius:50%;
+    background:var(--accent-tint);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='%239C5639' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  .hero-points li b{ color:var(--ink); font-weight:900; }
+
+  /* --- Service：主軸3つ＋サブ2つの階層 --- */
+  .service-sub-head{
+    text-align:center;
+    margin:64px 0 24px;
+  }
+  .service-sub-head .label{
+    display:inline-block;
+    font-family:var(--serif); font-style:italic;
+    font-size:.95rem; color:var(--accent-deep);
+    letter-spacing:.04em;
+  }
+  .service-sub-head .label::before,
+  .service-sub-head .label::after{
+    content:"—";
+    color:var(--line);
+    margin:0 10px;
+    font-style:normal;
+  }
+  .service-sub-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    max-width:880px; margin:0 auto;
+  }
+  .service-card.sub{
+    padding:24px 26px;
+    display:flex; align-items:flex-start; gap:16px;
+  }
+  .service-card.sub .ico{
+    width:42px; height:42px; border-radius:10px;
+    margin-bottom:0; flex-shrink:0;
+  }
+  .service-card.sub .ico svg{ width:20px; height:20px; }
+  .service-card.sub .sub-body h3{
+    font-size:1rem; margin-bottom:6px;
+  }
+  .service-card.sub .sub-body p{
+    font-size:.88rem; line-height:1.7;
+  }
+  @media (max-width:760px){
+    .service-sub-grid{ grid-template-columns:1fr; }
+  }
+
+  /* --- Pricing：プラン上部の「こんな方に」と「主な違い」 --- */
+  .plan-for{
+    display:inline-block;
+    font-size:.74rem; font-weight:700; letter-spacing:.04em;
+    color:var(--accent-deep);
+    background:var(--accent-tint);
+    border-radius:6px;
+    padding:4px 10px;
+    margin-bottom:14px;
+  }
+  .plan-card.featured .plan-for{
+    background:var(--accent);
+    color:#fff;
+  }
+  .plan-key{
+    margin-top:14px;
+    padding:14px 16px;
+    background:var(--bg-panel);
+    border-radius:10px;
+    font-size:.86rem;
+    color:var(--ink-soft);
+    line-height:1.7;
+  }
+  .plan-card.featured .plan-key{
+    background:var(--accent-tint);
+  }
+  .plan-key b{ color:var(--ink); font-weight:900; }
+
+  /* --- Pricing：比較ひと目テーブル（PCのみ表示の補助表） --- */
+  .plan-compare{
+    margin-top:48px;
+    max-width:880px;
+    margin-left:auto; margin-right:auto;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .plan-compare table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:.92rem;
+  }
+  .plan-compare th,
+  .plan-compare td{
+    padding:14px 16px;
+    text-align:center;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .plan-compare th:first-child,
+  .plan-compare td:first-child{
+    text-align:left;
+    color:var(--muted);
+    font-weight:700;
+    font-size:.84rem;
+    background:var(--bg-panel);
+    width:32%;
+  }
+  .plan-compare thead th{
+    font-weight:900;
+    font-size:.95rem;
+    color:var(--ink);
+    background:var(--bg-panel);
+    padding-top:18px; padding-bottom:18px;
+  }
+  .plan-compare thead th.is-featured{
+    color:var(--accent-deep);
+    background:var(--accent-tint);
+  }
+  .plan-compare tbody tr:last-child td{ border-bottom:none; }
+  @media (max-width:760px){
+    .plan-compare{ display:none; }
+  }
+
+  /* --- Vision/Mission を1つの「想い」セクションに統合した時用 --- */
+  .belief-intro{
+    text-align:center;
+    margin-bottom:18px;
+    font-size:.92rem;
+    color:var(--muted);
+    letter-spacing:.04em;
+  }
+
+  /* --- Founder Story：PCでも折りたたみ可能にする（任意） --- */
+  @media (min-width:761px){
+    .story-toggle.pc-enabled{
+      display:inline-flex;
+      align-items:center; gap:8px;
+      margin-top:8px;
+      background:none; border:none;
+      cursor:pointer;
+      font-family:var(--sans);
+      font-size:.95rem; font-weight:700;
+      color:var(--accent-deep);
+      padding:6px 0;
+    }
+    .story-toggle.pc-enabled .chev{
+      transition:transform .3s var(--ease);
+    }
+    .story-toggle.pc-enabled[aria-expanded="true"] .chev{
+      transform:rotate(180deg);
+    }
+  }
+
+  /* --- セクション間の「次へ誘導」ミニCTA --- */
+  .mini-cta{
+    margin-top:36px;
+    text-align:center;
+  }
+  .mini-cta .btn{ padding:14px 26px; font-size:.95rem; }
+
+  /* --- スマホでのHero安心バッジ調整 --- */
+  @media (max-width:760px){
+    .hero-trust{ margin-top:20px; }
+    .hero-trust span{ font-size:.74rem; padding:5px 12px; }
+    .hero-points li{ font-size:.94rem; }
+    .plan-key{ font-size:.84rem; padding:12px 14px; }
+  }
+
 </style>
 </head>
 <body>
@@ -1445,11 +1656,11 @@
     </a>
     <nav class="nav" aria-label="メインナビゲーション">
       <ul class="nav-links">
-        <li><a href="#vision">私たちの想い</a></li>
+        <li><a href="#concerns">こんな方へ</a></li>
         <li><a href="#service">サービス</a></li>
         <li><a href="#flow">制作の流れ</a></li>
-        <li><a href="#pricing">料金目安</a></li>
-        <li><a href="#company">会社概要</a></li>
+        <li><a href="#pricing">料金</a></li>
+        <li><a href="#belief">私たちの想い</a></li>
       </ul>
       <a href="#contact" class="btn btn-primary">無料試作デモ<span class="arrow">→</span></a>
     </nav>
@@ -1461,10 +1672,11 @@
 
 <!-- mobile drawer -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#vision">私たちの想い</a>
+  <a href="#concerns">こんな方へ</a>
   <a href="#service">サービス</a>
   <a href="#flow">制作の流れ</a>
-  <a href="#pricing">料金目安</a>
+  <a href="#pricing">料金</a>
+  <a href="#belief">私たちの想い</a>
   <a href="#company">会社概要</a>
   <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
 </div>
@@ -1475,14 +1687,22 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <p class="hero-eyebrow reveal">Web Production for Local Business</p>
-        <h1 class="reveal d1">小さな事業者の魅力が、<br /><span class="em">ちゃんと伝わる</span><br />ホームページを。</h1>
-        <p class="lead reveal d2">合同会社4Uは、地域の個人事業主・小規模事業者向けに、AIを活用した低価格・短納期のホームページ制作を行っています。まずは無料の試作デモから、お気軽にご相談ください。</p>
+        <p class="hero-eyebrow reveal">For local business in Numata, Gunma</p>
+        <h1 class="reveal d1">群馬・沼田の小さな事業者へ。<br /><span class="em">無料の試作デモ</span>から始める、<br />伝わるホームページ。</h1>
+        <ul class="hero-points reveal d2">
+          <li><b>2〜5日</b>で完成イメージが手元に届く</li>
+          <li>気に入ったときだけ、正式にご依頼</li>
+          <li>AI活用で、<b>低価格・短納期</b>を実現</li>
+        </ul>
         <div class="hero-cta reveal d3">
           <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
-          <a href="#service" class="link-arrow">サービスを見る</a>
+          <a href="#pricing" class="link-arrow">料金を見る</a>
         </div>
-        <p class="hero-note reveal d3">試作デモは無料。気に入った場合のみ、正式にご依頼いただけます。</p>
+        <div class="hero-trust reveal d3">
+          <span>デモ費用0円</span>
+          <span>無理な営業なし</span>
+          <span>フォーム3分で完了</span>
+        </div>
       </div>
 
       <div class="hero-visual reveal d2">
@@ -1506,87 +1726,13 @@
     </div>
   </section>
 
-  <!-- ===================== VISION ===================== -->
-  <section class="statement" id="vision">
-    <div class="wrap statement-inner">
-      <span class="eyebrow center reveal">Vision</span>
-      <h2 class="reveal d1">地域の小さな事業者の価値が、<br />必要な人に、きちんと届く社会へ。</h2>
-      <p class="body reveal d2">沼田市をはじめ、地域には良いお店、良い技術、良いサービスを持つ事業者がたくさんあります。けれど、スマホで調べたときに情報が見つからなかったり、魅力が十分に伝わらなかったりすることで、選ばれる機会を逃してしまうことがあります。4Uは、地域の小さな事業者の魅力が、必要な人にきちんと届くためのWebづくりをお手伝いします。</p>
-    </div>
-  </section>
-
-  <!-- ===================== MISSION ===================== -->
-  <section class="statement panel">
-    <div class="wrap statement-inner">
-      <span class="eyebrow center reveal">Mission</span>
-      <h2 class="reveal d1">わかりやすく、相談しやすい<br />Web制作を、あたりまえに。</h2>
-      <div class="mission-pair">
-        <div class="mission-card reveal d2">
-          <p class="num">01</p>
-          <p>専門用語を使わず、<b>わかりやすく、相談しやすい</b>Web制作を提供します。「何から始めればいいか分からない」を、安心に変えます。</p>
-        </div>
-        <div class="mission-card reveal d3">
-          <p class="num">02</p>
-          <p>AIを活用することで、<b>低価格・短納期</b>でも質の高いHP制作を実現します。コストを抑えながら、しっかり伝わる形に。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FOUNDER STORY ===================== -->
-  <section class="founder" id="story">
-    <div class="wrap founder-grid">
-      <aside class="founder-aside reveal">
-        <div class="profile-card">
-          <div class="avatar">T</div>
-          <p class="role">FOUNDER</p>
-          <p class="name">土屋 裕二</p>
-          <hr />
-          <p class="meta">
-            <b>個別指導塾 free</b> 代表<br />
-            <b>合同会社4U</b> 代表社員<br /><br />
-            個別指導塾で培った「むずかしいことを、わかりやすく伝える力」を、地域の事業者のWeb制作に活かしています。
-          </p>
-        </div>
-      </aside>
-
-      <div class="founder-body">
-        <span class="eyebrow reveal">Founder's Story</span>
-        <h2 class="reveal d1">良いものがあるのに、伝わらない。<br />そのもったいなさを減らしたい。</h2>
-        <p class="reveal d1">私の地元である沼田市には、良いお店や良いサービスを持つ事業者さんがたくさんいます。一方で、ホームページがなかったり、スマホで見づらかったり、情報が整理されていなかったりすることで、本来の魅力が伝わりきっていない場面もあります。</p>
-        <p class="reveal d1">この想いの出発点は、ほかでもない私自身の経験でした。個別指導塾 free を立ち上げたとき、最初にぶつかったのが<span class="hl">「どうやって塾を知ってもらうか」</span>という集客の壁。良い授業をする自信はあっても、それを届ける手段がわからなかったのです。</p>
-        <p class="reveal d2">開業したばかりで、資金に余裕はありません。ホームページや広告にまとまったお金をかけることはできない。調べてみると、制作会社に頼んだ場合の費用は、想像をはるかに超える高額でした。仕方なく自力でホームページを作ってみたものの、出来上がったのは、どこかで見たようなありきたりのテンプレート。<span class="hl">これでは、自分の塾の良さは何ひとつ伝わらない</span>——そう感じました。</p>
-
-        <button class="story-toggle" id="storyToggle" aria-expanded="false" aria-controls="storyMore">
-          代表ストーリーをもっと読む<span class="chev" aria-hidden="true">▾</span>
-        </button>
-
-        <div class="story-more" id="storyMore" hidden>
-          <div class="founder-quote reveal d2">良いものがあるのに、伝わらない。<br />それは、とてももったいないことだと思いました。</div>
-          <p class="reveal d3">そこから、自分で試行錯誤を重ねました。塾で毎日続けてきた「むずかしいことを、わかりやすく伝える」力をWebに応用し、何を載せれば伝わるのかを一つずつ確かめていく。さらにAIを使えば、制作にかかるコストと時間は大きく抑えられる。たどり着いた答えが、長い説明や高い初期費用の前に、まず実際に見て確かめられる<span class="hl">無料の試作デモ</span>という形でした。</p>
-          <p class="reveal d3">いま4Uは、ホームページやランディングページ、動画制作を通して、地域の事業者の「伝える」をお手伝いしています。かつての私と同じように、資金や知識がなくて一歩を踏み出せずにいる方へ。完成イメージを目で見て、納得してから決められる安心を届けたい。良いものを持つ人が、まっすぐ選ばれる地域を、一緒につくっていきます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== NAME ORIGIN ===================== -->
-  <section class="naming">
-    <div class="naming-bg" aria-hidden="true">For You</div>
-    <div class="wrap naming-inner">
-      <span class="eyebrow center reveal">Our Name</span>
-      <p class="naming-text reveal d1">「4U」という社名は、<em>For You</em>。<br />「あなたのために」という想いを込めています。</p>
-      <p class="naming-sub reveal d2">目の前のひとりの事業者のために、できることをする。<br />その姿勢を、これからも変えません。</p>
-    </div>
-  </section>
-
   <!-- ===================== CONCERNS ===================== -->
   <section class="concerns" id="concerns">
     <div class="wrap">
       <div class="concerns-head">
         <span class="eyebrow center reveal">Your Concerns</span>
-        <h2 class="section-title reveal d1">こんなお悩みはありませんか？</h2>
-        <p class="reveal d2">開業前・開業直後の方から、今あるホームページを見直したい方まで。4Uは、地域の小さな事業者の「まず整えたいWebまわり」をお手伝いします。</p>
+        <h2 class="section-title reveal d1">ひとつでも当てはまったら、<br />お役に立てるかもしれません。</h2>
+        <p class="reveal d2">開業前・開業直後の方から、今あるホームページを見直したい方まで。地域の小さな事業者の「まず整えたいWebまわり」を、4Uがお手伝いします。</p>
       </div>
 
       <div class="concerns-grid">
@@ -1658,6 +1804,10 @@
         <p class="roles-note reveal">お店やサービスを探すとき、多くの方はまずスマホで情報を確認します。だからこそホームページは「あるだけ」ではなく、スマホで見やすく、料金やサービス内容、予約や問い合わせまで迷わずたどり着けることが大切だと考えています。</p>
       </div>
 
+      <div class="mini-cta reveal">
+        <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
+      </div>
+
     </div>
   </section>
 
@@ -1666,48 +1816,61 @@
     <div class="wrap">
       <div class="service-head">
         <span class="eyebrow center reveal">Service</span>
-        <h2 class="section-title reveal d1">事業者のための、<br />伝わるWebづくり一式。</h2>
-        <p class="reveal d2">ホームページから動画、AI活用まで。発信に関わる「困った」を、まとめてご相談いただけます。</p>
+        <h2 class="section-title reveal d1">まずは、この3つから。</h2>
+        <p class="reveal d2">最初の一歩として多くの事業者さまに選ばれている、3つの基本サービスです。<br />どれが合うか分からなくても、無料試作デモで一緒に考えながら進められます。</p>
       </div>
+
+      <!-- 主軸3サービス -->
       <div class="service-grid">
 
         <article class="service-card reveal">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
-          <h3>ホームページ制作</h3>
+          <h3>01. ホームページ制作</h3>
           <p>会社やお店の魅力を伝える、基本のホームページ。スマートフォン対応まで、すべて込みで制作します。</p>
         </article>
 
         <article class="service-card reveal d1">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 7h4M12 17h.01"/></svg></div>
-          <h3>ランディングページ制作</h3>
+          <h3>02. ランディングページ制作</h3>
           <p>予約やお問い合わせにつなげる、1ページ完結型のページ。キャンペーンや新サービスの告知に。</p>
         </article>
 
         <article class="service-card reveal d2">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0-8-8"/><path d="M4 12V7h5"/><path d="m9 15 3-3"/></svg></div>
-          <h3>既存ホームページの改善</h3>
+          <h3>03. 既存ホームページの改善</h3>
           <p>今あるサイトを、見やすく・伝わる形にリニューアル。「古く見える」「スマホで崩れる」も解決します。</p>
         </article>
 
-        <article class="service-card reveal">
+      </div>
+
+      <!-- サブ：あわせてご相談いただけるサポート -->
+      <div class="service-sub-head reveal">
+        <span class="label">あわせてご相談いただけるサポート</span>
+      </div>
+      <div class="service-sub-grid">
+
+        <article class="service-card sub reveal">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></div>
-          <h3>YouTube / 動画制作サポート</h3>
-          <p>撮影から編集まで、動画での発信をお手伝い。お店の雰囲気や人柄を、動きと声で届けられます。</p>
+          <div class="sub-body">
+            <h3>YouTube / 動画制作サポート</h3>
+            <p>撮影から編集まで、動画での発信をお手伝い。お店の雰囲気や人柄を、動きと声で届けられます。</p>
+          </div>
         </article>
 
-        <article class="service-card reveal d1">
+        <article class="service-card sub reveal d1">
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg></div>
-          <h3>AI活用サポート</h3>
-          <p>日々の事務作業や情報発信を、AIで効率化するお手伝い。少人数でも回る仕組みづくりをご提案します。</p>
-        </article>
-
-        <article class="service-card reveal d2" style="display:flex;flex-direction:column;justify-content:center;background:var(--bg-deep);border-color:var(--bg-deep);">
-          <h3 style="color:#fff;">まずは無料の<br />試作デモから。</h3>
-          <p style="color:#bdb8b0;">どのサービスが合うか分からなくても大丈夫。完成イメージを見ながら一緒に考えます。</p>
-          <a href="#contact" class="link-arrow" style="color:#fff;border-color:rgba(255,255,255,.25);margin-top:16px;align-self:flex-start;">相談してみる →</a>
+          <div class="sub-body">
+            <h3>AI活用サポート</h3>
+            <p>日々の事務作業や情報発信を、AIで効率化するお手伝い。少人数でも回る仕組みづくりをご提案します。</p>
+          </div>
         </article>
 
       </div>
+
+      <div class="mini-cta reveal">
+        <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
+      </div>
+
     </div>
   </section>
 
@@ -1768,10 +1931,12 @@
       <div class="plan-grid">
 
         <article class="plan-card reveal">
+          <span class="plan-for">こんな方に｜まず名刺代わりに</span>
           <p class="plan-name">ライトプラン</p>
           <p class="plan-en">Light</p>
           <p class="plan-price">59,800<small>円〜</small></p>
           <p class="plan-desc">まずはシンプルにホームページを持ちたい方向け。</p>
+          <p class="plan-key"><b>1ページ／修正1回</b><br />必要最低限の情報を、整えて掲載します。</p>
           <hr class="plan-divider" />
           <ul class="plan-feat feat-pc">
             <li>1ページ構成</li>
@@ -1785,15 +1950,17 @@
             <li>基本情報の掲載・お問い合わせ導線</li>
             <li>修正1回まで</li>
           </ul>
-          <a href="#contact" class="btn plan-cta plan-cta-ghost">ライトプランで相談する</a>
+          <a href="#contact" class="btn plan-cta plan-cta-ghost">無料デモで相談する</a>
         </article>
 
         <article class="plan-card featured reveal d1">
           <span class="plan-badge">おすすめ</span>
+          <span class="plan-for">こんな方に｜魅力をしっかり伝えたい</span>
           <p class="plan-name">スタンダードプラン</p>
           <p class="plan-en">Standard</p>
           <p class="plan-price">99,800<small>円〜</small></p>
           <p class="plan-desc">事業の魅力やサービス内容をしっかり伝えたい方向け。</p>
+          <p class="plan-key"><b>1ページ充実／修正2回／文章サポート付</b><br />構成と文章まで一緒に整え、伝わる形に。</p>
           <hr class="plan-divider" />
           <ul class="plan-feat feat-pc">
             <li>1ページ充実構成</li>
@@ -1810,14 +1977,16 @@
             <li>スマホ対応・SEO基本設定</li>
             <li>お問い合わせ導線・修正2回まで</li>
           </ul>
-          <a href="#contact" class="btn btn-primary plan-cta">スタンダードで相談する<span class="arrow">→</span></a>
+          <a href="#contact" class="btn btn-primary plan-cta">無料デモで相談する<span class="arrow">→</span></a>
         </article>
 
         <article class="plan-card reveal d2">
+          <span class="plan-for">こんな方に｜ブランドとして整えたい</span>
           <p class="plan-name">プレミアムプラン</p>
           <p class="plan-en">Premium</p>
           <p class="plan-price">179,800<small>円〜</small></p>
           <p class="plan-desc">ブランディングや集客導線まで見据えた本格制作。</p>
+          <p class="plan-key"><b>複数ページ／修正3回／導線設計まで</b><br />SNS・動画とも組み合わせた本格的なWeb運用へ。</p>
           <hr class="plan-divider" />
           <ul class="plan-feat feat-pc">
             <li>複数ページ対応</li>
@@ -1835,9 +2004,55 @@
             <li>SNS / 動画導線・SEO基本設定</li>
             <li>修正3回まで</li>
           </ul>
-          <a href="#contact" class="btn plan-cta plan-cta-ghost">プレミアムで相談する</a>
+          <a href="#contact" class="btn plan-cta plan-cta-ghost">無料デモで相談する</a>
         </article>
 
+      </div>
+
+      <!-- PCのみ表示：違いをひと目で比較できる早見表 -->
+      <div class="plan-compare reveal">
+        <table>
+          <thead>
+            <tr>
+              <th>主な違い</th>
+              <th>ライト</th>
+              <th class="is-featured">スタンダード</th>
+              <th>プレミアム</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ページ数</td>
+              <td>1ページ</td>
+              <td>1ページ（充実）</td>
+              <td>複数ページ</td>
+            </tr>
+            <tr>
+              <td>文章サポート</td>
+              <td>—</td>
+              <td>整理サポート</td>
+              <td>作成サポート</td>
+            </tr>
+            <tr>
+              <td>構成・導線提案</td>
+              <td>—</td>
+              <td>構成提案</td>
+              <td>導線設計まで</td>
+            </tr>
+            <tr>
+              <td>SEO基本設定</td>
+              <td>—</td>
+              <td>あり</td>
+              <td>あり</td>
+            </tr>
+            <tr>
+              <td>修正回数</td>
+              <td>1回まで</td>
+              <td>2回まで</td>
+              <td>3回まで</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="plan-maint reveal">
@@ -1866,6 +2081,81 @@
     </div>
   </section>
 
+  <!-- ===================== VISION ===================== -->
+  <section class="statement" id="belief">
+    <div class="wrap statement-inner">
+      <p class="belief-intro reveal">— Our Belief —</p>
+      <span class="eyebrow center reveal">Vision</span>
+      <h2 class="reveal d1">地域の小さな事業者の価値が、<br />必要な人に、きちんと届く社会へ。</h2>
+      <p class="body reveal d2">沼田市をはじめ、地域には良いお店、良い技術、良いサービスを持つ事業者がたくさんあります。けれど、スマホで調べたときに情報が見つからなかったり、魅力が十分に伝わらなかったりすることで、選ばれる機会を逃してしまうことがあります。4Uは、地域の小さな事業者の魅力が、必要な人にきちんと届くためのWebづくりをお手伝いします。</p>
+    </div>
+  </section>
+
+  <!-- ===================== MISSION ===================== -->
+  <section class="statement panel">
+    <div class="wrap statement-inner">
+      <span class="eyebrow center reveal">Mission</span>
+      <h2 class="reveal d1">わかりやすく、相談しやすい<br />Web制作を、あたりまえに。</h2>
+      <div class="mission-pair">
+        <div class="mission-card reveal d2">
+          <p class="num">01</p>
+          <p>専門用語を使わず、<b>わかりやすく、相談しやすい</b>Web制作を提供します。「何から始めればいいか分からない」を、安心に変えます。</p>
+        </div>
+        <div class="mission-card reveal d3">
+          <p class="num">02</p>
+          <p>AIを活用することで、<b>低価格・短納期</b>でも質の高いHP制作を実現します。コストを抑えながら、しっかり伝わる形に。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOUNDER STORY ===================== -->
+  <section class="founder" id="story">
+    <div class="wrap founder-grid">
+      <aside class="founder-aside reveal">
+        <div class="profile-card">
+          <div class="avatar">T</div>
+          <p class="role">FOUNDER</p>
+          <p class="name">土屋 裕二</p>
+          <hr />
+          <p class="meta">
+            <b>個別指導塾 free</b> 代表<br />
+            <b>合同会社4U</b> 代表社員<br /><br />
+            個別指導塾で培った「むずかしいことを、わかりやすく伝える力」を、地域の事業者のWeb制作に活かしています。
+          </p>
+        </div>
+      </aside>
+
+      <div class="founder-body">
+        <span class="eyebrow reveal">Founder's Story</span>
+        <h2 class="reveal d1">良いものがあるのに、伝わらない。<br />そのもったいなさを減らしたい。</h2>
+        <p class="reveal d1">私の地元である沼田市には、良いお店や良いサービスを持つ事業者さんがたくさんいます。一方で、ホームページがなかったり、スマホで見づらかったり、情報が整理されていなかったりすることで、本来の魅力が伝わりきっていない場面もあります。</p>
+        <p class="reveal d1">この想いの出発点は、ほかでもない私自身の経験でした。個別指導塾 free を立ち上げたとき、最初にぶつかったのが<span class="hl">「どうやって塾を知ってもらうか」</span>という集客の壁。良い授業をする自信はあっても、それを届ける手段がわからなかったのです。</p>
+        <p class="reveal d2">開業したばかりで、資金に余裕はありません。ホームページや広告にまとまったお金をかけることはできない。調べてみると、制作会社に頼んだ場合の費用は、想像をはるかに超える高額でした。仕方なく自力でホームページを作ってみたものの、出来上がったのは、どこかで見たようなありきたりのテンプレート。<span class="hl">これでは、自分の塾の良さは何ひとつ伝わらない</span>——そう感じました。</p>
+
+        <button class="story-toggle" id="storyToggle" aria-expanded="false" aria-controls="storyMore">
+          代表ストーリーをもっと読む<span class="chev" aria-hidden="true">▾</span>
+        </button>
+
+        <div class="story-more" id="storyMore" hidden>
+          <div class="founder-quote reveal d2">良いものがあるのに、伝わらない。<br />それは、とてももったいないことだと思いました。</div>
+          <p class="reveal d3">そこから、自分で試行錯誤を重ねました。塾で毎日続けてきた「むずかしいことを、わかりやすく伝える」力をWebに応用し、何を載せれば伝わるのかを一つずつ確かめていく。さらにAIを使えば、制作にかかるコストと時間は大きく抑えられる。たどり着いた答えが、長い説明や高い初期費用の前に、まず実際に見て確かめられる<span class="hl">無料の試作デモ</span>という形でした。</p>
+          <p class="reveal d3">いま4Uは、ホームページやランディングページ、動画制作を通して、地域の事業者の「伝える」をお手伝いしています。かつての私と同じように、資金や知識がなくて一歩を踏み出せずにいる方へ。完成イメージを目で見て、納得してから決められる安心を届けたい。良いものを持つ人が、まっすぐ選ばれる地域を、一緒につくっていきます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NAME ORIGIN ===================== -->
+  <section class="naming">
+    <div class="naming-bg" aria-hidden="true">For You</div>
+    <div class="wrap naming-inner">
+      <span class="eyebrow center reveal">Our Name</span>
+      <p class="naming-text reveal d1">「4U」という社名は、<em>For You</em>。<br />「あなたのために」という想いを込めています。</p>
+      <p class="naming-sub reveal d2">目の前のひとりの事業者のために、できることをする。<br />その姿勢を、これからも変えません。</p>
+    </div>
+  </section>
+
   <!-- ===================== COMPANY ===================== -->
   <section class="company" id="company">
     <div class="wrap company-grid">
@@ -1877,7 +2167,7 @@
         <tbody>
           <tr><th>会社名</th><td>合同会社4U（フォーユー）</td></tr>
           <tr><th>代表者</th><td>代表社員 土屋 裕二</td></tr>
-          <tr><th>事業内容</th><td>ホームページ制作／ランディングページ制作／既存サイトの改善・運用／動画制作サポート／AI活用による業務効率化支援</td></tr>
+          <tr><th>事業内容</th><td>ホームページ制作／ランディングページ制作／既存サイトの改善・運用／YouTube・動画制作サポート／AI活用による業務効率化支援</td></tr>
           <tr><th>所在地</th><td>群馬県沼田市<br /><span class="small">詳しい所在地は、お問い合わせ時にお伝えします。</span></td></tr>
           <tr><th>対応エリア</th><td>沼田市を中心に群馬県内<br /><span class="small">オンラインでのご相談は、エリアを問わず対応いたします。</span></td></tr>
           <tr><th>お問い合わせ</th><td><a href="#contact" class="link-arrow">お問い合わせフォームへ →</a></td></tr>
@@ -1989,6 +2279,7 @@
     </div>
   </section>
 
+
 </main>
 
 <!-- ===================== FOOTER ===================== -->
@@ -2005,17 +2296,17 @@
           <ul>
             <li><a href="#service">ホームページ制作</a></li>
             <li><a href="#service">ランディングページ制作</a></li>
-            <li><a href="#service">動画制作サポート</a></li>
-            <li><a href="#service">AI活用サポート</a></li>
+            <li><a href="#service">既存サイトの改善</a></li>
+            <li><a href="#service">動画 / AI活用サポート</a></li>
           </ul>
         </div>
         <div>
           <h4>COMPANY</h4>
           <ul>
-            <li><a href="#vision">私たちの想い</a></li>
+            <li><a href="#belief">私たちの想い</a></li>
             <li><a href="#story">代表ストーリー</a></li>
             <li><a href="#company">会社概要</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="#contact">無料試作デモを申し込む</a></li>
           </ul>
         </div>
       </nav>
