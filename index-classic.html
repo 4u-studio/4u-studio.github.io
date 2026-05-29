@@ -1,0 +1,2790 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>合同会社4U｜地域の事業者のためのホームページ制作</title>
+<meta name="description" content="群馬・沼田の小さな事業者向け、無料の試作デモから始められるホームページ制作。AI活用で低価格・短納期。2〜5日で完成イメージをお届けします。HP制作・LP制作・既存サイトの改善まで。" />
+<meta property="og:title" content="合同会社4U｜無料の試作デモから始める、地域の事業者のためのHP制作" />
+<meta property="og:description" content="まずは見てから決められる。無料の試作デモを2〜5日でお届けします。気に入った場合のみ正式依頼。" />
+<meta property="og:type" content="website" />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#FBFAF8" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0C0C0D" media="(prefers-color-scheme: dark)" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+
+<style>
+  /* ============================================================
+     合同会社4U — Company Site
+     Design: refined minimalism / warm off-white / clay accent
+     ============================================================ */
+
+  :root{
+    color-scheme: light dark;
+    --bg:        #FBFAF8;
+    --bg-panel:  #F3EEE8;
+    --bg-deep:   #1C1A17;
+    --surface:   #FFFFFF;
+    --ink:       #1C1A17;
+    --ink-soft:  #46433D;
+    --muted:     #6E6960;
+    --line:      #E4E0D7;
+    --line-soft: #EDEAE3;
+    --accent:    #B96A4B;
+    --accent-deep:#9C5639;
+    --accent-tint:#F0E5DD;
+    --white:     #FFFFFF;
+
+    --serif: "Fraunces", Georgia, serif;
+    --sans:  "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+
+    --maxw: 1140px;
+    --ease: cubic-bezier(.22,.61,.36,1);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+    color-scheme:light dark;
+    background:var(--bg);
+  }
+
+  body{
+    font-family:var(--sans);
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.85;
+    font-weight:400;
+    letter-spacing:.01em;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  ::selection{ background:var(--accent-tint); }
+
+  .wrap{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 28px; }
+
+  section{ scroll-margin-top:84px; }
+
+  /* ---------- shared section heading ---------- */
+  .eyebrow{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:.95rem;
+    letter-spacing:.06em;
+    color:var(--accent-deep);
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:34px; height:1px;
+    background:var(--accent-deep);
+    display:inline-block;
+  }
+  .eyebrow.center{ justify-content:center; }
+  .eyebrow.center::after{
+    content:"";
+    width:34px; height:1px;
+    background:var(--accent-deep);
+    display:inline-block;
+  }
+
+  h1,h2,h3{ font-weight:900; letter-spacing:-.01em; line-height:1.5; }
+
+  .section-title{
+    font-size:clamp(1.6rem, 1rem + 2.4vw, 2.5rem);
+    line-height:1.55;
+  }
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:1rem;
+    padding:17px 32px;
+    border-radius:999px;
+    transition:transform .25s var(--ease), background .25s var(--ease), box-shadow .25s var(--ease), color .25s var(--ease);
+    cursor:pointer;
+    border:1px solid transparent;
+    white-space:nowrap;
+  }
+  .btn .arrow{ transition:transform .25s var(--ease); }
+  .btn:hover .arrow{ transform:translateX(4px); }
+
+  .btn-primary{
+    background:var(--accent);
+    color:#fff;
+    box-shadow:0 10px 24px -12px rgba(156,86,57,.7);
+  }
+  .btn-primary:hover{ background:var(--accent-deep); transform:translateY(-2px); }
+
+  .btn-ghost{
+    background:transparent;
+    color:var(--ink);
+    border-color:var(--line);
+  }
+  .btn-ghost:hover{ border-color:var(--ink); transform:translateY(-2px); }
+
+  .link-arrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-weight:700; color:var(--ink);
+    border-bottom:1px solid var(--line);
+    padding-bottom:3px;
+    transition:color .2s var(--ease), border-color .2s var(--ease);
+  }
+  .link-arrow:hover{ color:var(--accent); border-color:var(--accent); }
+
+  /* ============================================================
+     HEADER
+     ============================================================ */
+  .site-header{
+    position:fixed; top:0; left:0; right:0;
+    z-index:100;
+    transition:background .3s var(--ease), border-color .3s var(--ease), padding .3s var(--ease);
+    border-bottom:1px solid transparent;
+  }
+  .site-header.scrolled{
+    background:rgba(251,250,248,.88);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom-color:var(--line);
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    height:74px;
+  }
+  .brand{ display:flex; align-items:baseline; gap:10px; }
+  .brand .mark{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:1.7rem;
+    letter-spacing:-.02em;
+    line-height:1;
+  }
+  .brand .mark b{ color:var(--accent); font-weight:500; }
+  .brand .sub{
+    font-size:.72rem;
+    letter-spacing:.14em;
+    color:var(--muted);
+    font-weight:500;
+  }
+
+  .nav{ display:flex; align-items:center; gap:32px; }
+  .nav-links{ display:flex; gap:28px; list-style:none; }
+  .nav-links a{
+    font-size:.92rem; font-weight:500; color:var(--ink-soft);
+    position:relative; padding:4px 0;
+    transition:color .2s var(--ease);
+  }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; bottom:0;
+    width:0; height:1px; background:var(--accent);
+    transition:width .25s var(--ease);
+  }
+  .nav-links a:hover{ color:var(--ink); }
+  .nav-links a:hover::after{ width:100%; }
+
+  .nav .btn{ padding:11px 22px; font-size:.92rem; }
+
+  .menu-toggle{
+    display:none;
+    width:42px; height:42px;
+    background:none; border:1px solid var(--line);
+    border-radius:50%;
+    cursor:pointer; position:relative;
+  }
+  .menu-toggle span{
+    position:absolute; left:11px; width:20px; height:1.6px;
+    background:var(--ink);
+    transition:transform .3s var(--ease), opacity .2s var(--ease);
+  }
+  .menu-toggle span:nth-child(1){ top:16px; }
+  .menu-toggle span:nth-child(2){ top:22px; }
+  .menu-toggle span:nth-child(3){ top:28px; }
+  body.menu-open .menu-toggle span:nth-child(1){ transform:translateY(6px) rotate(45deg); }
+  body.menu-open .menu-toggle span:nth-child(2){ opacity:0; }
+  body.menu-open .menu-toggle span:nth-child(3){ transform:translateY(-6px) rotate(-45deg); }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero{
+    padding:148px 0 96px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; top:-180px; right:-160px;
+    width:560px; height:560px;
+    background:radial-gradient(circle, rgba(185,106,75,.10), transparent 70%);
+    border-radius:50%;
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:64px;
+    align-items:center;
+  }
+  .hero-eyebrow{
+    font-family:var(--serif);
+    font-style:italic;
+    color:var(--accent-deep);
+    font-size:1rem;
+    letter-spacing:.04em;
+    margin-bottom:28px;
+  }
+  .hero h1{
+    font-size:clamp(2rem, 1.1rem + 3.6vw, 3.5rem);
+    line-height:1.5;
+    letter-spacing:-.015em;
+  }
+  .hero h1 .em{
+    background:linear-gradient(transparent 64%, var(--accent-tint) 64%);
+  }
+  .hero p.lead{
+    margin-top:30px;
+    font-size:1.04rem;
+    color:var(--ink-soft);
+    max-width:30em;
+  }
+  .hero-cta{
+    margin-top:40px;
+    display:flex; align-items:center; gap:14px 26px;
+    flex-wrap:wrap;
+  }
+  .hero-note{
+    margin-top:22px;
+    font-size:.85rem;
+    color:var(--muted);
+    display:flex; align-items:center; gap:8px;
+  }
+  .hero-note::before{
+    content:""; width:6px; height:6px; border-radius:50%;
+    background:var(--accent); display:inline-block;
+  }
+
+  /* hero visual : abstract browser mock of a small-business site */
+  .hero-visual{ position:relative; }
+  .mock{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    box-shadow:0 40px 70px -36px rgba(28,26,23,.28);
+    overflow:hidden;
+  }
+  .mock-bar{
+    display:flex; align-items:center; gap:7px;
+    padding:13px 16px;
+    border-bottom:1px solid var(--line-soft);
+    background:var(--bg);
+  }
+  .mock-bar i{ width:9px; height:9px; border-radius:50%; background:var(--line); display:block; }
+  .mock-bar .addr{
+    margin-left:10px;
+    font-size:.72rem; color:var(--muted);
+    background:var(--surface); border:1px solid var(--line-soft);
+    border-radius:6px; padding:4px 12px;
+    font-family:var(--serif); font-style:italic;
+  }
+  .mock-body{ padding:26px 24px 30px; }
+  .mock-tag{
+    font-size:.66rem; letter-spacing:.16em; color:var(--accent);
+    font-weight:700;
+  }
+  .mock-h{
+    font-weight:900; font-size:1.18rem; line-height:1.5;
+    margin:10px 0 14px;
+  }
+  .mock-line{ height:9px; border-radius:5px; background:var(--line-soft); margin:8px 0; }
+  .mock-line.w70{ width:70%; }
+  .mock-line.w50{ width:50%; }
+  .mock-btn{
+    margin-top:18px;
+    display:inline-block;
+    font-size:.78rem; font-weight:700; color:#fff;
+    background:var(--accent);
+    padding:9px 20px; border-radius:999px;
+  }
+  .mock-grid{
+    margin-top:22px;
+    display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;
+  }
+  .mock-grid div{
+    height:54px; border-radius:8px;
+    background:var(--bg-panel);
+  }
+  .float-chip{
+    position:absolute;
+    z-index:3;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:13px 18px;
+    box-shadow:0 18px 40px -22px rgba(28,26,23,.4);
+    font-size:.82rem; font-weight:700;
+    display:flex; align-items:center; gap:9px;
+  }
+  .float-chip .dot{ width:9px;height:9px;border-radius:50%;background:var(--accent); }
+  .float-chip.one{ top:-22px; left:-30px; }
+  .float-chip.two{ bottom:-24px; right:-26px; }
+  .float-chip .big{ font-family:var(--serif); font-size:1.05rem; }
+
+  /* ============================================================
+     STATEMENT (Vision / Mission)
+     ============================================================ */
+  .statement{ padding:104px 0; }
+  .statement.panel{ background:var(--bg-panel); }
+  .statement-inner{ max-width:880px; margin:0 auto; text-align:center; }
+  .statement h2{
+    font-size:clamp(1.5rem, 1rem + 2.4vw, 2.45rem);
+    line-height:1.65;
+  }
+  .statement .body{
+    margin-top:26px;
+    color:var(--ink-soft);
+    font-size:1.03rem;
+  }
+  .mission-pair{
+    margin-top:40px;
+    display:grid; grid-template-columns:1fr 1fr; gap:24px;
+    text-align:left;
+  }
+  .mission-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:32px 30px;
+  }
+  .mission-card .num{
+    font-family:var(--serif); font-style:italic;
+    color:var(--accent); font-size:1.15rem;
+    margin-bottom:12px;
+  }
+  .mission-card p{ font-size:.99rem; color:var(--ink-soft); font-weight:500; }
+  .mission-card p b{ font-weight:900; color:var(--ink); }
+
+  /* ============================================================
+     FOUNDER STORY
+     ============================================================ */
+  .founder{ padding:104px 0; }
+  .founder-grid{
+    display:grid;
+    grid-template-columns:.82fr 1.18fr;
+    gap:56px;
+    align-items:start;
+  }
+  .founder-aside{
+    position:sticky; top:104px;
+  }
+  .profile-card{
+    background:var(--bg-deep);
+    color:#fff;
+    border-radius:16px;
+    padding:38px 32px;
+  }
+  .avatar{
+    width:70px; height:70px; border-radius:50%;
+    background:var(--accent);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif); font-size:1.8rem; color:#fff;
+    margin-bottom:22px;
+  }
+  .profile-card .role{
+    font-size:.74rem; letter-spacing:.14em;
+    color:var(--accent-tint); font-weight:700;
+  }
+  .profile-card .name{
+    font-size:1.5rem; font-weight:900; margin:6px 0 4px;
+  }
+  .profile-card .name span{ font-size:.95rem; color:#cfc9c0; font-weight:500; margin-left:8px; }
+  .profile-card hr{
+    border:0; border-top:1px solid rgba(255,255,255,.14);
+    margin:22px 0;
+  }
+  .profile-card .meta{ font-size:.88rem; color:#bdb8b0; line-height:1.95; }
+  .profile-card .meta b{ color:#fff; font-weight:700; }
+
+  .founder-body .eyebrow{ margin-bottom:18px; }
+  .founder-body h2{
+    font-size:clamp(1.5rem, 1rem + 2.2vw, 2.3rem);
+    margin-bottom:30px;
+  }
+  .founder-body p{
+    color:var(--ink-soft);
+    margin-bottom:22px;
+    font-size:1.02rem;
+  }
+  .founder-body p .hl{
+    font-weight:900; color:var(--ink);
+    background:linear-gradient(transparent 62%, var(--accent-tint) 62%);
+  }
+  .founder-quote{
+    margin:34px 0;
+    padding:24px 0 24px 28px;
+    border-left:3px solid var(--accent);
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.25rem;
+    line-height:1.7;
+    color:var(--ink);
+  }
+
+  /* ============================================================
+     NAME ORIGIN ("4U = For You")
+     ============================================================ */
+  .naming{
+    position:relative;
+    background:var(--bg-deep);
+    color:#fff;
+    padding:104px 0;
+    overflow:hidden;
+    text-align:center;
+  }
+  .naming-bg{
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(7rem, 24vw, 21rem);
+    line-height:1;
+    color:rgba(255,255,255,.05);
+    white-space:nowrap;
+    pointer-events:none;
+    user-select:none;
+    z-index:0;
+  }
+  .naming-inner{
+    position:relative; z-index:1;
+    max-width:680px; margin:0 auto;
+  }
+  .naming .eyebrow{ color:var(--accent); }
+  .naming .eyebrow::before,
+  .naming .eyebrow.center::after{ background:var(--accent); }
+  .naming-text{
+    font-size:clamp(1.35rem, 1rem + 1.7vw, 2rem);
+    font-weight:900;
+    line-height:1.75;
+    margin-bottom:22px;
+  }
+  .naming-text em{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    color:var(--accent);
+    letter-spacing:.01em;
+  }
+  .naming-sub{
+    color:#bdb8b0;
+    font-size:1rem;
+    line-height:1.95;
+  }
+
+  /* ============================================================
+     CONCERNS（こんなお悩みはありませんか？）
+     ============================================================ */
+  .concerns{ padding:104px 0; }
+  .concerns-head{ text-align:center; margin-bottom:52px; }
+  .concerns-head p{
+    margin-top:18px; color:var(--ink-soft);
+    max-width:34em; margin-left:auto; margin-right:auto;
+  }
+  .concerns-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+  }
+  .concern-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:30px 28px;
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+  }
+  .concern-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 24px 46px -30px rgba(28,26,23,.3);
+    border-color:var(--accent-tint);
+  }
+  .concern-card .c-check{
+    width:34px; height:34px; border-radius:9px;
+    background:var(--accent-tint);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:16px;
+  }
+  .concern-card .c-check svg{ width:18px; height:18px; stroke:var(--accent-deep); }
+  .concern-card .c-who{
+    font-size:.78rem; font-weight:700; letter-spacing:.04em;
+    color:var(--accent-deep);
+    margin-bottom:8px;
+  }
+  .concern-card .c-text{
+    font-size:1rem; font-weight:700;
+    color:var(--ink);
+    line-height:1.65;
+  }
+
+  /* --- Instagram × ホームページ 比較 --- */
+  .roles{
+    margin-top:64px;
+  }
+  .roles-head{ text-align:center; margin-bottom:36px; }
+  .roles-head h3{
+    font-size:clamp(1.3rem, 1rem + 1.5vw, 1.85rem);
+    line-height:1.6;
+  }
+  .roles-head p{
+    margin-top:16px; color:var(--ink-soft);
+    max-width:36em; margin-left:auto; margin-right:auto;
+    font-size:.98rem;
+  }
+  .roles-pair{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    max-width:880px; margin:0 auto;
+  }
+  .role-card{
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:30px 30px 32px;
+    background:var(--surface);
+  }
+  .role-card.web{
+    border-color:var(--accent);
+    background:var(--accent-tint);
+  }
+  .role-card .r-label{
+    font-family:var(--serif); font-style:italic;
+    font-size:1.15rem;
+    margin-bottom:4px;
+  }
+  .role-card.insta .r-label{ color:var(--ink); }
+  .role-card.web .r-label{ color:var(--accent-deep); }
+  .role-card .r-sub{
+    font-size:.82rem; color:var(--muted);
+    margin-bottom:18px;
+  }
+  .role-card.web .r-sub{ color:var(--accent-deep); }
+  .role-card ul{
+    list-style:none;
+    display:flex; flex-direction:column; gap:11px;
+  }
+  .role-card li{
+    position:relative;
+    padding-left:24px;
+    font-size:.94rem;
+    color:var(--ink);
+    line-height:1.6;
+  }
+  .role-card li::before{
+    content:"";
+    position:absolute; left:0; top:7px;
+    width:13px; height:13px; border-radius:50%;
+    background-repeat:no-repeat; background-position:center;
+  }
+  .role-card.insta li::before{
+    background:var(--bg-panel);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 24 24' fill='none' stroke='%236E6960' stroke-width='4' stroke-linecap='round'%3E%3Cpath d='M5 12h14'/%3E%3C/svg%3E");
+  }
+  .role-card.web li::before{
+    background:var(--accent);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFF' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  }
+  .roles-note{
+    text-align:center;
+    margin-top:30px;
+    font-size:.92rem;
+    color:var(--ink-soft);
+    max-width:34em; margin-left:auto; margin-right:auto;
+    line-height:1.85;
+  }
+
+  /* ============================================================
+     SERVICE
+     ============================================================ */
+  .service{ padding:104px 0; background:var(--bg-panel); }
+  .service-head{ text-align:center; margin-bottom:56px; }
+  .service-head p{ margin-top:18px; color:var(--ink-soft); }
+  .service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  .service-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:34px 30px;
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+  }
+  .service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 26px 50px -30px rgba(28,26,23,.32);
+    border-color:var(--accent-tint);
+  }
+  .service-card .ico{
+    width:48px; height:48px; border-radius:12px;
+    background:var(--accent-tint);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:20px;
+  }
+  .service-card .ico svg{ width:24px; height:24px; stroke:var(--accent-deep); }
+  .service-card h3{ font-size:1.12rem; margin-bottom:10px; }
+  .service-card p{ font-size:.94rem; color:var(--ink-soft); }
+
+  /* ============================================================
+     FLOW (demo steps)
+     ============================================================ */
+  .flow{ padding:104px 0; }
+  .flow-head{ text-align:center; margin-bottom:58px; }
+  .flow-head p{ margin-top:18px; color:var(--ink-soft); }
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+    position:relative;
+  }
+  .step{ position:relative; }
+  .step .num{
+    width:54px; height:54px; border-radius:50%;
+    border:1.5px solid var(--accent);
+    color:var(--accent);
+    font-family:var(--serif); font-size:1.3rem;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--bg);
+    margin-bottom:20px;
+    position:relative; z-index:2;
+  }
+  .step h3{ font-size:1.04rem; margin-bottom:8px; }
+  .step p{ font-size:.9rem; color:var(--ink-soft); }
+  .step .label{
+    font-size:.68rem; letter-spacing:.16em; color:var(--accent-deep);
+    font-weight:700; display:block; margin-bottom:14px;
+  }
+  /* connector line */
+  .steps::before{
+    content:"";
+    position:absolute; top:27px; left:8%; right:8%;
+    height:1.5px;
+    background:linear-gradient(90deg,var(--line),var(--accent-tint),var(--line));
+    z-index:1;
+  }
+
+  /* ============================================================
+     PRICING
+     ============================================================ */
+  .pricing{ padding:104px 0; background:var(--bg-panel); }
+  .pricing-head{ text-align:center; margin-bottom:54px; }
+  .pricing-head p{ margin-top:18px; color:var(--ink-soft); max-width:32em; margin-left:auto; margin-right:auto; }
+
+  /* 3つのメインプラン */
+  .plan-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+    align-items:start;
+  }
+  .plan-card{
+    position:relative;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:38px 30px;
+    display:flex; flex-direction:column;
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+  }
+  /* おすすめプランを自然に強調 */
+  .plan-card.featured{
+    border:1.5px solid var(--accent);
+    box-shadow:0 30px 60px -34px rgba(156,86,57,.5);
+  }
+  @media (min-width:761px){
+    .plan-card.featured{ transform:translateY(-14px); }
+    .plan-card.featured:hover{ transform:translateY(-20px); }
+  }
+  .plan-card:hover{
+    box-shadow:0 26px 50px -32px rgba(28,26,23,.34);
+  }
+  .plan-badge{
+    position:absolute; top:-13px; left:50%;
+    transform:translateX(-50%);
+    background:var(--accent);
+    color:#fff;
+    font-size:.74rem; font-weight:700;
+    letter-spacing:.08em;
+    padding:6px 20px; border-radius:999px;
+    white-space:nowrap;
+  }
+  .plan-name{
+    font-size:1.15rem; font-weight:900;
+    margin-bottom:6px;
+  }
+  .plan-en{
+    font-family:var(--serif); font-style:italic;
+    font-size:.85rem; color:var(--accent-deep);
+    margin-bottom:18px;
+  }
+  .plan-price{
+    font-family:var(--serif);
+    font-size:2.35rem;
+    color:var(--ink);
+    line-height:1;
+  }
+  .plan-price small{
+    font-family:var(--sans);
+    font-size:.95rem; font-weight:700; color:var(--muted);
+    margin-left:3px;
+  }
+  .plan-desc{
+    margin-top:16px;
+    font-size:.9rem; color:var(--ink-soft);
+    line-height:1.8;
+  }
+  .plan-divider{
+    border:0; border-top:1px solid var(--line);
+    margin:22px 0;
+  }
+  .plan-feat{
+    list-style:none;
+    display:flex; flex-direction:column; gap:11px;
+    margin-bottom:8px;
+  }
+  .plan-feat li{
+    position:relative;
+    padding-left:26px;
+    font-size:.9rem; color:var(--ink);
+    line-height:1.65;
+  }
+  .plan-feat li::before{
+    content:"";
+    position:absolute; left:0; top:7px;
+    width:15px; height:15px;
+    border-radius:50%;
+    background:var(--accent-tint);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='%239C5639' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+
+  /* 保守管理（横長カード） */
+  .plan-maint{
+    margin-top:20px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:32px 36px;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:24px 40px;
+    align-items:center;
+  }
+  .plan-maint .maint-head .plan-name{ margin-bottom:4px; }
+  .plan-maint .maint-head .plan-desc{ margin-top:8px; }
+  .plan-maint .maint-price{
+    text-align:right;
+    font-family:var(--serif);
+    font-size:2rem;
+    color:var(--ink);
+    white-space:nowrap;
+  }
+  .plan-maint .maint-price small{
+    font-family:var(--sans);
+    font-size:.9rem; font-weight:700; color:var(--muted);
+  }
+  .plan-maint .maint-price .lead-label{
+    display:block;
+    font-family:var(--sans);
+    font-size:.74rem; font-weight:700; letter-spacing:.06em;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+  .maint-feat{
+    grid-column:1 / -1;
+    list-style:none;
+    display:flex; flex-wrap:wrap; gap:10px 22px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+  }
+  .maint-feat li{
+    position:relative;
+    padding-left:24px;
+    font-size:.88rem; color:var(--ink);
+  }
+  .maint-feat li::before{
+    content:"";
+    position:absolute; left:0; top:5px;
+    width:14px; height:14px;
+    border-radius:50%;
+    background:var(--accent-tint);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='%239C5639' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+
+  .price-note{
+    margin-top:32px; text-align:center;
+    font-size:.86rem; color:var(--muted);
+    max-width:44em; margin-left:auto; margin-right:auto;
+    line-height:1.8;
+  }
+
+  /* ============================================================
+     COMPANY PROFILE
+     ============================================================ */
+  .company{ padding:104px 0; }
+  .company-grid{
+    display:grid; grid-template-columns:.7fr 1.3fr; gap:48px;
+    align-items:start;
+  }
+  .company-grid .eyebrow{ margin-bottom:18px; }
+  .company-grid h2{ font-size:clamp(1.5rem,1rem+2vw,2.2rem); }
+  .profile-table{ width:100%; border-collapse:collapse; }
+  .profile-table tr{ border-bottom:1px solid var(--line); }
+  .profile-table tr:first-child{ border-top:1px solid var(--line); }
+  .profile-table th{
+    text-align:left; vertical-align:top;
+    width:160px; padding:20px 0;
+    font-size:.86rem; font-weight:700; color:var(--muted);
+    letter-spacing:.04em;
+  }
+  .profile-table td{
+    padding:20px 0;
+    font-size:.98rem; color:var(--ink); font-weight:500;
+  }
+  .profile-table td .small{ font-size:.85rem; color:var(--muted); }
+
+  /* ============================================================
+     CONTACT
+     ============================================================ */
+  .contact{ padding:104px 0; background:var(--bg-deep); color:#fff; }
+  .contact .eyebrow{ color:var(--accent); }
+  .contact .eyebrow::before,
+  .contact .eyebrow.center::after{ background:var(--accent); }
+  .contact-head{ text-align:center; margin-bottom:18px; }
+  .contact-head h2{
+    font-size:clamp(1.6rem,1rem+2.4vw,2.5rem);
+    color:#fff;
+  }
+  .contact-head p{
+    margin-top:18px; color:#bdb8b0;
+    max-width:34em; margin-left:auto; margin-right:auto;
+  }
+  .assurance{
+    display:flex; justify-content:center; gap:12px;
+    flex-wrap:wrap;
+    margin:30px auto 48px;
+  }
+  .assurance span{
+    font-size:.82rem; font-weight:700;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:999px;
+    padding:8px 18px;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .assurance span::before{
+    content:""; width:6px; height:6px; border-radius:50%;
+    background:var(--accent);
+  }
+
+  .form-open{
+    text-align:center;
+    margin-bottom:30px;
+  }
+  .form-open-note{
+    margin-top:14px;
+    font-size:.84rem;
+    color:#bdb8b0;
+  }
+
+  .form-card{
+    background:var(--surface);
+    color:var(--ink);
+    border-radius:18px;
+    padding:20px;
+    max-width:720px; margin:0 auto;
+  }
+  /* Googleフォーム埋め込み */
+  .google-form-embed{
+    width:100%;
+    min-height:3400px;
+    border:none;
+    display:block;
+    border-radius:10px;
+    background:var(--surface);
+  }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  .site-footer{
+    background:var(--bg-deep);
+    color:#bdb8b0;
+    padding:56px 0 30px;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .footer-top{
+    display:flex; justify-content:space-between;
+    align-items:flex-start; gap:40px;
+    flex-wrap:wrap;
+  }
+  .footer-brand .mark{
+    font-family:var(--serif); font-size:1.8rem; color:#fff;
+  }
+  .footer-brand .mark b{ color:var(--accent); }
+  .footer-brand p{ margin-top:12px; font-size:.86rem; max-width:24em; }
+  .footer-nav{ display:flex; gap:48px; flex-wrap:wrap; }
+  .footer-nav h4{
+    font-size:.72rem; letter-spacing:.14em; color:#fff;
+    margin-bottom:14px; font-weight:700;
+  }
+  .footer-nav ul{ list-style:none; }
+  .footer-nav li{ margin-bottom:9px; }
+  .footer-nav a{
+    font-size:.88rem; color:#bdb8b0;
+    transition:color .2s var(--ease);
+  }
+  .footer-nav a:hover{ color:#fff; }
+  .footer-bottom{
+    margin-top:46px; padding-top:24px;
+    border-top:1px solid rgba(255,255,255,.08);
+    font-size:.78rem; color:#86827b;
+    display:flex; justify-content:space-between; gap:16px;
+    flex-wrap:wrap;
+  }
+
+  /* ============================================================
+     SCROLL REVEAL
+     ============================================================ */
+  .reveal{
+    opacity:0;
+    transform:translateY(26px);
+    transition:opacity .8s var(--ease), transform .8s var(--ease);
+  }
+  .reveal.in{ opacity:1; transform:none; }
+  .reveal.d1{ transition-delay:.08s; }
+  .reveal.d2{ transition-delay:.16s; }
+  .reveal.d3{ transition-delay:.24s; }
+  .reveal.d4{ transition-delay:.32s; }
+
+  /* ============================================================
+     RESPONSIVE
+     ============================================================ */
+  @media (max-width:980px){
+    .hero-grid{ grid-template-columns:1fr; gap:54px; }
+    .hero-visual{ max-width:440px; margin:0 auto; }
+    .founder-grid{ grid-template-columns:1fr; gap:36px; }
+    .founder-aside{ position:static; }
+    .service-grid{ grid-template-columns:1fr 1fr; }
+    .concerns-grid{ grid-template-columns:1fr 1fr; }
+    .company-grid{ grid-template-columns:1fr; gap:30px; }
+  }
+
+  @media (max-width:760px){
+    .wrap{ padding:0 22px; }
+    .nav-links, .nav .btn{ display:none; }
+    .menu-toggle{ display:block; }
+
+    /* mobile drawer */
+    .mobile-menu{
+      position:fixed; inset:74px 0 auto 0;
+      background:var(--bg);
+      border-bottom:1px solid var(--line);
+      transform:translateY(-130%);
+      transition:transform .4s var(--ease);
+      padding:14px 22px 28px;
+      z-index:99;
+    }
+    body.menu-open .mobile-menu{ transform:translateY(0); }
+    .mobile-menu a{
+      display:block;
+      padding:16px 2px;
+      font-weight:500;
+      border-bottom:1px solid var(--line-soft);
+      font-size:1.02rem;
+    }
+    .mobile-menu .btn{
+      display:flex;
+      width:100%;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      margin-top:20px;
+      padding:16px 18px;
+      border-bottom:none;
+    }
+
+    /* メニューを開いている間は固定CTAを隠す（重なり防止） */
+    body.menu-open .sticky-cta{
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+    }
+
+    .hero{ padding:120px 0 72px; }
+    .statement, .founder, .service, .flow, .pricing, .company, .contact{
+      padding:70px 0;
+    }
+    .mission-pair{ grid-template-columns:1fr; }
+    .service-grid{ grid-template-columns:1fr; }
+    .concerns-grid{ grid-template-columns:1fr; }
+    .roles-pair{ grid-template-columns:1fr; gap:14px; }
+    .roles{ margin-top:48px; }
+    .steps{ grid-template-columns:1fr; gap:14px; }
+    .steps::before{ display:none; }
+    .step{
+      display:grid; grid-template-columns:54px 1fr;
+      gap:18px; align-items:start;
+      padding-bottom:14px;
+    }
+    .step .num{ margin-bottom:0; }
+    .step .label{ margin-bottom:6px; }
+    .plan-grid{ grid-template-columns:1fr; gap:34px; }
+    .plan-card.featured{ transform:none; }
+    .plan-card.featured:hover{ transform:none; }
+    .plan-maint{
+      grid-template-columns:1fr;
+      gap:18px;
+      padding:30px 24px;
+      text-align:center;
+    }
+    .plan-maint .maint-price{ text-align:center; }
+    .maint-feat{ justify-content:center; }
+    .form-card{ padding:14px; }
+    .google-form-embed{ min-height:3700px; }
+    .float-chip.one{ left:-12px; }
+    .float-chip.two{ right:-10px; }
+    .hero-cta{ width:100%; }
+    .hero-cta .btn-primary{ flex:1; justify-content:center; }
+  }
+
+  @media (max-width:430px){
+    .plan-card{ padding:32px 24px; }
+  }
+
+  /* desktop : hide mobile menu element */
+  @media (min-width:761px){
+    .mobile-menu{ display:none; }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{ transition:none !important; animation:none !important; }
+    .reveal{ opacity:1; transform:none; }
+    html{ scroll-behavior:auto; }
+  }
+
+  /* ============================================================
+     DARK MODE
+     端末がダークモードのときに適用される濃色テーマ。
+     大半はCSS変数の差し替えだけで成立する。
+     ============================================================ */
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:        #0C0C0D;
+      --bg-panel:  #141415;
+      --bg-deep:   #000000;
+      --surface:   #18181A;
+      --ink:       #F4F3F1;
+      --ink-soft:  #BFBDB8;
+      --muted:     #8A8884;
+      --line:      #2A2A2C;
+      --line-soft: #1F1F21;
+      --accent:    #DB9067;
+      --accent-deep:#EBB08F;
+      --accent-tint:#3A2A20;
+    }
+
+    /* スクロール後のヘッダー背景を黒の半透明に */
+    .site-header.scrolled{
+      background:rgba(12,12,13,.86);
+    }
+
+    /* 明るいクレイ色のボタンには濃い文字色を載せる */
+    .btn-primary,
+    .mock-btn{ color:#141110; }
+    .btn-primary{ box-shadow:0 12px 26px -14px rgba(0,0,0,.9); }
+
+    /* 濃色カード上のラベルは明るいアクセント色に戻す */
+    .profile-card .role{ color:var(--accent-deep); }
+
+    /* カードの輪郭をやや強調（影が沈むため） */
+    .service-card:hover{
+      box-shadow:0 26px 50px -28px rgba(0,0,0,.85);
+    }
+    .mock{
+      box-shadow:0 40px 70px -34px rgba(0,0,0,.95);
+    }
+    .float-chip{
+      box-shadow:0 18px 40px -20px rgba(0,0,0,.9);
+    }
+    .form-card{
+      box-shadow:0 30px 60px -30px rgba(0,0,0,.85);
+    }
+
+    /* 黒基調どうしで境界が溶けないよう、濃色セクションに区切り線 */
+    .naming{
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .contact{
+      border-top:1px solid var(--line);
+    }
+    .site-footer{
+      border-top:1px solid var(--line);
+    }
+    /* Mission帯（bg-panel）はわずかに浮かせて差をつける */
+    .statement.panel{
+      border-top:1px solid var(--line-soft);
+      border-bottom:1px solid var(--line-soft);
+    }
+    /* スマホ固定CTAバーの背景を黒の不透明に */
+    .sticky-cta{
+      background:rgba(20,20,21,.92);
+      border-top:1px solid rgba(255,255,255,.10);
+      box-shadow:0 -12px 32px -6px rgba(0,0,0,.85);
+    }
+  }
+
+  /* ============================================================
+     ADDITIONS — ナビ現在地 / FAQ / 固定CTA / トップ戻る 他
+     ============================================================ */
+
+  /* --- ナビゲーション現在地表示 --- */
+  .nav-links a.active{ color:var(--ink); }
+  .nav-links a.active::after{ width:100%; }
+
+  /* --- 代表ストーリー：折りたたみ（スマホのみ機能） --- */
+  /* 表示制御は hidden 属性で行う（JSが画面幅に応じて付け外し） */
+  .story-toggle{ display:none; }
+
+  /* --- STEP：順次表示を少し強めに --- */
+  .step.reveal{ transform:translateY(34px); }
+  .step.reveal.in{ transform:none; }
+
+  /* --- 料金カード：相談ボタン --- */
+  .plan-cta{
+    margin-top:24px;
+    width:100%;
+    justify-content:center;
+    font-size:.95rem;
+    padding:14px 22px;
+  }
+  .plan-card{ /* フッターのボタンを下端に揃える */
+    /* （既存 display:flex; flex-direction:column; を活かす） */
+  }
+  .plan-feat{ flex:1; }
+  .plan-cta-ghost{
+    background:transparent;
+    border:1px solid var(--line);
+    color:var(--ink);
+  }
+  .plan-cta-ghost:hover{ border-color:var(--accent); color:var(--accent-deep); }
+
+  /* スマホ用に内容をまとめた箇条書き（PCでは隠す） */
+  .feat-sp{ display:none; }
+
+  /* --- 料金セクション下部のCTA --- */
+  .pricing-cta{
+    margin-top:40px;
+    text-align:center;
+  }
+
+  /* --- FAQ セクション --- */
+  .faq{ padding:104px 0; }
+  .faq-head{ text-align:center; margin-bottom:48px; }
+  .faq-list{
+    max-width:760px; margin:0 auto;
+    border-top:1px solid var(--line);
+  }
+  .faq-item{
+    border-bottom:1px solid var(--line);
+  }
+  .faq-q{
+    width:100%;
+    background:none; border:none;
+    cursor:pointer;
+    display:flex; align-items:flex-start; gap:16px;
+    padding:24px 4px;
+    text-align:left;
+    font-family:var(--sans);
+    font-size:1.02rem; font-weight:700;
+    color:var(--ink);
+    line-height:1.6;
+  }
+  .faq-q .q-mark{
+    font-family:var(--serif); font-style:italic;
+    color:var(--accent-deep);
+    flex-shrink:0;
+    font-size:1.1rem;
+    line-height:1.5;
+  }
+  .faq-q .q-text{ flex:1; }
+  .faq-q .q-icon{
+    flex-shrink:0;
+    width:22px; height:22px;
+    position:relative;
+    margin-top:4px;
+    transition:transform .3s var(--ease);
+  }
+  .faq-q .q-icon::before,
+  .faq-q .q-icon::after{
+    content:"";
+    position:absolute;
+    background:var(--accent);
+    border-radius:2px;
+  }
+  .faq-q .q-icon::before{
+    top:50%; left:3px; right:3px; height:2px;
+    transform:translateY(-50%);
+  }
+  .faq-q .q-icon::after{
+    left:50%; top:3px; bottom:3px; width:2px;
+    transform:translateX(-50%);
+    transition:opacity .3s var(--ease);
+  }
+  .faq-item.open .q-icon{ transform:rotate(180deg); }
+  .faq-item.open .q-icon::after{ opacity:0; }
+  .faq-a{
+    overflow:hidden;
+    max-height:0;
+    transition:max-height .35s var(--ease);
+  }
+  .faq-a-inner{
+    padding:0 4px 26px 42px;
+    color:var(--ink-soft);
+    font-size:.96rem;
+    line-height:1.85;
+  }
+
+  /* --- スクロールトップボタン --- */
+  .to-top{
+    position:fixed;
+    right:22px; bottom:24px;
+    width:46px; height:46px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 24px -10px rgba(156,86,57,.7);
+    opacity:0; visibility:hidden;
+    transform:translateY(12px);
+    transition:opacity .3s var(--ease), transform .3s var(--ease), background .25s var(--ease);
+    z-index:90;
+  }
+  .to-top.show{ opacity:1; visibility:visible; transform:none; }
+  .to-top:hover{ background:var(--accent-deep); transform:translateY(-3px); }
+  .to-top svg{ width:18px; height:18px; }
+
+  /* --- スマホ固定CTAバー --- */
+  .sticky-cta{
+    display:none;
+    position:fixed;
+    left:0; right:0; bottom:0;
+    z-index:95;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(251,250,248,.94);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-top:1px solid var(--line);
+    box-shadow:0 -10px 28px -8px rgba(28,26,23,.22);
+    transition:opacity .3s var(--ease), visibility .3s var(--ease), transform .3s var(--ease);
+  }
+  .sticky-cta .btn{
+    width:100%;
+    justify-content:center;
+    padding:15px 22px;
+  }
+
+  /* ============================================================
+     RESPONSIVE — 追加分（スマホ最適化）
+     ============================================================ */
+  @media (max-width:760px){
+    /* 12. セクション余白をやや詰める（窮屈にしない範囲で） */
+    .statement, .founder, .service, .flow, .pricing,
+    .company, .contact, .faq, .naming, .concerns{
+      padding:62px 0;
+    }
+    .hero{ padding:116px 0 60px; }
+
+    /* 3. 固定CTA + 本文下に余白 */
+    .sticky-cta{
+      display:block;
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(100%);
+    }
+    .sticky-cta.show{
+      opacity:1;
+      visibility:visible;
+      transform:none;
+    }
+    body{ padding-bottom:78px; }
+    /* 固定CTAとトップ戻るボタンの重なりを回避 */
+    .to-top{ bottom:84px; }
+
+    /* 2. Googleフォームiframeはスマホで非表示 */
+    .form-card{ display:none; }
+    .form-open{ margin-bottom:0; }
+
+    /* 1. 代表ストーリー折りたたみ */
+    .story-toggle{
+      display:inline-flex;
+      align-items:center; gap:8px;
+      margin-top:6px;
+      background:none; border:none;
+      cursor:pointer;
+      font-family:var(--sans);
+      font-size:.95rem; font-weight:700;
+      color:var(--accent-deep);
+      padding:6px 0;
+    }
+    .story-toggle .chev{
+      transition:transform .3s var(--ease);
+    }
+    .story-toggle[aria-expanded="true"] .chev{
+      transform:rotate(180deg);
+    }
+
+    /* 4. 料金：箇条書きを切り替え（スマホ用のまとめ表示） */
+    .feat-pc{ display:none; }
+    .feat-sp{ display:flex; }
+
+    /* FAQ 余白微調整 */
+    .faq-q{ font-size:.97rem; padding:20px 2px; }
+    .faq-a-inner{ padding:0 2px 22px 38px; }
+
+    /* ----------------------------------------------------------
+       スマホ向け 文字組みの最適化（読みやすさ改善）
+       見出しを少し小さく・行間を詰め、本文は行間ゆったり
+       ---------------------------------------------------------- */
+
+    /* 見出し全般：大きすぎる折り返しを抑える */
+    .hero h1{
+      font-size:1.62rem;
+      line-height:1.55;
+      letter-spacing:0;
+    }
+    /* 小画面では更にもう一段小さく */
+    @media (max-width:380px){
+      .hero h1{ font-size:1.5rem; }
+    }
+    .section-title{
+      font-size:1.5rem;
+      line-height:1.62;
+    }
+    .statement h2{
+      font-size:1.46rem;
+      line-height:1.66;
+    }
+    .founder-body h2{
+      font-size:1.4rem;
+      line-height:1.66;
+      margin-bottom:24px;
+    }
+    .naming-text{
+      font-size:1.28rem;
+      line-height:1.7;
+    }
+    .roles-head h3{
+      font-size:1.3rem;
+      line-height:1.62;
+    }
+
+    /* 本文：行間をゆったりめにして読みやすく */
+    body{ line-height:1.9; }
+    .hero p.lead,
+    .statement .body,
+    .founder-body p,
+    .mission-card p,
+    .service-card p,
+    .concerns-head p,
+    .roles-head p,
+    .roles-note,
+    .faq-a-inner{
+      font-size:.96rem;
+      line-height:1.92;
+    }
+
+    /* セクション説明文の左右に少し余白を持たせて窮屈感を緩和 */
+    .concerns-head p,
+    .service-head p,
+    .flow-head p,
+    .pricing-head p{
+      padding:0 4px;
+    }
+
+    /* 引用：スマホでは少し小さく */
+    .founder-quote{
+      font-size:1.08rem;
+      line-height:1.72;
+      padding:18px 0 18px 20px;
+    }
+
+    /* タップ要素を押しやすく */
+    .link-arrow{ padding:4px 0; }
+    .to-top{ width:48px; height:48px; }
+  }
+
+  /* ============================================================
+     ADDITIONS v2 — CV最優先のための追加スタイル
+     （既存スタイルを上書きしない範囲で最小限に追加）
+     ============================================================ */
+
+  /* --- Hero：安心バッジ（誰向け・無料・納期を一瞬で） --- */
+  .hero-trust{
+    margin-top:26px;
+    display:flex; flex-wrap:wrap; gap:8px 10px;
+  }
+  .hero-trust span{
+    font-size:.78rem; font-weight:700;
+    color:var(--accent-deep);
+    background:var(--accent-tint);
+    border-radius:999px;
+    padding:6px 14px;
+    display:inline-flex; align-items:center; gap:7px;
+    line-height:1.3;
+  }
+  .hero-trust span::before{
+    content:""; width:6px; height:6px; border-radius:50%;
+    background:var(--accent);
+  }
+
+  /* Hero リードを箇条書きに（3点で要点を伝える） */
+  .hero-points{
+    margin-top:22px;
+    list-style:none;
+    display:flex; flex-direction:column; gap:8px;
+    max-width:32em;
+  }
+  .hero-points li{
+    position:relative;
+    padding-left:26px;
+    font-size:.98rem;
+    color:var(--ink-soft);
+    line-height:1.75;
+  }
+  .hero-points li::before{
+    content:"";
+    position:absolute; left:0; top:9px;
+    width:14px; height:14px; border-radius:50%;
+    background:var(--accent-tint);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 24 24' fill='none' stroke='%239C5639' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  .hero-points li b{ color:var(--ink); font-weight:900; }
+
+  /* --- Service：主軸3つ＋サブ2つの階層 --- */
+  .service-sub-head{
+    text-align:center;
+    margin:64px 0 24px;
+  }
+  .service-sub-head .label{
+    display:inline-block;
+    font-family:var(--serif); font-style:italic;
+    font-size:.95rem; color:var(--accent-deep);
+    letter-spacing:.04em;
+  }
+  .service-sub-head .label::before,
+  .service-sub-head .label::after{
+    content:"—";
+    color:var(--line);
+    margin:0 10px;
+    font-style:normal;
+  }
+  .service-sub-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    max-width:880px; margin:0 auto;
+  }
+  .service-card.sub{
+    padding:24px 26px;
+    display:flex; align-items:flex-start; gap:16px;
+  }
+  .service-card.sub .ico{
+    width:42px; height:42px; border-radius:10px;
+    margin-bottom:0; flex-shrink:0;
+  }
+  .service-card.sub .ico svg{ width:20px; height:20px; }
+  .service-card.sub .sub-body h3{
+    font-size:1rem; margin-bottom:6px;
+  }
+  .service-card.sub .sub-body p{
+    font-size:.88rem; line-height:1.7;
+  }
+  @media (max-width:760px){
+    .service-sub-grid{ grid-template-columns:1fr; }
+  }
+
+  /* --- Pricing：プラン上部の「こんな方に」と「主な違い」 --- */
+  .plan-for{
+    display:inline-block;
+    font-size:.74rem; font-weight:700; letter-spacing:.04em;
+    color:var(--accent-deep);
+    background:var(--accent-tint);
+    border-radius:6px;
+    padding:4px 10px;
+    margin-bottom:14px;
+  }
+  .plan-card.featured .plan-for{
+    background:var(--accent);
+    color:#fff;
+  }
+  .plan-key{
+    margin-top:14px;
+    padding:14px 16px;
+    background:var(--bg-panel);
+    border-radius:10px;
+    font-size:.86rem;
+    color:var(--ink-soft);
+    line-height:1.7;
+  }
+  .plan-card.featured .plan-key{
+    background:var(--accent-tint);
+  }
+  .plan-key b{ color:var(--ink); font-weight:900; }
+
+  /* --- Pricing：比較ひと目テーブル（PCのみ表示の補助表） --- */
+  .plan-compare{
+    margin-top:48px;
+    max-width:880px;
+    margin-left:auto; margin-right:auto;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .plan-compare table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:.92rem;
+  }
+  .plan-compare th,
+  .plan-compare td{
+    padding:14px 16px;
+    text-align:center;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .plan-compare th:first-child,
+  .plan-compare td:first-child{
+    text-align:left;
+    color:var(--muted);
+    font-weight:700;
+    font-size:.84rem;
+    background:var(--bg-panel);
+    width:32%;
+  }
+  .plan-compare thead th{
+    font-weight:900;
+    font-size:.95rem;
+    color:var(--ink);
+    background:var(--bg-panel);
+    padding-top:18px; padding-bottom:18px;
+  }
+  .plan-compare thead th.is-featured{
+    color:var(--accent-deep);
+    background:var(--accent-tint);
+  }
+  .plan-compare tbody tr:last-child td{ border-bottom:none; }
+  @media (max-width:760px){
+    .plan-compare{ display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .plan-compare table{ min-width:540px; }
+  }
+
+  /* --- Vision/Mission を1つの「想い」セクションに統合した時用 --- */
+  .belief-intro{
+    text-align:center;
+    margin-bottom:18px;
+    font-size:.92rem;
+    color:var(--muted);
+    letter-spacing:.04em;
+  }
+
+  /* --- Founder Story：PCでも折りたたみ可能にする（任意） --- */
+  @media (min-width:761px){
+    .story-toggle.pc-enabled{
+      display:inline-flex;
+      align-items:center; gap:8px;
+      margin-top:8px;
+      background:none; border:none;
+      cursor:pointer;
+      font-family:var(--sans);
+      font-size:.95rem; font-weight:700;
+      color:var(--accent-deep);
+      padding:6px 0;
+    }
+    .story-toggle.pc-enabled .chev{
+      transition:transform .3s var(--ease);
+    }
+    .story-toggle.pc-enabled[aria-expanded="true"] .chev{
+      transform:rotate(180deg);
+    }
+  }
+
+  /* --- セクション間の「次へ誘導」ミニCTA --- */
+  .mini-cta{
+    margin-top:36px;
+    text-align:center;
+  }
+  .mini-cta .btn{ padding:14px 26px; font-size:.95rem; }
+
+  /* --- スマホでのHero安心バッジ調整 --- */
+  @media (max-width:760px){
+    .hero-trust{ margin-top:20px; }
+    .hero-trust span{ font-size:.74rem; padding:5px 12px; }
+    .hero-points li{ font-size:.94rem; }
+    .plan-key{ font-size:.84rem; padding:12px 14px; }
+  }
+
+  /* ============================================================
+     ADDITIONS v3 — プロフェッショナル感のための装飾強化
+     ============================================================ */
+
+  /* --- Hero：背景装飾を多層化（dot grid + 第2のglow） --- */
+  .hero::after{
+    content:"";
+    position:absolute;
+    bottom:-60px; left:-120px;
+    width:480px; height:480px;
+    background:radial-gradient(circle, rgba(185,106,75,.07), transparent 65%);
+    border-radius:50%;
+    pointer-events:none;
+    z-index:0;
+  }
+  .hero-grid{ position:relative; z-index:1; }
+
+  .hero-dots{
+    position:absolute;
+    inset:0;
+    background-image:
+      radial-gradient(circle, var(--line) 1px, transparent 1.4px);
+    background-size:28px 28px;
+    background-position:0 0;
+    opacity:.5;
+    mask-image:linear-gradient(180deg, transparent 0%, #000 30%, #000 70%, transparent 100%);
+    -webkit-mask-image:linear-gradient(180deg, transparent 0%, #000 30%, #000 70%, transparent 100%);
+    pointer-events:none;
+    z-index:0;
+  }
+
+  /* --- Hero モック：多層化と立体感 --- */
+  .hero-visual{ z-index:2; }
+  /* 背後にもう1枚モックの「影」を浮かせる */
+  .mock-shadow{
+    position:absolute;
+    top:38px; left:-28px;
+    width:calc(100% - 18px);
+    height:calc(100% - 14px);
+    background:var(--bg-panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    z-index:-1;
+    opacity:.7;
+    transform:rotate(-3deg);
+    box-shadow:0 30px 50px -30px rgba(28,26,23,.18);
+  }
+  .mock{
+    position:relative;
+    transform:rotate(.6deg);
+    transition:transform .5s var(--ease);
+  }
+  @media (hover:hover){
+    .hero-visual:hover .mock{ transform:rotate(0deg) translateY(-4px); }
+  }
+  /* Hero モックの中身を少しリッチに */
+  .mock-meta{
+    display:flex; gap:8px; flex-wrap:wrap;
+    margin-top:14px;
+  }
+  .mock-meta span{
+    font-size:.62rem; font-weight:700; letter-spacing:.08em;
+    color:var(--accent-deep);
+    background:var(--accent-tint);
+    padding:4px 8px;
+    border-radius:999px;
+  }
+  .mock-meta span.muted{
+    background:var(--bg-panel);
+    color:var(--muted);
+  }
+
+  /* スマホでは回転と背後シャドウを控えめに */
+  @media (max-width:760px){
+    .mock{ transform:none; }
+    .mock-shadow{
+      top:22px; left:-14px;
+      transform:rotate(-2deg);
+      opacity:.55;
+    }
+    .hero-dots{ background-size:22px 22px; opacity:.4; }
+  }
+
+  /* --- "By the numbers" セクション（Hero下のミニ実績/特徴） --- */
+  .stats{
+    padding:48px 0 24px;
+    border-top:1px solid var(--line-soft);
+    background:var(--bg);
+  }
+  .stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+  }
+  .stat-item{
+    text-align:left;
+    padding:18px 22px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:var(--surface);
+    position:relative;
+    overflow:hidden;
+    transition:transform .3s var(--ease), border-color .3s var(--ease);
+  }
+  .stat-item:hover{
+    transform:translateY(-3px);
+    border-color:var(--accent-tint);
+  }
+  .stat-item .stat-num{
+    font-family:var(--serif);
+    font-size:2rem;
+    font-weight:500;
+    color:var(--accent-deep);
+    line-height:1;
+    letter-spacing:-.01em;
+  }
+  .stat-item .stat-num small{
+    font-family:var(--sans);
+    font-size:.78rem;
+    font-weight:700;
+    color:var(--muted);
+    margin-left:4px;
+  }
+  .stat-item .stat-label{
+    margin-top:8px;
+    font-size:.84rem;
+    color:var(--ink-soft);
+    font-weight:500;
+    line-height:1.55;
+  }
+  .stat-item::after{
+    content:"";
+    position:absolute;
+    top:-30px; right:-30px;
+    width:80px; height:80px;
+    border-radius:50%;
+    background:radial-gradient(circle, var(--accent-tint), transparent 70%);
+    opacity:.6;
+    pointer-events:none;
+  }
+  @media (max-width:760px){
+    .stats{ padding:36px 0 8px; }
+    .stats-grid{
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    .stat-item{ padding:16px 18px; }
+    .stat-item .stat-num{ font-size:1.65rem; }
+    .stat-item .stat-label{ font-size:.78rem; }
+  }
+
+  /* --- Concerns カード：アイコンの装飾を強化 --- */
+  .concern-card{
+    position:relative;
+    overflow:hidden;
+  }
+  .concern-card::before{
+    content:"";
+    position:absolute;
+    top:-1px; left:-1px; right:-1px;
+    height:3px;
+    background:linear-gradient(90deg, var(--accent), var(--accent-deep));
+    opacity:0;
+    transition:opacity .3s var(--ease);
+  }
+  .concern-card:hover::before{ opacity:1; }
+
+  /* --- Service カード：ナンバーバッジ＋背景演出 --- */
+  .service-card:not(.sub){
+    position:relative;
+    overflow:hidden;
+  }
+  .service-card:not(.sub)::after{
+    content:"";
+    position:absolute;
+    bottom:-40px; right:-40px;
+    width:140px; height:140px;
+    border-radius:50%;
+    background:radial-gradient(circle, var(--accent-tint), transparent 70%);
+    opacity:0;
+    transition:opacity .4s var(--ease);
+    pointer-events:none;
+  }
+  .service-card:not(.sub):hover::after{ opacity:.7; }
+
+  /* --- Flow ステップ：数字に光彩を入れる --- */
+  .step .num{
+    background:linear-gradient(180deg, var(--bg), var(--accent-tint) 200%);
+    box-shadow:0 8px 20px -10px rgba(156,86,57,.3);
+  }
+
+  /* --- Pricing カード：背景に微細な装飾 --- */
+  .plan-card{
+    overflow:hidden;
+    position:relative;
+  }
+  .plan-card.featured::before{
+    content:"";
+    position:absolute;
+    top:-80px; right:-80px;
+    width:200px; height:200px;
+    border-radius:50%;
+    background:radial-gradient(circle, var(--accent-tint), transparent 70%);
+    opacity:.7;
+    pointer-events:none;
+    z-index:0;
+  }
+  .plan-card.featured > *{ position:relative; z-index:1; }
+
+  /* --- セクションタイトル：装飾的なアクセント --- */
+  .section-title-deco{
+    position:relative;
+    display:inline-block;
+  }
+  .section-title-deco::after{
+    content:"";
+    position:absolute;
+    left:50%; bottom:-14px;
+    transform:translateX(-50%);
+    width:38px; height:3px;
+    background:var(--accent);
+    border-radius:2px;
+  }
+
+  /* --- スマホ全般の見出し改行最適化 --- */
+  @media (max-width:760px){
+    /* ナンバリング付き見出しは大きすぎないように */
+    .service-card:not(.sub) h3{
+      font-size:1.06rem;
+      line-height:1.55;
+    }
+    .concerns-head h2{
+      font-size:1.42rem;
+      line-height:1.55;
+    }
+    /* セクション見出し共通：行間を整える */
+    .section-title{
+      letter-spacing:0;
+    }
+    /* Pricing 見出しを少し控えめに */
+    .pricing-head h2{
+      font-size:1.46rem;
+      line-height:1.55;
+    }
+    /* eyebrow を少しコンパクトに */
+    .eyebrow{ font-size:.86rem; }
+  }
+
+  /* --- 全画面：微細なテクスチャ（ノイズ感）を付けて質感UP --- */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+    opacity:.022;
+    pointer-events:none;
+    z-index:1;
+    mix-blend-mode:multiply;
+  }
+  @media (prefers-color-scheme: dark){
+    body::before{
+      opacity:.035;
+      mix-blend-mode:screen;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand" aria-label="合同会社4U">
+      <span class="mark"><b>4</b>U</span>
+      <span class="sub">合同会社4U</span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション">
+      <ul class="nav-links">
+        <li><a href="#concerns">こんな方へ</a></li>
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#flow">制作の流れ</a></li>
+        <li><a href="#pricing">料金</a></li>
+        <li><a href="#belief">私たちの想い</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">無料試作デモ<span class="arrow">→</span></a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- mobile drawer -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#concerns">こんな方へ</a>
+  <a href="#service">サービス</a>
+  <a href="#flow">制作の流れ</a>
+  <a href="#pricing">料金</a>
+  <a href="#belief">私たちの想い</a>
+  <a href="#company">会社概要</a>
+  <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
+</div>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-dots" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="hero-eyebrow reveal">For local business in Numata, Gunma</p>
+        <h1 class="reveal d1">群馬・沼田の<br />小さな事業者へ。<br /><span class="em">無料の試作デモ</span>から、<br />伝わるホームページを。</h1>
+        <ul class="hero-points reveal d2">
+          <li><b>2〜5日</b>で完成イメージが手元に届く</li>
+          <li>気に入ったときだけ、正式にご依頼</li>
+          <li>AI活用で、<b>低価格・短納期</b>を実現</li>
+        </ul>
+        <div class="hero-cta reveal d3">
+          <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
+          <a href="#pricing" class="link-arrow">料金を見る</a>
+        </div>
+        <div class="hero-trust reveal d3">
+          <span>デモ費用0円</span>
+          <span>無理な営業なし</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal d2">
+        <div class="float-chip one"><span class="dot"></span>スマホ対応もすべて込み</div>
+        <div class="mock-shadow" aria-hidden="true"></div>
+        <div class="mock" aria-hidden="true">
+          <div class="mock-bar">
+            <i></i><i></i><i></i>
+            <span class="addr">your-shop.com</span>
+          </div>
+          <div class="mock-body">
+            <span class="mock-tag">YOUR BUSINESS</span>
+            <p class="mock-h">あなたのお店の魅力を、<br />まっすぐ届けるページ。</p>
+            <div class="mock-line w70"></div>
+            <div class="mock-line w50"></div>
+            <span class="mock-btn">ご予約・お問い合わせ</span>
+            <div class="mock-grid"><div></div><div></div><div></div></div>
+            <div class="mock-meta">
+              <span>営業時間</span>
+              <span>アクセス</span>
+              <span class="muted">SNS</span>
+            </div>
+          </div>
+        </div>
+        <div class="float-chip two">最短<span class="big">2〜5日</span>でデモ完成</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="stats" aria-label="サービスの特徴">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <p class="stat-num">2-5<small>日</small></p>
+          <p class="stat-label">フォーム送信から<br />デモ完成までの目安</p>
+        </div>
+        <div class="stat-item reveal d1">
+          <p class="stat-num">¥0</p>
+          <p class="stat-label">試作デモの費用は<br />完全無料</p>
+        </div>
+        <div class="stat-item reveal d2">
+          <p class="stat-num">3<small>分</small></p>
+          <p class="stat-label">お申し込みフォームの<br />入力にかかる時間</p>
+        </div>
+        <div class="stat-item reveal d3">
+          <p class="stat-num">59,800<small>円〜</small></p>
+          <p class="stat-label">ライトプラン<br />スマホ対応・公開まで一式</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONCERNS ===================== -->
+  <section class="concerns" id="concerns">
+    <div class="wrap">
+      <div class="concerns-head">
+        <span class="eyebrow center reveal">Your Concerns</span>
+        <h2 class="section-title reveal d1">ひとつでも当てはまったら、<br />お役に立てるかもしれません。</h2>
+        <p class="reveal d2">開業前の方から、今のホームページを見直したい方まで。<br />地域の小さな事業者の「まず整えたいWebまわり」を、4Uがお手伝いします。</p>
+      </div>
+
+      <div class="concerns-grid">
+
+        <article class="concern-card reveal">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">これから開業する方</p>
+          <p class="c-text">名刺代わりになるページを用意したい</p>
+        </article>
+
+        <article class="concern-card reveal d1">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">開業したばかりの方</p>
+          <p class="c-text">まずは低予算でWeb上の入り口を整えたい</p>
+        </article>
+
+        <article class="concern-card reveal d2">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">自作ホームページの方</p>
+          <p class="c-text">見た目や文章をもう少し整えたい</p>
+        </article>
+
+        <article class="concern-card reveal">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">Instagramだけで発信している方</p>
+          <p class="c-text">料金・サービス・予約方法を分かりやすくまとめたい</p>
+        </article>
+
+        <article class="concern-card reveal d1">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">ホームページが古い方</p>
+          <p class="c-text">今の事業内容に合う形へ見直したい</p>
+        </article>
+
+        <article class="concern-card reveal d2">
+          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+          <p class="c-who">スマホで見づらいサイトの方</p>
+          <p class="c-text">スマホからでも問い合わせしやすい形にしたい</p>
+        </article>
+
+      </div>
+
+      <!-- Instagram × ホームページ の役割比較 -->
+      <div class="roles">
+        <div class="roles-head">
+          <h3 class="reveal">SNSだけでは伝えきれない情報を、<br />ホームページに。</h3>
+          <p class="reveal d1">Instagramは、お店の雰囲気や日々の活動を伝えるのに向いています。一方で、料金・サービス内容・アクセス・予約方法などを整理して伝えるには、ホームページがあると安心です。</p>
+        </div>
+        <div class="roles-pair">
+          <div class="role-card insta reveal d1">
+            <p class="r-label">Instagram</p>
+            <p class="r-sub">日々を届ける</p>
+            <ul>
+              <li>日々の雰囲気を伝える</li>
+              <li>投稿で知ってもらう</li>
+              <li>興味を持ってもらう</li>
+            </ul>
+          </div>
+          <div class="role-card web reveal d2">
+            <p class="r-label">ホームページ</p>
+            <p class="r-sub">情報を整えて置く</p>
+            <ul>
+              <li>サービス内容を整理して伝える</li>
+              <li>必要な情報を固定して置ける</li>
+              <li>予約・問い合わせにつなげる</li>
+            </ul>
+          </div>
+        </div>
+        <p class="roles-note reveal">お店やサービスを探すとき、多くの方はまずスマホで情報を確認します。だからこそホームページは「あるだけ」ではなく、スマホで見やすく、料金やサービス内容、予約や問い合わせまで迷わずたどり着けることが大切だと考えています。</p>
+      </div>
+
+      <div class="mini-cta reveal">
+        <a href="#contact" class="btn btn-ghost">気軽にWebの相談をしてみる<span class="arrow">→</span></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== SERVICE ===================== -->
+  <section class="service" id="service">
+    <div class="wrap">
+      <div class="service-head">
+        <span class="eyebrow center reveal">Service</span>
+        <h2 class="section-title reveal d1">できるのは、この3つから。</h2>
+        <p class="reveal d2">多くの事業者さまが最初に選ぶ、3つの基本サービスです。どれが合うか分からなくても、無料デモで一緒に考えながら進められます。</p>
+      </div>
+
+      <!-- 主軸3サービス -->
+      <div class="service-grid">
+
+        <article class="service-card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
+          <h3>01. ホームページ制作</h3>
+          <p>会社やお店の魅力を伝える、基本のホームページ。スマートフォン対応まで、すべて込みで制作します。</p>
+        </article>
+
+        <article class="service-card reveal d1">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 7h4M12 17h.01"/></svg></div>
+          <h3>02. ランディングページ制作</h3>
+          <p>予約やお問い合わせにつなげる、1ページ完結型のページ。キャンペーンや新サービスの告知に。</p>
+        </article>
+
+        <article class="service-card reveal d2">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0-8-8"/><path d="M4 12V7h5"/><path d="m9 15 3-3"/></svg></div>
+          <h3>03. 既存ホームページの改善</h3>
+          <p>今あるサイトを、見やすく・伝わる形にリニューアル。「古く見える」「スマホで崩れる」も解決します。</p>
+        </article>
+
+      </div>
+
+      <!-- サブ：あわせてご相談いただけるサポート -->
+      <div class="service-sub-head reveal">
+        <span class="label">あわせてご相談いただけるサポート</span>
+      </div>
+      <div class="service-sub-grid">
+
+        <article class="service-card sub reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></div>
+          <div class="sub-body">
+            <h3>YouTube / 動画制作サポート</h3>
+            <p>撮影から編集まで、動画での発信をお手伝い。お店の雰囲気や人柄を、動きと声で届けられます。</p>
+          </div>
+        </article>
+
+        <article class="service-card sub reveal d1">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <div class="sub-body">
+            <h3>AI活用サポート</h3>
+            <p>日々の事務作業や情報発信を、AIで効率化するお手伝い。少人数でも回る仕組みづくりをご提案します。</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mini-cta reveal">
+        <a href="#contact" class="btn btn-ghost">まずは無料で完成イメージを見る<span class="arrow">→</span></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== FLOW ===================== -->
+  <section class="flow" id="flow">
+    <div class="wrap">
+      <div class="flow-head">
+        <span class="eyebrow center reveal">How it works</span>
+        <h2 class="section-title reveal d1">無料試作デモの、4ステップ。</h2>
+        <p class="reveal d2">むずかしい打ち合わせは不要。フォームに答えるだけで、完成イメージが手元に届きます。</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="num">1</div>
+          <div>
+            <span class="label">STEP 01</span>
+            <h3>フォームに回答</h3>
+            <p>業種やご希望を、簡単なフォームでお聞かせください。所要時間は数分ほどです。</p>
+          </div>
+        </div>
+        <div class="step reveal d1">
+          <div class="num">2</div>
+          <div>
+            <span class="label">STEP 02</span>
+            <h3>試作品を制作</h3>
+            <p>いただいた内容をもとに、4Uが実際のデモページを制作します。</p>
+          </div>
+        </div>
+        <div class="step reveal d2">
+          <div class="num">3</div>
+          <div>
+            <span class="label">STEP 03</span>
+            <h3>デモページを確認</h3>
+            <p>2〜5日後を目安に、完成イメージのデモページをご確認いただけます。</p>
+          </div>
+        </div>
+        <div class="step reveal d3">
+          <div class="num">4</div>
+          <div>
+            <span class="label">STEP 04</span>
+            <h3>気に入ったら正式依頼</h3>
+            <p>内容に納得いただけた場合のみ、正式なご依頼へ。断っていただいても費用は一切かかりません。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING ===================== -->
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <div class="pricing-head">
+        <span class="eyebrow center reveal">Price</span>
+        <h2 class="section-title reveal d1">小規模事業者向けの料金プラン</h2>
+        <p class="reveal d2">必要なものを、必要なぶんだけ。まずは試作デモで完成イメージをご確認いただけます。</p>
+      </div>
+
+      <div class="plan-grid">
+
+        <article class="plan-card reveal">
+          <span class="plan-for">こんな方に｜まず名刺代わりに</span>
+          <p class="plan-name">ライトプラン</p>
+          <p class="plan-en">Light</p>
+          <p class="plan-price">59,800<small>円〜</small></p>
+          <p class="plan-desc">まずはシンプルにホームページを持ちたい方向け。</p>
+          <p class="plan-key"><b>1ページ／修正1回</b><br />必要最低限の情報を、整えて掲載します。</p>
+          <hr class="plan-divider" />
+          <ul class="plan-feat feat-pc">
+            <li>1ページ構成</li>
+            <li>スマホ対応</li>
+            <li>基本情報の掲載</li>
+            <li>お問い合わせ導線</li>
+            <li>修正1回まで</li>
+          </ul>
+          <ul class="plan-feat feat-sp">
+            <li>1ページ構成・スマホ対応</li>
+            <li>基本情報の掲載・お問い合わせ導線</li>
+            <li>修正1回まで</li>
+          </ul>
+          <a href="#contact" class="btn plan-cta plan-cta-ghost">無料デモで相談する</a>
+        </article>
+
+        <article class="plan-card featured reveal d1">
+          <span class="plan-badge">おすすめ</span>
+          <span class="plan-for">こんな方に｜魅力をしっかり伝えたい</span>
+          <p class="plan-name">スタンダードプラン</p>
+          <p class="plan-en">Standard</p>
+          <p class="plan-price">99,800<small>円〜</small></p>
+          <p class="plan-desc">事業の魅力やサービス内容をしっかり伝えたい方向け。</p>
+          <p class="plan-key"><b>1ページ充実／修正2回／文章サポート付</b><br />構成と文章まで一緒に整え、伝わる形に。</p>
+          <hr class="plan-divider" />
+          <ul class="plan-feat feat-pc">
+            <li>1ページ充実構成</li>
+            <li>構成提案</li>
+            <li>文章整理サポート</li>
+            <li>スマホ対応</li>
+            <li>SEO基本設定</li>
+            <li>お問い合わせ導線</li>
+            <li>修正2回まで</li>
+          </ul>
+          <ul class="plan-feat feat-sp">
+            <li>1ページ充実構成・構成提案</li>
+            <li>文章整理サポート</li>
+            <li>スマホ対応・SEO基本設定</li>
+            <li>お問い合わせ導線・修正2回まで</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary plan-cta">無料デモで相談する<span class="arrow">→</span></a>
+        </article>
+
+        <article class="plan-card reveal d2">
+          <span class="plan-for">こんな方に｜ブランドとして整えたい</span>
+          <p class="plan-name">プレミアムプラン</p>
+          <p class="plan-en">Premium</p>
+          <p class="plan-price">179,800<small>円〜</small></p>
+          <p class="plan-desc">ブランディングや集客導線まで見据えた本格制作。</p>
+          <p class="plan-key"><b>複数ページ／修正3回／導線設計まで</b><br />SNS・動画とも組み合わせた本格的なWeb運用へ。</p>
+          <hr class="plan-divider" />
+          <ul class="plan-feat feat-pc">
+            <li>複数ページ対応</li>
+            <li>導線設計</li>
+            <li>文章作成サポート</li>
+            <li>サービス設計の整理</li>
+            <li>SNS / 動画導線</li>
+            <li>SEO基本設定</li>
+            <li>修正3回まで</li>
+          </ul>
+          <ul class="plan-feat feat-sp">
+            <li>複数ページ対応・導線設計</li>
+            <li>文章作成サポート</li>
+            <li>サービス設計の整理</li>
+            <li>SNS / 動画導線・SEO基本設定</li>
+            <li>修正3回まで</li>
+          </ul>
+          <a href="#contact" class="btn plan-cta plan-cta-ghost">無料デモで相談する</a>
+        </article>
+
+      </div>
+
+      <!-- PCのみ表示：違いをひと目で比較できる早見表 -->
+      <div class="plan-compare reveal">
+        <table>
+          <thead>
+            <tr>
+              <th>主な違い</th>
+              <th>ライト</th>
+              <th class="is-featured">スタンダード</th>
+              <th>プレミアム</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ページ数</td>
+              <td>1ページ</td>
+              <td>1ページ（充実）</td>
+              <td>複数ページ</td>
+            </tr>
+            <tr>
+              <td>文章サポート</td>
+              <td>—</td>
+              <td>整理サポート</td>
+              <td>作成サポート</td>
+            </tr>
+            <tr>
+              <td>構成・導線提案</td>
+              <td>—</td>
+              <td>構成提案</td>
+              <td>導線設計まで</td>
+            </tr>
+            <tr>
+              <td>SEO基本設定</td>
+              <td>—</td>
+              <td>あり</td>
+              <td>あり</td>
+            </tr>
+            <tr>
+              <td>修正回数</td>
+              <td>1回まで</td>
+              <td>2回まで</td>
+              <td>3回まで</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="plan-maint reveal">
+        <div class="maint-head">
+          <p class="plan-name">保守管理</p>
+          <p class="plan-en">Maintenance</p>
+          <p class="plan-desc">公開後も安心して運用したい方向け。</p>
+        </div>
+        <div class="maint-price">
+          <span class="lead-label">月額</span>
+          5,500<small>円〜</small>
+        </div>
+        <ul class="maint-feat">
+          <li>軽微な修正</li>
+          <li>表示チェック</li>
+          <li>サーバー / ドメインまわりの相談</li>
+          <li>月1回までの相談サポート</li>
+        </ul>
+      </div>
+
+      <p class="price-note reveal">※ 表示価格は目安です。内容やページ数、必要なサポート範囲により変動します。詳しい料金は、無料試作デモまたはご相談後にお見積もりいたします。</p>
+
+      <div class="pricing-cta reveal">
+        <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <div class="faq-head">
+        <span class="eyebrow center reveal">FAQ</span>
+        <h2 class="section-title reveal d1">よくあるご質問</h2>
+      </div>
+      <div class="faq-list reveal d1">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">無料試作デモは本当に無料ですか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">はい、無料です。デモをご確認いただき、気に入った場合のみ正式にご依頼いただけます。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">パソコンやWebに詳しくなくても大丈夫ですか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">大丈夫です。専門用語をできるだけ使わず、必要な内容を整理しながら進めます。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">写真や文章がまだ用意できていなくても相談できますか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">はい、可能です。まずは現在ある情報をもとに試作し、必要な素材は一緒に整理していきます。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">公開後の修正や管理もお願いできますか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">はい、月額の保守管理プランをご用意しています。軽微な修正や表示確認、サーバー・ドメイン周りの相談にも対応します。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">無理な営業はありませんか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">ありません。試作デモをご覧いただいたうえで、必要ないと感じた場合は断っていただいて大丈夫です。</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="q-mark">Q</span>
+            <span class="q-text">うちのような小さな事業でも頼んで大丈夫ですか？</span>
+            <span class="q-icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">もちろんです。むしろ、地域の小さな事業者の方のために4Uはあります。1ページのシンプルな制作から、お気軽にご相談ください。</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mini-cta reveal">
+        <a href="#contact" class="btn btn-primary">不安が解けたら、無料デモを申し込む<span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 想い（Vision + Mission 統合）===================== -->
+  <section class="statement panel" id="belief">
+    <div class="wrap statement-inner">
+      <p class="belief-intro reveal">— Our Belief —</p>
+      <span class="eyebrow center reveal">Vision &amp; Mission</span>
+      <h2 class="reveal d1">地域の小さな事業者の価値が、<br />必要な人に、きちんと届く社会へ。</h2>
+      <p class="body reveal d2">沼田には、良いお店・良い技術・良いサービスがたくさんあります。けれど「スマホで調べても出てこない」というだけで、選ばれる機会を逃してしまうことがあります。4Uは、その魅力が必要な人にきちんと届くWebづくりをお手伝いします。</p>
+      <div class="mission-pair">
+        <div class="mission-card reveal d2">
+          <p class="num">01</p>
+          <p><b>わかりやすく、相談しやすく。</b>専門用語を使わず進めます。「何から始めればいいか分からない」を、安心に変えます。</p>
+        </div>
+        <div class="mission-card reveal d3">
+          <p class="num">02</p>
+          <p><b>低価格・短納期で、しっかり伝わる。</b>AIを活用してコストを抑えつつ、伝わる形に仕上げます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOUNDER STORY ===================== -->
+  <section class="founder" id="story">
+    <div class="wrap founder-grid">
+      <aside class="founder-aside reveal">
+        <div class="profile-card">
+          <div class="avatar">T</div>
+          <p class="role">FOUNDER</p>
+          <p class="name">土屋 裕二</p>
+          <hr />
+          <p class="meta">
+            <b>個別指導塾 free</b> 代表<br />
+            <b>合同会社4U</b> 代表社員<br /><br />
+            個別指導塾で培った「むずかしいことを、わかりやすく伝える力」を、地域の事業者のWeb制作に活かしています。
+          </p>
+        </div>
+      </aside>
+
+      <div class="founder-body">
+        <span class="eyebrow reveal">Founder's Story</span>
+        <h2 class="reveal d1">良いものがあるのに、伝わらない。<br />そのもったいなさを減らしたい。</h2>
+        <p class="reveal d1">私の地元である沼田市には、良いお店や良いサービスを持つ事業者さんがたくさんいます。一方で、ホームページがなかったり、スマホで見づらかったり、情報が整理されていなかったりすることで、本来の魅力が伝わりきっていない場面もあります。</p>
+        <p class="reveal d1">この想いの出発点は、ほかでもない私自身の経験でした。個別指導塾 free を立ち上げたとき、最初にぶつかったのが<span class="hl">「どうやって塾を知ってもらうか」</span>という集客の壁。良い授業をする自信はあっても、それを届ける手段がわからなかったのです。</p>
+        <p class="reveal d2">開業したばかりで、資金に余裕はありません。ホームページや広告にまとまったお金をかけることはできない。調べてみると、制作会社に頼んだ場合の費用は、想像をはるかに超える高額でした。仕方なく自力でホームページを作ってみたものの、出来上がったのは、どこかで見たようなありきたりのテンプレート。<span class="hl">これでは、自分の塾の良さは何ひとつ伝わらない</span>——そう感じました。</p>
+
+        <button class="story-toggle" id="storyToggle" aria-expanded="false" aria-controls="storyMore">
+          代表ストーリーをもっと読む<span class="chev" aria-hidden="true">▾</span>
+        </button>
+
+        <div class="story-more" id="storyMore" hidden>
+          <div class="founder-quote reveal d2">良いものがあるのに、伝わらない。<br />それは、とてももったいないことだと思いました。</div>
+          <p class="reveal d3">そこから、自分で試行錯誤を重ねました。塾で毎日続けてきた「むずかしいことを、わかりやすく伝える」力をWebに応用し、何を載せれば伝わるのかを一つずつ確かめていく。さらにAIを使えば、制作にかかるコストと時間は大きく抑えられる。たどり着いた答えが、長い説明や高い初期費用の前に、まず実際に見て確かめられる<span class="hl">無料の試作デモ</span>という形でした。</p>
+          <p class="reveal d3">いま4Uは、ホームページやランディングページ、動画制作を通して、地域の事業者の「伝える」をお手伝いしています。かつての私と同じように、資金や知識がなくて一歩を踏み出せずにいる方へ。完成イメージを目で見て、納得してから決められる安心を届けたい。良いものを持つ人が、まっすぐ選ばれる地域を、一緒につくっていきます。</p>
+        </div>
+
+        <p class="naming-line reveal" style="margin-top:32px;padding-top:28px;border-top:1px solid var(--line);font-weight:700;color:var(--ink);line-height:1.9">
+          ――「4U」という社名は、<em style="font-family:var(--serif);font-style:italic;font-weight:400;color:var(--accent)">For You</em>。「あなたのために」という想いを込めています。<br />
+          <span style="font-weight:500;color:var(--ink-soft)">目の前のひとりの事業者のために、できることをする。その姿勢は、これからも変わりません。</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPANY ===================== -->
+  <section class="company" id="company">
+    <div class="wrap company-grid">
+      <div>
+        <span class="eyebrow reveal">Company</span>
+        <h2 class="reveal d1">会社概要</h2>
+      </div>
+      <table class="profile-table reveal d1">
+        <tbody>
+          <tr><th>会社名</th><td>合同会社4U（フォーユー）</td></tr>
+          <tr><th>代表者</th><td>代表社員 土屋 裕二</td></tr>
+          <tr><th>事業内容</th><td>ホームページ制作／ランディングページ制作／既存サイトの改善・運用／YouTube・動画制作サポート／AI活用による業務効率化支援</td></tr>
+          <tr><th>所在地</th><td>群馬県沼田市<br /><span class="small">詳しい所在地は、お問い合わせ時にお伝えします。</span></td></tr>
+          <tr><th>対応エリア</th><td>沼田市を中心に群馬県内<br /><span class="small">オンラインでのご相談は、エリアを問わず対応いたします。</span></td></tr>
+          <tr><th>お問い合わせ</th><td><a href="#contact" class="link-arrow">お問い合わせフォームへ →</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact-head">
+        <span class="eyebrow center reveal">Contact</span>
+        <h2 class="reveal d1">まずは、無料の試作デモから。</h2>
+        <p class="reveal d2">「どんな感じになるか見てみたい」という段階でも大丈夫です。3分ほどのフォーム入力だけで、2〜5日を目安に完成イメージをご提案します。</p>
+      </div>
+      <div class="assurance reveal d2">
+        <span>試作デモは無料</span>
+        <span>気に入った場合のみ正式依頼</span>
+        <span>しつこい営業はしません</span>
+      </div>
+
+      <div class="form-open reveal d2">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeW2J1htSPXWIAFzeyLr_OVemyHssLpFc_5MXznLi2BgF3zUQ/viewform"
+           class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+          別画面でフォームを開く<span class="arrow">→</span>
+        </a>
+        <p class="form-open-note">フォームが表示されない場合は、こちらからお申し込みください。</p>
+      </div>
+
+      <div class="form-card reveal d2">
+        <iframe
+          class="google-form-embed"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeW2J1htSPXWIAFzeyLr_OVemyHssLpFc_5MXznLi2BgF3zUQ/viewform?embedded=true"
+          title="無料試作デモ お申し込みフォーム"
+          loading="lazy"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">読み込んでいます…</iframe>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="mark"><b>4</b>U</span>
+        <p>地域の小さな事業者の魅力が、必要な人にきちんと届くように。合同会社4Uは、わかりやすいWeb制作をお届けします。</p>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <div>
+          <h4>SERVICE</h4>
+          <ul>
+            <li><a href="#service">ホームページ制作</a></li>
+            <li><a href="#service">ランディングページ制作</a></li>
+            <li><a href="#service">既存サイトの改善</a></li>
+            <li><a href="#service">動画 / AI活用サポート</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="#belief">私たちの想い</a></li>
+            <li><a href="#story">代表ストーリー</a></li>
+            <li><a href="#company">会社概要</a></li>
+            <li><a href="#contact">無料試作デモを申し込む</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 合同会社4U All rights reserved.</span>
+      <span>地域の事業者のためのWeb制作 — Numata, Gunma</span>
+    </div>
+  </div>
+</footer>
+
+<!-- スクロールトップ -->
+<button class="to-top" id="toTop" aria-label="ページ上部へ戻る">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- スマホ固定CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
+</div>
+
+<script>
+  /* ---------- header scroll state ---------- */
+  const header = document.getElementById('header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive:true });
+
+  /* ---------- mobile menu ---------- */
+  const toggle = document.getElementById('menuToggle');
+  const closeMenu = () => {
+    document.body.classList.remove('menu-open');
+    toggle.setAttribute('aria-expanded','false');
+  };
+  toggle.addEventListener('click', () => {
+    const open = document.body.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.querySelectorAll('#mobileMenu a').forEach(a =>
+    a.addEventListener('click', closeMenu)
+  );
+
+  /* ---------- scroll reveal ---------- */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold:0.12, rootMargin:'0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- 制作の流れ：STEPの順次表示 ---------- */
+  const steps = document.querySelectorAll('.flow .step');
+  if (steps.length){
+    const stepIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting){
+          const i = [...steps].indexOf(e.target);
+          const delay = reduceMotion ? 0 : i * 140;
+          setTimeout(() => e.target.classList.add('in'), delay);
+          stepIo.unobserve(e.target);
+        }
+      });
+    }, { threshold:0.2 });
+    steps.forEach(s => stepIo.observe(s));
+  }
+
+  /* ---------- ナビゲーション現在地表示 ---------- */
+  const navLinks = [...document.querySelectorAll('.nav-links a')];
+  const sections = navLinks
+    .map(a => document.querySelector(a.getAttribute('href')))
+    .filter(Boolean);
+  if (sections.length){
+    const navIo = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting){
+          const id = e.target.getAttribute('id');
+          navLinks.forEach(a =>
+            a.classList.toggle('active', a.getAttribute('href') === '#' + id)
+          );
+        }
+      });
+    }, { rootMargin:'-45% 0px -50% 0px' });
+    sections.forEach(s => navIo.observe(s));
+  }
+
+  /* ---------- 代表ストーリー：折りたたみ（スマホのみ） ---------- */
+  const storyToggle = document.getElementById('storyToggle');
+  const storyMore = document.getElementById('storyMore');
+  const mqMobile = window.matchMedia('(max-width: 760px)');
+  if (storyToggle && storyMore){
+    /* 画面幅に応じて初期状態を決める */
+    const syncStory = () => {
+      if (mqMobile.matches){
+        /* スマホ：未操作なら閉じる */
+        if (storyToggle.getAttribute('aria-expanded') !== 'true'){
+          storyMore.setAttribute('hidden', '');
+        }
+      } else {
+        /* PC：常に全表示 */
+        storyMore.removeAttribute('hidden');
+        storyMore.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+      }
+    };
+    syncStory();
+    mqMobile.addEventListener('change', syncStory);
+
+    storyToggle.addEventListener('click', () => {
+      const willOpen = storyMore.hasAttribute('hidden');
+      if (willOpen){
+        storyMore.removeAttribute('hidden');
+        storyToggle.setAttribute('aria-expanded', 'true');
+        storyToggle.firstChild.textContent = '代表ストーリーを閉じる';
+        storyMore.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+      } else {
+        storyMore.setAttribute('hidden', '');
+        storyToggle.setAttribute('aria-expanded', 'false');
+        storyToggle.firstChild.textContent = '代表ストーリーをもっと読む';
+      }
+    });
+  }
+
+  /* ---------- FAQ アコーディオン ---------- */
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      if (isOpen){
+        item.classList.remove('open');
+        q.setAttribute('aria-expanded', 'false');
+        a.style.maxHeight = '0px';
+      } else {
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+  /* 画面リサイズ時に開いているFAQの高さを再計算 */
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.faq-item.open .faq-a').forEach(a => {
+      a.style.maxHeight = a.scrollHeight + 'px';
+    });
+  }, { passive:true });
+
+  /* ---------- スクロールトップ & 固定CTA ---------- */
+  const toTop = document.getElementById('toTop');
+  const stickyCta = document.getElementById('stickyCta');
+  toTop.addEventListener('click', () => {
+    window.scrollTo({ top:0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+  const toggleScrollUi = () => {
+    const y = window.scrollY;
+    /* スマホ幅 かつ ヒーローを過ぎたら固定CTAを表示 */
+    const isMobile = window.innerWidth <= 760;
+    const ctaShowing = isMobile && y > 560;
+    if (stickyCta){
+      stickyCta.classList.toggle('show', ctaShowing);
+    }
+    /* CTAが表示されている間は to-top を出さない（重なり回避） */
+    toTop.classList.toggle('show', y > 600 && !ctaShowing);
+  };
+  toggleScrollUi();
+  window.addEventListener('scroll', toggleScrollUi, { passive:true });
+  window.addEventListener('resize', toggleScrollUi, { passive:true });
+</script>
+
+</body>
+</html>
