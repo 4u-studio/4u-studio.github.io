@@ -65,9 +65,9 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 .textlink{ font-size:.86rem; letter-spacing:.06em; color:var(--ink-2); border-bottom:1px solid var(--line); padding-bottom:3px; transition:.25s; }
 .textlink:hover{ color:var(--accent); border-color:var(--accent); }
 
-/* reveal */
-.rv{ opacity:0; transform:translateY(22px); transition:opacity .8s var(--easing), transform .8s var(--easing); }
-.rv.in{ opacity:1; transform:none; }
+/* reveal — JSが有効なときだけ隠す（no-JSでも必ず表示される） */
+.js .rv{ opacity:0; transform:translateY(22px); transition:opacity .8s var(--easing), transform .8s var(--easing); }
+.js .rv.in{ opacity:1; transform:none; }
 .d1{ transition-delay:.08s; } .d2{ transition-delay:.16s; } .d3{ transition-delay:.24s; }
 @media(prefers-reduced-motion:reduce){ .rv{ opacity:1; transform:none; transition:none; } html{ scroll-behavior:auto; } }
 
@@ -544,6 +544,7 @@ button{ font-family:inherit; cursor:pointer; border:none; background:none; }
 <script>
 (function(){
   "use strict";
+  document.documentElement.classList.add("js");
   var header=document.getElementById("header");
   var burger=document.getElementById("burger");
   var drawer=document.getElementById("drawer");
