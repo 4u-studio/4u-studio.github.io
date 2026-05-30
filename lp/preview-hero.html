@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>4U ヒーロー プレビュー（ライト×上品）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#FAF9F7;          /* 温かいオフホワイト */
+  --bg-2:#F4F1EC;        /* 一段濃い面 */
+  --card:#FFFFFF;
+  --ink:#1C1A17;         /* 墨 */
+  --ink-2:#5A544D;       /* 淡い文字 */
+  --muted:#9A938A;
+  --line:#E7E2DA;        /* 極薄罫線 */
+  --line-2:#EFEBE3;
+  --accent:#B5704D;      /* くすんだテラコッタ */
+  --accent-deep:#9C5C3C;
+  --accent-tint:#F2E9E2;
+  --serif:"Fraunces",Georgia,serif;
+  --mincho:"Shippori Mincho",serif;
+}
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{
+  font-family:"Zen Kaku Gothic New",system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  background:var(--bg); color:var(--ink);
+  font-size:16px; line-height:1.95; font-weight:400;
+  -webkit-font-smoothing:antialiased; letter-spacing:.01em;
+}
+a{ color:inherit; text-decoration:none; }
+ul{ list-style:none; }
+.wrap{ max-width:1180px; margin:0 auto; padding:0 32px; }
+
+/* header */
+.header{ position:sticky; top:0; z-index:50; background:rgba(250,249,247,.85); backdrop-filter:blur(14px); border-bottom:1px solid var(--line-2); }
+.header-in{ display:flex; align-items:center; justify-content:space-between; height:74px; }
+.brand{ display:flex; align-items:baseline; gap:10px; }
+.brand .lg{ font-family:var(--serif); font-size:1.35rem; font-weight:400; letter-spacing:.02em; }
+.brand .lg b{ color:var(--accent); font-weight:400; }
+.brand small{ font-size:.66rem; letter-spacing:.18em; color:var(--muted); }
+.nav{ display:flex; gap:34px; }
+.nav a{ font-size:.86rem; color:var(--ink-2); letter-spacing:.04em; transition:color .25s; }
+.nav a:hover{ color:var(--accent); }
+.header-cta{ font-size:.84rem; letter-spacing:.04em; color:var(--ink); border:1px solid var(--ink); border-radius:2px; padding:11px 22px; transition:.25s; }
+.header-cta:hover{ background:var(--ink); color:#fff; }
+@media(max-width:860px){ .nav,.header-cta{ display:none; } }
+
+/* hero */
+.hero{ position:relative; overflow:hidden; }
+.hero-in{ display:grid; grid-template-columns:1.08fr .92fr; gap:72px; align-items:center; padding:104px 0 110px; }
+.eyebrow{
+  display:inline-flex; align-items:center; gap:12px; font-family:var(--serif); font-style:italic;
+  font-size:.92rem; color:var(--accent); letter-spacing:.06em; margin-bottom:30px;
+}
+.eyebrow::before{ content:""; width:34px; height:1px; background:var(--accent); opacity:.6; }
+.hero h1{
+  font-family:var(--mincho); font-weight:600;
+  font-size:clamp(2.3rem,4.7vw,3.5rem); line-height:1.5; letter-spacing:.02em; color:var(--ink);
+}
+.hero h1 .accent{ color:var(--accent); }
+.hero h1 .thin{ display:block; font-size:.52em; font-weight:500; letter-spacing:.04em; color:var(--ink-2); margin-top:22px; line-height:1.9; font-family:"Zen Kaku Gothic New",sans-serif; }
+.lead{ margin-top:34px; font-size:1rem; line-height:2.1; color:var(--ink-2); max-width:30em; }
+.points{ margin:34px 0 42px; display:grid; gap:15px; }
+.points li{ position:relative; padding-left:30px; font-size:.95rem; color:var(--ink-2); letter-spacing:.02em; }
+.points li b{ color:var(--ink); font-weight:700; }
+.points li::before{
+  content:""; position:absolute; left:0; top:.62em; width:14px; height:1px; background:var(--accent);
+}
+.cta-row{ display:flex; align-items:center; gap:30px; flex-wrap:wrap; }
+.btn{
+  display:inline-flex; align-items:center; gap:14px; background:var(--accent); color:#fff;
+  font-size:.98rem; letter-spacing:.04em; padding:18px 38px; border-radius:2px; transition:.28s ease;
+}
+.btn:hover{ background:var(--accent-deep); }
+.btn .arw{ transition:transform .28s ease; }
+.btn:hover .arw{ transform:translateX(5px); }
+.txtlink{ font-size:.9rem; letter-spacing:.04em; color:var(--ink-2); border-bottom:1px solid var(--line); padding-bottom:3px; transition:.25s; }
+.txtlink:hover{ color:var(--accent); border-color:var(--accent); }
+.note{ margin-top:26px; font-size:.8rem; color:var(--muted); letter-spacing:.03em; }
+
+/* hero visual — quiet framed mock */
+.visual{ position:relative; }
+.frame{
+  background:var(--card); border:1px solid var(--line); border-radius:4px;
+  box-shadow:0 40px 80px -50px rgba(40,30,20,.45); overflow:hidden;
+}
+.frame-bar{ display:flex; align-items:center; gap:7px; padding:15px 18px; border-bottom:1px solid var(--line-2); }
+.frame-bar i{ width:9px; height:9px; border-radius:50%; background:var(--line); }
+.frame-bar .url{ margin-left:10px; font-size:.7rem; color:var(--muted); letter-spacing:.05em; }
+.frame-body{ padding:38px 36px 42px; }
+.frame-tag{ font-family:var(--serif); font-style:italic; font-size:.78rem; color:var(--accent); letter-spacing:.08em; }
+.frame-h{ font-family:var(--mincho); font-size:1.4rem; font-weight:600; line-height:1.7; margin:14px 0 22px; letter-spacing:.02em; }
+.frame-line{ height:7px; border-radius:4px; background:var(--bg-2); margin-bottom:11px; }
+.frame-line.w70{ width:70%; } .frame-line.w45{ width:45%; }
+.frame-btn{ display:inline-block; margin-top:18px; font-size:.76rem; letter-spacing:.05em; color:#fff; background:var(--ink); padding:10px 22px; border-radius:2px; }
+.frame-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:30px; }
+.frame-grid div{ aspect-ratio:1; border-radius:3px; background:var(--bg-2); }
+.tab{
+  position:absolute; background:var(--card); border:1px solid var(--line);
+  border-radius:3px; padding:14px 20px; box-shadow:0 24px 50px -34px rgba(40,30,20,.4);
+}
+.tab.a{ top:34px; left:-34px; }
+.tab.a .k{ font-family:var(--serif); font-style:italic; font-size:1.5rem; color:var(--accent); line-height:1; }
+.tab.a .v{ font-size:.7rem; color:var(--muted); letter-spacing:.06em; margin-top:4px; }
+.tab.b{ bottom:42px; right:-30px; font-size:.82rem; letter-spacing:.04em; color:var(--ink-2); }
+.tab.b b{ color:var(--ink); }
+
+@media(max-width:860px){
+  .hero-in{ grid-template-columns:1fr; gap:64px; padding:72px 0 84px; }
+  .visual{ max-width:420px; margin:0 auto; width:100%; }
+  .tab.a{ left:-14px; } .tab.b{ right:-10px; }
+}
+@media(max-width:520px){
+  .wrap{ padding:0 22px; }
+  .hero h1{ line-height:1.55; }
+  .cta-row{ gap:20px; }
+  .btn{ width:100%; justify-content:center; }
+}
+/* preview helper banner */
+.pv{ background:var(--ink); color:#fff; text-align:center; font-size:.78rem; letter-spacing:.05em; padding:10px; }
+.pv b{ color:#E9C9B6; }
+</style>
+</head>
+<body>
+
+<div class="pv">PREVIEW — ヒーロー単体（ライト×上品案）。<b>全体ではなくこの1枚の雰囲気</b>を見てください。</div>
+
+<header class="header">
+  <div class="wrap header-in">
+    <a href="#" class="brand"><span class="lg">4<b>U</b></span><small>FOR YOU — NUMATA</small></a>
+    <nav class="nav">
+      <a href="#">サービス</a><a href="#">流れ</a><a href="#">料金</a><a href="#">よくある質問</a>
+    </nav>
+    <a href="#" class="header-cta">無料デモを見てみる</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <span class="eyebrow">群馬・沼田の小さなお店のために</span>
+      <h1>ホームページ、<br /><span class="accent">見てから</span>決めませんか。
+        <span class="thin">ITが苦手でも、大丈夫。<br />沼田の、相談できるホームページ屋さんです。</span>
+      </h1>
+      <p class="lead">アンケートに答えるだけで、完成イメージを無料でお作りします。気に入ったときだけ、正式にご依頼ください。</p>
+      <ul class="points">
+        <li><b>2〜5日</b>で、完成イメージが手元に届きます</li>
+        <li>気に入らなければ、<b>断っていただいてOK</b>。費用はかかりません</li>
+        <li>難しい打ち合わせは不要。<b>スマホで答えるだけ</b></li>
+      </ul>
+      <div class="cta-row">
+        <a href="#" class="btn">まずは無料でデモを見てみる<span class="arw">→</span></a>
+        <a href="#" class="txtlink">サービスの流れを見る</a>
+      </div>
+      <p class="note">しつこい営業はいたしません。「どんな感じか見てみたい」だけでも、どうぞ。</p>
+    </div>
+
+    <div class="visual">
+      <div class="tab a"><div class="k">¥0</div><div class="v">デモ作成は無料</div></div>
+      <div class="frame">
+        <div class="frame-bar"><i></i><i></i><i></i><span class="url">your-shop.com</span></div>
+        <div class="frame-body">
+          <span class="frame-tag">Your Shop</span>
+          <p class="frame-h">あなたのお店の魅力を、<br />まっすぐ届けるページ。</p>
+          <div class="frame-line w70"></div>
+          <div class="frame-line w45"></div>
+          <span class="frame-btn">ご予約・お問い合わせ</span>
+          <div class="frame-grid"><div></div><div></div><div></div></div>
+        </div>
+      </div>
+      <div class="tab b">最短 <b>2〜5日</b> でお届け</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
