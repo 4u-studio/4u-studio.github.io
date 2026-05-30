@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>新事業LP｜カラーパレット & トンマナ プレビュー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --blue:       #2A6FDB;
+    --blue-deep:  #1B4FA8;
+    --blue-tint:  #E7F0FD;
+    --amber:      #F5944E;
+    --amber-deep: #E07A33;
+
+    --bg:        #F8F9FB;
+    --surface:   #FFFFFF;
+    --deep:      #13203A;
+    --ink:       #1A2740;
+    --ink-soft:  #45506B;
+    --muted:     #7A8294;
+    --line:      #E5E8EF;
+    --line-soft: #EEF1F6;
+    --success:   #2BB673;
+    --warning:   #E8B53A;
+
+    --sans:  "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+    --latin-head: "Plus Jakarta Sans", sans-serif;
+    --latin-body: "Inter", sans-serif;
+
+    --radius: 14px;
+    --shadow: 0 8px 24px rgba(19,32,58,.08);
+    --maxw: 1080px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:var(--sans);
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 24px; }
+  section{ padding:72px 0; border-bottom:1px solid var(--line-soft); }
+  .kicker{
+    font-family:var(--latin-head);
+    font-size:.72rem; font-weight:700; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--blue);
+  }
+  h1{ font-family:var(--sans); font-weight:900; font-size:clamp(2rem,5vw,3.2rem); line-height:1.25; letter-spacing:-.02em; }
+  h2{ font-weight:800; font-size:clamp(1.4rem,3vw,2rem); letter-spacing:-.01em; margin:.4em 0 1.2em; }
+  h3{ font-weight:700; font-size:1.05rem; margin-bottom:.4em; }
+  p{ color:var(--ink-soft); }
+  .lead{ font-size:1.12rem; max-width:46ch; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(1200px 500px at 80% -10%, var(--blue-tint), transparent 60%),
+      var(--surface);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-inner{ display:grid; grid-template-columns:1.2fr .8fr; gap:48px; align-items:center; padding:96px 0; }
+  .badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--blue-tint); color:var(--blue-deep);
+    font-size:.82rem; font-weight:700; padding:7px 14px; border-radius:999px; margin-bottom:22px;
+  }
+  .hero p.lead{ margin:20px 0 32px; }
+  .cta-row{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    font-family:var(--sans); font-weight:700; font-size:1rem;
+    border:none; cursor:pointer; padding:15px 28px; border-radius:12px;
+    transition:transform .15s ease, background .15s ease, box-shadow .15s ease;
+    text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn-primary{ background:var(--amber); color:#fff; box-shadow:0 8px 20px rgba(224,122,51,.28); }
+  .btn-primary:hover{ background:var(--amber-deep); transform:translateY(-2px); }
+  .btn-ghost{ background:var(--surface); color:var(--ink); border:1.5px solid var(--line); }
+  .btn-ghost:hover{ border-color:var(--blue); color:var(--blue); }
+  .hero-visual{
+    aspect-ratio:4/5; border-radius:20px;
+    background:linear-gradient(160deg, var(--blue) 0%, var(--blue-deep) 100%);
+    box-shadow:var(--shadow); position:relative; overflow:hidden;
+  }
+  .hero-visual::after{
+    content:"4U"; position:absolute; inset:0;
+    display:grid; place-items:center; color:rgba(255,255,255,.18);
+    font-family:var(--latin-head); font-weight:800; font-size:8rem;
+  }
+
+  /* ---------- SWATCHES ---------- */
+  .swatch-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:16px; }
+  .swatch{ border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); background:var(--surface); box-shadow:var(--shadow); }
+  .swatch .chip{ height:96px; }
+  .swatch .meta{ padding:12px 14px; }
+  .swatch .name{ font-weight:700; font-size:.9rem; }
+  .swatch .hex{ font-family:var(--latin-body); font-size:.8rem; color:var(--muted); letter-spacing:.02em; }
+
+  /* ---------- TYPE SPECIMEN ---------- */
+  .type-card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:32px; box-shadow:var(--shadow); margin-bottom:20px; }
+  .type-label{ font-family:var(--latin-body); font-size:.78rem; color:var(--muted); margin-bottom:10px; }
+  .latin{ font-family:var(--latin-head); }
+
+  /* ---------- COMPONENTS ---------- */
+  .comp-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+  .card{ background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:28px; box-shadow:var(--shadow); }
+  .card .ico{ width:46px; height:46px; border-radius:12px; background:var(--blue-tint); color:var(--blue); display:grid; place-items:center; margin-bottom:16px; font-weight:800; }
+  .tag{ display:inline-block; background:var(--blue-tint); color:var(--blue-deep); font-size:.78rem; font-weight:700; padding:4px 12px; border-radius:999px; }
+  .pill-success{ background:rgba(43,182,115,.12); color:var(--success); }
+  .pill-warning{ background:rgba(232,181,58,.16); color:#9a7610; }
+
+  /* ---------- DARK SECTION ---------- */
+  .dark{ background:var(--deep); color:#E8ECF3; border:none; }
+  .dark .kicker{ color:#7FB0F5; }
+  .dark h2{ color:#fff; }
+  .dark p{ color:#AEB8CC; }
+  .dark .card{ background:#172238; border-color:#26334d; }
+  .dark .card h3{ color:#fff; }
+  .dark .card p{ color:#AEB8CC; }
+  .dark .card .ico{ background:rgba(91,147,238,.18); color:#7FB0F5; }
+
+  @media(max-width:760px){
+    .hero-inner{ grid-template-columns:1fr; padding:64px 0; }
+    .hero-visual{ aspect-ratio:16/10; }
+    section{ padding:56px 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="badge">● 信頼できる。でも、気軽に相談できる。</span>
+      <h1>地域の「やりたい」を、<br>カタチにするWeb制作。</h1>
+      <p class="lead">難しいことは、こちらで。あなたは本業に集中してください。小さな会社・お店のためのホームページ／LP制作。</p>
+      <div class="cta-row">
+        <a href="#" class="btn btn-primary">無料で相談してみる →</a>
+        <a href="#" class="btn btn-ghost">制作事例を見る</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true"></div>
+  </div>
+</header>
+
+<!-- PALETTE -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Color Palette</span>
+    <h2>カラーパレット</h2>
+
+    <h3 style="margin-bottom:14px;">ブランドカラー</h3>
+    <div class="swatch-grid" style="margin-bottom:36px;">
+      <div class="swatch"><div class="chip" style="background:#2A6FDB"></div><div class="meta"><div class="name">Trust Blue</div><div class="hex">#2A6FDB</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#1B4FA8"></div><div class="meta"><div class="name">Deep Blue</div><div class="hex">#1B4FA8</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#E7F0FD"></div><div class="meta"><div class="name">Blue Tint</div><div class="hex">#E7F0FD</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#F5944E"></div><div class="meta"><div class="name">Warm Amber</div><div class="hex">#F5944E</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#E07A33"></div><div class="meta"><div class="name">Amber Deep</div><div class="hex">#E07A33</div></div></div>
+    </div>
+
+    <h3 style="margin-bottom:14px;">ニュートラル & 状態色</h3>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="chip" style="background:#F8F9FB"></div><div class="meta"><div class="name">Off White</div><div class="hex">#F8F9FB</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#13203A"></div><div class="meta"><div class="name">Ink Navy</div><div class="hex">#13203A</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#1A2740"></div><div class="meta"><div class="name">Ink</div><div class="hex">#1A2740</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#45506B"></div><div class="meta"><div class="name">Ink Soft</div><div class="hex">#45506B</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#7A8294"></div><div class="meta"><div class="name">Muted</div><div class="hex">#7A8294</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#E5E8EF"></div><div class="meta"><div class="name">Line</div><div class="hex">#E5E8EF</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#2BB673"></div><div class="meta"><div class="name">Success</div><div class="hex">#2BB673</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#E8B53A"></div><div class="meta"><div class="name">Warning</div><div class="hex">#E8B53A</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section>
+  <div class="wrap">
+    <span class="kicker">Typography</span>
+    <h2>タイポグラフィ</h2>
+    <div class="type-card">
+      <div class="type-label">見出し ─ Zen Kaku Gothic New 900 / Plus Jakarta Sans 800</div>
+      <div style="font-weight:900; font-size:2rem; letter-spacing:-.02em;">あなたの仕事に、ちゃんと効くサイトを。</div>
+      <div class="latin" style="font-weight:800; font-size:2rem; letter-spacing:-.02em; color:var(--blue);">Web that works for you.</div>
+    </div>
+    <div class="type-card">
+      <div class="type-label">本文 ─ Zen Kaku Gothic New 400 / Inter 400</div>
+      <p style="font-size:1.05rem;">ホームページは作って終わりではありません。お客様に見つけてもらい、問い合わせにつなげるところまでが私たちの仕事です。専門用語はできるだけ使わず、何をしているか・何が良くなるかを、わかる言葉でお伝えします。</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPONENTS -->
+<section>
+  <div class="wrap">
+    <span class="kicker">UI Components</span>
+    <h2>UIパーツの見え方</h2>
+    <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:28px; align-items:center;">
+      <a href="#" class="btn btn-primary">無料相談する →</a>
+      <a href="#" class="btn btn-ghost">詳しく見る</a>
+      <span class="tag">HP制作</span>
+      <span class="tag pill-success">納品実績 120件</span>
+      <span class="tag pill-warning">先着5社限定</span>
+    </div>
+    <div class="comp-grid">
+      <div class="card">
+        <div class="ico">01</div>
+        <h3>まず見てから決める</h3>
+        <p>無料の試作デモをお届け。気に入った場合だけ正式にご依頼いただけます。</p>
+      </div>
+      <div class="card">
+        <div class="ico">02</div>
+        <h3>低価格・短納期</h3>
+        <p>AIを活用し、地域の小さな事業者でも頼みやすい価格と早さを実現します。</p>
+      </div>
+      <div class="card">
+        <div class="ico">03</div>
+        <h3>ずっと相談できる</h3>
+        <p>作った後の更新や改善も、気軽に話せる相手として伴走します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DARK SECTION -->
+<section class="dark">
+  <div class="wrap">
+    <span class="kicker">Dark Section</span>
+    <h2>反転セクション（フッター手前のCTA帯）</h2>
+    <p style="max-width:48ch; margin-bottom:28px;">濃色のネイビー面で「締め」を作り、暖色CTAを最も目立たせる構成。フッターや最終CTAに使用します。</p>
+    <div class="comp-grid" style="margin-bottom:32px;">
+      <div class="card"><div class="ico">◎</div><h3>誠実</h3><p>専門用語で煙に巻かない、明朗な進め方。</p></div>
+      <div class="card"><div class="ico">◇</div><h3>的確</h3><p>プロとしての技術力と提案力。</p></div>
+      <div class="card"><div class="ico">♡</div><h3>温かい</h3><p>一人ひとりに寄り添う伴走姿勢。</p></div>
+    </div>
+    <a href="#" class="btn btn-primary">まずは無料で相談する →</a>
+  </div>
+</section>
+
+</body>
+</html>
