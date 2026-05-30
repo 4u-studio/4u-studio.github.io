@@ -27,6 +27,17 @@
     document.querySelectorAll('#mobileMenu a').forEach((a) =>
       a.addEventListener('click', closeMenu)
     );
+    // close on tap of empty area inside the menu
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) closeMenu();
+      });
+    }
+    // close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.body.classList.contains('menu-open')) closeMenu();
+    });
   }
 
   /* ---------- scroll reveal ---------- */
