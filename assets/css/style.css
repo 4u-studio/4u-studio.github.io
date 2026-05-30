@@ -144,12 +144,14 @@ section{ position:relative; }
 
 .brand{ display:flex; align-items:center; gap:11px; font-weight:900; }
 .brand .mark{
-  display:grid; place-items:center;
-  width:38px; height:38px; border-radius:11px;
-  background:var(--teal); color:#fff;
-  font-size:1.05rem; letter-spacing:-.02em;
+  display:inline-flex; align-items:center; justify-content:center;
+  width:40px; height:40px; border-radius:12px;
+  background:linear-gradient(145deg, #1F8E75 0%, var(--teal) 55%, var(--teal-deep) 100%);
+  color:#fff; font-weight:900; font-size:1.08rem; letter-spacing:.01em;
+  line-height:1; white-space:nowrap;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22), 0 5px 14px rgba(15,94,77,.28);
 }
-.brand .mark b{ color:var(--terra-tint); }
+.brand .mark b{ color:var(--terra); font-weight:900; }
 .brand-name{ font-size:1.05rem; letter-spacing:.01em; }
 .brand-name small{ display:block; font-size:.64rem; font-weight:500; color:var(--muted); letter-spacing:.12em; }
 
@@ -560,8 +562,15 @@ body.menu-open .mobile-menu{ opacity:1; visibility:visible; transform:none; }
    ============================================================ */
 .site-footer{ background:var(--deep); color:#B7C2BA; padding:64px 0 28px; }
 .footer-top{ display:grid; grid-template-columns:1.4fr 1fr; gap:48px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,.1); }
-.footer-brand .mark{ display:inline-grid; place-items:center; width:44px; height:44px; border-radius:12px; background:var(--teal); color:#fff; font-weight:900; font-size:1.2rem; margin-bottom:16px; }
-.footer-brand .mark b{ color:var(--terra-tint); }
+.footer-brand .mark{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:46px; height:46px; border-radius:13px;
+  background:linear-gradient(145deg, #1F8E75 0%, var(--teal) 55%, var(--teal-deep) 100%);
+  color:#fff; font-weight:900; font-size:1.22rem; letter-spacing:.01em;
+  line-height:1; white-space:nowrap; margin-bottom:16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22), 0 6px 16px rgba(0,0,0,.25);
+}
+.footer-brand .mark b{ color:var(--terra); font-weight:900; }
 .footer-brand p{ font-size:.9rem; max-width:42ch; }
 .footer-nav{ display:grid; grid-template-columns:1fr 1fr; gap:32px; }
 .footer-nav h4{ font-size:.74rem; letter-spacing:.14em; color:#86C9B6; margin-bottom:16px; }
