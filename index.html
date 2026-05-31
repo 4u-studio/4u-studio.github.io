@@ -1,654 +1,879 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>合同会社4U｜地域の事業者のためのホームページ制作</title>
-<meta name="description" content="群馬・沼田の小さな事業者向け、無料の試作デモから始められるホームページ制作。AI活用で低価格・短納期。2〜5日で完成イメージをお届けします。HP制作・LP制作・既存サイトの改善まで。" />
-<meta property="og:title" content="合同会社4U｜無料の試作デモから始める、地域の事業者のためのHP制作" />
-<meta property="og:description" content="まずは見てから決められる。無料の試作デモを2〜5日でお届けします。気に入った場合のみ正式依頼。" />
-<meta property="og:type" content="website" />
-<meta name="theme-color" content="#FAF8F4" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4U Studio｜沼田・利根沼田のスマホページ制作</title>
+<meta name="description" content="沼田市・利根沼田エリアの小規模事業者向け。問い合わせ・予約・来店につながるスマホで見やすい1ページを制作します。まずは無料デモから。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Shippori+Mincho:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-900:#13241a;
+    --green-800:#1c3527;
+    --green-700:#27503a;
+    --green-600:#356b4d;
+    --green-500:#4a8867;
+    --cream:#f6f0e2;
+    --cream-2:#efe7d4;
+    --paper:#fffdf6;
+    --ink:#1c2620;
+    --ink-soft:#46544b;
+    --ochre:#d4a24c;
+    --ochre-deep:#b9842f;
+    --terra:#c87b52;
+    --apple:#c23b2c;       /* 沼田の林檎 */
+    --apple-deep:#9e2c20;
+    --water:#9cc7be;
+    --line:rgba(28,38,32,.12);
+    --shadow:0 18px 40px -18px rgba(19,36,26,.5);
+    --shadow-sm:0 8px 22px -12px rgba(19,36,26,.4);
+    --radius:20px;
+    --maxw:580px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
+    color:var(--ink);background:var(--cream);
+    line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;padding-bottom:84px;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.045;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px;position:relative}
+  .eyebrow{font-family:"Shippori Mincho",serif;font-weight:600;letter-spacing:.16em;font-size:.74rem;
+    color:var(--ochre-deep);display:inline-flex;align-items:center;gap:.6em}
+  .eyebrow::before{content:"";width:24px;height:1px;background:var(--ochre-deep)}
+  .eyebrow.apple::after{content:"";width:13px;height:14px;background:var(--apple);
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 6c0-2 1.2-3.6 3-4-.2 1.8-1 3-3 4zm0 0c-1.6-1.6-3.6-2-5.2-1.2C4.5 6 3 9 3 12.5 3 17 6 21 9 21c1 0 1.8-.4 3-.4s2 .4 3 .4c3 0 6-4 6-8.5C21 9 19.5 6 17.2 4.8 15.6 4 13.6 4.4 12 6z'/%3E%3C/svg%3E") center/contain no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 6c0-2 1.2-3.6 3-4-.2 1.8-1 3-3 4zm0 0c-1.6-1.6-3.6-2-5.2-1.2C4.5 6 3 9 3 12.5 3 17 6 21 9 21c1 0 1.8-.4 3-.4s2 .4 3 .4c3 0 6-4 6-8.5C21 9 19.5 6 17.2 4.8 15.6 4 13.6 4.4 12 6z'/%3E%3C/svg%3E") center/contain no-repeat;display:inline-block;margin-left:.2em}
+  h1,h2,h3{font-weight:900;line-height:1.42;letter-spacing:.01em}
+  section{padding:76px 0;position:relative}
+  .sec-head h2{font-size:1.52rem;margin-top:8px}
+  .sec-num{font-family:"Shippori Mincho",serif;font-size:.7rem;letter-spacing:.2em;color:var(--green-500);font-weight:600}
+  p{color:var(--ink-soft)}
+  .lead{color:var(--ink);font-weight:500}
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/style.css" />
+  /* progress + nav dots */
+  .progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;
+    background:linear-gradient(90deg,var(--ochre),var(--apple));transition:width .1s linear}
+  .dots{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:90;
+    display:flex;flex-direction:column;gap:11px}
+  .dots a{width:8px;height:8px;border-radius:50%;background:rgba(28,38,32,.25);transition:.3s;display:block}
+  .dots a.active{background:var(--ochre);transform:scale(1.5)}
+  .dots.on-dark a{background:rgba(246,240,226,.3)}
+  .dots.on-dark a.active{background:var(--ochre)}
+  @media(max-width:640px){.dots{display:none}}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+    font-family:"Zen Kaku Gothic New";font-weight:700;font-size:1rem;padding:16px 26px;border-radius:999px;
+    text-decoration:none;cursor:pointer;border:none;width:100%;text-align:center;position:relative;overflow:hidden;
+    transition:transform .25s cubic-bezier(.34,1.4,.6,1),box-shadow .25s}
+  .btn-primary{background:var(--ochre);color:#3a2b0b;box-shadow:0 10px 24px -8px rgba(185,132,47,.6)}
+  .btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.5),transparent 70%);
+    transform:translateX(-130%);transition:transform .6s}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 30px -10px rgba(185,132,47,.7)}
+  .btn-primary:hover::after{transform:translateX(130%)}
+  .btn-ghost{background:transparent;color:var(--green-700);border:1.6px solid var(--green-600)}
+  .btn-ghost:hover{background:var(--green-700);color:var(--cream);transform:translateY(-2px)}
+  .btn-sm{width:auto;padding:11px 20px;font-size:.86rem}
+  .arrow{transition:transform .25s}.btn:hover .arrow{transform:translateX(4px)}
+
+  /* header */
+  .topbar{position:absolute;top:0;left:0;right:0;z-index:40}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:18px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo-text{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.08rem;color:var(--cream);letter-spacing:.04em}
+  .logo-text small{display:block;font-size:.5rem;letter-spacing:.3em;color:var(--ochre);font-weight:500;margin-top:1px}
+
+  /* HERO */
+  .hero{color:var(--cream);padding:120px 0 0;position:relative;overflow:hidden;
+    background:linear-gradient(168deg,var(--green-800) 0%,var(--green-900) 100%)}
+  .hero-glow{position:absolute;inset:0;z-index:0;
+    background:radial-gradient(110% 70% at 78% -8%,rgba(74,136,103,.6),transparent 58%),
+              radial-gradient(80% 50% at 12% 8%,rgba(212,162,76,.18),transparent 60%);
+    animation:glow 14s ease-in-out infinite alternate}
+  @keyframes glow{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-3%,2%,0) scale(1.08)}}
+  .hero .wrap{padding-bottom:0;position:relative;z-index:3}
+  .hero h1{font-size:2.1rem;line-height:1.5;color:#fff;margin:18px 0 0}
+  .hero h1 .hl{color:var(--ochre)}
+  .hero-sub{margin-top:22px;color:rgba(246,240,226,.86);font-size:1rem}
+  .hero-note{margin-top:20px;font-size:.92rem;color:rgba(246,240,226,.78);border-left:2px solid var(--ochre);padding-left:14px}
+  .hero-trust{display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:rgba(255,255,255,.08);
+    border:1px solid rgba(246,240,226,.18);padding:9px 16px;border-radius:999px;font-size:.82rem;color:var(--cream)}
+  .hero-cta{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+  .hero-fineprint{margin-top:24px;font-size:.76rem;color:rgba(246,240,226,.82);line-height:1.8;padding-bottom:120px}
+  /* parallax scenery */
+  .scenery{position:absolute;left:0;right:0;bottom:-1px;z-index:1;width:100%;height:88px;display:block}
+  .sun{position:absolute;right:13%;top:120px;width:54px;height:54px;border-radius:50%;z-index:1;
+    background:radial-gradient(circle,#f4cd7a,#d4a24c);box-shadow:0 0 50px 12px rgba(212,162,76,.45);
+    animation:rise 2s cubic-bezier(.2,.7,.3,1) both}
+  @keyframes rise{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+
+  /* staggered hero reveal */
+  .hr{opacity:0;transform:translateY(22px);animation:hr .9s cubic-bezier(.2,.7,.2,1) forwards}
+  .hr1{animation-delay:.1s}.hr2{animation-delay:.28s}.hr3{animation-delay:.42s}
+  .hr4{animation-delay:.56s}.hr5{animation-delay:.7s}.hr6{animation-delay:.84s}
+  @keyframes hr{to{opacity:1;transform:none}}
+
+  /* WORRIES */
+  .worries{background:var(--cream)}
+  .worry-intro{margin:14px 0 24px;font-size:1.02rem}
+  .worry-list{list-style:none;display:flex;flex-direction:column}
+  .worry-list li{display:flex;gap:13px;align-items:flex-start;padding:14px 2px;border-bottom:1px dashed var(--line);font-weight:500;color:var(--ink)}
+  .worry-list li:last-child{border-bottom:none}
+  .check{flex:0 0 auto;width:22px;height:22px;margin-top:3px}
+
+  /* BEFORE / AFTER infographic */
+  .ba{display:grid;grid-template-columns:1fr;gap:14px;margin:26px 0 4px}
+  .ba-card{border-radius:var(--radius);padding:22px 20px;position:relative;overflow:hidden}
+  .ba-before{background:#ece4d2;border:1px dashed rgba(28,38,32,.25)}
+  .ba-after{background:linear-gradient(160deg,var(--green-700),var(--green-800));color:var(--cream)}
+  .ba-tag{display:inline-block;font-family:"Shippori Mincho",serif;font-weight:700;font-size:.72rem;letter-spacing:.12em;
+    padding:4px 12px;border-radius:999px;margin-bottom:12px}
+  .ba-before .ba-tag{background:rgba(28,38,32,.1);color:var(--ink-soft)}
+  .ba-after .ba-tag{background:var(--ochre);color:#3a2b0b}
+  .ba-card h4{font-size:1.04rem;margin-bottom:12px}
+  .ba-before h4{color:var(--ink)}.ba-after h4{color:#fff}
+  .ba-icons{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+  .ba-chip{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;background:rgba(255,255,255,.6);
+    border-radius:8px;padding:6px 10px;color:var(--ink-soft)}
+  .ba-after .ba-chip{background:rgba(255,255,255,.12);color:var(--cream)}
+  .ba-note{font-size:.88rem;line-height:1.7}
+  .ba-before .ba-note{color:var(--ink-soft)}.ba-after .ba-note{color:rgba(246,240,226,.9)}
+  .ba-arrow{display:grid;place-items:center;height:30px;color:var(--ochre-deep)}
+  .ba-arrow svg{animation:bob 1.8s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
+  /* visitor FLOW diagram */
+  .journey{margin-top:30px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 20px;box-shadow:var(--shadow-sm)}
+  .journey-title{font-size:.95rem;color:var(--green-800);font-weight:700;margin-bottom:18px;text-align:center}
+  .jflow{display:flex;flex-direction:column;align-items:center;gap:0}
+  .jsrc{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .jnode{display:inline-flex;flex-direction:column;align-items:center;gap:5px;background:var(--cream-2);
+    border-radius:12px;padding:11px 14px;font-size:.76rem;color:var(--ink-soft);min-width:78px}
+  .jnode svg{width:22px;height:22px}
+  .jhub{background:var(--green-700);color:var(--cream);font-weight:700;font-size:.92rem;
+    border-radius:14px;padding:14px 22px;display:flex;align-items:center;gap:9px;box-shadow:var(--shadow-sm)}
+  .jhub svg{width:24px;height:24px}
+  .jact{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .jact .jnode{background:rgba(212,162,76,.16);color:var(--ochre-deep);font-weight:600}
+  .jconn{width:2px;height:26px;background:linear-gradient(var(--green-500),var(--ochre));margin:6px 0;position:relative}
+  .jconn::after{content:"";position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);
+    border:5px solid transparent;border-top-color:var(--ochre)}
+
+  /* CAN DO */
+  .cando{background:var(--green-800);color:var(--cream)}
+  .cando .eyebrow,.cando .sec-num{color:var(--ochre)}
+  .cando h2{color:#fff}
+  .cando .intro{color:rgba(246,240,226,.82);margin:14px 0 28px}
+  .feat{display:flex;gap:15px;padding:22px 0;border-top:1px solid rgba(246,240,226,.14)}
+  .feat:first-of-type{border-top:none}
+  .feat-ic{flex:0 0 auto;width:48px;height:48px;border-radius:14px;background:rgba(212,162,76,.16);
+    display:grid;place-items:center;transition:.3s}
+  .feat:hover .feat-ic{background:var(--ochre);transform:rotate(-6deg) scale(1.06)}
+  .feat:hover .feat-ic svg{stroke:#2b210a}
+  .feat-ic svg{transition:.3s}
+  .feat h3{font-size:1.06rem;color:#fff;margin-bottom:5px}
+  .feat p{color:rgba(246,240,226,.78);font-size:.93rem;margin:0}
+
+  /* DEMO */
+  .demo{background:var(--cream-2)}
+  .demo-quote{font-family:"Shippori Mincho",serif;font-size:1.12rem;color:var(--green-700);font-weight:600;line-height:1.9;margin:16px 0 22px}
+  .know-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
+  .know{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 15px;box-shadow:var(--shadow-sm);transition:.3s}
+  .know:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .know-ic{width:40px;height:40px;border-radius:11px;background:rgba(74,136,103,.12);display:grid;place-items:center;margin-bottom:10px}
+  .know p{font-size:.84rem;color:var(--ink);line-height:1.6;margin:0;font-weight:500}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;box-shadow:var(--shadow-sm)}
+  .card h3{font-size:1.04rem;margin-bottom:14px;color:var(--green-800);display:flex;align-items:center;gap:9px}
+  .card h3 .dot{width:8px;height:8px;border-radius:50%;background:var(--ochre);flex:0 0 auto}
+  .tick-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .tick-list li{display:flex;gap:11px;font-size:.95rem;color:var(--ink)}
+  .tick-list li::before{content:"";flex:0 0 auto;width:17px;height:17px;margin-top:4px;background:var(--green-600);
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat}
+  .callout{margin-top:18px;background:rgba(74,136,103,.1);border-radius:14px;padding:16px 18px;font-size:.9rem;color:var(--green-700);border:1px solid rgba(74,136,103,.22)}
+
+  /* SAMPLES */
+  .samples{background:var(--cream)}
+  .sample-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:.35s}
+  .sample-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .sample-card+.sample-card{margin-top:20px}
+  .sample-photo{height:140px;display:grid;place-items:center;position:relative;color:rgba(255,255,255,.95);
+    font-family:"Shippori Mincho",serif;font-size:.92rem;letter-spacing:.1em;overflow:hidden}
+  .sample-photo span{position:relative;z-index:2}
+  .sample-photo::before{content:"";position:absolute;inset:0;opacity:.16;
+    background-image:radial-gradient(circle at 30% 30%,#fff 1px,transparent 1.5px);background-size:18px 18px}
+  .s1{background:linear-gradient(135deg,#2f5d45,#13241a)}
+  .s2{background:linear-gradient(135deg,#b9842f,#7a4f17)}
+  .s3{background:linear-gradient(135deg,#c87b52,#8f4f33)}
+  .photo-tag{position:absolute;top:10px;left:10px;z-index:3;font-family:"Zen Kaku Gothic New";font-size:.62rem;
+    letter-spacing:.05em;background:rgba(255,255,255,.85);color:var(--ink-soft);padding:3px 9px;border-radius:6px}
+  .sample-body{padding:20px 22px 24px}
+  .sample-body h3{font-size:1.08rem;color:var(--green-800);margin-bottom:8px}
+  .sample-body p{font-size:.93rem;margin-bottom:16px}
+
+  /* PRICING */
+  .pricing{background:var(--green-900);color:var(--cream)}
+  .pricing .eyebrow,.pricing .sec-num{color:var(--ochre)}
+  .pricing h2{color:#fff}
+  .pricing .intro{color:rgba(246,240,226,.82);margin:14px 0 12px}
+  .commit-note{background:rgba(212,162,76,.14);border:1px solid rgba(212,162,76,.35);border-radius:14px;
+    padding:14px 16px;font-size:.86rem;color:var(--cream);margin-bottom:26px;display:flex;gap:10px;align-items:flex-start}
+  .plan{background:rgba(255,255,255,.04);border:1px solid rgba(246,240,226,.16);border-radius:var(--radius);
+    padding:24px 22px;position:relative;transition:.35s}
+  .plan:hover{transform:translateY(-4px);border-color:rgba(246,240,226,.4)}
+  .plan+.plan{margin-top:18px}
+  .plan.featured{background:linear-gradient(165deg,rgba(212,162,76,.18),rgba(255,255,255,.05));
+    border:1.6px solid var(--ochre);box-shadow:0 22px 50px -22px rgba(212,162,76,.5)}
+  .badge{position:absolute;top:-13px;left:22px;background:var(--ochre);color:#3a2b0b;font-weight:700;font-size:.74rem;
+    padding:6px 15px;border-radius:999px;letter-spacing:.05em}
+  .plan h3{font-size:1.22rem;color:#fff;margin-bottom:6px}
+  .plan .pdesc{font-size:.88rem;color:rgba(246,240,226,.75);margin-bottom:16px;line-height:1.75}
+  .price-row{display:flex;align-items:baseline;gap:8px}
+  .price-mon{font-size:1.75rem;font-weight:900;color:var(--ochre)}
+  .yen{font-size:1rem}
+  .price-label{font-size:.72rem;color:rgba(246,240,226,.7)}
+  .price-reg{font-size:.98rem;font-weight:700;color:#ffffff;margin:0 0 8px;display:block}
+  .price-reg s{color:#ffffff;text-decoration-color:var(--ochre);text-decoration-thickness:1.5px}
+  .price-reg .arrow-down{color:var(--ochre);font-weight:700;margin:0 .3em}
+  .plan ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .plan ul li{display:flex;gap:10px;font-size:.9rem;color:rgba(246,240,226,.9)}
+  .plan ul li::before{content:"";flex:0 0 auto;width:16px;height:16px;margin-top:4px;background:var(--ochre);
+    -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat;
+    mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat}
+
+  /* comparison table */
+  .compare{margin-top:26px;background:rgba(255,255,255,.04);border:1px solid rgba(246,240,226,.16);border-radius:var(--radius);overflow:hidden}
+  .compare h4{color:#fff;font-size:1rem;padding:18px 18px 4px}
+  .compare table{width:100%;border-collapse:collapse;font-size:.8rem}
+  .compare th,.compare td{padding:11px 6px;text-align:center;border-top:1px solid rgba(246,240,226,.1)}
+  .compare th:first-child,.compare td:first-child{text-align:left;padding-left:18px;color:rgba(246,240,226,.92);width:42%}
+  .compare thead th{color:rgba(246,240,226,.7);font-size:.74rem;font-weight:700;padding-top:14px;padding-bottom:14px}
+  .compare thead th.hot{color:var(--ochre)}
+  .compare td .yes{color:var(--ochre);font-weight:900}
+  .compare td .no{color:rgba(246,240,226,.3)}
+  .compare tbody tr:hover{background:rgba(255,255,255,.03)}
+
+  .common{margin-top:22px;background:rgba(255,255,255,.04);border:1px solid rgba(246,240,226,.16);border-radius:var(--radius);padding:22px}
+  .common h4{color:#fff;font-size:1rem;margin-bottom:14px}
+  .common ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+  .common ul li{font-size:.9rem;color:rgba(246,240,226,.88);display:flex;gap:9px}
+  .common ul li::before{content:"—";color:var(--ochre)}
+  .fineprint{margin-top:16px;font-size:.8rem;color:rgba(246,240,226,.92);line-height:1.85}
+
+  /* MAINTENANCE */
+  .maint{background:var(--cream)}
+  .maint-box{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;box-shadow:var(--shadow-sm)}
+  .maint-box+.maint-box{margin-top:18px}
+  .maint-box h3{font-size:1.05rem;color:var(--green-800);margin-bottom:14px}
+  .maint-quotes{display:flex;flex-direction:column;gap:10px;margin:12px 0 14px}
+  .maint-quotes span{background:var(--cream-2);border-radius:12px;padding:11px 15px;font-size:.93rem;font-weight:500;
+    color:var(--green-800);font-family:"Shippori Mincho",serif}
+  .price-pill{display:inline-block;background:var(--green-700);color:var(--cream);font-weight:700;padding:4px 14px;border-radius:999px;font-size:.92rem}
+
+  /* FLOW — 吹割の滝モチーフ */
+  .flow{background:linear-gradient(180deg,var(--green-800),var(--green-700));color:var(--cream);overflow:hidden}
+  .flow .eyebrow,.flow .sec-num{color:var(--ochre)}
+  .flow h2{color:#fff}
+  .flow .intro{color:rgba(246,240,226,.82);margin:14px 0 8px}
+  .falls-cap{font-size:.76rem;color:rgba(246,240,226,.6);margin-bottom:26px;font-family:"Shippori Mincho",serif}
+  .steps{position:relative;padding-left:4px}
+  .step{display:flex;gap:16px;padding-bottom:26px;position:relative}
+  .step:last-child{padding-bottom:0}
+  .step-num{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:var(--ochre);color:#3a2b0b;
+    display:grid;place-items:center;font-weight:900;font-size:1rem;z-index:2;font-family:"Shippori Mincho",serif}
+  /* flowing water line — 上から下へ流れる水 */
+  .step:not(:last-child)::before{content:"";position:absolute;left:18px;top:42px;bottom:-4px;width:4px;border-radius:4px;
+    background-image:
+      linear-gradient(180deg, rgba(159,199,190,.5), rgba(159,199,190,.16)),
+      linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.95) 50%, rgba(255,255,255,0));
+    background-repeat:no-repeat,no-repeat;
+    background-size:100% 100%, 100% 45%;
+    background-position:0 0, 0 -45%;
+    animation:fall 1.4s linear infinite}
+  @keyframes fall{from{background-position:0 0, 0 -45%}to{background-position:0 0, 0 145%}}
+  .step-body h3{font-size:1.02rem;color:#fff;margin-bottom:4px}
+  .step-body p{font-size:.92rem;margin:0;color:rgba(246,240,226,.82)}
+
+  /* stats strip with count-up */
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px}
+  .stat{background:rgba(255,255,255,.06);border:1px solid rgba(246,240,226,.16);border-radius:16px;padding:18px 8px;text-align:center}
+  .stat b{display:block;font-family:"Shippori Mincho",serif;font-size:1.7rem;color:var(--ochre);line-height:1.1}
+  .stat b .u{font-size:.9rem}
+  .stat b .pre{font-size:.82rem;font-weight:600;margin-right:.1em}
+  .stat span{font-size:.72rem;color:rgba(246,240,226,.78);display:block;margin-top:5px}
+
+  /* PROFILE */
+  .profile{background:var(--green-800);color:var(--cream)}
+  .profile .eyebrow,.profile .sec-num{color:var(--ochre)}
+  .profile h2{color:#fff}
+  .profile .about{color:rgba(246,240,226,.82);margin:14px 0 26px}
+  .prof-card{background:rgba(255,255,255,.05);border:1px solid rgba(246,240,226,.16);border-radius:var(--radius);padding:26px 22px}
+  .prof-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+  .prof-avatar{width:64px;height:64px;border-radius:50%;flex:0 0 auto;
+    background:radial-gradient(120% 120% at 50% 18%, #2f5d45, #16271d);
+    border:2px solid var(--ochre);display:grid;place-items:center;overflow:hidden;
+    box-shadow:0 6px 16px -8px rgba(0,0,0,.5)}
+  .prof-head h3{color:#fff;font-size:1.18rem;margin-bottom:3px}
+  .prof-head .role{font-size:.8rem;color:var(--ochre)}
+  .prof-card p{color:rgba(246,240,226,.85);font-size:.93rem;margin-bottom:12px}
+  .prof-card p:last-child{margin-bottom:0}
+  .values{display:flex;flex-direction:column;gap:8px;margin:14px 0}
+  .values span{font-family:"Shippori Mincho",serif;font-weight:600;color:#fff;font-size:.96rem;border-left:2px solid var(--ochre);padding-left:12px}
+  .closing{margin-top:30px;text-align:center}
+  .closing h3{color:#fff;font-size:1.2rem;margin-bottom:12px}
+  .closing p{color:rgba(246,240,226,.8);font-size:.94rem;margin-bottom:22px}
+  .closing .btn-primary{margin-bottom:14px}
+  .closing .sublink{color:var(--ochre);font-size:.88rem;text-decoration:underline;text-underline-offset:3px}
+
+  footer{background:var(--green-900);color:rgba(246,240,226,.55);text-align:center;padding:30px 0;font-size:.78rem;position:relative;overflow:hidden}
+  footer .logo-text{font-size:.95rem;color:rgba(246,240,226,.8);margin-bottom:6px}
+  footer .apples{display:flex;gap:8px;justify-content:center;margin-bottom:14px;opacity:.8}
+
+  /* sticky CTA */
+  .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(19,36,26,.94);backdrop-filter:blur(8px);
+    border-top:1px solid rgba(212,162,76,.4);padding:12px 16px;display:flex;justify-content:center;
+    transform:translateY(110%);transition:transform .4s cubic-bezier(.4,0,.2,1)}
+  .sticky-cta.show{transform:translateY(0)}
+  .sticky-cta .inner{width:100%;max-width:var(--maxw);display:flex;align-items:center;gap:12px}
+  .sticky-cta .txt{flex:1;min-width:0}
+  .sticky-cta .txt b{display:block;color:#fff;font-size:.86rem;line-height:1.3}
+  .sticky-cta .txt span{font-size:.7rem;color:rgba(246,240,226,.6)}
+  .sticky-cta .btn{width:auto;padding:13px 22px;font-size:.92rem;white-space:nowrap}
+
+  /* reveal */
+  .reveal{opacity:0;transition:opacity .6s ease-out}
+  .reveal.in{opacity:1}
+  .reveal[data-d="1"]{transition-delay:.05s}.reveal[data-d="2"]{transition-delay:.1s}.reveal[data-d="3"]{transition-delay:.15s}
+
+  @media(max-width:380px){
+    .hero h1{font-size:1.8rem}
+    .sticky-cta .txt{display:none}.sticky-cta .btn{width:100%}
+    .know-grid{grid-template-columns:1fr}
+  }
+  @media(min-width:600px){.hero h1{font-size:2.4rem}}
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .hr,.reveal{opacity:1!important;transform:none!important}
+  }
+</style>
 </head>
 <body>
+<div class="progress" id="progress"></div>
+<nav class="dots" id="dots">
+  <a href="#hero" data-s="hero" class="active"></a>
+  <a href="#worries" data-s="worries"></a>
+  <a href="#cando" data-s="cando"></a>
+  <a href="#demo" data-s="demo"></a>
+  <a href="#samples" data-s="samples"></a>
+  <a href="#pricing" data-s="pricing"></a>
+  <a href="#maint" data-s="maint"></a>
+  <a href="#flow" data-s="flow"></a>
+  <a href="#profile" data-s="profile"></a>
+</nav>
 
-<!-- ===================== HEADER ===================== -->
-<header class="site-header" id="header">
-  <div class="wrap header-inner">
-    <a href="#top" class="brand" aria-label="合同会社4U トップへ">
-      <span class="mark">4<b>U</b></span>
-      <span class="brand-name">合同会社4U<small>FOR YOU — NUMATA</small></span>
-    </a>
-    <nav class="nav-links" aria-label="グローバルナビゲーション">
-      <a href="#concerns">お悩み</a>
-      <a href="#service">サービス</a>
-      <a href="#reasons">選ばれる理由</a>
-      <a href="#flow">流れ</a>
-      <a href="#pricing">料金</a>
-      <a href="#faq">FAQ</a>
-      <a href="#story">想い</a>
-    </nav>
-    <div class="header-cta">
-      <a href="#contact" class="btn btn-primary">無料デモを申し込む</a>
+<!-- ============ HERO ============ -->
+<header class="hero" id="hero">
+  <div class="hero-glow"></div>
+  <div class="sun"></div>
+  <div class="topbar">
+    <div class="wrap">
+      <a href="#hero" class="logo" aria-label="4U Studio">
+        <!-- LOGO: 山並み＋沼田城＋朝日 -->
+        <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="23" stroke="#d4a24c" stroke-width="1.5"/>
+          <circle cx="30" cy="16" r="4.5" fill="#d4a24c"/>
+          <path d="M5 35 L15 22 L22 30 L31 18 L43 35 Z" fill="#f6f0e2"/>
+          <!-- castle silhouette -->
+          <g fill="#27503a">
+            <rect x="20.5" y="26" width="7" height="6"/>
+            <path d="M19.5 26 L24 22.5 L28.5 26 Z"/>
+            <rect x="22.5" y="20.5" width="3" height="2"/>
+          </g>
+          <rect x="5" y="34.5" width="38" height="2" fill="#d4a24c"/>
+        </svg>
+        <span class="logo-text">4U Studio<small>FOR YOU · NUMATA</small></span>
+      </a>
     </div>
-    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
   </div>
+
+  <div class="wrap">
+    <span class="eyebrow apple hr hr1">沼田市・利根沼田エリア</span>
+    <h1 class="hr hr2">Instagramだけでは、<br>伝えきれていません。<br>あなたのお店の魅力を、<br><span class="hl">スマホで見やすい1ページ</span>に。</h1>
+    <p class="hero-sub lead hr hr3">問い合わせ・予約・来店につながるスマホページを、地域の小規模事業者さま向けに制作します。</p>
+    <p class="hero-note hr hr3">あなたのお店にも、InstagramもGoogleマップもあるはずです。でも、料金や問い合わせ方法をまとめて見せる場所がない。そこを、1ページで解決します。</p>
+    <div class="hero-trust hr hr4">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a24c"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/></svg>
+      公開後も月額保守でサポート。長く安心して使えます。
+    </div>
+    <div class="hero-cta hr hr5">
+      <a href="form.html" class="btn btn-primary">無料デモを申し込む <span class="arrow">→</span></a>
+      <a href="#samples" class="btn btn-ghost" style="color:var(--cream);border-color:rgba(246,240,226,.5)">サンプルを見る</a>
+    </div>
+    <p class="hero-fineprint hr hr6">※「LP」とは、魅力・料金・問い合わせ方法を1ページにまとめたWebページのこと。このサービスでは、分かりやすく「スマホページ」と呼んでいます。</p>
+  </div>
+
+  <!-- parallax scenery: 山並み -->
+  <svg class="scenery" id="scenery" viewBox="0 0 580 88" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 奥の稜線（淡い緑） -->
+    <path d="M0 88 L0 50 L70 30 L130 46 L200 22 L270 44 L330 26 L410 48 L470 28 L540 46 L580 34 L580 88 Z" fill="#356b4d" opacity=".55"/>
+    <!-- 手前の山並み（濃い緑・はっきりした峰） -->
+    <path d="M0 88 L0 60 L60 34 L110 58 L170 30 L210 52 L260 38 L300 64 L360 36 L420 60 L470 40 L520 62 L580 44 L580 88 Z" fill="#1c3527"/>
+    <!-- ふもと（クリームの境界線） -->
+    <path d="M0 88 L0 74 L90 60 L160 76 L240 58 L320 76 L400 60 L480 76 L560 62 L580 70 L580 88 Z" fill="#f6f0e2"/>
+  </svg>
 </header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#concerns">お悩み</a>
-  <a href="#service">サービス</a>
-  <a href="#reasons">選ばれる理由</a>
-  <a href="#flow">流れ</a>
-  <a href="#pricing">料金</a>
-  <a href="#faq">FAQ</a>
-  <a href="#story">想い</a>
-  <a href="#contact" class="btn btn-primary">無料デモを申し込む</a>
-</div>
+<!-- ============ 2. WORRIES ============ -->
+<section class="worries" id="worries">
+  <div class="wrap sec-head reveal">
+    <span class="sec-num">02 / WORRIES</span>
+    <h2>こんなお悩み、<br>ありませんか？</h2>
+    <p class="worry-intro lead">ひとつでも当てはまるなら、その悩みは1ページで解決できます。Instagramを更新して、Googleマップにも登録した。なのに、まとめて見せる場所がない——あなたのお店は、いかがですか？</p>
+  </div>
+  <div class="wrap reveal">
+    <ul class="worry-list">
+      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>Instagramはあるけど、ホームページがない</li>
+      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>メニューや料金を何度も聞かれる</li>
+      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>問い合わせ先や予約方法が分かりにくい</li>
+      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>GoogleマップやSNSから来た人の受け皿がない</li>
+      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>古いホームページがスマホで見づらい</li>
+      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>お店やサービスの魅力をうまく伝えきれていない</li>
+      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>紹介やチラシだけに頼っていて、新しいお客様に届きにくい</li>
+    </ul>
 
-<main id="top">
-
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-text">
-        <p class="hero-eyebrow reveal">For local business in Numata, Gunma</p>
-        <h1 class="reveal d1">ホームページ、<br /><span class="em">見てから</span>決めませんか。</h1>
-        <p class="hero-lead reveal d2">ITが苦手でも大丈夫。沼田の、相談できるホームページ屋さんです。<br />アンケートに答えるだけで、完成イメージを無料でお作りします。</p>
-        <ul class="hero-points reveal d2">
-          <li><b>2〜5日</b>で完成イメージが手元に届く</li>
-          <li>気に入ったときだけ、正式にご依頼</li>
-          <li>気に入らなければ、<b>断ってOK</b>。費用は0円</li>
-        </ul>
-        <div class="hero-cta reveal d3">
-          <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
-          <a href="#pricing" class="link-arrow">料金を見る</a>
+    <!-- BEFORE / AFTER infographic -->
+    <div class="ba">
+      <div class="ba-card ba-before">
+        <span class="ba-tag">いまの状態</span>
+        <h4>情報がバラバラ</h4>
+        <div class="ba-icons">
+          <span class="ba-chip">📷 Instagram</span>
+          <span class="ba-chip">📍 Googleマップ</span>
+          <span class="ba-chip">📄 チラシ</span>
         </div>
-        <div class="hero-trust reveal d3">
-          <span>デモ費用0円</span>
-          <span>無理な営業なし</span>
-          <span>Webが苦手でもOK</span>
-        </div>
+        <p class="ba-note">魅力・料金・問い合わせ方法が別々の場所に散らばり、興味を持った人の「受け皿」がない状態。</p>
       </div>
-
-      <div class="hero-visual reveal d2">
-        <div class="float-chip one"><span class="dot"></span>スマホ対応もすべて込み</div>
-        <div class="mock" aria-hidden="true">
-          <div class="mock-bar">
-            <i></i><i></i><i></i>
-            <span class="addr">your-shop.com</span>
-          </div>
-          <div class="mock-body">
-            <span class="mock-tag">YOUR BUSINESS</span>
-            <p class="mock-h">あなたのお店の魅力を、<br />まっすぐ届けるページ。</p>
-            <div class="mock-line w70"></div>
-            <div class="mock-line w50"></div>
-            <span class="mock-btn">ご予約・お問い合わせ</span>
-            <div class="mock-grid"><div></div><div></div><div></div></div>
-            <div class="mock-meta">
-              <span>営業時間</span>
-              <span>アクセス</span>
-              <span class="muted">SNS</span>
-            </div>
-          </div>
+      <div class="ba-arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4v13l-5-5-1.4 1.4L12 20l6.4-6.6L17 12l-5 5z"/></svg></div>
+      <div class="ba-card ba-after">
+        <span class="ba-tag">スマホページがあると</span>
+        <h4>1ページにすっきり集約</h4>
+        <div class="ba-icons">
+          <span class="ba-chip">✓ 魅力</span>
+          <span class="ba-chip">✓ 料金</span>
+          <span class="ba-chip">✓ 問い合わせ導線</span>
         </div>
-        <div class="float-chip two">最短<span class="big">2〜5日</span>でデモ完成</div>
+        <p class="ba-note">必要な情報が一目で伝わり、迷わず問い合わせ・予約・来店へ。SNSやマップからの来訪を確実に受け止めます。</p>
       </div>
     </div>
-  </section>
 
-  <!-- ===================== STATS ===================== -->
-  <section class="stats" aria-label="サービスの特徴">
-    <div class="wrap">
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <p class="stat-num">2-5<small>日</small></p>
-          <p class="stat-label">フォーム送信から<br />デモ完成までの目安</p>
+    <!-- visitor JOURNEY flow -->
+    <div class="journey">
+      <div class="journey-title">お客様が「行動」に進むまでの流れ</div>
+      <div class="jflow">
+        <div class="jsrc">
+          <div class="jnode"><svg viewBox="0 0 24 24" fill="none" stroke="#46544b" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#46544b"/></svg>Instagram</div>
+          <div class="jnode"><svg viewBox="0 0 24 24" fill="none" stroke="#46544b" stroke-width="2"><path d="M12 21s7-6.3 7-12a7 7 0 10-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Googleマップ</div>
         </div>
-        <div class="stat-item reveal d1">
-          <p class="stat-num">¥0</p>
-          <p class="stat-label">試作デモの費用は<br />完全無料</p>
-        </div>
-        <div class="stat-item reveal d2">
-          <p class="stat-num">3<small>分</small></p>
-          <p class="stat-label">お申し込みフォームの<br />入力にかかる時間</p>
-        </div>
-        <div class="stat-item reveal d3">
-          <p class="stat-num">5,500<small>円〜</small></p>
-          <p class="stat-label">月額保守<br />公開後の更新・相談もこみ</p>
+        <div class="jconn"></div>
+        <div class="jhub"><svg viewBox="0 0 24 24" fill="none" stroke="#f6f0e2" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2.5"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/></svg>スマホページ</div>
+        <div class="jconn"></div>
+        <div class="jact">
+          <div class="jnode">📞 問い合わせ</div>
+          <div class="jnode">📅 予約</div>
+          <div class="jnode">🏠 来店</div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== CONCERNS ===================== -->
-  <section class="concerns" id="concerns">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow center reveal">Your Concerns</span>
-        <h2 class="section-title reveal d1">ひとつでも当てはまったら、<br />お役に立てるかもしれません。</h2>
-        <p class="reveal d2">開業前の方から、今のホームページを見直したい方まで。地域の小さな事業者の「まず整えたいWebまわり」を、4Uがお手伝いします。</p>
-      </div>
-
-      <div class="concerns-grid">
-        <article class="concern-card reveal">
-          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <p class="c-who">これから開業する方</p>
-          <p class="c-text">名刺代わりになるページを用意したい</p>
-        </article>
-        <article class="concern-card reveal d1">
-          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <p class="c-who">開業したばかりの方</p>
-          <p class="c-text">まずは低予算でWeb上の入り口を整えたい</p>
-        </article>
-        <article class="concern-card reveal d2">
-          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <p class="c-who">自作ホームページの方</p>
-          <p class="c-text">見た目や文章をもう少し整えたい</p>
-        </article>
-        <article class="concern-card reveal">
-          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <p class="c-who">Instagramだけで発信している方</p>
-          <p class="c-text">料金・サービス・予約方法を分かりやすくまとめたい</p>
-        </article>
-        <article class="concern-card reveal d1">
-          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <p class="c-who">ホームページが古い方</p>
-          <p class="c-text">今の事業内容に合う形へ見直したい</p>
-        </article>
-        <article class="concern-card reveal d2">
-          <div class="c-check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
-          <p class="c-who">スマホで見づらいサイトの方</p>
-          <p class="c-text">スマホからでも問い合わせしやすい形にしたい</p>
-        </article>
-      </div>
-
-      <div class="roles">
-        <div class="roles-head">
-          <h3 class="reveal">SNSだけでは伝えきれない情報を、<br />ホームページに。</h3>
-          <p class="reveal d1">Instagramは、お店の雰囲気や日々の活動を伝えるのに向いています。一方で、料金・サービス内容・アクセス・予約方法などを整理して伝えるには、ホームページがあると安心です。</p>
-        </div>
-        <div class="roles-pair">
-          <div class="role-card insta reveal d1">
-            <div class="role-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></div>
-            <p class="r-label">Instagram</p>
-            <p class="r-sub">日々を届ける／知ってもらう</p>
-            <ul>
-              <li>お店の雰囲気を伝える</li>
-              <li>投稿で見つけてもらう</li>
-              <li>興味を持ってもらう</li>
-            </ul>
-          </div>
-          <div class="roles-plus reveal d1" aria-hidden="true">＋</div>
-          <div class="role-card web reveal d2">
-            <div class="role-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M9 21h6"/></svg></div>
-            <p class="r-label">ホームページ</p>
-            <p class="r-sub">情報を整えて、行動につなげる</p>
-            <ul>
-              <li>料金・内容を整理して伝える</li>
-              <li>必要な情報を固定で置ける</li>
-              <li>予約・問い合わせにつなぐ</li>
-            </ul>
-          </div>
-        </div>
-        <p class="roles-note reveal">多くの人は、まずスマホで情報を確認します。だから「あるだけ」ではなく、<b>スマホで見やすく、予約・問い合わせまで迷わずたどり着ける</b>ことが大切です。</p>
-      </div>
-
-      <div class="mini-cta reveal">
-        <a href="#contact" class="btn btn-ghost">気軽にWebの相談をしてみる<span class="arrow">→</span></a>
-      </div>
+<!-- ============ 3. CAN DO ============ -->
+<section class="cando" id="cando">
+  <div class="wrap sec-head reveal">
+    <span class="eyebrow">4U STUDIO</span>
+    <h2>できること</h2>
+    <p class="intro">あなたのお店に必要なのは、「次の行動」につながる1ページです。見た目だけのページは作りません。魅力・メニュー・料金・問い合わせ方法を整理して、見た人がすぐ動けるページにします。</p>
+  </div>
+  <div class="wrap reveal">
+    <div class="feat">
+      <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a24c" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div>
+      <div><h3>スマホで見やすい1ページを制作</h3><p>読みやすい文字、押しやすいボタン、すぐ届く情報。スマホで見るお客様を第一に作ります。</p></div>
     </div>
-  </section>
-
-  <!-- ===================== SERVICE ===================== -->
-  <section class="service" id="service">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow center reveal">Service</span>
-        <h2 class="section-title reveal d1">できるのは、この3つから。</h2>
-        <p class="reveal d2">多くの事業者さまが最初に選ぶ、3つの基本サービスです。どれが合うか分からなくても、無料デモで一緒に考えながら進められます。</p>
-      </div>
-
-      <div class="service-grid">
-        <article class="service-card reveal">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg></div>
-          <h3>01. ホームページ制作</h3>
-          <p>会社やお店の魅力を伝える、基本のホームページ。スマートフォン対応まで、すべて込みで制作します。</p>
-          <span class="for">飲食店・サロン・教室など</span>
-        </article>
-        <article class="service-card reveal d1">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M10 7h4M12 17h.01"/></svg></div>
-          <h3>02. ランディングページ制作</h3>
-          <p>予約やお問い合わせにつなげる、1ページ完結型のページ。キャンペーンや新サービスの告知に。</p>
-          <span class="for">新サービス・キャンペーン</span>
-        </article>
-        <article class="service-card reveal d2">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0-8-8"/><path d="M4 12V7h5"/><path d="m9 15 3-3"/></svg></div>
-          <h3>03. 既存ホームページの改善</h3>
-          <p>今あるサイトを、見やすく・伝わる形にリニューアル。「古く見える」「スマホで崩れる」も解決します。</p>
-          <span class="for">リニューアルしたい方</span>
-        </article>
-      </div>
-
-      <div class="service-sub-head reveal">
-        <span class="label">＋ あわせてご相談いただけるサポート</span>
-      </div>
-      <div class="service-sub-grid">
-        <article class="service-card sub reveal">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></div>
-          <div class="sub-body">
-            <h3>YouTube / 動画制作サポート</h3>
-            <p>撮影から編集まで、動画での発信をお手伝い。お店の雰囲気や人柄を、動きと声で届けられます。</p>
-          </div>
-        </article>
-        <article class="service-card sub reveal d1">
-          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg></div>
-          <div class="sub-body">
-            <h3>AI活用サポート</h3>
-            <p>日々の事務作業や情報発信を、AIで効率化するお手伝い。少人数でも回る仕組みづくりをご提案します。</p>
-          </div>
-        </article>
-      </div>
-
-      <div class="mini-cta reveal">
-        <a href="#contact" class="btn btn-ghost">まずは無料で完成イメージを見る<span class="arrow">→</span></a>
-      </div>
+    <div class="feat">
+      <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a24c" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <div><h3>お店・サービスの魅力を整理</h3><p>「どんなお店か」「何をお願いできるか」「他と何が違うか」。初めて見る人にも伝わるように、内容を分かりやすく整理します。</p></div>
     </div>
-  </section>
-
-  <!-- ===================== REASONS (new) ===================== -->
-  <section class="reasons" id="reasons">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow center reveal">Why 4U</span>
-        <h2 class="section-title reveal d1">4Uが選ばれる、4つの理由。</h2>
-        <p class="reveal d2">「Webは難しそう」「高そう」を、ひとつずつ取り除いていく。地域の小さな事業者のために考えた、4Uの進め方です。</p>
-      </div>
-      <div class="reasons-grid">
-        <article class="reason-card reveal">
-          <div class="r-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <span class="r-num">01</span>
-          <h3>まず見てから決める</h3>
-          <p>無料の試作デモで完成イメージを確認。納得してから正式にご依頼いただけます。</p>
-        </article>
-        <article class="reason-card reveal d1">
-          <div class="r-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
-          <span class="r-num">02</span>
-          <h3>低価格・短納期</h3>
-          <p>AI活用でコストと時間を抑え、小さな事業者でも頼みやすい価格と早さに。</p>
-        </article>
-        <article class="reason-card reveal d2">
-          <div class="r-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-4A8.4 8.4 0 1 1 21 11.5z"/></svg></div>
-          <span class="r-num">03</span>
-          <h3>専門用語を使わない</h3>
-          <p>「むずかしいことを、わかりやすく」。Webが苦手な方にも安心の進め方です。</p>
-        </article>
-        <article class="reason-card reveal d3">
-          <div class="r-ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <span class="r-num">04</span>
-          <h3>地域に根ざして伴走</h3>
-          <p>沼田を拠点に、公開後の更新や改善まで気軽に相談できる相手であり続けます。</p>
-        </article>
-      </div>
+    <div class="feat">
+      <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a24c" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+      <div><h3>問い合わせ・予約・来店への導線づくり</h3><p>電話、LINE、Instagram、Googleマップ、予約サイトなど、業種に合わせて必要な導線を設置します。</p></div>
     </div>
-  </section>
-
-  <!-- ===================== FLOW ===================== -->
-  <section class="flow" id="flow">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow center reveal">How it works</span>
-        <h2 class="section-title reveal d1">無料試作デモの、4ステップ。</h2>
-        <p class="reveal d2">むずかしい打ち合わせは不要。フォームに答えるだけで、完成イメージが手元に届きます。</p>
-      </div>
-      <div class="steps">
-        <div class="step reveal">
-          <div class="num">1</div>
-          <span class="label">STEP 01</span>
-          <h3>フォームに回答</h3>
-          <p>業種やご希望を、簡単なフォームでお聞かせください。所要時間は数分ほどです。</p>
-        </div>
-        <div class="step reveal d1">
-          <div class="num">2</div>
-          <span class="label">STEP 02</span>
-          <h3>試作品を制作</h3>
-          <p>いただいた内容をもとに、4Uが実際のデモページを制作します。</p>
-        </div>
-        <div class="step reveal d2">
-          <div class="num">3</div>
-          <span class="label">STEP 03</span>
-          <h3>デモページを確認</h3>
-          <p>2〜5日後を目安に、完成イメージのデモページをご確認いただけます。</p>
-        </div>
-        <div class="step reveal d3">
-          <div class="num">4</div>
-          <span class="label">STEP 04</span>
-          <h3>気に入ったら正式依頼</h3>
-          <p>内容に納得いただけた場合のみ、正式なご依頼へ。断っていただいても費用は一切かかりません。</p>
-        </div>
-      </div>
+    <div class="feat">
+      <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a24c" stroke-width="2"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg></div>
+      <div><h3>AIを活用しつつ、仕上げは人の手で</h3><p>AIで効率よく進めつつ、言葉選びや地域に合わせた表現は人が整えます。その分、あなたが始めやすい価格でご提供します。</p></div>
     </div>
-  </section>
+    <div class="feat">
+      <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a24c" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg></div>
+      <div><h3>公開後もサポート</h3><p>作って終わりにはしません。難しい操作は不要。変更したい内容を送っていただければ、こちらで対応します。</p></div>
+    </div>
+  </div>
+</section>
 
-  <!-- ===================== PRICING ===================== -->
-  <section class="pricing" id="pricing">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow center reveal">Price</span>
-        <h2 class="section-title reveal d1">はじめやすい価格に、しました。</h2>
-        <p class="reveal d2">月額5,500円〜。作って終わりではなく、公開後もずっとそばで。<br />ホームページは「作って終わり」ではありません。月額には、こんな安心が含まれています。</p>
-      </div>
+<!-- ============ 4. DEMO ============ -->
+<section class="demo" id="demo">
+  <div class="wrap sec-head reveal">
+    <span class="sec-num">04 / FREE DEMO</span>
+    <h2>無料デモについて</h2>
+    <p class="demo-quote">「いきなり申し込むのは不安」<br>「先にどんなページになるか見てみたい」</p>
+    <p class="lead">申し込む前に、完成イメージを無料で確認できます。「いきなり申し込むのは不安」——そのままで大丈夫です。店名・業種・メニュー・料金などを入力いただければ、あなたのお店に合わせた簡易デモをお作りします。</p>
+  </div>
 
-      <ul class="price-assure reveal d2">
-        <li><b>見てから決められる</b> … お金を払う前に、無料デモで完成イメージを確認できます。</li>
-        <li><b>公開後も相談できる</b> … 「ここ直したい」に、いつでも対応します。</li>
-        <li><b>ちょっとした修正も頼める</b> … 営業時間やメニュー変更も、お任せください。</li>
-        <li><b>困った時に相談できる</b> … 分からないことは、何でも聞いてください。</li>
-        <li><b>地元で頼れる</b> … 同じ沼田だから、すぐ近くに相談相手がいます。</li>
+  <div class="wrap reveal">
+    <h3 style="font-size:1.02rem;color:var(--green-800);margin-bottom:4px">無料デモで分かること</h3>
+    <div class="know-grid">
+      <div class="know"><div class="know-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div><p>自分のお店がスマホページになると、どんな見え方になるか</p></div>
+      <div class="know"><div class="know-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><line x1="8" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="8" y1="18" x2="20" y2="18"/><circle cx="4" cy="6" r="1" fill="#356b4d"/><circle cx="4" cy="12" r="1" fill="#356b4d"/><circle cx="4" cy="18" r="1" fill="#356b4d"/></svg></div><p>メニューや料金をどう整理できるか</p></div>
+      <div class="know"><div class="know-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M8 12h8"/></svg></div><p>問い合わせボタンがどのように表示されるか</p></div>
+      <div class="know"><div class="know-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><path d="M12 21s7-6.3 7-12a7 7 0 10-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div><p>SNSやマップから来た人に、どんな情報を見せられるか</p></div>
+    </div>
+
+    <div class="card">
+      <h3><span class="dot"></span>無料デモの内容</h3>
+      <ul class="tick-list">
+        <li>スマホで見られる一時URLで共有</li>
+        <li>公開期間は7日間</li>
+        <li>ファーストビュー＋2〜3セクション程度</li>
+        <li>商用利用・正式公開は本制作契約後</li>
+        <li>修正は誤字脱字や明らかな情報ミスのみ対応</li>
       </ul>
+      <div class="callout">無料デモは、正式版をじっくり仕上げる前に、完成イメージを気軽に確認していただくための簡易サンプルです。本番では、内容も仕上がりもさらに作り込みます。</div>
+    </div>
+    <div style="margin-top:24px"><a href="form.html" class="btn btn-primary">無料デモを申し込む <span class="arrow">→</span></a></div>
+  </div>
+</section>
 
-      <div class="plan-grid">
-        <article class="plan-card reveal">
-          <span class="plan-for">しっかり魅せたいお店へ</span>
-          <p class="plan-name">プレミアム</p>
-          <p class="plan-en">Premium</p>
-          <p class="plan-price-label">初期費用</p>
-          <p class="plan-price is-soft">応相談<small>（お見積り）</small></p>
-          <p class="plan-month">月額保守 <b>応相談</b></p>
-          <p class="plan-desc">メニューや実績など、ページを分けてじっくり見せる本格サイト。</p>
-          <p class="plan-key"><b>複数ページ（3〜5ページ目安）</b><br />内容に合わせて一緒に設計します。まずはご相談ください。</p>
-          <hr class="plan-divider" />
-          <ul class="plan-feat">
-            <li>複数ページ構成</li>
-            <li>構成・導線の設計</li>
-            <li>文章作成サポート</li>
-            <li>スマホ対応</li>
-            <li>SEO基本設定</li>
-            <li>公開後の相談サポート</li>
-          </ul>
-          <a href="#contact" class="btn plan-cta plan-cta-ghost">無料デモで相談する</a>
-        </article>
-
-        <article class="plan-card featured reveal d1">
-          <span class="plan-badge">一番人気</span>
-          <span class="plan-for">小さなお店にちょうどいい</span>
-          <p class="plan-name">スタンダード</p>
-          <p class="plan-en">Standard</p>
-          <p class="plan-price-label">初期費用（税込）</p>
-          <p class="plan-price">99,800<small>円</small></p>
-          <p class="plan-month">月額保守 <b>7,700円</b>（税込）</p>
-          <p class="plan-desc">1枚にお店の魅力をたっぷり。これだけで“ちゃんとした顔”になります。</p>
-          <p class="plan-key"><b>充実した1ページ／文章サポート付</b><br />構成と文章まで一緒に整え、伝わる形に仕上げます。</p>
-          <hr class="plan-divider" />
-          <ul class="plan-feat">
-            <li>充実した1ページ構成</li>
-            <li>構成提案</li>
-            <li>文章整理サポート</li>
-            <li>スマホ対応</li>
-            <li>SEO基本設定</li>
-            <li>予約 / 地図 / SNS連携</li>
-            <li>お問い合わせフォーム</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary plan-cta">無料デモで相談する<span class="arrow">→</span></a>
-          <p class="plan-best">迷ったら、これ。<span>小さなお店に必要なものが、ちょうどぜんぶ揃っています。</span></p>
-        </article>
-
-        <article class="plan-card reveal d2">
-          <span class="plan-for">まずは持ちたい方へ</span>
-          <p class="plan-name">ライト</p>
-          <p class="plan-en">Light</p>
-          <p class="plan-price-label">初期費用（税込）</p>
-          <p class="plan-price">59,800<small>円</small></p>
-          <p class="plan-month">月額保守 <b>5,500円</b>（税込）</p>
-          <p class="plan-desc">お店のことを、まずは1枚にコンパクトにまとめます。</p>
-          <p class="plan-key"><b>簡易な1ページ</b><br />必要最低限の情報を、整えて掲載します。</p>
-          <hr class="plan-divider" />
-          <ul class="plan-feat">
-            <li>簡易な1ページ構成</li>
-            <li>スマホ対応</li>
-            <li>基本情報の掲載</li>
-            <li>簡易なお問い合わせ導線</li>
-            <li>更新は軽微なもののみ</li>
-          </ul>
-          <a href="#contact" class="btn plan-cta plan-cta-ghost">無料デモで相談する</a>
-          <p class="plan-note">※ まずはお試しで、という方に。物足りなければ、あとでスタンダードに変更もできます。</p>
-        </article>
-      </div>
-
-      <div class="plan-compare reveal">
-        <table>
-          <thead>
-            <tr>
-              <th>主な違い</th>
-              <th>プレミアム</th>
-              <th class="is-featured">スタンダード</th>
-              <th>ライト</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>中身</td><td>複数ページ</td><td>充実した1ページ</td><td>簡易な1ページ</td></tr>
-            <tr><td>初期費用（税込）</td><td>応相談</td><td>99,800円</td><td>59,800円</td></tr>
-            <tr><td>月額保守（税込）</td><td>応相談</td><td>7,700円</td><td>5,500円</td></tr>
-            <tr><td>文章サポート</td><td>作成サポート</td><td>整理サポート</td><td>—</td></tr>
-            <tr><td>構成・導線提案</td><td>導線設計まで</td><td>構成提案</td><td>—</td></tr>
-            <tr><td>SEO基本設定</td><td>あり</td><td>あり</td><td>—</td></tr>
-            <tr><td>予約 / 地図 / SNS連携</td><td>◎</td><td>◎</td><td>△</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="price-note reveal">※ ライトとスタンダードの初期費用の差は40,000円。<b>1日あたりにすると、わずか約110円</b>の違いです。長く使うものだから、多くの方が「ちょうどいい」スタンダードを選んでいます。<br />※ プレミアムは内容により変動するため、無料デモ後にお見積りいたします。月額保守には、公開後の更新・修正・相談サポートが含まれます。</p>
-
-      <div class="pricing-cta reveal">
-        <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
+<!-- ============ 5. SAMPLES ============ -->
+<section class="samples" id="samples">
+  <div class="wrap sec-head reveal">
+    <span class="sec-num">05 / SAMPLES</span>
+    <h2>こんなスマホページが<br>作れます</h2>
+    <p class="lead" style="margin:14px 0 26px">業種に合わせて、雰囲気や見せ方を変えられます。実際のサンプルをご用意しています。</p>
+  </div>
+  <div class="wrap">
+    <div class="sample-card reveal">
+      <div class="sample-photo s1"><span class="photo-tag">写真差し込み可</span><span>士業・専門サービス</span></div>
+      <div class="sample-body">
+        <h3>士業・専門サービス向け</h3>
+        <p>信頼感や相談しやすさを伝える構成。サービス内容、料金、相談の流れ、問い合わせ導線を分かりやすく整理します。</p>
+        <a href="https://4u-studio.github.io/demo-shigyo/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">士業向けサンプルを見る <span class="arrow">→</span></a>
       </div>
     </div>
-  </section>
-
-  <!-- ===================== FAQ ===================== -->
-  <section class="faq" id="faq">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow center reveal">FAQ</span>
-        <h2 class="section-title reveal d1">よくあるご質問</h2>
-      </div>
-      <div class="faq-list reveal d1">
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span class="q-mark">Q</span><span class="q-text">無料試作デモは本当に無料ですか？</span><span class="q-icon" aria-hidden="true"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">はい、無料です。デモをご確認いただき、気に入った場合のみ正式にご依頼いただけます。</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span class="q-mark">Q</span><span class="q-text">パソコンやWebに詳しくなくても大丈夫ですか？</span><span class="q-icon" aria-hidden="true"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">大丈夫です。専門用語をできるだけ使わず、必要な内容を整理しながら進めます。</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span class="q-mark">Q</span><span class="q-text">写真や文章がまだ用意できていなくても相談できますか？</span><span class="q-icon" aria-hidden="true"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">はい、可能です。まずは現在ある情報をもとに試作し、必要な素材は一緒に整理していきます。</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span class="q-mark">Q</span><span class="q-text">公開後の修正や管理もお願いできますか？</span><span class="q-icon" aria-hidden="true"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">はい、月額の保守管理プランをご用意しています。軽微な修正や表示確認、サーバー・ドメイン周りの相談にも対応します。</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span class="q-mark">Q</span><span class="q-text">無理な営業はありませんか？</span><span class="q-icon" aria-hidden="true"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">ありません。試作デモをご覧いただいたうえで、必要ないと感じた場合は断っていただいて大丈夫です。</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false"><span class="q-mark">Q</span><span class="q-text">うちのような小さな事業でも頼んで大丈夫ですか？</span><span class="q-icon" aria-hidden="true"></span></button>
-          <div class="faq-a"><div class="faq-a-inner">もちろんです。むしろ、地域の小さな事業者の方のために4Uはあります。1ページのシンプルな制作から、お気軽にご相談ください。</div></div>
-        </div>
-      </div>
-      <div class="mini-cta reveal">
-        <a href="#contact" class="btn btn-primary">不安が解けたら、無料デモを申し込む<span class="arrow">→</span></a>
+    <div class="sample-card reveal" data-d="1">
+      <div class="sample-photo s2"><span class="photo-tag">写真差し込み可</span><span>喫茶店・飲食店</span></div>
+      <div class="sample-body">
+        <h3>喫茶店・飲食店向け</h3>
+        <p>お店の雰囲気、メニュー、地域らしさを伝える構成。初めてのお客様が「行ってみたい」と思えるようにまとめます。</p>
+        <a href="https://4u-studio.github.io/demo-kissaten/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">喫茶店向けサンプルを見る <span class="arrow">→</span></a>
       </div>
     </div>
-  </section>
-
-  <!-- ===================== STATEMENT ===================== -->
-  <section class="statement" id="belief">
-    <div class="wrap statement-inner">
-      <p class="belief-intro reveal">— Our Belief —</p>
-      <span class="eyebrow center reveal">Vision &amp; Mission</span>
-      <h2 class="reveal d1">地域の小さな事業者の価値が、<br />必要な人に、きちんと届く社会へ。</h2>
-      <p class="body reveal d2">沼田には、良いお店・良い技術・良いサービスがたくさんあります。けれど「スマホで調べても出てこない」というだけで、選ばれる機会を逃してしまうことがあります。4Uは、その魅力が必要な人にきちんと届くWebづくりをお手伝いします。</p>
-      <div class="mission-pair">
-        <div class="mission-card reveal d2">
-          <p class="num">01</p>
-          <p><b>わかりやすく、相談しやすく。</b>専門用語を使わず進めます。「何から始めればいいか分からない」を、安心に変えます。</p>
-        </div>
-        <div class="mission-card reveal d3">
-          <p class="num">02</p>
-          <p><b>低価格・短納期で、しっかり伝わる。</b>AIを活用してコストを抑えつつ、伝わる形に仕上げます。</p>
-        </div>
+    <div class="sample-card reveal" data-d="2">
+      <div class="sample-photo s3"><span class="photo-tag">写真差し込み可</span><span>美容室・サロン</span></div>
+      <div class="sample-body">
+        <h3>美容室・サロン向け</h3>
+        <p>雰囲気、メニュー、予約導線をまとめる構成。スマホで見たときに、料金や予約方法がすぐ分かるページを意識しています。</p>
+        <a href="https://4u-studio.github.io/demo-hairsalon/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">美容室向けサンプルを見る <span class="arrow">→</span></a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===================== FOUNDER ===================== -->
-  <section class="founder" id="story">
-    <div class="wrap founder-grid">
-      <aside class="founder-aside reveal">
-        <div class="profile-card">
-          <div class="avatar">T</div>
-          <p class="role">FOUNDER</p>
-          <p class="name">土屋 裕二</p>
-          <hr />
-          <p class="meta">
-            <b>個別指導塾 free</b> 代表<br />
-            <b>合同会社4U</b> 代表社員<br /><br />
-            個別指導塾で培った「むずかしいことを、わかりやすく伝える力」を、地域の事業者のWeb制作に活かしています。
-          </p>
-        </div>
-      </aside>
-
-      <div class="founder-body">
-        <span class="eyebrow reveal">Founder's Story</span>
-        <h2 class="reveal d1">良いものがあるのに、伝わらない。<br />そのもったいなさを減らしたい。</h2>
-
-        <p class="reveal d1">私の地元である沼田市には、良いお店や良いサービスを持つ事業者さんがたくさんいます。一方で、ホームページがなかったり、スマホで見づらかったり、情報が整理されていなかったりすることで、本来の魅力が伝わりきっていない場面もあります。</p>
-        <p class="reveal d1">この想いの出発点は、ほかでもない私自身の経験でした。個別指導塾 free を立ち上げたとき、最初にぶつかったのが<span class="hl">「どうやって塾を知ってもらうか」</span>という集客の壁。良い授業をする自信はあっても、それを届ける手段がわからなかったのです。</p>
-        <p class="reveal d2">開業したばかりで、資金に余裕はありません。ホームページや広告にまとまったお金をかけることはできない。調べてみると、制作会社に頼んだ場合の費用は、想像をはるかに超える高額でした。仕方なく自力でホームページを作ってみたものの、出来上がったのは、どこかで見たようなありきたりのテンプレート。<span class="hl">これでは、自分の塾の良さは何ひとつ伝わらない</span>——そう感じました。</p>
-
-        <button class="story-toggle" id="storyToggle" aria-expanded="false" aria-controls="storyMore">
-          代表ストーリーをもっと読む<span class="chev" aria-hidden="true">▾</span>
-        </button>
-
-        <div class="story-more" id="storyMore" hidden>
-          <div class="founder-quote reveal d2">良いものがあるのに、伝わらない。<br />それは、とてももったいないことだと思いました。</div>
-          <p class="reveal d3">そこから、自分で試行錯誤を重ねました。塾で毎日続けてきた「むずかしいことを、わかりやすく伝える」力をWebに応用し、何を載せれば伝わるのかを一つずつ確かめていく。さらにAIを使えば、制作にかかるコストと時間は大きく抑えられる。たどり着いた答えが、長い説明や高い初期費用の前に、まず実際に見て確かめられる<span class="hl">無料の試作デモ</span>という形でした。</p>
-          <p class="reveal d3">いま4Uは、ホームページやランディングページ、動画制作を通して、地域の事業者の「伝える」をお手伝いしています。かつての私と同じように、資金や知識がなくて一歩を踏み出せずにいる方へ。完成イメージを目で見て、納得してから決められる安心を届けたい。良いものを持つ人が、まっすぐ選ばれる地域を、一緒につくっていきます。</p>
-        </div>
-
-        <p class="naming-line reveal">――「4U」という社名は、<em>For You</em>。「あなたのために」という想いを込めています。<br /><span>目の前のひとりの事業者のために、できることをする。その姿勢は、これからも変わりません。</span></p>
-      </div>
+<!-- ============ 6. PRICING ============ -->
+<section class="pricing" id="pricing">
+  <div class="wrap sec-head reveal">
+    <span class="eyebrow">PRICE PLAN</span>
+    <h2>料金プラン</h2>
+    <p class="intro">迷ったら、一番おすすめの「集客LP」を選んでください。プランは3つ。どれもスマホで見やすい1ページが基本で、違いは情報量と作り込みの度合いです。</p>
+    <div class="commit-note">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a24c" style="flex:0 0 auto;margin-top:2px"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/></svg>
+      どのプランも公開後は月額保守でサポートします（最低契約期間6か月）。作って終わりではなく、長く安心して使い続けられる仕組みです。
     </div>
-  </section>
+  </div>
 
-  <!-- ===================== COMPANY ===================== -->
-  <section class="company" id="company">
-    <div class="wrap company-grid">
-      <div>
-        <span class="eyebrow reveal">Company</span>
-        <h2 class="reveal d1">会社概要</h2>
-      </div>
-      <table class="profile-table reveal d1">
+  <div class="wrap reveal">
+    <div class="plan">
+      <h3>はじめてLP</h3>
+      <p class="pdesc">まずはWeb上に、お店やサービスの受け皿を作りたい方向け。基本情報を1ページにまとめます。</p>
+      <span class="price-reg">通常価格 <s>60,000円</s></span>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="60000" data-count="30000">30,000</span><span class="yen">円</span></span><span class="price-label">モニター価格</span></div>
+      <ul>
+        <li>5セクション程度</li>
+        <li>店舗・サービスの基本情報を掲載</li>
+        <li>電話・LINE・Instagram・Googleマップなどの基本導線を設置</li>
+      </ul>
+    </div>
+
+    <div class="plan featured">
+      <span class="badge">★ 一番おすすめ</span>
+      <h3>集客LP</h3>
+      <p class="pdesc">問い合わせ・予約・来店につなげたい方向けの標準プラン。お店の強みを整理し、見た人が行動しやすいページを制作します。</p>
+      <span class="price-reg">通常価格 <s>80,000円</s></span>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="80000" data-count="50000">50,000</span><span class="yen">円</span></span><span class="price-label">モニター価格</span></div>
+      <ul>
+        <li>7セクション程度</li>
+        <li>キャッチコピー・文章作成込み</li>
+        <li>お店やサービスの強みを整理</li>
+        <li>問い合わせ・予約導線を設計</li>
+        <li>よくある質問も掲載可能</li>
+      </ul>
+    </div>
+
+    <div class="plan">
+      <h3>しっかり集客LP</h3>
+      <p class="pdesc">情報量を増やして、魅力や信頼感をしっかり伝えたい方向け。本格的な集客用ページとして制作します。</p>
+      <span class="price-reg">通常価格 <s>120,000円</s></span>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="120000" data-count="80000">80,000</span><span class="yen">円</span></span><span class="price-label">モニター価格</span></div>
+      <ul>
+        <li>10セクション程度／情報量多めの構成</li>
+        <li>魅力や強みを丁寧に整理</li>
+        <li>実績・事例・お客様の声なども掲載可能</li>
+        <li>複数の問い合わせ導線を整理</li>
+      </ul>
+    </div>
+
+    <!-- comparison table infographic -->
+    <div class="compare">
+      <h4>プランの違いが一目で分かる比較表</h4>
+      <table>
+        <thead>
+          <tr><th>内容</th><th>はじめて</th><th class="hot">集客</th><th>しっかり</th></tr>
+        </thead>
         <tbody>
-          <tr><th>会社名</th><td>合同会社4U（フォーユー）</td></tr>
-          <tr><th>代表者</th><td>代表社員 土屋 裕二</td></tr>
-          <tr><th>事業内容</th><td>ホームページ制作／ランディングページ制作／既存サイトの改善・運用／YouTube・動画制作サポート／AI活用による業務効率化支援</td></tr>
-          <tr><th>所在地</th><td>群馬県沼田市<br /><span class="small">詳しい所在地は、お問い合わせ時にお伝えします。</span></td></tr>
-          <tr><th>対応エリア</th><td>沼田市を中心に群馬県内<br /><span class="small">オンラインでのご相談は、エリアを問わず対応いたします。</span></td></tr>
-          <tr><th>お問い合わせ</th><td><a href="#contact" class="link-arrow">お問い合わせフォームへ</a></td></tr>
+          <tr><td>基本情報の掲載</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>基本の問い合わせ導線</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>キャッチコピー・文章作成</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>強み・選ばれる理由の整理</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>予約導線の設計</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>よくある質問</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>実績・お客様の声</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>複数導線の整理</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>ボリューム目安</td><td>5節</td><td class="hot" style="color:var(--ochre)">7節</td><td>10節</td></tr>
         </tbody>
       </table>
     </div>
-  </section>
 
-  <!-- ===================== CONTACT ===================== -->
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="contact-head">
-        <span class="eyebrow center reveal">Contact</span>
-        <h2 class="reveal d1">まずは、無料の試作デモから。</h2>
-        <p class="reveal d2">「どんな感じになるか見てみたい」という段階でも大丈夫です。3分ほどのフォーム入力だけで、2〜5日を目安に完成イメージをご提案します。</p>
-      </div>
-      <div class="assurance reveal d2">
-        <span>試作デモは無料</span>
-        <span>気に入った場合のみ正式依頼</span>
-        <span>しつこい営業はしません</span>
-      </div>
-
-      <div class="form-open reveal d2">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeW2J1htSPXWIAFzeyLr_OVemyHssLpFc_5MXznLi2BgF3zUQ/viewform"
-           class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-          別画面でフォームを開く<span class="arrow">→</span>
-        </a>
-        <p class="form-open-note">フォームが表示されない場合は、こちらからお申し込みください。</p>
-      </div>
-
-      <div class="form-card reveal d2">
-        <iframe
-          class="google-form-embed"
-          src="https://docs.google.com/forms/d/e/1FAIpQLSeW2J1htSPXWIAFzeyLr_OVemyHssLpFc_5MXznLi2BgF3zUQ/viewform?embedded=true"
-          title="無料試作デモ お申し込みフォーム"
-          loading="lazy">読み込んでいます…</iframe>
+    <div class="common">
+      <h4>共通条件</h4>
+      <ul>
+        <li>月額保守：10,000円</li>
+        <li>最低契約期間：6か月</li>
+        <li>制作期間：掲載情報・写真素材が揃ってから約2週間</li>
+        <li>初期制作中の修正：2回まで</li>
+        <li>初期制作費と初月保守費は契約時に前払い</li>
+      </ul>
+      <div class="fineprint">
+        <p>※モニター価格は、先着3件・募集開始から1か月間限定です。</p>
+        <p>※モニター価格での制作をご希望の場合は、制作実績としての掲載と簡単なご感想へのご協力をお願いしています。</p>
+        <p>※店名掲載は任意で、掲載内容は事前に確認いただいたうえで使用します。</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-</main>
+<!-- ============ 7. MAINTENANCE ============ -->
+<section class="maint" id="maint">
+  <div class="wrap sec-head reveal">
+    <span class="sec-num">07 / SUPPORT</span>
+    <h2>公開後の保守サポート</h2>
+    <p class="lead" style="margin:14px 0 24px">更新は、あなたがやらなくて大丈夫です。営業時間も季節メニューも料金も、変えたい内容を送るだけ。あとはこちらで対応します。公開後は月額保守で、長く安心して使えます。</p>
+  </div>
+  <div class="wrap reveal">
+    <div class="maint-box">
+      <h3>月額保守に含まれる内容</h3>
+      <ul class="tick-list">
+        <li>LPの公開管理</li>
+        <li>サーバー・ドメインまわりの基本管理</li>
+        <li>月1回までの軽微な修正</li>
+        <li>季節のお知らせ・キャンペーン情報の更新</li>
+        <li>月1回の簡単な相談対応（LINE・メール・DMなどのテキスト中心）</li>
+        <li>必要に応じて15〜30分程度の通話対応</li>
+      </ul>
+    </div>
+    <div class="maint-box">
+      <h3>難しい操作は不要です</h3>
+      <div class="maint-quotes">
+        <span>「営業時間を変えたい」</span>
+        <span>「新しいメニューを載せたい」</span>
+        <span>「キャンペーン情報を追加したい」</span>
+      </div>
+      <p style="font-size:.93rem">そんなときは、変更したい内容を送っていただければ、こちらで対応します。</p>
+    </div>
+    <div class="maint-box">
+      <h3>月額保守について</h3>
+      <ul class="tick-list">
+        <li><span class="price-pill">月額 10,000円</span></li>
+        <li>最低契約期間：6か月</li>
+        <li>6か月経過後は、解約のご連絡がない限り自動継続</li>
+        <li>年払いをご希望の場合は、100,000円 / 年で対応可能</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-<!-- ===================== FOOTER ===================== -->
-<footer class="site-footer">
+<!-- ============ 8. FLOW（吹割の滝モチーフ）============ -->
+<section class="flow" id="flow">
+  <div class="wrap sec-head reveal">
+    <span class="sec-num">08 / FLOW</span>
+    <h2>制作の流れ</h2>
+    <p class="intro lead">あなたがすることは、最初の入力だけです。あとはこちらで進めるので、初めてでも迷いません。</p>
+  </div>
+  <div class="wrap reveal">
+    <div class="steps">
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>無料デモを申し込む</h3><p>まずはフォームから、店名・業種・メニュー・料金・問い合わせ先などを入力してください。</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>スマホページの無料デモを作成</h3><p>入力いただいた内容をもとに、スマホで見られる簡易デモを作成します。</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>一時URLで確認</h3><p>完成した無料デモを一時URLでお送りします。公開期間は7日間です。</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-body"><h3>本制作プランを選ぶ</h3><p>正式に制作をご希望の場合は3つのプランからお選びいただきます。迷った場合は「集客LP」を基準にご提案します。</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-body"><h3>ご入金確認後、制作開始</h3><p>初期制作費と初月保守費のご入金確認後、制作を開始します。</p></div></div>
+      <div class="step"><div class="step-num">6</div><div class="step-body"><h3>掲載情報・写真素材を確認</h3><p>必要な情報や写真を確認しながら、正式公開用のページとして整えます。</p></div></div>
+      <div class="step"><div class="step-num">7</div><div class="step-body"><h3>約2週間で公開</h3><p>掲載情報・写真素材が揃ってから、約2週間を目安に公開します。</p></div></div>
+      <div class="step"><div class="step-num">8</div><div class="step-body"><h3>公開後も月額保守でサポート</h3><p>軽微な修正やお知らせ更新、相談対応を月額保守内で行います。</p></div></div>
+    </div>
+
+    <!-- count-up stats -->
+    <div class="stats">
+      <div class="stat"><b><span class="pre">約</span><span class="count" data-count="2">0</span><span class="u">週間</span></b><span>情報が揃ってから公開まで</span></div>
+      <div class="stat"><b><span class="pre">先着</span><span class="count" data-count="3">0</span><span class="u">件</span></b><span>モニター価格の枠</span></div>
+      <div class="stat"><b><span class="count" data-count="8">0</span><span class="u">STEP</span></b><span>シンプルな制作の流れ</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. PROFILE ============ -->
+<section class="profile" id="profile">
+  <div class="wrap sec-head reveal">
+    <span class="eyebrow apple">ABOUT</span>
+    <h2>プロフィール・<br>お問い合わせ</h2>
+    <p class="about">私たちは、あなたと同じ沼田・利根沼田で事業をする立場から、地域のお店のためのスマホページを作っています。4U Studioは、合同会社４Ｕが運営する、個人事業主・小規模事業者さま向けの制作サービスです。</p>
+  </div>
+  <div class="wrap reveal">
+    <div class="prof-card">
+      <div class="prof-head">
+        <div class="prof-avatar" aria-label="4U Studio">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="31" cy="17" r="4.5" fill="#d4a24c"/>
+            <path d="M6 37 L17 22 L24 30 L33 18 L42 37 Z" fill="#f6f0e2"/>
+            <path d="M24 30 L29 24 L33 18 L42 37 L31 37 Z" fill="#e7ddc7"/>
+          </svg>
+        </div>
+        <div>
+          <h3>土屋 裕二</h3>
+          <span class="role">合同会社４Ｕ 代表社員 / 個別指導塾 free 代表</span>
+        </div>
+      </div>
+      <p>沼田市で個別指導塾 free を運営しながら、合同会社４Ｕの代表社員として、動画制作・Web制作に取り組んでいます。</p>
+      <p>私自身も、あなたと同じ沼田で事業をする一人です。だからこそ、大切さを実感してきました——</p>
+      <div class="values">
+        <span>まず知ってもらうこと</span>
+        <span>魅力を分かりやすく伝えること</span>
+        <span>問い合わせにつながる導線を整えること</span>
+      </div>
+      <p>InstagramやGoogleマップだけでは伝えきれないあなたのお店の魅力を、スマホで見やすい1ページに整理し、集客の導線づくりをお手伝いします。</p>
+    </div>
+
+    <div class="closing">
+      <h3>まずは無料デモから</h3>
+      <p>申し込む前に、無料デモで完成イメージを確認できます。あなたのお店の情報をもとに試作します。気軽にどうぞ。</p>
+      <a href="form.html" class="btn btn-primary">無料デモを申し込む <span class="arrow">→</span></a><br>
+      <a href="#contact" class="sublink">入力前に相談したい方はこちら</a>
+    </div>
+  </div>
+</section>
+
+<footer>
   <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="mark">4<b>U</b></span>
-        <p>地域の小さな事業者の魅力が、必要な人にきちんと届くように。合同会社4Uは、わかりやすいWeb制作をお届けします。</p>
-      </div>
-      <nav class="footer-nav" aria-label="フッターナビゲーション">
-        <div>
-          <h4>SERVICE</h4>
-          <ul>
-            <li><a href="#service">ホームページ制作</a></li>
-            <li><a href="#service">ランディングページ制作</a></li>
-            <li><a href="#service">既存サイトの改善</a></li>
-            <li><a href="#service">動画 / AI活用サポート</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>COMPANY</h4>
-          <ul>
-            <li><a href="#belief">私たちの想い</a></li>
-            <li><a href="#story">代表ストーリー</a></li>
-            <li><a href="#company">会社概要</a></li>
-            <li><a href="#contact">無料試作デモを申し込む</a></li>
-          </ul>
-        </div>
-      </nav>
+    <div class="apples">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#c23b2c"><path d="M12 6c0-2 1.2-3.6 3-4-.2 1.8-1 3-3 4zm0 0c-1.6-1.6-3.6-2-5.2-1.2C4.5 6 3 9 3 12.5 3 17 6 21 9 21c1 0 1.8-.4 3-.4s2 .4 3 .4c3 0 6-4 6-8.5C21 9 19.5 6 17.2 4.8 15.6 4 13.6 4.4 12 6z"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#c23b2c" style="opacity:.7"><path d="M12 6c0-2 1.2-3.6 3-4-.2 1.8-1 3-3 4zm0 0c-1.6-1.6-3.6-2-5.2-1.2C4.5 6 3 9 3 12.5 3 17 6 21 9 21c1 0 1.8-.4 3-.4s2 .4 3 .4c3 0 6-4 6-8.5C21 9 19.5 6 17.2 4.8 15.6 4 13.6 4.4 12 6z"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#c23b2c" style="opacity:.5"><path d="M12 6c0-2 1.2-3.6 3-4-.2 1.8-1 3-3 4zm0 0c-1.6-1.6-3.6-2-5.2-1.2C4.5 6 3 9 3 12.5 3 17 6 21 9 21c1 0 1.8-.4 3-.4s2 .4 3 .4c3 0 6-4 6-8.5C21 9 19.5 6 17.2 4.8 15.6 4 13.6 4.4 12 6z"/></svg>
     </div>
-    <div class="footer-bottom">
-      <span>© <span id="year">2026</span> 合同会社4U All rights reserved.</span>
-      <span>地域の事業者のためのWeb制作 — Numata, Gunma</span>
-    </div>
+    <div class="logo-text">4U Studio</div>
+    合同会社４Ｕ ｜ 沼田市・利根沼田エリア<br>
+    © 2026 4U Studio. All rights reserved.
   </div>
 </footer>
 
-<button class="to-top" id="toTop" aria-label="ページ上部へ戻る">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-</button>
-
+<!-- ============ STICKY CTA ============ -->
 <div class="sticky-cta" id="stickyCta">
-  <a href="#contact" class="btn btn-primary">無料試作デモを申し込む<span class="arrow">→</span></a>
+  <div class="inner">
+    <div class="txt"><b>まずは無料で試作</b><span>あなたのお店のスマホページを</span></div>
+    <a href="form.html" class="btn btn-primary">無料デモを申し込む</a>
+  </div>
 </div>
 
-<script src="assets/js/main.js" defer></script>
+<script>
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // scroll reveal — pre-trigger slightly before entering view for a smooth, lag-free fade
+  const io = new IntersectionObserver((es)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:0, rootMargin:'0px 0px 220px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // count-up / count-down (data-from → data-count)
+  function countUp(el){
+    const target = +el.dataset.count;
+    const from = el.dataset.from !== undefined ? +el.dataset.from : 0;
+    const dur = el.dataset.from !== undefined ? 1400 : 1100, t0 = performance.now();
+    function tick(now){
+      const p = Math.min((now-t0)/dur,1);
+      const eased = 1-Math.pow(1-p,3);
+      const val = Math.round(from + (target-from)*eased);
+      el.textContent = val.toLocaleString('ja-JP');
+      if(p<1) requestAnimationFrame(tick); else el.textContent = target.toLocaleString('ja-JP');
+    }
+    if(reduce){ el.textContent = target.toLocaleString('ja-JP'); } else requestAnimationFrame(tick);
+  }
+  const countIO = new IntersectionObserver((es)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ countUp(e.target); countIO.unobserve(e.target);} });
+  },{threshold:0, rootMargin:'0px 0px 90px 0px'});
+  document.querySelectorAll('.count').forEach(el=>countIO.observe(el));
+
+  // sticky CTA after hero
+  const hero = document.querySelector('.hero'), cta = document.getElementById('stickyCta');
+  new IntersectionObserver((es)=>es.forEach(e=>cta.classList.toggle('show',!e.isIntersecting)),{threshold:0}).observe(hero);
+
+  // progress bar + parallax + dots + dark-section detection
+  const progress = document.getElementById('progress');
+  const scenery = document.getElementById('scenery');
+  const sun = document.querySelector('.sun');
+  const dots = document.getElementById('dots');
+  const dotLinks = [...dots.querySelectorAll('a')];
+  const sections = dotLinks.map(a=>document.getElementById(a.dataset.s));
+  const darkSet = new Set(['hero','cando','pricing','flow','profile']);
+
+  function onScroll(){
+    const h = document.documentElement;
+    const sc = h.scrollTop, max = h.scrollHeight - h.clientHeight;
+    progress.style.width = (sc/max*100)+'%';
+    if(!reduce){
+      scenery.style.transform = 'translateY('+(sc*0.06)+'px)';
+      sun.style.transform = 'translateY('+(sc*0.12)+'px)';
+    }
+    // active dot + dot color
+    let cur = 0;
+    sections.forEach((s,i)=>{ if(s && s.getBoundingClientRect().top <= window.innerHeight*0.4) cur=i; });
+    dotLinks.forEach((a,i)=>a.classList.toggle('active',i===cur));
+    dots.classList.toggle('on-dark', darkSet.has(dotLinks[cur].dataset.s));
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+</script>
 </body>
 </html>
