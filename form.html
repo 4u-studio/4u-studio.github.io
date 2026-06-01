@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>無料デモ申し込み｜4U Studio</title>
+<meta name="description" content="4U Studioの無料デモ申し込みフォーム。店名・業種・掲載したい内容を入力して、スマホページの試作をご相談ください。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Shippori+Mincho:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-900:#13241a;
+    --green-800:#1c3527;
+    --green-700:#27503a;
+    --green-600:#356b4d;
+    --cream:#f6f0e2;
+    --paper:#fffdf6;
+    --ink:#1c2620;
+    --ink-soft:#46544b;
+    --ochre:#d4a24c;
+    --ochre-deep:#b9842f;
+    --apple:#c23b2c;
+    --line:rgba(28,38,32,.14);
+    --shadow:0 18px 40px -18px rgba(19,36,26,.5);
+    --radius:20px;
+    --maxw:580px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.85;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.045;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  header{
+    background:linear-gradient(168deg,var(--green-800),var(--green-900));
+    color:var(--cream);
+    padding:22px 0 46px;
+    position:relative;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-1px;
+    height:54px;
+    background:var(--cream);
+    clip-path:polygon(0 42%,18% 58%,42% 38%,66% 62%,100% 40%,100% 100%,0 100%);
+  }
+  .top{display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:1}
+  .logo{display:inline-flex;align-items:center;gap:10px;color:var(--cream);text-decoration:none;font-weight:900;line-height:1.1}
+  .logo small{display:block;font-size:.56rem;letter-spacing:.16em;color:var(--ochre);font-weight:700;margin-top:3px}
+  .back{color:rgba(246,240,226,.86);font-size:.88rem;text-decoration:underline;text-underline-offset:4px;white-space:nowrap}
+  .hero-copy{padding-top:40px;position:relative;z-index:1}
+  .eyebrow{
+    font-family:"Shippori Mincho",serif;
+    letter-spacing:.16em;
+    font-size:.74rem;
+    color:var(--ochre);
+    font-weight:700;
+  }
+  h1{font-size:2rem;line-height:1.45;margin:14px 0 14px;font-weight:900;letter-spacing:.01em}
+  .lead{color:rgba(246,240,226,.86);font-weight:500}
+  main{padding:42px 0 64px}
+  .notice{
+    background:rgba(212,162,76,.16);
+    border:1px solid rgba(185,132,47,.32);
+    border-radius:16px;
+    padding:15px 16px;
+    margin-bottom:20px;
+    color:var(--ink);
+    font-size:.92rem;
+  }
+  form{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:24px 20px;
+  }
+  .grid{display:grid;gap:18px}
+  label{display:grid;gap:7px;font-weight:700;color:var(--green-800)}
+  label span{font-size:.93rem}
+  .optional{font-size:.78rem;color:var(--ink-soft);font-weight:500}
+  input,select,textarea{
+    width:100%;
+    border:1px solid rgba(28,38,32,.2);
+    border-radius:14px;
+    background:#fff;
+    color:var(--ink);
+    font:inherit;
+    padding:13px 14px;
+    outline:none;
+  }
+  textarea{min-height:128px;resize:vertical}
+  input:focus,select:focus,textarea:focus{
+    border-color:var(--ochre-deep);
+    box-shadow:0 0 0 3px rgba(212,162,76,.18);
+  }
+  .checks{display:grid;gap:10px;margin-top:4px}
+  .check{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    color:var(--ink);
+    font-weight:500;
+    line-height:1.55;
+  }
+  .check input{width:18px;height:18px;flex:0 0 auto;margin-top:3px}
+  .actions{display:grid;gap:10px;margin-top:22px}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:54px;
+    border:0;
+    border-radius:999px;
+    font:inherit;
+    font-weight:800;
+    cursor:pointer;
+    text-decoration:none;
+    text-align:center;
+  }
+  .btn-primary{background:var(--ochre);color:#3a2b0b;box-shadow:0 10px 24px -8px rgba(185,132,47,.6)}
+  .btn-secondary{background:transparent;color:var(--green-800);border:1px solid rgba(39,80,58,.28)}
+  .fine{font-size:.8rem;color:var(--ink-soft);line-height:1.7;margin-top:14px}
+  .output{
+    display:none;
+    margin-top:18px;
+    background:#fff;
+    border:1px dashed rgba(39,80,58,.35);
+    border-radius:16px;
+    padding:16px;
+  }
+  .output.show{display:block}
+  .output h2{font-size:1rem;color:var(--green-800);margin-bottom:8px}
+  .output pre{
+    white-space:pre-wrap;
+    word-break:break-word;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:.82rem;
+    line-height:1.65;
+    color:var(--ink);
+  }
+  footer{padding:30px 0;color:var(--ink-soft);font-size:.82rem;text-align:center}
+  @media(min-width:600px){
+    h1{font-size:2.35rem}
+    form{padding:28px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="index.html" aria-label="4U Studio トップへ">
+        <svg width="42" height="42" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="23" stroke="#d4a24c" stroke-width="1.5"/>
+          <circle cx="30" cy="16" r="4.5" fill="#d4a24c"/>
+          <path d="M5 35 L15 22 L22 30 L31 18 L43 35 Z" fill="#f6f0e2"/>
+          <g fill="#27503a"><rect x="20.5" y="26" width="7" height="6"/><path d="M19.5 26 L24 22.5 L28.5 26 Z"/><rect x="22.5" y="20.5" width="3" height="2"/></g>
+          <rect x="5" y="34.5" width="38" height="2" fill="#d4a24c"/>
+        </svg>
+        <span>4U Studio<small>FOR YOU · NUMATA</small></span>
+      </a>
+      <a class="back" href="index.html">トップへ戻る</a>
+    </div>
+    <div class="hero-copy">
+      <div class="eyebrow">FREE DEMO FORM</div>
+      <h1>無料デモの申し込み</h1>
+      <p class="lead">店名・業種・掲載したい内容を送ってください。スマホページの完成イメージを試作します。</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="notice" id="consult">
+      入力前の相談も、このフォームの「相談だけしたい」を選んで送れます。
+    </div>
+
+    <form id="demoForm">
+      <div class="grid">
+        <label>
+          <span>ご用件</span>
+          <select name="type" required>
+            <option value="無料デモを申し込みたい">無料デモを申し込みたい</option>
+            <option value="相談だけしたい">相談だけしたい</option>
+            <option value="料金や保守について聞きたい">料金や保守について聞きたい</option>
+          </select>
+        </label>
+
+        <label>
+          <span>お名前</span>
+          <input name="name" autocomplete="name" required>
+        </label>
+
+        <label>
+          <span>店名・屋号 <b class="optional">任意</b></span>
+          <input name="shop" autocomplete="organization">
+        </label>
+
+        <label>
+          <span>業種・サービス内容</span>
+          <input name="business" placeholder="例：美容室、カフェ、整体、士業など" required>
+        </label>
+
+        <label>
+          <span>返信先メールアドレス</span>
+          <input name="email" type="email" autocomplete="email" required>
+        </label>
+
+        <label>
+          <span>電話番号 <b class="optional">任意</b></span>
+          <input name="tel" type="tel" autocomplete="tel">
+        </label>
+
+        <label>
+          <span>既存のSNS・Googleマップ・WebサイトURL <b class="optional">任意</b></span>
+          <textarea name="links" placeholder="Instagram、Googleマップ、予約サイトなどがあれば貼ってください。"></textarea>
+        </label>
+
+        <label>
+          <span>掲載したい内容・相談内容</span>
+          <textarea name="message" placeholder="メニュー、料金、営業時間、強み、困っていることなどを自由に書いてください。" required></textarea>
+        </label>
+
+        <div>
+          <span style="display:block;font-weight:700;color:var(--green-800);margin-bottom:7px">興味のあるプラン <b class="optional">任意</b></span>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="plans" value="はじめてLP">はじめてLP</label>
+            <label class="check"><input type="checkbox" name="plans" value="集客LP">集客LP</label>
+            <label class="check"><input type="checkbox" name="plans" value="しっかり集客LP">しっかり集客LP</label>
+            <label class="check"><input type="checkbox" name="plans" value="まだ決めていない">まだ決めていない</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">送信内容を作成する</button>
+        <button class="btn btn-secondary" type="button" id="copyBtn">内容をコピー</button>
+      </div>
+      <p class="fine">このページは静的HTMLです。公開前に送信先メールアドレスを設定すると、入力内容からメール作成画面を開けます。</p>
+
+      <div class="output" id="output">
+        <h2>送信内容</h2>
+        <pre id="preview"></pre>
+      </div>
+    </form>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">合同会社４Ｕ ｜ 沼田市・利根沼田エリア<br>© 2026 4U Studio. All rights reserved.</div>
+</footer>
+
+<script>
+  // 公開前に申し込みを受け取るメールアドレスを入れてください。
+  const CONTACT_EMAIL = "";
+  const form = document.getElementById("demoForm");
+  const output = document.getElementById("output");
+  const preview = document.getElementById("preview");
+  const copyBtn = document.getElementById("copyBtn");
+
+  function buildBody(data){
+    const plans = [...form.querySelectorAll('input[name="plans"]:checked')].map(el=>el.value).join("、") || "未定";
+    return [
+      "【4U Studio 無料デモ申し込み】",
+      "",
+      `ご用件：${data.get("type")}`,
+      `お名前：${data.get("name")}`,
+      `店名・屋号：${data.get("shop") || "未入力"}`,
+      `業種・サービス内容：${data.get("business")}`,
+      `返信先メールアドレス：${data.get("email")}`,
+      `電話番号：${data.get("tel") || "未入力"}`,
+      `興味のあるプラン：${plans}`,
+      "",
+      "既存URL：",
+      data.get("links") || "未入力",
+      "",
+      "掲載したい内容・相談内容：",
+      data.get("message")
+    ].join("\n");
+  }
+
+  form.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    const data = new FormData(form);
+    const body = buildBody(data);
+    preview.textContent = body;
+    output.classList.add("show");
+
+    if(CONTACT_EMAIL){
+      const subject = encodeURIComponent("4U Studio 無料デモ申し込み");
+      const mailBody = encodeURIComponent(body);
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${mailBody}`;
+    }
+  });
+
+  copyBtn.addEventListener("click", async ()=>{
+    if(!preview.textContent){
+      preview.textContent = buildBody(new FormData(form));
+      output.classList.add("show");
+    }
+    await navigator.clipboard.writeText(preview.textContent);
+    copyBtn.textContent = "コピーしました";
+    setTimeout(()=>copyBtn.textContent = "内容をコピー", 1600);
+  });
+</script>
+</body>
+</html>
