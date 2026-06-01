@@ -54,6 +54,7 @@
   h1,h2,h3{font-weight:900;line-height:1.42;letter-spacing:.01em}
   section{padding:76px 0;position:relative}
   .sec-head h2{font-size:1.52rem;margin-top:8px}
+  .nowrap-title{white-space:nowrap}
   .sec-num{font-family:"Shippori Mincho",serif;font-size:.7rem;letter-spacing:.2em;color:var(--green-500);font-weight:600}
   p{color:var(--ink-soft)}
   .lead{color:var(--ink);font-weight:500}
@@ -90,9 +91,25 @@
   .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
   .logo-text{font-family:"Shippori Mincho",serif;font-weight:700;font-size:1.08rem;color:var(--cream);letter-spacing:.04em}
   .logo-text small{display:block;font-size:.5rem;letter-spacing:.3em;color:var(--ochre);font-weight:500;margin-top:1px}
+  .menu-toggle{width:44px;height:44px;border-radius:50%;border:1px solid rgba(246,240,226,.32);
+    background:rgba(19,36,26,.54);display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:5px;cursor:pointer;color:var(--cream);backdrop-filter:blur(8px)}
+  .menu-toggle span{width:18px;height:2px;border-radius:2px;background:currentColor;transition:.25s}
+  .topbar.open .menu-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .topbar.open .menu-toggle span:nth-child(2){opacity:0}
+  .topbar.open .menu-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{position:absolute;top:74px;left:22px;right:22px;z-index:45;max-width:calc(var(--maxw) - 44px);
+    margin:0 auto;padding:12px;border:1px solid rgba(246,240,226,.22);border-radius:16px;
+    background:rgba(19,36,26,.94);box-shadow:0 20px 44px -22px rgba(0,0,0,.7);backdrop-filter:blur(12px);
+    opacity:0;transform:translateY(-8px);pointer-events:none;transition:.25s}
+  .topbar.open .mobile-menu{opacity:1;transform:translateY(0);pointer-events:auto}
+  .mobile-menu a{display:flex;justify-content:space-between;align-items:center;padding:12px 10px;color:var(--cream);
+    text-decoration:none;border-radius:10px;font-weight:700;font-size:.92rem}
+  .mobile-menu a+a{border-top:1px solid rgba(246,240,226,.1)}
+  .mobile-menu a::after{content:"→";color:var(--ochre)}
 
   /* HERO */
-  .hero{color:var(--cream);padding:120px 0 0;position:relative;overflow:hidden;
+  .hero{color:var(--cream);padding:112px 0 0;position:relative;overflow:hidden;
     background:linear-gradient(168deg,var(--green-800) 0%,var(--green-900) 100%)}
   .hero-glow{position:absolute;inset:0;z-index:0;
     background:radial-gradient(110% 70% at 78% -8%,rgba(74,136,103,.6),transparent 58%),
@@ -100,7 +117,8 @@
     animation:glow 14s ease-in-out infinite alternate}
   @keyframes glow{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-3%,2%,0) scale(1.08)}}
   .hero .wrap{padding-bottom:0;position:relative;z-index:3}
-  .hero h1{font-size:2.1rem;line-height:1.5;color:#fff;margin:18px 0 0}
+  .hero h1{font-size:clamp(1.42rem,6.1vw,2.1rem);line-height:1.46;color:#fff;margin:18px 0 0}
+  .hero h1 .hero-line{display:block;white-space:nowrap}
   .hero h1 .hl{color:var(--ochre)}
   .hero-sub{margin-top:22px;color:rgba(246,240,226,.86);font-size:1rem}
   .hero-note{margin-top:20px;font-size:.92rem;color:rgba(246,240,226,.78);border-left:2px solid var(--ochre);padding-left:14px}
@@ -208,12 +226,21 @@
   .sample-card+.sample-card{margin-top:20px}
   .sample-photo{height:140px;display:grid;place-items:center;position:relative;color:rgba(255,255,255,.95);
     font-family:"Shippori Mincho",serif;font-size:.92rem;letter-spacing:.1em;overflow:hidden}
-  .sample-photo span{position:relative;z-index:2}
+  .sample-photo span{position:relative;z-index:2;text-shadow:0 2px 10px rgba(19,36,26,.45)}
   .sample-photo::before{content:"";position:absolute;inset:0;opacity:.16;
     background-image:radial-gradient(circle at 30% 30%,#fff 1px,transparent 1.5px);background-size:18px 18px}
-  .s1{background:linear-gradient(135deg,#2f5d45,#13241a)}
-  .s2{background:linear-gradient(135deg,#b9842f,#7a4f17)}
-  .s3{background:linear-gradient(135deg,#c87b52,#8f4f33)}
+  .s1{background:
+    linear-gradient(135deg,rgba(19,36,26,.72),rgba(19,36,26,.28)),
+    url("assets/shigyo-professional-services.png") center 48%/cover no-repeat}
+  .s1::before{opacity:1;background:linear-gradient(135deg,rgba(19,36,26,.38),rgba(19,36,26,.08))}
+  .s2{background:
+    linear-gradient(135deg,rgba(122,79,23,.62),rgba(122,79,23,.22)),
+    url("assets/cafe-restaurant-homepage.png") center 55%/cover no-repeat}
+  .s2::before{opacity:1;background:linear-gradient(135deg,rgba(122,79,23,.34),rgba(122,79,23,.08))}
+  .s3{background:
+    linear-gradient(135deg,rgba(143,79,51,.58),rgba(143,79,51,.18)),
+    url("assets/beauty-nail-salon-homepage.png") center 54%/cover no-repeat}
+  .s3::before{opacity:1;background:linear-gradient(135deg,rgba(143,79,51,.3),rgba(143,79,51,.08))}
   .photo-tag{position:absolute;top:10px;left:10px;z-index:3;font-family:"Zen Kaku Gothic New";font-size:.62rem;
     letter-spacing:.05em;background:rgba(255,255,255,.85);color:var(--ink-soft);padding:3px 9px;border-radius:6px}
   .sample-body{padding:20px 22px 24px}
@@ -241,8 +268,10 @@
   .price-mon{font-size:1.75rem;font-weight:900;color:var(--ochre)}
   .yen{font-size:1rem}
   .price-label{font-size:.72rem;color:rgba(246,240,226,.7)}
-  .price-reg{font-size:.98rem;font-weight:700;color:#ffffff;margin:0 0 8px;display:block}
-  .price-reg s{color:#ffffff;text-decoration-color:var(--ochre);text-decoration-thickness:1.5px}
+  .price-reg{width:max-content;max-width:100%;font-size:.84rem;font-weight:800;color:rgba(246,240,226,.9);
+    margin:0 0 12px;display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:999px;
+    background:rgba(246,240,226,.13);border:1px solid rgba(246,240,226,.24);line-height:1.45;box-shadow:0 6px 16px -12px rgba(0,0,0,.8)}
+  .price-reg s{font-size:1.14rem;color:#fffdf6;font-weight:900;text-decoration:none;letter-spacing:.02em}
   .price-reg .arrow-down{color:var(--ochre);font-weight:700;margin:0 .3em}
   .plan ul{list-style:none;display:flex;flex-direction:column;gap:9px}
   .plan ul li{display:flex;gap:10px;font-size:.9rem;color:rgba(246,240,226,.9)}
@@ -267,7 +296,10 @@
   .common ul{list-style:none;display:flex;flex-direction:column;gap:9px}
   .common ul li{font-size:.9rem;color:rgba(246,240,226,.88);display:flex;gap:9px}
   .common ul li::before{content:"—";color:var(--ochre)}
-  .fineprint{margin-top:16px;font-size:.8rem;color:rgba(246,240,226,.92);line-height:1.85}
+  .fineprint{margin-top:16px;font-size:.86rem;color:#fffdf6;line-height:1.85;
+    background:rgba(246,240,226,.16);border:1px solid rgba(246,240,226,.34);border-radius:12px;padding:13px 14px}
+  .pricing .common .fineprint p{color:#fffdf6!important;font-weight:700!important;text-shadow:0 1px 2px rgba(0,0,0,.18)}
+  .pricing .common .fineprint p+p{margin-top:5px}
 
   /* MAINTENANCE */
   .maint{background:var(--cream)}
@@ -306,15 +338,18 @@
   /* stats strip with count-up */
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:34px}
   .stat{background:rgba(255,255,255,.06);border:1px solid rgba(246,240,226,.16);border-radius:16px;padding:18px 8px;text-align:center}
-  .stat b{display:block;font-family:"Shippori Mincho",serif;font-size:1.7rem;color:var(--ochre);line-height:1.1}
-  .stat b .u{font-size:.9rem}
-  .stat b .pre{font-size:.82rem;font-weight:600;margin-right:.1em}
-  .stat span{font-size:.72rem;color:rgba(246,240,226,.78);display:block;margin-top:5px}
+  .stat .stat-value{display:inline-flex;align-items:baseline;justify-content:center;gap:.12em;white-space:nowrap;
+    font-family:"Shippori Mincho",serif;font-size:1.6rem;color:var(--ochre);line-height:1.1}
+  .stat .stat-value span{display:inline!important;margin-top:0!important;color:inherit}
+  .stat .stat-value .u{font-size:.86rem}
+  .stat .stat-value .pre{font-size:.82rem;font-weight:600;margin-right:.1em}
+  .stat>span{font-size:.72rem;color:rgba(246,240,226,.78);display:block;margin-top:5px}
 
   /* PROFILE */
   .profile{background:var(--green-800);color:var(--cream)}
   .profile .eyebrow,.profile .sec-num{color:var(--ochre)}
   .profile h2{color:#fff}
+  .profile-title{white-space:nowrap;font-size:1.42rem}
   .profile .about{color:rgba(246,240,226,.82);margin:14px 0 26px}
   .prof-card{background:rgba(255,255,255,.05);border:1px solid rgba(246,240,226,.16);border-radius:var(--radius);padding:26px 22px}
   .prof-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
@@ -355,7 +390,9 @@
   .reveal[data-d="1"]{transition-delay:.05s}.reveal[data-d="2"]{transition-delay:.1s}.reveal[data-d="3"]{transition-delay:.15s}
 
   @media(max-width:380px){
-    .hero h1{font-size:1.8rem}
+    .hero h1{font-size:1.27rem}
+    .hero-sub{font-size:.94rem}
+    .hero-note{font-size:.86rem}
     .sticky-cta .txt{display:none}.sticky-cta .btn{width:100%}
     .know-grid{grid-template-columns:1fr}
   }
@@ -402,12 +439,23 @@
         </svg>
         <span class="logo-text">4U Studio<small>FOR YOU · NUMATA</small></span>
       </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="メニューを開く" aria-controls="mobileMenu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="mobile-menu" id="mobileMenu" aria-label="サイト内メニュー">
+        <a href="#worries">お悩み</a>
+        <a href="#demo">無料デモ</a>
+        <a href="#samples">サンプル</a>
+        <a href="#pricing">料金</a>
+        <a href="#flow">制作の流れ</a>
+        <a href="#profile">お問い合わせ</a>
+      </nav>
     </div>
   </div>
 
   <div class="wrap">
     <span class="eyebrow apple hr hr1">沼田市・利根沼田エリア</span>
-    <h1 class="hr hr2">Instagramだけでは、<br>伝えきれていません。<br>あなたのお店の魅力を、<br><span class="hl">スマホで見やすい1ページ</span>に。</h1>
+    <h1 class="hr hr2"><span class="hero-line">Instagramだけでは、</span><span class="hero-line">伝えきれていません。</span><span class="hero-line">あなたのお店の魅力を、</span><span class="hero-line hl">スマホで見やすい1ページに。</span></h1>
     <p class="hero-sub lead hr hr3">問い合わせ・予約・来店につながるスマホページを、地域の小規模事業者さま向けに制作します。</p>
     <p class="hero-note hr hr3">あなたのお店にも、InstagramもGoogleマップもあるはずです。でも、料金や問い合わせ方法をまとめて見せる場所がない。そこを、1ページで解決します。</p>
     <div class="hero-trust hr hr4">
@@ -436,7 +484,7 @@
 <section class="worries" id="worries">
   <div class="wrap sec-head reveal">
     <span class="sec-num">02 / WORRIES</span>
-    <h2>こんなお悩み、<br>ありませんか？</h2>
+    <h2 class="nowrap-title">こんなお悩み、ありませんか？</h2>
     <p class="worry-intro lead">ひとつでも当てはまるなら、その悩みは1ページで解決できます。Instagramを更新して、Googleマップにも登録した。なのに、まとめて見せる場所がない——あなたのお店は、いかがですか？</p>
   </div>
   <div class="wrap reveal">
@@ -564,12 +612,12 @@
 <section class="samples" id="samples">
   <div class="wrap sec-head reveal">
     <span class="sec-num">05 / SAMPLES</span>
-    <h2>こんなスマホページが<br>作れます</h2>
-    <p class="lead" style="margin:14px 0 26px">業種に合わせて、雰囲気や見せ方を変えられます。実際のサンプルをご用意しています。</p>
+    <h2 class="nowrap-title">こんなスマホページが作れます</h2>
+    <p class="lead" style="margin:14px 0 26px">業種に合わせて、雰囲気や見せ方を変えられます。<br>実際のサンプルをご用意しています。</p>
   </div>
   <div class="wrap">
     <div class="sample-card reveal">
-      <div class="sample-photo s1"><span class="photo-tag">写真差し込み可</span><span>士業・専門サービス</span></div>
+      <div class="sample-photo s1"><span>士業・専門サービス</span></div>
       <div class="sample-body">
         <h3>士業・専門サービス向け</h3>
         <p>信頼感や相談しやすさを伝える構成。サービス内容、料金、相談の流れ、問い合わせ導線を分かりやすく整理します。</p>
@@ -577,7 +625,7 @@
       </div>
     </div>
     <div class="sample-card reveal" data-d="1">
-      <div class="sample-photo s2"><span class="photo-tag">写真差し込み可</span><span>喫茶店・飲食店</span></div>
+      <div class="sample-photo s2"><span>喫茶店・飲食店</span></div>
       <div class="sample-body">
         <h3>喫茶店・飲食店向け</h3>
         <p>お店の雰囲気、メニュー、地域らしさを伝える構成。初めてのお客様が「行ってみたい」と思えるようにまとめます。</p>
@@ -585,7 +633,7 @@
       </div>
     </div>
     <div class="sample-card reveal" data-d="2">
-      <div class="sample-photo s3"><span class="photo-tag">写真差し込み可</span><span>美容室・サロン</span></div>
+      <div class="sample-photo s3"><span>美容室・サロン</span></div>
       <div class="sample-body">
         <h3>美容室・サロン向け</h3>
         <p>雰囲気、メニュー、予約導線をまとめる構成。スマホで見たときに、料金や予約方法がすぐ分かるページを意識しています。</p>
@@ -600,7 +648,7 @@
   <div class="wrap sec-head reveal">
     <span class="eyebrow">PRICE PLAN</span>
     <h2>料金プラン</h2>
-    <p class="intro">迷ったら、一番おすすめの「集客LP」を選んでください。プランは3つ。どれもスマホで見やすい1ページが基本で、違いは情報量と作り込みの度合いです。</p>
+    <p class="intro">迷ったら、一番おすすめの「集客LP」を選んでください。LPとは、お店の魅力・料金・問い合わせ方法を1ページにまとめたWebページのことです。プランは3つ。どれもスマホで見やすい1ページが基本で、違いは情報量と作り込みの度合いです。</p>
     <div class="commit-note">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a24c" style="flex:0 0 auto;margin-top:2px"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/></svg>
       どのプランも公開後は月額保守でサポートします（最低契約期間6か月）。作って終わりではなく、長く安心して使い続けられる仕組みです。
@@ -748,9 +796,9 @@
 
     <!-- count-up stats -->
     <div class="stats">
-      <div class="stat"><b><span class="pre">約</span><span class="count" data-count="2">0</span><span class="u">週間</span></b><span>情報が揃ってから公開まで</span></div>
-      <div class="stat"><b><span class="pre">先着</span><span class="count" data-count="3">0</span><span class="u">件</span></b><span>モニター価格の枠</span></div>
-      <div class="stat"><b><span class="count" data-count="8">0</span><span class="u">STEP</span></b><span>シンプルな制作の流れ</span></div>
+      <div class="stat"><b class="stat-value"><span class="pre">約</span><span class="count" data-count="2">0</span><span class="u">週間</span></b><span>情報が揃ってから公開まで</span></div>
+      <div class="stat"><b class="stat-value"><span class="pre">先着</span><span class="count" data-count="3">0</span><span class="u">件</span></b><span>モニター価格の枠</span></div>
+      <div class="stat"><b class="stat-value"><span class="count" data-count="8">0</span><span class="u">STEP</span></b><span>シンプルな制作の流れ</span></div>
     </div>
   </div>
 </section>
@@ -759,7 +807,7 @@
 <section class="profile" id="profile">
   <div class="wrap sec-head reveal">
     <span class="eyebrow apple">ABOUT</span>
-    <h2>プロフィール・<br>お問い合わせ</h2>
+    <h2 class="profile-title">プロフィール・お問い合わせ</h2>
     <p class="about">私たちは、あなたと同じ沼田・利根沼田で事業をする立場から、地域のお店のためのスマホページを作っています。4U Studioは、合同会社４Ｕが運営する、個人事業主・小規模事業者さま向けの制作サービスです。</p>
   </div>
   <div class="wrap reveal">
@@ -791,7 +839,7 @@
       <h3>まずは無料デモから</h3>
       <p>申し込む前に、無料デモで完成イメージを確認できます。あなたのお店の情報をもとに試作します。気軽にどうぞ。</p>
       <a href="form.html" class="btn btn-primary">無料デモを申し込む <span class="arrow">→</span></a><br>
-      <a href="#contact" class="sublink">入力前に相談したい方はこちら</a>
+      <a href="form.html#consult" class="sublink">入力前に相談したい方はこちら</a>
     </div>
   </div>
 </section>
@@ -848,6 +896,19 @@
   // sticky CTA after hero
   const hero = document.querySelector('.hero'), cta = document.getElementById('stickyCta');
   new IntersectionObserver((es)=>es.forEach(e=>cta.classList.toggle('show',!e.isIntersecting)),{threshold:0}).observe(hero);
+
+  // mobile menu
+  const topbar = document.querySelector('.topbar');
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function setMenu(open){
+    topbar.classList.toggle('open', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  }
+  menuToggle.addEventListener('click', ()=>setMenu(!topbar.classList.contains('open')));
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>setMenu(false)));
+  document.addEventListener('keydown', e=>{ if(e.key === 'Escape') setMenu(false); });
 
   // progress bar + parallax + dots + dark-section detection
   const progress = document.getElementById('progress');
