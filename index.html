@@ -137,15 +137,6 @@
     animation:rise 2s cubic-bezier(.2,.7,.3,1) both}
   @keyframes rise{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
 
-  /* りんご accents resting on the ridgeline */
-  .hero-apples{position:absolute;left:0;right:0;bottom:0;height:130px;z-index:2;pointer-events:none}
-  .hero-apples .ap{position:absolute;display:block;filter:drop-shadow(0 3px 5px rgba(0,0,0,.35));
-    opacity:0;animation:apdrop .8s cubic-bezier(.2,.8,.3,1) forwards}
-  .hero-apples .ap1{left:27%;bottom:48px;width:19px;animation-delay:1s}
-  .hero-apples .ap2{left:60%;bottom:55px;width:15px;animation-delay:1.15s}
-  .hero-apples .ap3{left:80%;bottom:42px;width:13px;animation-delay:1.3s}
-  @keyframes apdrop{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
-
   /* staggered hero reveal */
   .hr{opacity:0;transform:translateY(22px);animation:hr .9s cubic-bezier(.2,.7,.2,1) forwards}
   .hr1{animation-delay:.1s}.hr2{animation-delay:.28s}.hr3{animation-delay:.42s}
@@ -491,25 +482,6 @@
     <!-- ふもと（クリームの境界線） -->
     <path d="M0 88 L0 74 L90 60 L160 76 L240 58 L320 76 L400 60 L480 76 L560 62 L580 70 L580 88 Z" fill="#f6f0e2"/>
   </svg>
-
-  <!-- 沼田の特産・りんご：山並みに添えた小さなアクセント -->
-  <div class="hero-apples" aria-hidden="true">
-    <svg class="ap ap1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#5a8a52" d="M12 6c0-2 1.2-3.6 3-4-.2 1.8-1 3-3 4z"/>
-      <path fill="#c23b2c" d="M12 6c-1.6-1.6-3.6-2-5.2-1.2C4.5 6 3 9 3 12.5 3 17 6 21 9 21c1 0 1.8-.4 3-.4s2 .4 3 .4c3 0 6-4 6-8.5C21 9 19.5 6 17.2 4.8 15.6 4 13.6 4.4 12 6z"/>
-      <ellipse cx="8.4" cy="11" rx="1.5" ry="2.3" fill="rgba(255,255,255,.32)"/>
-    </svg>
-    <svg class="ap ap2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#5a8a52" d="M12 6c0-2 1.2-3.6 3-4-.2 1.8-1 3-3 4z"/>
-      <path fill="#b9342a" d="M12 6c-1.6-1.6-3.6-2-5.2-1.2C4.5 6 3 9 3 12.5 3 17 6 21 9 21c1 0 1.8-.4 3-.4s2 .4 3 .4c3 0 6-4 6-8.5C21 9 19.5 6 17.2 4.8 15.6 4 13.6 4.4 12 6z"/>
-      <ellipse cx="8.4" cy="11" rx="1.5" ry="2.3" fill="rgba(255,255,255,.3)"/>
-    </svg>
-    <svg class="ap ap3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#5a8a52" d="M12 6c0-2 1.2-3.6 3-4-.2 1.8-1 3-3 4z"/>
-      <path fill="#c23b2c" d="M12 6c-1.6-1.6-3.6-2-5.2-1.2C4.5 6 3 9 3 12.5 3 17 6 21 9 21c1 0 1.8-.4 3-.4s2 .4 3 .4c3 0 6-4 6-8.5C21 9 19.5 6 17.2 4.8 15.6 4 13.6 4.4 12 6z"/>
-      <ellipse cx="8.4" cy="11" rx="1.4" ry="2.1" fill="rgba(255,255,255,.32)"/>
-    </svg>
-  </div>
 </header>
 
 <!-- ============ 2. WORRIES ============ -->
