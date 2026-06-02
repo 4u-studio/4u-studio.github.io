@@ -402,11 +402,29 @@
   .check-row{display:flex;gap:9px;align-items:flex-start;color:rgba(246,240,226,.82);font-size:.84rem;line-height:1.7}
   .check-row input{width:18px;height:18px;margin-top:4px;flex:0 0 auto;accent-color:var(--ochre)}
   .demo-form .btn[disabled]{opacity:.58;cursor:not-allowed;transform:none;box-shadow:none}
-  .form-embed{background:#fff;border-radius:12px;overflow:hidden}
-  .form-embed iframe{display:block;width:100%;border:0}
-  .form-fallback{margin-top:12px;font-size:.85rem;color:rgba(246,240,226,.72);text-align:center}
-  .form-fallback a{color:var(--ochre);text-decoration:underline;text-underline-offset:2px}
-  .form-status{min-height:1.7em;font-size:.86rem;color:var(--ochre);font-weight:700}
+  .grp{margin-bottom:24px}
+  .grp-head{display:flex;align-items:baseline;gap:10px;margin-bottom:2px}
+  .grp-num{font-family:"Shippori Mincho",serif;font-size:.7rem;letter-spacing:.18em;color:var(--ochre);font-weight:600}
+  .grp-head h4{color:#fff;font-size:1rem;margin:0;font-weight:700}
+  .grp-note{color:rgba(246,240,226,.6);font-size:.8rem;margin:0 0 14px}
+  .badge-req{color:#13241a;background:var(--ochre);font-size:.64rem;font-weight:700;margin-left:.5em;padding:2px 7px;border-radius:999px;vertical-align:middle}
+  .badge-opt{color:rgba(246,240,226,.8);background:rgba(246,240,226,.14);font-size:.64rem;font-weight:700;margin-left:.5em;padding:2px 7px;border-radius:999px;vertical-align:middle}
+  .hint{font-size:.78rem;color:rgba(246,240,226,.6);margin:-1px 0 0}
+  .plan-options{display:flex;flex-direction:column;gap:10px}
+  .plan-card{display:flex;gap:12px;align-items:flex-start;background:rgba(246,240,226,.06);border:1px solid rgba(246,240,226,.2);border-radius:14px;padding:13px 15px;cursor:pointer;transition:border-color .15s,background .15s}
+  .plan-card:hover{border-color:var(--ochre)}
+  .plan-card input{width:19px;height:19px;margin-top:2px;flex:0 0 auto;accent-color:var(--ochre)}
+  .plan-card .pc-body{display:flex;flex-direction:column;gap:2px}
+  .plan-card .pc-title{color:#fff;font-weight:700;font-size:.9rem}
+  .plan-card .pc-desc{color:rgba(246,240,226,.66);font-size:.79rem}
+  .plan-card:has(input:checked){border-color:var(--ochre);background:rgba(212,162,76,.12)}
+  .submit-note{text-align:center;color:rgba(246,240,226,.6);font-size:.78rem;margin:10px 0 0}
+  .form-status{min-height:1.4em;font-size:.86rem;color:var(--ochre);font-weight:700;text-align:center}
+  .done{display:none;text-align:center;color:#fff;padding:14px 4px}
+  .done.show{display:block}
+  .done .tick{width:54px;height:54px;border-radius:50%;background:var(--ochre);color:#1b1206;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.6rem}
+  .done h4{margin:0 0 8px;font-size:1.15rem}
+  .done p{color:rgba(246,240,226,.8);font-size:.9rem;margin:0}
   @media(max-width:520px){.form-grid{grid-template-columns:1fr}}
 
   footer{background:var(--green-900);color:rgba(246,240,226,.55);text-align:center;padding:30px 0 104px;font-size:.78rem;position:relative;overflow:hidden}
@@ -962,12 +980,99 @@
     </div>
 
     <div class="form-panel reveal" id="demo-form">
-      <h3>無料デモ申し込みフォーム</h3>
-      <p class="form-lead">簡単な内容だけで大丈夫です。いただいた情報をもとに、スマホで確認できる簡易デモを作成します。</p>
-      <div class="form-embed">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDO9WAjPPyR_rSKJR5zOlZlP1jVj7ebOGzlkyFPxzZ2WxJYQ/viewform?embedded=true" title="無料デモ申し込みフォーム" loading="lazy" width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+      <h3>無料デモ申し込み</h3>
+      <p class="form-lead">下の3つを書くだけで大丈夫です。あとは分かる範囲でOK。いただいた内容で、スマホで見られる簡易デモを作ってお送りします。</p>
+
+      <form class="demo-form" id="demoForm" method="post" target="formSubmitFrame" novalidate>
+        <input type="hidden" name="source" value="4U Studio HP">
+        <input type="hidden" name="page_url" id="formPageUrl" value="">
+
+        <div class="grp">
+          <div class="grp-head"><span class="grp-num">STEP 1</span><h4>まずはこれだけ</h4></div>
+          <p class="grp-note">連絡とデモ作成に必要な、最低限の3項目です。</p>
+          <div class="form-row">
+            <label for="name">お名前<span class="badge-req">必須</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="例：山田 太郎" required>
+          </div>
+          <div class="form-row" style="margin-top:14px">
+            <label for="email">メールアドレス<span class="badge-req">必須</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="例：you@example.com" required>
+            <p class="hint">完成したデモは、このアドレス宛にお送りします。</p>
+          </div>
+          <div class="form-row" style="margin-top:14px">
+            <label for="businessName">お店・事業の名前<span class="badge-req">必須</span></label>
+            <input id="businessName" name="business_name" type="text" placeholder="例：○○美容室" required>
+          </div>
+        </div>
+
+        <div class="grp">
+          <div class="grp-head"><span class="grp-num">STEP 2</span><h4>お店のこと</h4></div>
+          <p class="grp-note">分かる範囲でOK。空欄でも申し込めます。</p>
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="industry">どんなお店？<span class="badge-opt">任意</span></label>
+              <input id="industry" name="industry" type="text" placeholder="例：美容室・整体・カフェ">
+            </div>
+            <div class="form-row">
+              <label for="area">エリア<span class="badge-opt">任意</span></label>
+              <input id="area" name="area" type="text" placeholder="例：沼田市・利根沼田">
+            </div>
+          </div>
+          <div class="form-row" style="margin-top:14px">
+            <label for="referenceUrl">参考になるリンク<span class="badge-opt">任意</span></label>
+            <input id="referenceUrl" name="reference_url" type="text" placeholder="Instagram・Googleマップ・今のHP など">
+            <p class="hint">ここを貼っていただければ、下の記入は最小限で大丈夫です。</p>
+          </div>
+        </div>
+
+        <div class="grp">
+          <div class="grp-head"><span class="grp-num">STEP 3</span><h4>気になっているプラン</h4></div>
+          <p class="grp-note">迷っていれば「相談して決めたい」でOKです。</p>
+          <div class="plan-options">
+            <label class="plan-card">
+              <input type="radio" name="plan_type" value="A プレミアム｜しっかり事業サイト">
+              <span class="pc-body"><span class="pc-title">A｜しっかり事業サイト</span>
+                <span class="pc-desc">複数ページでしっかり伝えたい方に</span></span>
+            </label>
+            <label class="plan-card">
+              <input type="radio" name="plan_type" value="B スタンダード｜予約につなげるスマホページ">
+              <span class="pc-body"><span class="pc-title">B｜予約につなげるスマホページ</span>
+                <span class="pc-desc">予約・問い合わせを増やしたい方に</span></span>
+            </label>
+            <label class="plan-card">
+              <input type="radio" name="plan_type" value="C ライト｜お店紹介スマホページ">
+              <span class="pc-body"><span class="pc-title">C｜お店紹介スマホページ</span>
+                <span class="pc-desc">まずは1ページで知ってもらいたい方に</span></span>
+            </label>
+            <label class="plan-card">
+              <input type="radio" name="plan_type" value="相談して決めたい" checked>
+              <span class="pc-body"><span class="pc-title">相談して決めたい</span>
+                <span class="pc-desc">ぴったりのプランを一緒に考えます</span></span>
+            </label>
+          </div>
+          <div class="form-row" style="margin-top:16px">
+            <label for="message">載せたいこと・伝えたい雰囲気<span class="badge-opt">任意</span></label>
+            <textarea id="message" name="message" placeholder="メニューや料金、営業時間、お店の雰囲気など。思いつくままで大丈夫です。"></textarea>
+          </div>
+        </div>
+
+        <label class="check-row">
+          <input type="checkbox" name="privacy_agree" value="同意済み" required>
+          <span>入力内容を、デモ作成とご連絡のために使うことに同意します。</span>
+        </label>
+
+        <button class="btn btn-primary" id="demoFormButton" type="submit">この内容で申し込む <span class="arrow">→</span></button>
+        <p class="submit-note">しつこい営業はしません。デモ確認後に断っていただいてOKです。</p>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+
+      <div class="done" id="formDone">
+        <div class="tick">✓</div>
+        <h4>送信ありがとうございます</h4>
+        <p>いただいた内容をもとにデモを作って、メールでご連絡します。少しお待ちください。</p>
       </div>
-      <p class="form-fallback">うまく表示されない場合は <a href="https://docs.google.com/forms/d/e/1FAIpQLScDO9WAjPPyR_rSKJR5zOlZlP1jVj7ebOGzlkyFPxzZ2WxJYQ/viewform" target="_blank" rel="noopener">こちらからフォームを開く</a> こともできます。</p>
+
+      <iframe name="formSubmitFrame" id="formSubmitFrame" title="送信結果" style="display:none"></iframe>
     </div>
 
     <div class="closing">
@@ -1053,6 +1158,40 @@
   menuToggle.addEventListener('click', ()=>setMenu(!topbar.classList.contains('open')));
   mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>setMenu(false)));
   document.addEventListener('keydown', e=>{ if(e.key === 'Escape') setMenu(false); });
+
+  // 無料デモ申し込みフォーム → スプレッドシート（Google Apps Script）へ送信
+  // デプロイ後のウェブアプリURL（.../exec）をここに設定してください
+  const FORM_ENDPOINT = '';
+  const demoForm = document.getElementById('demoForm');
+  if(demoForm){
+    const formStatus = document.getElementById('formStatus');
+    const formButton = document.getElementById('demoFormButton');
+    const formFrame = document.getElementById('formSubmitFrame');
+    const formDone = document.getElementById('formDone');
+    const formPageUrl = document.getElementById('formPageUrl');
+    let sending = false;
+    formPageUrl.value = location.href;
+    demoForm.addEventListener('submit', e=>{
+      if(!demoForm.checkValidity()){ e.preventDefault(); demoForm.reportValidity(); return; }
+      if(!FORM_ENDPOINT){
+        e.preventDefault();
+        formStatus.textContent = '現在、送信先の設定を準備中です。お手数ですがしばらくしてからお試しください。';
+        return;
+      }
+      demoForm.setAttribute('action', FORM_ENDPOINT);
+      sending = true;
+      formButton.disabled = true;
+      formStatus.textContent = '送信しています…';
+    });
+    formFrame.addEventListener('load', ()=>{
+      if(!sending) return;
+      sending = false;
+      demoForm.style.display = 'none';
+      formStatus.textContent = '';
+      formDone.classList.add('show');
+      formDone.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  }
 
   // progress bar + parallax + dots + dark-section detection
   const progress = document.getElementById('progress');
