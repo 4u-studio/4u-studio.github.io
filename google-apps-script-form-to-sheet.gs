@@ -184,3 +184,52 @@ function shortPlan_(name) {
   if (name.indexOf('相談') === 0) return '相談して決めたい';
   return name;
 }
+
+/**
+ * 「無料デモ申込」シートを見やすく整える（手動で1回だけ実行すればOK）
+ *  - 名前もメールも空の行（手動テストの空行など）を掃除
+ *  - ヘッダーに色／1行おきの色分け／列幅／日時の整形
+ *  - 不要な初期シート「シート1」を削除
+ *  - 集計シートとグラフも最新化
+ */
+function formatNow() {
+  const ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  const sheet = ss.getSheetByName(SHEET_NAME);
+  if (!sheet) return;
+
+  // 1) 名前もメールも空の行を掃除
+  for (var r = sheet.getLastRow(); r >= 2; r--) {
+    var name = sheet.getRange(r, 3).getValue();
+    var email = sheet.getRange(r, 4).getValue();
+    if (!name && !email) sheet.deleteRow(r);
+  }
+
+  // 2) 見た目を整える
+  const cols = HEADERS.length;
+  sheet.setFrozenRows(1);
+  sheet.setRowHeight(1, 34);
+  sheet.getRange(1, 1, 1, cols)
+    .setFontWeight('bold').setFontColor('#ffffff')
+    .setBackground('#27503a').setVerticalAlignment('middle');
+
+  const widths = [150, 200, 110, 210, 150, 150, 110, 210, 280, 80, 120, 220];
+  widths.forEach(function (w, i) { sheet.setColumnWidth(i + 1, w); });
+
+  const maxRows = sheet.getMaxRows();
+  sheet.getRange(2, 1, maxRows - 1, 1).setNumberFormat('yyyy/MM/dd HH:mm'); // 受信日時
+  sheet.getRange(2, 9, maxRows - 1, 1).setWrap(true);                       // 掲載したい内容
+
+  // 3) 1行おきに色（バンディング）
+  sheet.getBandings().forEach(function (b) { b.remove(); });
+  const bandRows = Math.max(sheet.getLastRow() - 1, 200);
+  sheet.getRange(2, 1, bandRows, cols)
+    .applyRowBanding(SpreadsheetApp.BandingTheme.LIGHT_GREEN, false, false);
+
+  // 4) 不要な初期シート「シート1」を削除
+  var def = ss.getSheetByName('シート1');
+  if (def && def.getLastRow() === 0 && ss.getSheets().length > 1) ss.deleteSheet(def);
+
+  // 5) 集計とグラフを最新化
+  rebuildSummary_();
+}
+
