@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.className+=' js';</script>
 <title>4U Studio｜沼田・利根沼田のスマホページ制作</title>
 <meta name="description" content="沼田市・利根沼田エリアの小規模事業者向け。問い合わせ・予約・来店につながるスマホで見やすい1ページを制作します。まずは無料デモから。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +39,7 @@
     font-family:"Zen Kaku Gothic New",system-ui,sans-serif;
     color:var(--ink);background:var(--cream);
     line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased;
-    overflow-x:hidden;padding-bottom:84px;
+    overflow-x:hidden;
   }
   body::before{
     content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.045;
@@ -62,6 +63,10 @@
     mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 6c0-2 1.2-3.6 3-4-.2 1.8-1 3-3 4zm0 0c-1.6-1.6-3.6-2-5.2-1.2C4.5 6 3 9 3 12.5 3 17 6 21 9 21c1 0 1.8-.4 3-.4s2 .4 3 .4c3 0 6-4 6-8.5C21 9 19.5 6 17.2 4.8 15.6 4 13.6 4.4 12 6z'/%3E%3C/svg%3E") center/contain no-repeat}
   p{color:var(--ink-soft)}
   .lead{color:var(--ink);font-weight:500}
+  /* 日本語の読みやすさ：禁則・文節折り返し */
+  body{word-break:normal;line-break:strict;overflow-wrap:anywhere}
+  h1,h2,h3{line-break:strict}
+  .ph{display:inline-block}            /* 文節ごとに改行（語の途中で切れない） */
 
   /* progress + nav dots */
   .progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;
@@ -128,7 +133,7 @@
   .hero-note{margin-top:20px;font-size:.92rem;color:rgba(246,240,226,.78);border-left:2px solid var(--ochre);padding-left:14px}
   .hero-trust{display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:rgba(255,255,255,.08);
     border:1px solid rgba(246,240,226,.18);padding:9px 16px;border-radius:999px;font-size:.82rem;color:var(--cream)}
-  .hero-cta{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+  .hero-cta{margin-top:28px;display:flex;flex-direction:column;gap:12px;padding-bottom:128px}
   .hero-fineprint{margin-top:24px;font-size:.76rem;color:rgba(246,240,226,.82);line-height:1.8;padding-bottom:120px}
   /* parallax scenery */
   .scenery{position:absolute;left:0;right:0;bottom:-1px;z-index:1;width:100%;height:88px;display:block}
@@ -203,7 +208,7 @@
   .feat:hover .feat-ic svg{stroke:#2b210a}
   .feat-ic svg{transition:.3s}
   .feat h3{font-size:1.06rem;color:#fff;margin-bottom:5px}
-  .feat p{color:rgba(246,240,226,.78);font-size:.93rem;margin:0}
+  .feat p{color:rgba(246,240,226,.82);font-size:.96rem;margin:0;line-height:1.8}
 
   /* DEMO */
   .demo{background:var(--cream-2)}
@@ -213,11 +218,13 @@
     display:flex;gap:10px;align-items:flex-start;line-height:1.7}
   .demo-anyone svg{flex:0 0 auto;margin-top:2px}
   .demo-anyone b{color:var(--ochre-deep)}
-  .know-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
-  .know{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 15px;box-shadow:var(--shadow-sm);transition:.3s}
+  .demo-know-title{font-size:1.12rem;color:var(--green-800);margin:8px 0 12px;line-height:1.4}
+  .know-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0 24px}
+  .know{background:#fffdf6;border:1px solid rgba(74,136,103,.16);border-radius:18px;padding:20px 18px;
+    box-shadow:var(--shadow-sm);transition:.3s;display:flex;gap:14px;align-items:center}
   .know:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-  .know-ic{width:40px;height:40px;border-radius:11px;background:rgba(74,136,103,.12);display:grid;place-items:center;margin-bottom:10px}
-  .know p{font-size:.84rem;color:var(--ink);line-height:1.6;margin:0;font-weight:500}
+  .know-ic{flex:0 0 auto;width:48px;height:48px;border-radius:14px;background:rgba(74,136,103,.12);display:grid;place-items:center}
+  .know p{font-size:.98rem;color:var(--green-800);line-height:1.5;margin:0;font-weight:700}
   .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;box-shadow:var(--shadow-sm)}
   .card h3{font-size:1.04rem;margin-bottom:14px;color:var(--green-800);display:flex;align-items:center;gap:9px}
   .card h3 .dot{width:8px;height:8px;border-radius:50%;background:var(--ochre);flex:0 0 auto}
@@ -254,7 +261,7 @@
     letter-spacing:.05em;background:rgba(255,255,255,.85);color:var(--ink-soft);padding:3px 9px;border-radius:6px}
   .sample-body{padding:20px 22px 24px}
   .sample-body h3{font-size:1.08rem;color:var(--green-800);margin-bottom:8px}
-  .sample-body p{font-size:.93rem;margin-bottom:16px}
+  .sample-body p{font-size:.95rem;line-height:1.8;margin-bottom:16px}
 
   /* PRICING */
   .pricing{background:var(--green-900);color:var(--cream)}
@@ -271,8 +278,10 @@
     border:1.6px solid var(--ochre);box-shadow:0 22px 50px -22px rgba(212,162,76,.5)}
   .badge{position:absolute;top:-13px;left:22px;background:var(--ochre);color:#3a2b0b;font-weight:700;font-size:.74rem;
     padding:6px 15px;border-radius:999px;letter-spacing:.05em}
+  .plan-tag{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.04em;color:var(--ochre);
+    background:rgba(212,162,76,.14);border:1px solid rgba(212,162,76,.32);border-radius:999px;padding:3px 11px;margin-bottom:10px}
   .plan h3{font-size:1.22rem;color:#fff;margin-bottom:6px}
-  .plan .pdesc{font-size:.88rem;color:rgba(246,240,226,.75);margin-bottom:16px;line-height:1.75}
+  .plan .pdesc{font-size:.94rem;color:rgba(246,240,226,.82);margin-bottom:16px;line-height:1.85}
   .price-row{display:flex;align-items:baseline;gap:8px}
   .price-mon{font-size:1.75rem;font-weight:900;color:var(--ochre)}
   .yen{font-size:1rem}
@@ -283,7 +292,7 @@
   .price-reg s{font-size:1.14rem;color:#fffdf6;font-weight:900;text-decoration:none;letter-spacing:.02em}
   .price-reg .arrow-down{color:var(--ochre);font-weight:700;margin:0 .3em}
   .plan ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-  .plan ul li{display:flex;gap:10px;font-size:.9rem;color:rgba(246,240,226,.9)}
+  .plan ul li{display:flex;gap:10px;font-size:.94rem;line-height:1.7;color:rgba(246,240,226,.92)}
   .plan ul li::before{content:"";flex:0 0 auto;width:16px;height:16px;margin-top:4px;background:var(--ochre);
     -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat;
     mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat}
@@ -377,10 +386,69 @@
   .closing p{color:rgba(246,240,226,.8);font-size:.94rem;margin-bottom:22px}
   .closing .btn-primary{margin-bottom:14px}
   .closing .sublink{color:var(--ochre);font-size:.88rem;text-decoration:underline;text-underline-offset:3px}
+  .form-panel{margin-top:30px;background:rgba(255,255,255,.06);border:1px solid rgba(246,240,226,.18);border-radius:var(--radius);padding:24px 20px}
+  .form-panel h3{color:#fff;font-size:1.18rem;margin-bottom:8px}
+  .form-panel .form-lead{color:rgba(246,240,226,.82);font-size:.92rem;margin-bottom:18px}
+  .demo-form{display:flex;flex-direction:column;gap:14px}
+  .form-row{display:flex;flex-direction:column;gap:7px}
+  .form-row label{font-size:.82rem;font-weight:700;color:rgba(246,240,226,.9)}
+  .form-row label span{color:var(--ochre);font-size:.74rem;margin-left:.35em}
+  .demo-form input,.demo-form select,.demo-form textarea{
+    width:100%;border:1px solid rgba(246,240,226,.22);border-radius:12px;background:rgba(246,240,226,.96);
+    color:var(--ink);font:inherit;font-size:.95rem;padding:12px 13px;outline:none}
+  .demo-form textarea{min-height:118px;resize:vertical}
+  .demo-form input:focus,.demo-form select:focus,.demo-form textarea:focus{border-color:var(--ochre);box-shadow:0 0 0 3px rgba(212,162,76,.22)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .check-row{display:flex;gap:9px;align-items:flex-start;color:rgba(246,240,226,.82);font-size:.84rem;line-height:1.7}
+  .check-row input{width:18px;height:18px;margin-top:4px;flex:0 0 auto;accent-color:var(--ochre)}
+  .demo-form .btn[disabled]{opacity:.58;cursor:not-allowed;transform:none;box-shadow:none}
+  .form-status{min-height:1.7em;font-size:.86rem;color:var(--ochre);font-weight:700}
+  @media(max-width:520px){.form-grid{grid-template-columns:1fr}}
 
-  footer{background:var(--green-900);color:rgba(246,240,226,.55);text-align:center;padding:30px 0;font-size:.78rem;position:relative;overflow:hidden}
+  footer{background:var(--green-900);color:rgba(246,240,226,.55);text-align:center;padding:30px 0 104px;font-size:.78rem;position:relative;overflow:hidden}
   footer .logo-text{font-size:.95rem;color:rgba(246,240,226,.8);margin-bottom:6px}
   footer .apples{display:flex;gap:8px;justify-content:center;margin-bottom:14px;opacity:.8}
+
+  /* FAQ */
+  .faq{background:var(--cream-2)}
+  .faq-list{margin-top:8px}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-item summary{list-style:none;cursor:pointer;padding:18px 2px;display:flex;gap:12px;align-items:flex-start;
+    font-family:"Shippori Mincho",serif;font-weight:700;font-size:1rem;color:var(--green-800);line-height:1.6}
+  .faq-item summary::-webkit-details-marker{display:none}
+  .faq-item .qm{flex:0 0 auto;color:var(--apple);font-family:"Shippori Mincho",serif;font-weight:800}
+  .faq-item .pm{flex:0 0 auto;margin-left:auto;width:22px;height:22px;border-radius:50%;border:1.5px solid var(--ochre-deep);
+    position:relative;transition:.3s;margin-top:2px}
+  .faq-item .pm::before,.faq-item .pm::after{content:"";position:absolute;background:var(--ochre-deep);transition:.3s}
+  .faq-item .pm::before{width:10px;height:2px;top:9px;left:5px}
+  .faq-item .pm::after{width:2px;height:10px;top:5px;left:9px}
+  .faq-item[open] .pm{background:var(--green-700);border-color:var(--green-700)}
+  .faq-item[open] .pm::before,.faq-item[open] .pm::after{background:var(--cream)}
+  .faq-item[open] .pm::after{transform:scaleY(0)}
+  .faq-ans{padding:0 2px 18px 26px;font-size:.94rem;color:var(--ink-soft);line-height:1.9}
+  .faq-ans b{color:var(--green-800)}
+
+  /* PRICE summary / payment */
+  .price-summary{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 4px}
+  .price-summary .ps{flex:1 1 150px;background:rgba(255,255,255,.05);border:1px solid rgba(246,240,226,.16);border-radius:14px;padding:14px 16px}
+  .price-summary .ps small{display:block;font-size:.72rem;color:rgba(246,240,226,.7);margin-bottom:4px}
+  .price-summary .ps b{font-family:"Shippori Mincho",serif;font-size:1.32rem;color:var(--ochre);font-weight:800;line-height:1.1}
+  .price-summary .ps b .u{font-size:.78rem;color:rgba(246,240,226,.85);font-weight:600;margin-left:1px}
+  .price-summary-note{font-size:.86rem;color:rgba(246,240,226,.82);margin:12px 0 4px;line-height:1.7}
+  .price-summary-note b{color:var(--ochre)}
+  .pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+  .pay-card{background:rgba(255,255,255,.04);border:1px solid rgba(246,240,226,.16);border-radius:16px;padding:18px 16px;position:relative}
+  .pay-card.best{border:1.5px solid var(--ochre);background:linear-gradient(165deg,rgba(212,162,76,.16),rgba(255,255,255,.04))}
+  .pay-card .pl{font-size:.82rem;color:rgba(246,240,226,.82);font-weight:700;margin-bottom:8px}
+  .pay-card .pv{font-family:"Shippori Mincho",serif;font-size:1.5rem;color:var(--ochre);font-weight:800;line-height:1.1}
+  .pay-card .pv .u{font-size:.8rem;color:rgba(246,240,226,.85);font-weight:600}
+  .pay-card .pfor{font-size:.76rem;color:rgba(246,240,226,.72);margin-top:8px;line-height:1.6}
+  .pay-card .ptag{position:absolute;top:-10px;right:12px;background:var(--ochre);color:#3a2b0b;font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:999px}
+  .cont-note{margin-top:14px;font-size:.86rem;color:rgba(246,240,226,.92);line-height:1.85;background:rgba(159,199,190,.1);border:1px solid rgba(159,199,190,.3);border-radius:12px;padding:13px 15px}
+  .cont-note b{color:#fff}
+  .pay-incl{margin-top:6px;font-size:.86rem;color:rgba(246,240,226,.82);line-height:1.7}
+  @media(max-width:380px){.pay-grid{grid-template-columns:1fr}}
+  @media(max-width:720px){.know-grid{grid-template-columns:1fr}.know{padding:18px 16px}}
 
   /* sticky CTA */
   .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(19,36,26,.94);backdrop-filter:blur(8px);
@@ -393,9 +461,10 @@
   .sticky-cta .txt span{font-size:.7rem;color:rgba(246,240,226,.6)}
   .sticky-cta .btn{width:auto;padding:13px 22px;font-size:.92rem;white-space:nowrap}
 
-  /* reveal */
-  .reveal{opacity:0;transition:opacity .6s ease-out}
-  .reveal.in{opacity:1}
+  /* reveal — JSが動く場合のみ隠してフェードイン（JS無効時は最初から表示） */
+  .reveal{opacity:1;transition:opacity .6s ease-out}
+  .js .reveal{opacity:0}
+  .js .reveal.in{opacity:1}
   .reveal[data-d="1"]{transition-delay:.05s}.reveal[data-d="2"]{transition-delay:.1s}.reveal[data-d="3"]{transition-delay:.15s}
 
   @media(max-width:380px){
@@ -423,6 +492,7 @@
   <a href="#pricing" data-s="pricing"></a>
   <a href="#maint" data-s="maint"></a>
   <a href="#flow" data-s="flow"></a>
+  <a href="#faq" data-s="faq"></a>
   <a href="#profile" data-s="profile"></a>
 </nav>
 
@@ -457,6 +527,7 @@
         <a href="#samples">サンプル</a>
         <a href="#pricing">料金</a>
         <a href="#flow">制作の流れ</a>
+        <a href="#faq">よくある質問</a>
         <a href="#profile">お問い合わせ</a>
       </nav>
     </div>
@@ -464,18 +535,16 @@
 
   <div class="wrap">
     <span class="eyebrow apple hr hr1">沼田市・利根沼田エリア</span>
-    <h1 class="hr hr2"><span class="hero-line">Instagramだけでは、</span><span class="hero-line">伝えきれていません。</span><span class="hero-line">あなたのお店の魅力を、</span><span class="hero-line hl">スマホで見やすい1ページに。</span></h1>
-    <p class="hero-sub lead hr hr3">問い合わせ・予約・来店につながるスマホページを、地域の小規模事業者さま向けに制作します。</p>
-    <p class="hero-note hr hr3">InstagramもGoogleマップもある。でも、料金や問い合わせ方法をまとめて見せる場所がない。そこを、1ページで解決します。</p>
+    <h1 class="hr hr2"><span class="hero-line"><span class="hl">スマホで見やすい1ページ</span>で、</span><span class="hero-line">お店のことが、</span><span class="hero-line">ちゃんと伝わる。</span></h1>
+    <p class="hero-sub lead hr hr3"><span class="ph">魅力・料金・予約方法をまとめて、</span><span class="ph">問い合わせや来店につなげます。</span><span class="ph">沼田・利根沼田の</span><span class="ph">個人店・小規模事業者さま向け。</span><span class="ph">まずは無料デモでお試しください。</span></p>
     <div class="hero-trust hr hr4">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a24c"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/></svg>
-      公開後も月額保守でサポート。長く安心して使えます。
+      申し込み前に、無料デモで確認できます。
     </div>
     <div class="hero-cta hr hr5">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScDO9WAjPPyR_rSKJR5zOlZlP1jVj7ebOGzlkyFPxzZ2WxJYQ/viewform" target="_blank" rel="noopener" class="btn btn-primary">無料デモを申し込む <span class="arrow">→</span></a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScDO9WAjPPyR_rSKJR5zOlZlP1jVj7ebOGzlkyFPxzZ2WxJYQ/viewform" target="_blank" rel="noopener" class="btn btn-primary">無料でデモを見てみる <span class="arrow">→</span></a>
       <a href="#samples" class="btn btn-ghost" style="color:var(--cream);border-color:rgba(246,240,226,.5)">サンプルを見る</a>
     </div>
-    <p class="hero-fineprint hr hr6">※「LP」とは、魅力・料金・問い合わせ方法を1ページにまとめたWebページのこと。このサービスでは、分かりやすく「スマホページ」と呼んでいます。</p>
   </div>
 
   <!-- parallax scenery: 山並み -->
@@ -492,19 +561,17 @@
 <!-- ============ 2. WORRIES ============ -->
 <section class="worries" id="worries">
   <div class="wrap sec-head reveal">
-    <span class="sec-num">02 / WORRIES</span>
-    <h2 class="nowrap-title">こんなお悩み、ありませんか？</h2>
-    <p class="worry-intro lead">ひとつでも当てはまるなら、その悩みは1ページで解決できます。SNSもマップもあるのに、まとめて見せる場所がない——その状態を整理します。</p>
+    <span class="sec-num">お悩み</span>
+    <h2 class="nowrap-title">こんなこと、ありませんか？</h2>
+    <p class="worry-intro lead">ひとつでも当てはまるなら、スマホの1ページで整理できます。</p>
   </div>
   <div class="wrap reveal">
     <ul class="worry-list">
       <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>Instagramはあるけど、ホームページがない</li>
-      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>メニューや料金を何度も聞かれる</li>
-      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>問い合わせ先や予約方法が分かりにくい</li>
-      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>GoogleマップやSNSから来た人の受け皿がない</li>
+      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>メニューや料金を、何度も聞かれる</li>
+      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>予約・問い合わせ方法が分かりにくい</li>
+      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>SNSやマップから来た人の「受け皿」がない</li>
       <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>古いホームページがスマホで見づらい</li>
-      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>お店やサービスの魅力をうまく伝えきれていない</li>
-      <li><svg class="check" viewBox="0 0 24 24" fill="#c87b52"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1 15l-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10z"/></svg>紹介やチラシだけに頼っていて、新しいお客様に届きにくい</li>
     </ul>
 
     <!-- BEFORE / AFTER infographic -->
@@ -556,30 +623,26 @@
 <!-- ============ 3. CAN DO ============ -->
 <section class="cando" id="cando">
   <div class="wrap sec-head reveal">
-    <span class="eyebrow apple">4U STUDIO</span>
-    <h2>できること</h2>
-    <p class="intro">必要なのは、「次の行動」につながる1ページ。魅力・メニュー・料金・問い合わせ方法を整理して、見た人がすぐ動けるページにします。</p>
+    <span class="eyebrow apple">サービス内容</span>
+    <h2>4U Studioがやること</h2>
+    <p class="intro"><span class="ph">お店の魅力・メニュー・料金・予約方法を、</span><span class="ph">スマホで見やすい1ページに整理。</span><span class="ph">見た人が迷わず、</span><span class="ph">連絡・予約・来店できるページにします。</span></p>
   </div>
   <div class="wrap reveal">
     <div class="feat">
       <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a24c" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div>
-      <div><h3>スマホで見やすい1ページを制作</h3><p>読みやすい文字、押しやすいボタン、すぐ届く情報。スマホで見るお客様を第一に作ります。</p></div>
+      <div><h3>スマホで見やすい1ページ</h3><p>読みやすい文字、押しやすいボタン。スマホで見るお客様を第一に作ります。</p></div>
     </div>
     <div class="feat">
       <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a24c" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div>
-      <div><h3>お店・サービスの魅力を整理</h3><p>「どんなお店か」「何をお願いできるか」「他と何が違うか」。初めて見る人にも伝わるように、内容を分かりやすく整理します。</p></div>
+      <div><h3>魅力をわかりやすく整理</h3><p>「どんなお店か」「何が違うか」を、初めて見る人にも伝わる言葉に整えます。</p></div>
     </div>
     <div class="feat">
       <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a24c" stroke-width="2"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
-      <div><h3>問い合わせ・予約・来店への導線づくり</h3><p>電話、LINE、Instagram、Googleマップ、予約サイトなど、業種に合わせて必要な導線を設置します。</p></div>
-    </div>
-    <div class="feat">
-      <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a24c" stroke-width="2"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg></div>
-      <div><h3>AIを活用しつつ、仕上げは人の手で</h3><p>AIで効率よく進めつつ、言葉選びや地域に合わせた表現は人が整えます。その分、あなたが始めやすい価格でご提供します。</p></div>
+      <div><h3>問い合わせ・予約・来店の導線</h3><p>電話・LINE・Instagram・予約サイトなど、業種に合わせて必要な導線を設置します。</p></div>
     </div>
     <div class="feat">
       <div class="feat-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d4a24c" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5l3 2"/></svg></div>
-      <div><h3>公開後もサポート</h3><p>作って終わりにはしません。難しい操作は不要。変更したい内容を送っていただければ、こちらで対応します。</p></div>
+      <div><h3>公開後もおまかせ</h3><p>変更したい内容を送るだけ。難しい操作は不要です。更新はこちらで対応します。</p></div>
     </div>
   </div>
 </section>
@@ -587,23 +650,23 @@
 <!-- ============ 4. DEMO ============ -->
 <section class="demo" id="demo">
   <div class="wrap sec-head reveal">
-    <span class="sec-num">04 / FREE DEMO</span>
-    <h2>無料デモについて</h2>
+    <span class="sec-num">無料デモ</span>
+    <h2>まずは無料デモで、完成イメージを</h2>
     <p class="demo-quote">「いきなり申し込むのは不安」<br>「先にどんなページになるか見てみたい」</p>
-    <p class="lead">そのままで大丈夫です。店名・業種・メニュー・料金などを入力いただくだけで、あなたのお店に合わせた簡易デモを無料でお作りします。</p>
+    <p class="lead"><span class="ph">そのままで大丈夫です。</span><span class="ph">店名・業種・メニューなどを</span><span class="ph">入力いただくだけで、</span><span class="ph">あなたのお店に合わせた</span><span class="ph">簡易デモを無料でお作りします。</span><span class="ph">気に入ったら本制作へ。</span><span class="ph">気に入らなければ、</span><span class="ph">それで終わりでOKです。</span></p>
     <p class="demo-anyone">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8.5 12l2.2 2.2L15.5 9.5"/></svg>
-      <span><b>先着・審査はありません。</b>アンケート（フォーム）にお答えいただいた方なら、どなたでも無料でお試しいただけます。気に入ったら、そのまま本制作に進むかどうかを決められます。</span>
+      <span><b>先着・審査はありません。</b>フォームにお答えいただいた方なら、どなたでも無料でお試しいただけます。</span>
     </p>
   </div>
 
   <div class="wrap reveal">
-    <h3 style="font-size:1.02rem;color:var(--green-800);margin-bottom:4px">無料デモで分かること</h3>
+    <h3 class="demo-know-title">無料デモで分かること</h3>
     <div class="know-grid">
-      <div class="know"><div class="know-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div><p>自分のお店がスマホページになると、どんな見え方になるか</p></div>
-      <div class="know"><div class="know-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><line x1="8" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="8" y1="18" x2="20" y2="18"/><circle cx="4" cy="6" r="1" fill="#356b4d"/><circle cx="4" cy="12" r="1" fill="#356b4d"/><circle cx="4" cy="18" r="1" fill="#356b4d"/></svg></div><p>メニューや料金をどう整理できるか</p></div>
-      <div class="know"><div class="know-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M8 12h8"/></svg></div><p>問い合わせボタンがどのように表示されるか</p></div>
-      <div class="know"><div class="know-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><path d="M12 21s7-6.3 7-12a7 7 0 10-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div><p>SNSやマップから来た人に、どんな情報を見せられるか</p></div>
+      <div class="know"><div class="know-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg></div><p>スマホでの見え方</p></div>
+      <div class="know"><div class="know-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><line x1="8" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="8" y1="18" x2="20" y2="18"/><circle cx="4" cy="6" r="1" fill="#356b4d"/><circle cx="4" cy="12" r="1" fill="#356b4d"/><circle cx="4" cy="18" r="1" fill="#356b4d"/></svg></div><p>メニュー・料金の整理</p></div>
+      <div class="know"><div class="know-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M8 12h8"/></svg></div><p>問い合わせボタン</p></div>
+      <div class="know"><div class="know-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><path d="M12 21s7-6.3 7-12a7 7 0 10-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div><p>SNS・マップからの受け皿</p></div>
     </div>
 
     <div class="card">
@@ -615,16 +678,15 @@
         <li>商用利用・正式公開は本制作契約後</li>
         <li>修正は誤字脱字や明らかな情報ミスのみ対応</li>
       </ul>
-      <div class="callout">無料デモは、正式版をじっくり仕上げる前に、完成イメージを気軽に確認していただくための簡易サンプルです。本番では、内容も仕上がりもさらに作り込みます。</div>
     </div>
-    <div style="margin-top:24px"><a href="https://docs.google.com/forms/d/e/1FAIpQLScDO9WAjPPyR_rSKJR5zOlZlP1jVj7ebOGzlkyFPxzZ2WxJYQ/viewform" target="_blank" rel="noopener" class="btn btn-primary">無料デモを申し込む <span class="arrow">→</span></a></div>
+    <div style="margin-top:24px"><a href="https://docs.google.com/forms/d/e/1FAIpQLScDO9WAjPPyR_rSKJR5zOlZlP1jVj7ebOGzlkyFPxzZ2WxJYQ/viewform" target="_blank" rel="noopener" class="btn btn-primary">無料でデモを作ってもらう <span class="arrow">→</span></a></div>
   </div>
 </section>
 
 <!-- ============ 5. SAMPLES ============ -->
 <section class="samples" id="samples">
   <div class="wrap sec-head reveal">
-    <span class="sec-num">05 / SAMPLES</span>
+    <span class="sec-num">制作事例</span>
     <h2 class="nowrap-title">こんなスマホページが作れます</h2>
     <p class="lead" style="margin:14px 0 26px">業種に合わせて、雰囲気や見せ方を変えられます。<br>実際のサンプルをご用意しています。</p>
   </div>
@@ -659,54 +721,54 @@
 <!-- ============ 6. PRICING ============ -->
 <section class="pricing" id="pricing">
   <div class="wrap sec-head reveal">
-    <span class="eyebrow apple">PRICE PLAN</span>
+    <span class="eyebrow apple">料金のご案内</span>
     <h2>料金プラン</h2>
-    <p class="intro">プランは3つ。どれもスマホで見やすい1ページが基本で、違いは情報量と作り込みの度合いです。迷ったら、一番おすすめの「集客LP」を選んでください。</p>
-    <p class="intro" style="margin-top:8px">まずは<b style="color:var(--ochre)">無料デモ</b>から。気に入って本制作に進む方のうち、<b style="color:var(--ochre)">先着5事業者さま</b>に、下記のモニター価格を適用します。</p>
     <div class="commit-note">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a24c" style="flex:0 0 auto;margin-top:2px"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/></svg>
-      どのプランも公開後は月額保守でサポートします（最低契約期間6か月）。作って終わりではなく、長く安心して使い続けられる仕組みです。
+      <span><b style="color:var(--ochre)">先着5事業者さま限定。</b>導入モニター価格で制作できます。下記は通常制作費と、導入モニター価格の両方を表示しています。</span>
     </div>
   </div>
 
   <div class="wrap reveal">
     <div class="plan">
-      <h3>はじめてLP</h3>
-      <p class="pdesc">まずはWeb上に、お店やサービスの受け皿を作りたい方向け。基本情報を1ページにまとめます。</p>
-      <span class="price-reg">通常価格 <s>60,000円</s></span>
-      <div class="price-row"><span class="price-mon"><span class="count" data-from="60000" data-count="30000">30,000</span><span class="yen">円</span></span><span class="price-label">モニター価格</span></div>
+      <span class="plan-tag">しっかり型（複数ページ）</span>
+      <h3>しっかり事業サイト</h3>
+      <p class="pdesc">サービス紹介・料金・会社概要・お問い合わせなどを分けて見せたい方へ。1ページだけでなく、複数ページのホームページ制作にも対応します。</p>
+      <span class="price-reg">通常制作費 60,000円〜</span>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="60000" data-count="30000">30,000</span><span class="yen">円〜</span></span><span class="price-label">導入モニター価格</span></div>
       <ul>
-        <li>5セクション程度</li>
-        <li>店舗・サービスの基本情報を掲載</li>
-        <li>電話・LINE・Instagram・Googleマップなどの基本導線を設置</li>
+        <li>複数ページのホームページに対応</li>
+        <li>サービス・料金・会社概要などをページごとに整理</li>
+        <li>複数の問い合わせ導線を設計</li>
+        <li>内容に応じて個別にお見積もりします</li>
       </ul>
     </div>
 
     <div class="plan featured">
       <span class="badge">★ 一番おすすめ</span>
-      <h3>集客LP</h3>
-      <p class="pdesc">問い合わせ・予約・来店につなげたい方向けの標準プラン。お店の強みを整理し、見た人が行動しやすいページを制作します。</p>
-      <span class="price-reg">通常価格 <s>80,000円</s></span>
-      <div class="price-row"><span class="price-mon"><span class="count" data-from="80000" data-count="50000">50,000</span><span class="yen">円</span></span><span class="price-label">モニター価格</span></div>
+      <span class="plan-tag">予約・問い合わせ重視型</span>
+      <h3>予約につなげるスマホページ</h3>
+      <p class="pdesc">「見てもらうだけ」で終わらせず、予約や問い合わせにつなげたい方へ。魅力・料金・よくある質問・予約方法まで整理します。</p>
+      <span class="price-reg">通常制作費 40,000円</span>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="40000" data-count="20000">20,000</span><span class="yen">円</span></span><span class="price-label">導入モニター価格</span></div>
       <ul>
-        <li>7セクション程度</li>
+        <li>お店紹介プランの内容をすべて含む</li>
+        <li>お店の魅力・料金・よくある質問を整理</li>
+        <li>予約・問い合わせにつながる導線を設計</li>
         <li>キャッチコピー・文章作成込み</li>
-        <li>お店やサービスの強みを整理</li>
-        <li>問い合わせ・予約導線を設計</li>
-        <li>よくある質問も掲載可能</li>
       </ul>
     </div>
 
     <div class="plan">
-      <h3>しっかり集客LP</h3>
-      <p class="pdesc">情報量を増やして、魅力や信頼感をしっかり伝えたい方向け。本格的な集客用ページとして制作します。</p>
-      <span class="price-reg">通常価格 <s>120,000円</s></span>
-      <div class="price-row"><span class="price-mon"><span class="count" data-from="120000" data-count="80000">80,000</span><span class="yen">円</span></span><span class="price-label">モニター価格</span></div>
+      <span class="plan-tag">まずは1ページ型</span>
+      <h3>お店紹介スマホページ</h3>
+      <p class="pdesc">スマホで見られる、名刺代わりの1ページ。InstagramやGoogleマップから来た人に、お店をきちんと知ってもらえます。</p>
+      <span class="price-reg">通常制作費 30,000円</span>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="30000" data-count="15000">15,000</span><span class="yen">円</span></span><span class="price-label">導入モニター価格</span></div>
       <ul>
-        <li>10セクション程度／情報量多めの構成</li>
-        <li>魅力や強みを丁寧に整理</li>
-        <li>実績・事例・お客様の声なども掲載可能</li>
-        <li>複数の問い合わせ導線を整理</li>
+        <li>基本情報・メニュー・営業時間を掲載</li>
+        <li>電話・LINE・Instagram・Googleマップなどの問い合わせ先を設置</li>
+        <li>スマホで見やすい1ページ構成</li>
       </ul>
     </div>
 
@@ -715,36 +777,56 @@
       <h4>プランの違いが一目で分かる比較表</h4>
       <table>
         <thead>
-          <tr><th>内容</th><th>はじめて</th><th class="hot">集客</th><th>しっかり</th></tr>
+          <tr><th>内容</th><th>事業<br>サイト</th><th class="hot">予約<br>につなげる</th><th>お店<br>紹介</th></tr>
         </thead>
         <tbody>
-          <tr><td>基本情報の掲載</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>基本の問い合わせ導線</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>キャッチコピー・文章作成</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>強み・選ばれる理由の整理</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>予約導線の設計</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>よくある質問</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>実績・お客様の声</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>複数導線の整理</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>ボリューム目安</td><td>5節</td><td class="hot" style="color:var(--ochre)">7節</td><td>10節</td></tr>
+          <tr><td>ページ構成</td><td>複数ページ</td><td class="hot" style="color:var(--ochre)">1ページ</td><td>1ページ</td></tr>
+          <tr><td>基本情報・メニュー・営業時間</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>問い合わせ先の掲載</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>魅力・よくある質問の整理</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="no">—</span></td></tr>
+          <tr><td>予約・問い合わせ導線の設計</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="no">—</span></td></tr>
+          <tr><td>会社概要・サービス別ページ</td><td><span class="yes">✓</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td></tr>
+          <tr><td>導入モニター価格</td><td>30,000円〜</td><td class="hot" style="color:var(--ochre)">20,000円</td><td>15,000円</td></tr>
         </tbody>
       </table>
     </div>
 
+    <p class="price-summary-note" style="color:rgba(246,240,226,.7)">制作期間：掲載情報・写真素材が揃ってから約2週間／初期制作中の修正：2回まで</p>
+
     <div class="common">
-      <h4>共通条件</h4>
+      <h4>導入モニター価格の条件</h4>
       <ul>
-        <li>月額保守：10,000円</li>
-        <li>最低契約期間：6か月</li>
-        <li>制作期間：掲載情報・写真素材が揃ってから約2週間</li>
-        <li>初期制作中の修正：2回まで</li>
-        <li>初期制作費と初月保守費は契約時に前払い</li>
+        <li>先着5事業者さま限定です</li>
+        <li>制作実績としての掲載と、ご感想のご協力をお願いしています</li>
+        <li>本制作後は、公開後サポート6か月以上のご利用をお願いしています</li>
+        <li>店名やページ内容の掲載は、事前に確認したうえで行います</li>
       </ul>
-      <div class="fineprint">
-        <p>※無料デモはどなたでもお試しいただけます。モニター価格（先着5事業者・募集開始から1か月限定）は、デモをご確認後、本制作をご契約いただく場合に適用されます。</p>
-        <p>※モニター価格での制作をご希望の場合は、制作実績としての掲載と簡単なご感想へのご協力をお願いしています。</p>
-        <p>※店名掲載は任意で、掲載内容は事前に確認いただいたうえで使用します。</p>
+    </div>
+
+    <!-- 公開後サポート -->
+    <div class="common" style="margin-top:18px">
+      <h4>公開後サポート</h4>
+      <p class="pay-incl">公開管理・軽微な修正・月1回までの更新などを、月額でおまかせいただけます。（含まれる内容は、下の「公開後の保守サポート」をご覧ください）</p>
+      <div class="pay-grid">
+        <div class="pay-card">
+          <div class="pl">月払い</div>
+          <div class="pv">5,500<span class="u">円 / 月</span></div>
+          <div class="pfor">まずは6か月、使ってみたい方に。</div>
+        </div>
+        <div class="pay-card best">
+          <span class="ptag">月払いより6,000円お得</span>
+          <div class="pl">年払い</div>
+          <div class="pv">60,000<span class="u">円 / 年</span></div>
+          <div class="pfor">長く使う予定の方に。<br>（月払いは5,500円×12＝66,000円）</div>
+        </div>
       </div>
+      <div class="cont-note">
+        公開後サポートは<b>最低6か月から</b>。6か月以降もページを使い続ける場合は、引き続き<b>月5,500円</b>で継続できます。長く使う予定の方には、お得な年払いプランもご用意しています。
+      </div>
+    </div>
+
+    <div style="margin-top:26px;text-align:center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScDO9WAjPPyR_rSKJR5zOlZlP1jVj7ebOGzlkyFPxzZ2WxJYQ/viewform" target="_blank" rel="noopener" class="btn btn-primary">まず無料デモで確かめる <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -752,20 +834,19 @@
 <!-- ============ 7. MAINTENANCE ============ -->
 <section class="maint" id="maint">
   <div class="wrap sec-head reveal">
-    <span class="sec-num">07 / SUPPORT</span>
+    <span class="sec-num">公開後サポート</span>
     <h2>公開後の保守サポート</h2>
-    <p class="lead" style="margin:14px 0 24px">更新は、あなたがやらなくて大丈夫。営業時間も季節メニューも料金も、変えたい内容を送るだけで、あとはこちらで対応します。長く安心して使えます。</p>
+    <p class="lead" style="margin:14px 0 24px"><span class="ph">更新は、あなたがやらなくて大丈夫。</span><span class="ph">営業時間も季節メニューも料金も、</span><span class="ph">変えたい内容を送るだけで、</span><span class="ph">あとはこちらで対応します。</span><span class="ph">長く安心して使えます。</span></p>
   </div>
   <div class="wrap reveal">
     <div class="maint-box">
-      <h3>月額保守に含まれる内容</h3>
+      <h3>公開後サポートに含まれる内容</h3>
       <ul class="tick-list">
-        <li>LPの公開管理</li>
-        <li>サーバー・ドメインまわりの基本管理</li>
-        <li>月1回までの軽微な修正</li>
-        <li>季節のお知らせ・キャンペーン情報の更新</li>
-        <li>月1回の簡単な相談対応（LINE・メール・DMなどのテキスト中心）</li>
-        <li>必要に応じて15〜30分程度の通話対応</li>
+        <li>ページの公開管理</li>
+        <li>軽微な修正</li>
+        <li>月1回までの更新</li>
+        <li>営業時間・料金・写真などの変更対応</li>
+        <li>LINEまたはメールでの相談対応</li>
       </ul>
     </div>
     <div class="maint-box">
@@ -775,16 +856,7 @@
         <span>「新しいメニューを載せたい」</span>
         <span>「キャンペーン情報を追加したい」</span>
       </div>
-      <p style="font-size:.93rem">そんなときは、変更したい内容を送っていただければ、こちらで対応します。</p>
-    </div>
-    <div class="maint-box">
-      <h3>月額保守について</h3>
-      <ul class="tick-list">
-        <li><span class="price-pill">月額 10,000円</span></li>
-        <li>最低契約期間：6か月</li>
-        <li>6か月経過後は、解約のご連絡がない限り自動継続</li>
-        <li>年払いをご希望の場合は、100,000円 / 年で対応可能</li>
-      </ul>
+      <p style="font-size:.93rem">そんなときは、変更したい内容を送っていただければ、こちらで対応します。料金は<a href="#pricing" style="color:var(--green-700);text-decoration:underline;text-underline-offset:2px">月5,500円（最低6か月から）</a>です。</p>
     </div>
   </div>
 </section>
@@ -792,37 +864,73 @@
 <!-- ============ 8. FLOW（吹割の滝モチーフ）============ -->
 <section class="flow" id="flow">
   <div class="wrap sec-head reveal">
-    <span class="sec-num">08 / FLOW</span>
+    <span class="sec-num">制作の流れ</span>
     <h2>制作の流れ</h2>
-    <p class="intro lead">あなたがすることは、最初の入力だけです。あとはこちらで進めるので、初めてでも迷いません。</p>
+    <p class="intro lead"><span class="ph">あなたがすることは、</span><span class="ph">最初の入力だけです。</span><span class="ph">あとはこちらで進めるので、</span><span class="ph">初めてでも迷いません。</span></p>
   </div>
   <div class="wrap reveal">
     <div class="steps">
-      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>無料デモを申し込む</h3><p>まずはフォームから、店名・業種・メニュー・料金・問い合わせ先などを入力してください。</p></div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>スマホページの無料デモを作成</h3><p>入力いただいた内容をもとに、スマホで見られる簡易デモを作成します。</p></div></div>
-      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>一時URLで確認</h3><p>完成した無料デモを一時URLでお送りします。公開期間は7日間です。</p></div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-body"><h3>本制作プランを選ぶ（任意）</h3><p>デモを見て「お願いしたい」と思ったら、3つのプランからお選びください。先着5事業者さまはモニター価格でご案内します。もちろん、ここで見送ってもOKです。</p></div></div>
-      <div class="step"><div class="step-num">5</div><div class="step-body"><h3>ご入金確認後、制作開始</h3><p>初期制作費と初月保守費のご入金確認後、制作を開始します。</p></div></div>
-      <div class="step"><div class="step-num">6</div><div class="step-body"><h3>掲載情報・写真素材を確認</h3><p>必要な情報や写真を確認しながら、正式公開用のページとして整えます。</p></div></div>
-      <div class="step"><div class="step-num">7</div><div class="step-body"><h3>約2週間で公開</h3><p>掲載情報・写真素材が揃ってから、約2週間を目安に公開します。</p></div></div>
-      <div class="step"><div class="step-num">8</div><div class="step-body"><h3>公開後も月額保守でサポート</h3><p>軽微な修正やお知らせ更新、相談対応を月額保守内で行います。</p></div></div>
+      <div class="step"><div class="step-num">1</div><div class="step-body"><h3>申し込む</h3><p>フォームに店名・業種・メニューなどを入力するだけ。あなたがするのはここだけです。</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-body"><h3>デモを確認</h3><p>簡易デモを一時URLでお送りします（公開7日間）。見送りもOKです。</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-body"><h3>本制作・公開</h3><p>プランを選び、入金確認後に制作開始。情報が揃ってから約2週間で公開。その後も公開後サポートでお手伝いします。</p></div></div>
     </div>
+    <p class="falls-cap" style="margin:18px 0 0;text-align:center"><a href="#faq" style="color:var(--ochre);text-decoration:underline;text-underline-offset:3px">▸ 詳しい制作ステップ（全8工程）を見る</a></p>
 
     <!-- count-up stats -->
     <div class="stats">
-      <div class="stat"><b class="stat-value"><span class="pre">約</span><span class="count" data-count="2">0</span><span class="u">週間</span></b><span>情報が揃ってから公開まで</span></div>
-      <div class="stat"><b class="stat-value"><span class="pre">先着</span><span class="count" data-count="5">0</span><span class="u">件</span></b><span>モニター価格の枠</span></div>
-      <div class="stat"><b class="stat-value"><span class="count" data-count="8">0</span><span class="u">STEP</span></b><span>シンプルな制作の流れ</span></div>
+      <div class="stat"><b class="stat-value"><span class="pre">約</span><span class="count" data-count="2">2</span><span class="u">週間</span></b><span>情報が揃ってから公開まで</span></div>
+      <div class="stat"><b class="stat-value"><span class="pre">先着</span><span class="count" data-count="5">5</span><span class="u">件</span></b><span>導入モニター価格の枠</span></div>
+      <div class="stat"><b class="stat-value"><span class="count" data-count="3">3</span><span class="u">STEP</span></b><span>シンプルな制作の流れ</span></div>
     </div>
   </div>
 </section>
 
-<!-- ============ 9. PROFILE ============ -->
+<!-- ============ 9. FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="wrap sec-head reveal">
+    <span class="eyebrow apple">ご質問</span>
+    <h2>よくある質問</h2>
+  </div>
+  <div class="wrap reveal">
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary><span class="qm">Q.</span>「スマホページ」って何ですか？<span class="pm"></span></summary>
+        <div class="faq-ans">お店の魅力・料金・問い合わせ方法を1ページにまとめたWebページ（いわゆる「LP」）を、分かりやすく「スマホページ」と呼んでいます。スマホで見るお客様を第一に設計します。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="qm">Q.</span>無料デモは、本当に無料ですか？<span class="pm"></span></summary>
+        <div class="faq-ans">はい。フォーム（アンケート）にお答えいただいた方なら、<b>先着・審査なし</b>で、どなたでも無料でお試しいただけます。気に入ったら、そのまま本制作に進むかどうかを決められます。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="qm">Q.</span>モニター価格は誰でも対象ですか？<span class="pm"></span></summary>
+        <div class="faq-ans">導入モニター価格は、無料デモ後に本制作をご契約いただく<b>先着5事業者さま限定</b>です。制作実績としての掲載とご感想にご協力をお願いしています。本制作後は公開後サポート6か月以上のご利用をお願いしており、店名やページ内容の掲載は事前に確認のうえ行います。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="qm">Q.</span>お支払いのタイミングは？<span class="pm"></span></summary>
+        <div class="faq-ans">初期制作費と初月の保守費を、契約時に前払いいただきます。ご入金の確認後に制作を開始します。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="qm">Q.</span>解約はできますか？<span class="pm"></span></summary>
+        <div class="faq-ans">公開後サポートは<b>月5,500円・最低6か月から</b>です。6か月以降もページを使い続ける場合は、引き続き月5,500円で継続できます。長く使う予定の方には、年払い（60,000円 / 年・月払いより6,000円お得）もご用意しています。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="qm">Q.</span>AIで作るんですか？品質は大丈夫？<span class="pm"></span></summary>
+        <div class="faq-ans">AIで効率よく進めつつ、言葉選びや地域に合わせた表現は<b>人の手で</b>整えます。その分、始めやすい価格でご提供できます。仕上げは必ず人が確認します。</div>
+      </details>
+      <details class="faq-item">
+        <summary><span class="qm">Q.</span>詳しい制作ステップを教えてください。<span class="pm"></span></summary>
+        <div class="faq-ans">①無料デモを申し込む（フォーム入力）→ ②簡易デモを作成 → ③一時URLで確認（7日間）→ ④本制作プランを選ぶ（任意・見送りOK）→ ⑤入金確認後に制作開始 → ⑥掲載情報・写真素材を確認 → ⑦情報が揃ってから約2週間で公開 → ⑧公開後も月額サポートで対応、という流れです。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. PROFILE ============ -->
 <section class="profile" id="profile">
   <div class="wrap sec-head reveal">
-    <span class="eyebrow apple">ABOUT</span>
+    <span class="eyebrow apple">自己紹介</span>
     <h2 class="profile-title">プロフィール・お問い合わせ</h2>
-    <p class="about">あなたと同じ沼田・利根沼田で事業をする立場から、地域のお店のためのスマホページを作っています。4U Studioは、合同会社４Ｕが運営する、小規模事業者さま向けの制作サービスです。</p>
+    <p class="about"><span class="ph">あなたと同じ沼田・利根沼田で</span><span class="ph">事業をする立場から、</span><span class="ph">地域のお店のためのスマホページを</span><span class="ph">作っています。</span><span class="ph">4U Studioは、合同会社４Ｕが運営する、</span><span class="ph">小規模事業者さま向けの制作サービスです。</span></p>
   </div>
   <div class="wrap reveal">
     <div class="prof-card">
@@ -875,7 +983,7 @@
 <div class="sticky-cta" id="stickyCta">
   <div class="inner">
     <div class="txt"><b>まずは無料で試作</b><span>あなたのお店のスマホページを</span></div>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScDO9WAjPPyR_rSKJR5zOlZlP1jVj7ebOGzlkyFPxzZ2WxJYQ/viewform" target="_blank" rel="noopener" class="btn btn-primary">無料デモを申し込む</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScDO9WAjPPyR_rSKJR5zOlZlP1jVj7ebOGzlkyFPxzZ2WxJYQ/viewform" target="_blank" rel="noopener" class="btn btn-primary">無料デモを見てみる</a>
   </div>
 </div>
 
@@ -883,10 +991,19 @@
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // scroll reveal — pre-trigger slightly before entering view for a smooth, lag-free fade
-  const io = new IntersectionObserver((es)=>{
-    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:0, rootMargin:'0px 0px 220px 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const revealAll = ()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0, rootMargin:'0px 0px 220px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    // safety net: 一定時間内に表示されなければ全て表示（プレビュー環境対策）
+    setTimeout(()=>{ document.querySelectorAll('.reveal:not(.in)').forEach(el=>{
+      if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+    }); }, 1500);
+  } else {
+    revealAll();
+  }
 
   // count-up / count-down (data-from → data-count)
   function countUp(el){
