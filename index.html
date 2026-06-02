@@ -62,6 +62,10 @@
     mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 6c0-2 1.2-3.6 3-4-.2 1.8-1 3-3 4zm0 0c-1.6-1.6-3.6-2-5.2-1.2C4.5 6 3 9 3 12.5 3 17 6 21 9 21c1 0 1.8-.4 3-.4s2 .4 3 .4c3 0 6-4 6-8.5C21 9 19.5 6 17.2 4.8 15.6 4 13.6 4.4 12 6z'/%3E%3C/svg%3E") center/contain no-repeat}
   p{color:var(--ink-soft)}
   .lead{color:var(--ink);font-weight:500}
+  /* 日本語の読みやすさ：禁則・文節折り返し */
+  body{word-break:normal;line-break:strict;overflow-wrap:anywhere}
+  h1,h2,h3{line-break:strict}
+  .ph{display:inline-block}            /* 文節ごとに改行（語の途中で切れない） */
 
   /* progress + nav dots */
   .progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:200;
@@ -203,7 +207,7 @@
   .feat:hover .feat-ic svg{stroke:#2b210a}
   .feat-ic svg{transition:.3s}
   .feat h3{font-size:1.06rem;color:#fff;margin-bottom:5px}
-  .feat p{color:rgba(246,240,226,.78);font-size:.93rem;margin:0}
+  .feat p{color:rgba(246,240,226,.82);font-size:.96rem;margin:0;line-height:1.8}
 
   /* DEMO */
   .demo{background:var(--cream-2)}
@@ -256,7 +260,7 @@
     letter-spacing:.05em;background:rgba(255,255,255,.85);color:var(--ink-soft);padding:3px 9px;border-radius:6px}
   .sample-body{padding:20px 22px 24px}
   .sample-body h3{font-size:1.08rem;color:var(--green-800);margin-bottom:8px}
-  .sample-body p{font-size:.93rem;margin-bottom:16px}
+  .sample-body p{font-size:.95rem;line-height:1.8;margin-bottom:16px}
 
   /* PRICING */
   .pricing{background:var(--green-900);color:var(--cream)}
@@ -276,7 +280,7 @@
   .plan-tag{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.04em;color:var(--ochre);
     background:rgba(212,162,76,.14);border:1px solid rgba(212,162,76,.32);border-radius:999px;padding:3px 11px;margin-bottom:10px}
   .plan h3{font-size:1.22rem;color:#fff;margin-bottom:6px}
-  .plan .pdesc{font-size:.88rem;color:rgba(246,240,226,.75);margin-bottom:16px;line-height:1.75}
+  .plan .pdesc{font-size:.94rem;color:rgba(246,240,226,.82);margin-bottom:16px;line-height:1.85}
   .price-row{display:flex;align-items:baseline;gap:8px}
   .price-mon{font-size:1.75rem;font-weight:900;color:var(--ochre)}
   .yen{font-size:1rem}
@@ -287,7 +291,7 @@
   .price-reg s{font-size:1.14rem;color:#fffdf6;font-weight:900;text-decoration:none;letter-spacing:.02em}
   .price-reg .arrow-down{color:var(--ochre);font-weight:700;margin:0 .3em}
   .plan ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-  .plan ul li{display:flex;gap:10px;font-size:.9rem;color:rgba(246,240,226,.9)}
+  .plan ul li{display:flex;gap:10px;font-size:.94rem;line-height:1.7;color:rgba(246,240,226,.92)}
   .plan ul li::before{content:"";flex:0 0 auto;width:16px;height:16px;margin-top:4px;background:var(--ochre);
     -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat;
     mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat}
@@ -402,7 +406,7 @@
   .faq-item[open] .pm{background:var(--green-700);border-color:var(--green-700)}
   .faq-item[open] .pm::before,.faq-item[open] .pm::after{background:var(--cream)}
   .faq-item[open] .pm::after{transform:scaleY(0)}
-  .faq-ans{padding:0 2px 18px 26px;font-size:.9rem;color:var(--ink-soft);line-height:1.85}
+  .faq-ans{padding:0 2px 18px 26px;font-size:.94rem;color:var(--ink-soft);line-height:1.9}
   .faq-ans b{color:var(--green-800)}
 
   /* PRICE summary / payment */
@@ -512,7 +516,7 @@
   <div class="wrap">
     <span class="eyebrow apple hr hr1">沼田市・利根沼田エリア</span>
     <h1 class="hr hr2"><span class="hero-line"><span class="hl">スマホで見やすい1ページ</span>で、</span><span class="hero-line">お店のことが、</span><span class="hero-line">ちゃんと伝わる。</span></h1>
-    <p class="hero-sub lead hr hr3">魅力・料金・予約方法をまとめて、問い合わせや来店につなげます。沼田・利根沼田の個人店・小規模事業者さま向け。無料デモでお試しください。</p>
+    <p class="hero-sub lead hr hr3"><span class="ph">魅力・料金・予約方法をまとめて、</span><span class="ph">問い合わせや来店につなげます。</span><span class="ph">沼田・利根沼田の</span><span class="ph">個人店・小規模事業者さま向け。</span><span class="ph">まずは無料デモでお試しください。</span></p>
     <div class="hero-trust hr hr4">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="#d4a24c"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/></svg>
       申し込み前に、無料デモで確認できます。
@@ -601,7 +605,7 @@
   <div class="wrap sec-head reveal">
     <span class="eyebrow apple">サービス内容</span>
     <h2>4U Studioがやること</h2>
-    <p class="intro">お店の魅力・メニュー・料金・予約方法を、スマホで見やすい1ページに整理。見た人が、迷わず連絡・予約・来店できるページにします。</p>
+    <p class="intro"><span class="ph">お店の魅力・メニュー・料金・予約方法を、</span><span class="ph">スマホで見やすい1ページに整理。</span><span class="ph">見た人が迷わず、</span><span class="ph">連絡・予約・来店できるページにします。</span></p>
   </div>
   <div class="wrap reveal">
     <div class="feat">
@@ -629,7 +633,7 @@
     <span class="sec-num">無料デモ</span>
     <h2>まずは無料デモで、完成イメージを</h2>
     <p class="demo-quote">「いきなり申し込むのは不安」<br>「先にどんなページになるか見てみたい」</p>
-    <p class="lead">そのままで大丈夫です。店名・業種・メニューなどを入力いただくだけで、あなたのお店に合わせた簡易デモを無料でお作りします。気に入ったら本制作へ。気に入らなければ、それで終わりでOKです。</p>
+    <p class="lead"><span class="ph">そのままで大丈夫です。</span><span class="ph">店名・業種・メニューなどを</span><span class="ph">入力いただくだけで、</span><span class="ph">あなたのお店に合わせた</span><span class="ph">簡易デモを無料でお作りします。</span><span class="ph">気に入ったら本制作へ。</span><span class="ph">気に入らなければ、</span><span class="ph">それで終わりでOKです。</span></p>
     <p class="demo-anyone">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#356b4d" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8.5 12l2.2 2.2L15.5 9.5"/></svg>
       <span><b>先着・審査はありません。</b>フォームにお答えいただいた方なら、どなたでも無料でお試しいただけます。</span>
@@ -716,7 +720,7 @@
       <h3>お店紹介スマホページ</h3>
       <p class="pdesc">スマホで見られる、名刺代わりの1ページ。InstagramやGoogleマップから来た人に、お店をきちんと知ってもらえます。</p>
       <span class="price-reg">通常制作費 30,000円</span>
-      <div class="price-row"><span class="price-mon"><span class="count" data-from="30000" data-count="15000">15,000</span><span class="yen">円</span></span><span class="price-label">導入モニター価格（先着5事業者さま）</span></div>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="30000" data-count="15000">15,000</span><span class="yen">円</span></span><span class="price-label">導入モニター価格</span></div>
       <ul>
         <li>基本情報・メニュー・営業時間を掲載</li>
         <li>電話・LINE・Instagram・Googleマップなどの問い合わせ先を設置</li>
@@ -730,7 +734,7 @@
       <h3>予約につなげるスマホページ</h3>
       <p class="pdesc">「見てもらうだけ」で終わらせず、予約や問い合わせにつなげたい方へ。魅力・料金・よくある質問・予約方法まで整理します。</p>
       <span class="price-reg">通常制作費 40,000円</span>
-      <div class="price-row"><span class="price-mon"><span class="count" data-from="40000" data-count="20000">20,000</span><span class="yen">円</span></span><span class="price-label">導入モニター価格（先着5事業者さま）</span></div>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="40000" data-count="20000">20,000</span><span class="yen">円</span></span><span class="price-label">導入モニター価格</span></div>
       <ul>
         <li>お店紹介プランの内容をすべて含む</li>
         <li>お店の魅力・料金・よくある質問を整理</li>
@@ -744,7 +748,7 @@
       <h3>しっかり事業サイト</h3>
       <p class="pdesc">サービス紹介・料金・会社概要・お問い合わせなどを分けて見せたい方へ。1ページだけでなく、複数ページのホームページ制作にも対応します。</p>
       <span class="price-reg">通常制作費 60,000円〜</span>
-      <div class="price-row"><span class="price-mon"><span class="count" data-from="60000" data-count="30000">30,000</span><span class="yen">円〜</span></span><span class="price-label">導入モニター価格（内容により個別見積もり）</span></div>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="60000" data-count="30000">30,000</span><span class="yen">円〜</span></span><span class="price-label">導入モニター価格</span></div>
       <ul>
         <li>複数ページのホームページに対応</li>
         <li>サービス・料金・会社概要などをページごとに整理</li>
@@ -817,7 +821,7 @@
   <div class="wrap sec-head reveal">
     <span class="sec-num">公開後サポート</span>
     <h2>公開後の保守サポート</h2>
-    <p class="lead" style="margin:14px 0 24px">更新は、あなたがやらなくて大丈夫。営業時間も季節メニューも料金も、変えたい内容を送るだけで、あとはこちらで対応します。長く安心して使えます。</p>
+    <p class="lead" style="margin:14px 0 24px"><span class="ph">更新は、あなたがやらなくて大丈夫。</span><span class="ph">営業時間も季節メニューも料金も、</span><span class="ph">変えたい内容を送るだけで、</span><span class="ph">あとはこちらで対応します。</span><span class="ph">長く安心して使えます。</span></p>
   </div>
   <div class="wrap reveal">
     <div class="maint-box">
@@ -847,7 +851,7 @@
   <div class="wrap sec-head reveal">
     <span class="sec-num">制作の流れ</span>
     <h2>制作の流れ</h2>
-    <p class="intro lead">あなたがすることは、最初の入力だけです。あとはこちらで進めるので、初めてでも迷いません。</p>
+    <p class="intro lead"><span class="ph">あなたがすることは、</span><span class="ph">最初の入力だけです。</span><span class="ph">あとはこちらで進めるので、</span><span class="ph">初めてでも迷いません。</span></p>
   </div>
   <div class="wrap reveal">
     <div class="steps">
@@ -911,7 +915,7 @@
   <div class="wrap sec-head reveal">
     <span class="eyebrow apple">自己紹介</span>
     <h2 class="profile-title">プロフィール・お問い合わせ</h2>
-    <p class="about">あなたと同じ沼田・利根沼田で事業をする立場から、地域のお店のためのスマホページを作っています。4U Studioは、合同会社４Ｕが運営する、小規模事業者さま向けの制作サービスです。</p>
+    <p class="about"><span class="ph">あなたと同じ沼田・利根沼田で</span><span class="ph">事業をする立場から、</span><span class="ph">地域のお店のためのスマホページを</span><span class="ph">作っています。</span><span class="ph">4U Studioは、合同会社４Ｕが運営する、</span><span class="ph">小規模事業者さま向けの制作サービスです。</span></p>
   </div>
   <div class="wrap reveal">
     <div class="prof-card">
