@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.className+=' js';</script>
 <title>4U Studio｜沼田・利根沼田のスマホページ制作</title>
 <meta name="description" content="沼田市・利根沼田エリアの小規模事業者向け。問い合わせ・予約・来店につながるスマホで見やすい1ページを制作します。まずは無料デモから。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -442,9 +443,10 @@
   .sticky-cta .txt span{font-size:.7rem;color:rgba(246,240,226,.6)}
   .sticky-cta .btn{width:auto;padding:13px 22px;font-size:.92rem;white-space:nowrap}
 
-  /* reveal */
-  .reveal{opacity:0;transition:opacity .6s ease-out}
-  .reveal.in{opacity:1}
+  /* reveal — JSが動く場合のみ隠してフェードイン（JS無効時は最初から表示） */
+  .reveal{opacity:1;transition:opacity .6s ease-out}
+  .js .reveal{opacity:0}
+  .js .reveal.in{opacity:1}
   .reveal[data-d="1"]{transition-delay:.05s}.reveal[data-d="2"]{transition-delay:.1s}.reveal[data-d="3"]{transition-delay:.15s}
 
   @media(max-width:380px){
@@ -863,9 +865,9 @@
 
     <!-- count-up stats -->
     <div class="stats">
-      <div class="stat"><b class="stat-value"><span class="pre">約</span><span class="count" data-count="2">0</span><span class="u">週間</span></b><span>情報が揃ってから公開まで</span></div>
-      <div class="stat"><b class="stat-value"><span class="pre">先着</span><span class="count" data-count="5">0</span><span class="u">件</span></b><span>導入モニター価格の枠</span></div>
-      <div class="stat"><b class="stat-value"><span class="count" data-count="3">0</span><span class="u">STEP</span></b><span>シンプルな制作の流れ</span></div>
+      <div class="stat"><b class="stat-value"><span class="pre">約</span><span class="count" data-count="2">2</span><span class="u">週間</span></b><span>情報が揃ってから公開まで</span></div>
+      <div class="stat"><b class="stat-value"><span class="pre">先着</span><span class="count" data-count="5">5</span><span class="u">件</span></b><span>導入モニター価格の枠</span></div>
+      <div class="stat"><b class="stat-value"><span class="count" data-count="3">3</span><span class="u">STEP</span></b><span>シンプルな制作の流れ</span></div>
     </div>
   </div>
 </section>
@@ -976,10 +978,19 @@
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // scroll reveal — pre-trigger slightly before entering view for a smooth, lag-free fade
-  const io = new IntersectionObserver((es)=>{
-    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:0, rootMargin:'0px 0px 220px 0px'});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const revealAll = ()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+  if('IntersectionObserver' in window){
+    const io = new IntersectionObserver((es)=>{
+      es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0, rootMargin:'0px 0px 220px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    // safety net: 一定時間内に表示されなければ全て表示（プレビュー環境対策）
+    setTimeout(()=>{ document.querySelectorAll('.reveal:not(.in)').forEach(el=>{
+      if(el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+    }); }, 1500);
+  } else {
+    revealAll();
+  }
 
   // count-up / count-down (data-from → data-count)
   function countUp(el){
