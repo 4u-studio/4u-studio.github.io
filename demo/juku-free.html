@@ -7,191 +7,245 @@
 <title>【デモ】個別指導塾 free｜群馬県沼田市の個別指導</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#16324f; --teal:#2f8f83; --teal-deep:#236b62; --teal-tint:#e6f3f0;
-    --amber:#f2a154; --amber-deep:#dd8636; --cream:#fbf7ef; --paper:#ffffff;
-    --ink:#1f2d28; --ink-soft:#4d5a54; --muted:#7b867f;
-    --line:#eae6da; --radius:18px;
+    --navy:#13314e; --teal-deep:#236b62;
+    --teal:#2f8f83; --teal-tint:#e9f4f1; --amber:#f2a154; --amber-deep:#dd8636;
+    --cream:#fbf7ef; --paper:#ffffff; --ink:#1f2d28; --ink-soft:#4d5a54; --muted:#828c85;
+    --line:#ece7db; --radius:20px; --shadow:0 14px 40px rgba(19,49,78,.10);
+    --maxw:1000px;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0;font-family:"Zen Maru Gothic",system-ui,sans-serif;color:var(--ink);
-    background:var(--cream);line-height:1.9;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:"Shippori Mincho",serif;line-height:1.4}
-  img{max-width:100%}
-  .wrap{max-width:920px;margin:0 auto;padding:0 20px}
-  .btn{display:inline-flex;align-items:center;gap:.5em;border:0;cursor:pointer;text-decoration:none;
-    font-family:inherit;font-weight:700;border-radius:999px;padding:15px 26px;transition:transform .12s,box-shadow .12s}
-  .btn-amber{background:var(--amber);color:#3a2406;box-shadow:0 10px 22px rgba(242,161,84,.35)}
-  .btn-amber:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(242,161,84,.45)}
-  .btn-ghost{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.5)}
-  .btn-line{background:#06c755;color:#fff}
+    background:var(--cream);line-height:1.95;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.serif{font-family:"Shippori Mincho",serif;line-height:1.42;letter-spacing:.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
 
-  /* demo flag */
-  .demo-flag{background:#16324f;color:#fff;text-align:center;font-size:.8rem;padding:8px 14px}
+  /* progress + reveal */
+  #bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--teal),var(--amber));z-index:60;transition:width .1s}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+  .btn{display:inline-flex;align-items:center;gap:.5em;border:0;cursor:pointer;text-decoration:none;
+    font-family:inherit;font-weight:700;border-radius:999px;padding:16px 28px;font-size:1rem;
+    transition:transform .14s,box-shadow .14s;white-space:nowrap}
+  .btn-amber{background:var(--amber);color:#3a2406;box-shadow:0 12px 26px rgba(242,161,84,.4)}
+  .btn-amber:hover{transform:translateY(-2px);box-shadow:0 18px 34px rgba(242,161,84,.5)}
+  .btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.55)}
+  .btn-ghost:hover{background:rgba(255,255,255,.2)}
+  .btn-line{background:#06c755;color:#fff}
+  .btn-teal{background:var(--teal);color:#fff;box-shadow:0 12px 26px rgba(47,143,131,.3)}
+
+  .demo-flag{background:#0f2436;color:#fff;text-align:center;font-size:.8rem;padding:9px 14px;position:relative;z-index:2}
   .demo-flag b{color:var(--amber)}
 
+  /* topbar */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(251,247,239,.86);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{font-family:"Shippori Mincho",serif;font-weight:800;font-size:1.15rem;color:var(--navy)}
+  .brand small{display:block;font-family:"Zen Maru Gothic";font-weight:500;font-size:.62rem;color:var(--muted);letter-spacing:.18em}
+  .topbar .btn{padding:10px 18px;font-size:.85rem}
+
   /* hero */
-  .hero{position:relative;background:linear-gradient(160deg,#1d4a44 0%,#16324f 100%);color:#fff;overflow:hidden}
-  .hero::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;
-    background:radial-gradient(circle at 30% 30%,rgba(242,161,84,.4),transparent 70%)}
-  .hero .wrap{position:relative;padding:54px 20px 60px;z-index:1}
-  .badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);
-    border-radius:999px;font-size:.78rem;padding:6px 14px;margin-bottom:18px}
-  .hero h1{font-size:2rem;margin:0 0 16px;color:#fff}
+  .hero{position:relative;background:radial-gradient(120% 90% at 80% 0%,#1f5249 0%,#13314e 60%);color:#fff;overflow:hidden}
+  .hero .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.5}
+  .hero .b1{right:-90px;top:-70px;width:300px;height:300px;background:radial-gradient(circle at 30% 30%,rgba(242,161,84,.55),transparent 70%)}
+  .hero .b2{left:-110px;bottom:-120px;width:340px;height:340px;background:radial-gradient(circle at 60% 40%,rgba(47,143,131,.6),transparent 70%)}
+  .hero .wrap{position:relative;z-index:1;padding:64px 22px 74px}
+  .pill{display:inline-flex;align-items:center;gap:.5em;background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.3);border-radius:999px;font-size:.78rem;padding:7px 15px;margin-bottom:22px}
+  .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--amber)}
+  .hero h1{font-size:2.15rem;font-weight:800;margin:0 0 18px;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.15)}
   .hero h1 .em{color:var(--amber)}
-  .hero p.lead{font-size:1.02rem;color:rgba(255,255,255,.9);margin:0 0 26px}
-  .hero .cta{display:flex;flex-wrap:wrap;gap:12px}
-  .hero .place{margin-top:22px;font-size:.85rem;color:rgba(255,255,255,.72)}
+  .hero .lead{font-size:1.05rem;color:rgba(255,255,255,.92);margin:0 0 30px;max-width:560px}
+  .hero .cta{display:flex;flex-wrap:wrap;gap:13px}
+  .hero .place{margin-top:26px;font-size:.85rem;color:rgba(255,255,255,.72)}
+  .hero .stats{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap}
+  .hero .stat .n{font-family:"Shippori Mincho",serif;font-size:1.7rem;font-weight:800;color:var(--amber)}
+  .hero .stat .l{font-size:.78rem;color:rgba(255,255,255,.8)}
 
-  section{padding:52px 0}
-  .eyebrow{color:var(--teal-deep);font-weight:700;font-size:.82rem;letter-spacing:.12em;text-align:center}
-  .sec-title{text-align:center;font-size:1.5rem;margin:.3em 0 0;color:var(--navy)}
-  .sec-lead{text-align:center;color:var(--ink-soft);font-size:.95rem;margin:14px auto 0;max-width:600px}
+  section{padding:62px 0}
+  .eyebrow{color:var(--teal-deep);font-weight:700;font-size:.8rem;letter-spacing:.16em;text-align:center}
+  .sec-title{text-align:center;font-size:1.7rem;font-weight:800;margin:.4em 0 0;color:var(--navy)}
+  .sec-lead{text-align:center;color:var(--ink-soft);font-size:.96rem;margin:16px auto 0;max-width:620px}
 
-  /* worries */
   .worries{background:var(--teal-tint)}
-  .worry-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
-  .worry{background:#fff;border-radius:var(--radius);padding:18px 18px;font-size:.92rem;color:var(--ink-soft);
-    box-shadow:0 6px 18px rgba(22,50,79,.06)}
+  .worry-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:34px}
+  .worry{background:#fff;border-radius:16px;padding:18px 20px;font-size:.95rem;color:var(--ink-soft);
+    box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start}
+  .worry .q{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--teal-tint);color:var(--teal-deep);
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem}
   .worry b{color:var(--navy)}
-  .arrow-down{text-align:center;font-size:1.8rem;color:var(--teal);margin-top:24px}
+  .turn{text-align:center;margin-top:30px}
+  .turn .arrow{font-size:1.7rem;color:var(--teal)}
+  .turn p{font-family:"Shippori Mincho",serif;font-weight:700;color:var(--navy);font-size:1.15rem;margin:6px 0 0}
 
-  /* reasons */
-  .reasons{display:grid;grid-template-columns:1fr;gap:16px;margin-top:34px}
-  .reason{display:flex;gap:16px;background:var(--paper);border:1px solid var(--line);
-    border-radius:var(--radius);padding:20px}
-  .reason .no{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--teal);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-family:"Shippori Mincho",serif;font-size:1.2rem}
-  .reason h3{margin:0 0 6px;font-size:1.1rem;color:var(--navy)}
-  .reason p{margin:0;font-size:.92rem;color:var(--ink-soft)}
+  .reasons{display:grid;grid-template-columns:1fr;gap:18px;margin-top:38px}
+  .reason{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;
+    box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .reason .ic{width:52px;height:52px;border-radius:14px;background:var(--teal-tint);color:var(--teal-deep);
+    display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .reason .ic svg{width:26px;height:26px}
+  .reason .no{position:absolute;right:18px;top:10px;font-family:"Shippori Mincho",serif;font-size:2.6rem;color:#eef3f1;font-weight:800}
+  .reason h3{margin:0 0 8px;font-size:1.18rem;color:var(--navy)}
+  .reason p{margin:0;font-size:.93rem;color:var(--ink-soft)}
 
-  /* target / subjects */
-  .target{background:var(--navy);color:#fff}
+  .target{background:linear-gradient(160deg,#1f5249,#13314e);color:#fff}
   .target .sec-title{color:#fff}
-  .grade-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
-  .grade{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);border-radius:12px;
-    padding:12px 18px;font-weight:700}
-  .subjects{text-align:center;color:rgba(255,255,255,.82);margin-top:22px;font-size:.92rem}
+  .grade-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px}
+  .grade{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);border-radius:14px;
+    padding:14px 22px;font-weight:700;font-size:1.05rem}
+  .subjects{text-align:center;color:rgba(255,255,255,.85);margin-top:24px;font-size:.93rem}
 
-  /* pricing */
-  .price-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:34px}
-  .plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;text-align:center;
-    box-shadow:0 8px 22px rgba(22,50,79,.05)}
+  .price-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:38px}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;text-align:center;
+    box-shadow:var(--shadow);transition:transform .15s}
+  .plan:hover{transform:translateY(-4px)}
   .plan.feat{border:2px solid var(--amber);position:relative}
-  .plan.feat::before{content:"おすすめ";position:absolute;top:-12px;left:50%;transform:translateX(-50%);
-    background:var(--amber);color:#3a2406;font-size:.74rem;font-weight:700;padding:3px 14px;border-radius:999px}
-  .plan h3{margin:0;color:var(--navy);font-size:1.15rem}
-  .plan .price{font-family:"Shippori Mincho",serif;font-size:1.8rem;color:var(--teal-deep);margin:8px 0 2px}
-  .plan .price small{font-size:.85rem;color:var(--muted)}
-  .plan ul{list-style:none;padding:0;margin:16px 0 0;text-align:left;font-size:.9rem;color:var(--ink-soft)}
-  .plan li{padding:6px 0 6px 26px;position:relative}
-  .plan li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:700}
-  .price-note{text-align:center;color:var(--muted);font-size:.8rem;margin-top:18px}
+  .plan.feat::before{content:"いちばん人気";position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+    background:var(--amber);color:#3a2406;font-size:.74rem;font-weight:700;padding:4px 16px;border-radius:999px}
+  .plan h3{margin:0;color:var(--navy);font-size:1.2rem}
+  .plan .price{font-family:"Shippori Mincho",serif;font-size:2rem;font-weight:800;color:var(--teal-deep);margin:10px 0 2px}
+  .plan .price small{font-size:.82rem;color:var(--muted);font-weight:500}
+  .plan ul{list-style:none;padding:0;margin:18px 0 0;text-align:left;font-size:.92rem;color:var(--ink-soft)}
+  .plan li{padding:7px 0 7px 28px;position:relative}
+  .plan li::before{content:"";position:absolute;left:4px;top:14px;width:8px;height:8px;border-radius:50%;background:var(--teal)}
+  .price-note{text-align:center;color:var(--muted);font-size:.8rem;margin-top:20px}
 
-  /* flow */
   .flow{background:var(--teal-tint)}
-  .steps{margin-top:32px;display:grid;gap:14px}
-  .step{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:var(--radius);padding:18px}
-  .step .n{flex:0 0 auto;font-family:"Shippori Mincho",serif;color:var(--amber-deep);font-size:1.4rem;width:30px}
-  .step h3{margin:0 0 4px;font-size:1rem;color:var(--navy)}
-  .step p{margin:0;font-size:.9rem;color:var(--ink-soft)}
+  .steps{margin-top:36px;display:grid;gap:16px}
+  .step{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+  .step .n{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-family:"Shippori Mincho",serif;font-weight:700}
+  .step h3{margin:0 0 4px;font-size:1.05rem;color:var(--navy)}
+  .step p{margin:0;font-size:.92rem;color:var(--ink-soft)}
 
-  /* voice */
-  .voice{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-top:30px}
-  .voice p{margin:0 0 14px;color:var(--ink-soft)}
-  .voice .who{font-weight:700;color:var(--navy);font-size:.92rem}
+  .voice{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;margin-top:32px;
+    box-shadow:var(--shadow);position:relative}
+  .voice::before{content:"“";position:absolute;left:20px;top:-6px;font-family:"Shippori Mincho",serif;font-size:4rem;color:var(--teal-tint)}
+  .voice p{margin:0 0 14px;color:var(--ink-soft);position:relative;z-index:1}
+  .voice .who{font-weight:700;color:var(--navy);font-size:.95rem}
 
-  /* faq */
-  .faq{margin-top:30px;display:grid;gap:12px}
-  .faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:4px 18px}
-  .faq summary{cursor:pointer;font-weight:700;color:var(--navy);padding:14px 0;list-style:none}
+  .faq{margin-top:32px;display:grid;gap:12px;max-width:760px;margin-left:auto;margin-right:auto}
+  .faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:2px 20px;box-shadow:0 6px 18px rgba(19,49,78,.05)}
+  .faq summary{cursor:pointer;font-weight:700;color:var(--navy);padding:16px 0;list-style:none;display:flex;gap:10px}
   .faq summary::-webkit-details-marker{display:none}
-  .faq summary::before{content:"Q  ";color:var(--teal)}
-  .faq p{margin:0 0 16px;color:var(--ink-soft);font-size:.92rem}
+  .faq summary::before{content:"Q";color:#fff;background:var(--teal);width:24px;height:24px;border-radius:6px;
+    display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;flex:0 0 auto}
+  .faq p{margin:0 0 18px 34px;color:var(--ink-soft);font-size:.92rem}
 
-  /* access */
-  .access-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin-top:28px}
-  .access-card dl{display:grid;grid-template-columns:90px 1fr;gap:10px 14px;margin:0;font-size:.92rem}
+  .access-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;margin-top:30px;box-shadow:var(--shadow)}
+  .access-card dl{display:grid;grid-template-columns:96px 1fr;gap:12px 16px;margin:0;font-size:.93rem}
   .access-card dt{color:var(--teal-deep);font-weight:700}
   .access-card dd{margin:0;color:var(--ink-soft)}
-  .map-ph{margin-top:18px;height:170px;border-radius:12px;background:
-    repeating-linear-gradient(45deg,#eef3f1,#eef3f1 12px,#e6efeb 12px,#e6efeb 24px);
+  .map-ph{margin-top:20px;height:180px;border-radius:14px;background:
+    repeating-linear-gradient(45deg,#eef3f1,#eef3f1 13px,#e4efea 13px,#e4efea 26px);
     display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem}
 
-  /* final cta */
-  .final{background:linear-gradient(160deg,#1d4a44,#16324f);color:#fff;text-align:center}
-  .final h2{color:#fff;font-size:1.6rem;margin:0 0 12px}
-  .final p{color:rgba(255,255,255,.85);margin:0 0 26px}
-  .final .cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .final{background:radial-gradient(120% 100% at 50% 0%,#1f5249,#13314e);color:#fff;text-align:center}
+  .final h2{color:#fff;font-size:1.8rem;font-weight:800;margin:0 0 14px}
+  .final p{color:rgba(255,255,255,.88);margin:0 0 28px}
+  .final .cta{display:flex;flex-wrap:wrap;gap:13px;justify-content:center}
 
-  footer{background:#0f2436;color:rgba(255,255,255,.7);text-align:center;font-size:.82rem;padding:30px 20px}
-  footer .name{font-family:"Shippori Mincho",serif;color:#fff;font-size:1rem;margin-bottom:6px}
+  footer{background:#0e2030;color:rgba(255,255,255,.7);text-align:center;font-size:.82rem;padding:36px 22px}
+  footer .name{font-family:"Shippori Mincho",serif;color:#fff;font-size:1.1rem;margin-bottom:6px;font-weight:700}
 
-  @media(min-width:680px){
-    .hero h1{font-size:2.6rem}
+  /* sticky mobile cta */
+  .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(255,255,255,.95);
+    backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 14px;display:flex;gap:10px;
+    transform:translateY(120%);transition:transform .3s}
+  .sticky-cta.show{transform:none}
+  .sticky-cta .btn{flex:1;justify-content:center;padding:13px 10px;font-size:.92rem}
+  .sticky-cta .btn-line{flex:0 0 auto}
+
+  @media(min-width:720px){
+    .hero h1{font-size:2.9rem}
+    .worry-grid{grid-template-columns:1fr 1fr}
     .reasons{grid-template-columns:1fr 1fr}
     .price-grid{grid-template-columns:1fr 1fr 1fr}
+    .sticky-cta{display:none}
   }
 </style>
 </head>
 <body>
+<div id="bar"></div>
 
-<div class="demo-flag">これは <b>無料デモ（サンプル）</b> です。文言・料金・写真・住所などは仮で、自由に差し替えできます。</div>
+<div class="demo-flag">これは <b>無料デモ（サンプル）</b> です。料金・住所・写真などは仮で、自由に差し替えできます。</div>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand">個別指導塾 free<small>NUMATA · GUNMA</small></div>
+    <a href="#taiken" class="btn btn-amber">無料体験</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <header class="hero">
+  <span class="blob b1"></span><span class="blob b2"></span>
   <div class="wrap">
-    <span class="badge">群馬県沼田市の個別指導塾</span>
+    <span class="pill"><span class="dot"></span>群馬県沼田市の個別指導塾</span>
     <h1>沼田で、<span class="em">「わかった！」</span><br>がふえる場所。</h1>
-    <p class="lead">集団がにがてでも大丈夫。一人ひとりのペースに合わせた完全個別指導で、「できた」を積み重ねていきます。</p>
+    <p class="lead">集団がにがてでも大丈夫。一人ひとりのペースに寄り添う完全個別指導で、「できた」を積み重ね、自分から学べる子へ。</p>
     <div class="cta">
       <a href="#taiken" class="btn btn-amber">無料体験を申し込む →</a>
-      <a href="#" class="btn btn-ghost">資料を見てみる</a>
+      <a href="#reasons" class="btn btn-ghost">free の特長を見る</a>
     </div>
-    <p class="place">📍 群馬県沼田市〇〇町0-0-0（仮）／ 駐車場あり・送り迎えOK</p>
+    <div class="stats">
+      <div class="stat"><div class="n">完全1対〇</div><div class="l">個別指導（仮）</div></div>
+      <div class="stat"><div class="n">小〜高</div><div class="l">対象学年</div></div>
+      <div class="stat"><div class="n">自習し放題</div><div class="l">授業日以外もOK</div></div>
+    </div>
+    <p class="place">📍 群馬県沼田市〇〇町 0-0-0（仮）／ 駐車場あり・送り迎えOK</p>
   </div>
 </header>
 
 <!-- WORRIES -->
 <section class="worries">
   <div class="wrap">
-    <p class="eyebrow">こんなお悩みありませんか？</p>
-    <h2 class="sec-title">その「つまずき」、個別指導で変わります</h2>
+    <p class="eyebrow reveal">SUCH WORRIES?</p>
+    <h2 class="sec-title reveal">こんなお悩み、ありませんか？</h2>
     <div class="worry-grid">
-      <div class="worry">大人数だと<b>質問しづらい</b>。分からないところがそのままに…</div>
-      <div class="worry">家だと<b>集中できない</b>。何から手をつければいいか分からない</div>
-      <div class="worry"><b>テストの点</b>が伸び悩んでいる。勉強のやり方が分からない</div>
-      <div class="worry"><b>受験</b>が不安。志望校に向けて何をすればいい？</div>
+      <div class="worry reveal"><span class="q">?</span><span>大人数だと<b>質問しづらい</b>。分からないところがそのままに…</span></div>
+      <div class="worry reveal"><span class="q">?</span><span>家だと<b>集中できない</b>。何から手をつければいいか分からない</span></div>
+      <div class="worry reveal"><span class="q">?</span><span><b>テストの点</b>が伸び悩む。勉強のやり方が分からない</span></div>
+      <div class="worry reveal"><span class="q">?</span><span><b>受験</b>が不安。志望校に向けて何をすればいい？</span></div>
     </div>
-    <div class="arrow-down">▼</div>
+    <div class="turn reveal"><div class="arrow">▼</div><p>その「つまずき」、個別指導で変わります。</p></div>
   </div>
 </section>
 
 <!-- REASONS -->
-<section>
+<section id="reasons">
   <div class="wrap">
-    <p class="eyebrow">free が選ばれる理由</p>
-    <h2 class="sec-title">一人ひとりに、ちょうどいい学び方を</h2>
+    <p class="eyebrow reveal">WHY free</p>
+    <h2 class="sec-title reveal">free が選ばれる4つの理由</h2>
     <div class="reasons">
-      <div class="reason"><div class="no">1</div><div>
+      <div class="reason reveal"><span class="no">01</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14c3.3 0 6 1.3 6 3v2H6v-2c0-1.7 2.7-3 6-3z"/><circle cx="12" cy="8" r="3.2"/></svg></div>
         <h3>完全個別指導</h3>
-        <p>講師1人に生徒は最大〇名（仮）。分からないところをその場で、納得できるまで質問できます。</p>
-      </div></div>
-      <div class="reason"><div class="no">2</div><div>
+        <p>講師1人に生徒は最大〇名（仮）。分からないところを、その場で納得できるまで質問できます。</p>
+      </div>
+      <div class="reason reveal"><span class="no">02</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h7"/></svg></div>
         <h3>一人ひとりの学習プラン</h3>
-        <p>今の理解度と目標に合わせて、カリキュラムをオーダーメイド。ムリなく、ムダなく進めます。</p>
-      </div></div>
-      <div class="reason"><div class="no">3</div><div>
+        <p>今の理解度と目標に合わせてカリキュラムをオーダーメイド。ムリなく、ムダなく進めます。</p>
+      </div>
+      <div class="reason reveal"><span class="no">03</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M21 10v5M7 9v4c0 1.7 2.2 3 5 3s5-1.3 5-3V9"/></svg></div>
         <h3>自習スペース使い放題</h3>
-        <p>授業がない日でも自習に来てOK。家では集中できない子も、ここなら勉強モードに。</p>
-      </div></div>
-      <div class="reason"><div class="no">4</div><div>
+        <p>授業がない日も自習に来てOK。家では集中できない子も、ここなら勉強モードに。</p>
+      </div>
+      <div class="reason reveal"><span class="no">04</span>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.6A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg></div>
         <h3>講師がとなりで伴走</h3>
-        <p>勉強の中身だけでなく、計画の立て方ややる気の続け方まで一緒に。保護者へのご報告も丁寧に。</p>
-      </div></div>
+        <p>勉強の中身だけでなく、計画の立て方ややる気の保ち方まで。保護者へのご報告も丁寧に。</p>
+      </div>
     </div>
   </div>
 </section>
@@ -199,36 +253,33 @@
 <!-- TARGET -->
 <section class="target">
   <div class="wrap">
-    <p class="eyebrow" style="color:#9fd8cf">対象・教科</p>
-    <h2 class="sec-title">小学生から高校生まで</h2>
+    <p class="eyebrow reveal" style="color:#9fd8cf">FOR STUDENTS</p>
+    <h2 class="sec-title reveal">小学生から高校生まで</h2>
     <div class="grade-row">
-      <span class="grade">小学生</span>
-      <span class="grade">中学生</span>
-      <span class="grade">高校生</span>
+      <span class="grade reveal">小学生</span>
+      <span class="grade reveal">中学生</span>
+      <span class="grade reveal">高校生</span>
     </div>
-    <p class="subjects">主要5教科（国・数英・理・社）に対応／定期テスト対策・受験対策・苦手克服・先取り学習 など（仮）</p>
+    <p class="subjects reveal">主要5教科（国・数/英・理・社）に対応／定期テスト対策・受験対策・苦手克服・先取り学習 など（仮）</p>
   </div>
 </section>
 
 <!-- PRICING -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">料金プラン（例）</p>
-    <h2 class="sec-title">わかりやすい月謝制</h2>
-    <p class="sec-lead">下記は仮の料金例です。学年・回数によって変わります。詳しくは無料体験のときにご案内します。</p>
+    <p class="eyebrow reveal">PRICE</p>
+    <h2 class="sec-title reveal">わかりやすい月謝制</h2>
+    <p class="sec-lead reveal">下記は仮の料金例です。学年・回数で変わります。詳しくは無料体験のときにご案内します。</p>
     <div class="price-grid">
-      <div class="plan">
-        <h3>週1回コース</h3>
+      <div class="plan reveal"><h3>週1回コース</h3>
         <div class="price">¥〇,〇〇〇<small>／月（税込）</small></div>
         <ul><li>1回〇〇分の個別指導</li><li>自習スペース利用OK</li><li>学習プラン作成</li></ul>
       </div>
-      <div class="plan feat">
-        <h3>週2回コース</h3>
+      <div class="plan feat reveal"><h3>週2回コース</h3>
         <div class="price">¥〇,〇〇〇<small>／月（税込）</small></div>
         <ul><li>1回〇〇分の個別指導</li><li>自習スペース利用OK</li><li>定期テスト対策つき</li><li>保護者面談あり</li></ul>
       </div>
-      <div class="plan">
-        <h3>受験対策コース</h3>
+      <div class="plan reveal"><h3>受験対策コース</h3>
         <div class="price">¥〇,〇〇〇<small>／月（税込）</small></div>
         <ul><li>志望校別カリキュラム</li><li>過去問演習サポート</li><li>面接・小論文対策（仮）</li></ul>
       </div>
@@ -240,13 +291,13 @@
 <!-- FLOW -->
 <section class="flow">
   <div class="wrap">
-    <p class="eyebrow">はじめ方</p>
-    <h2 class="sec-title">無料体験までの流れ</h2>
+    <p class="eyebrow reveal">FLOW</p>
+    <h2 class="sec-title reveal">無料体験までの流れ</h2>
     <div class="steps">
-      <div class="step"><div class="n">1</div><div><h3>お申し込み</h3><p>下のフォームまたはLINEから、お気軽にご連絡ください。</p></div></div>
-      <div class="step"><div class="n">2</div><div><h3>面談・学習相談</h3><p>今の状況やお悩み、目標をお聞きします（無料）。</p></div></div>
-      <div class="step"><div class="n">3</div><div><h3>無料体験授業</h3><p>実際の個別指導を体験。教室の雰囲気を確かめてください。</p></div></div>
-      <div class="step"><div class="n">4</div><div><h3>スタート</h3><p>納得いただけたら入会。一人ひとりの学習プランで始めます。</p></div></div>
+      <div class="step reveal"><div class="n">1</div><div><h3>お申し込み</h3><p>下のフォームまたはLINEから、お気軽にご連絡ください。</p></div></div>
+      <div class="step reveal"><div class="n">2</div><div><h3>面談・学習相談</h3><p>今の状況やお悩み、目標をお聞きします（無料）。</p></div></div>
+      <div class="step reveal"><div class="n">3</div><div><h3>無料体験授業</h3><p>実際の個別指導を体験。教室の雰囲気を確かめてください。</p></div></div>
+      <div class="step reveal"><div class="n">4</div><div><h3>スタート</h3><p>納得いただけたら入会。一人ひとりの学習プランで始めます。</p></div></div>
     </div>
   </div>
 </section>
@@ -254,10 +305,10 @@
 <!-- VOICE -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">代表より</p>
-    <h2 class="sec-title">沼田の子どもたちへ</h2>
-    <div class="voice">
-      <p>「勉強がわからない」のは、その子のせいではなく、合うやり方にまだ出会えていないだけだと考えています。free では、一人ひとりのペースを大切に、「わかった！」「できた！」の瞬間を一緒に増やしていきます。</p>
+    <p class="eyebrow reveal">MESSAGE</p>
+    <h2 class="sec-title reveal">沼田の子どもたちへ</h2>
+    <div class="voice reveal">
+      <p>「勉強がわからない」のは、その子のせいではなく、合うやり方にまだ出会えていないだけだと考えています。free では一人ひとりのペースを大切に、「わかった！」「できた！」の瞬間を一緒に増やしていきます。</p>
       <p>地域の子どもたちが、自分のペースで自信をつけていける場所でありたい。まずは無料体験で、お子さまに合うかどうかを確かめてください。</p>
       <p class="who">個別指導塾 free 代表　土屋 裕二</p>
     </div>
@@ -265,15 +316,15 @@
 </section>
 
 <!-- FAQ -->
-<section class="flow" style="background:var(--teal-tint)">
+<section class="flow">
   <div class="wrap">
-    <p class="eyebrow">よくある質問</p>
-    <h2 class="sec-title">FAQ</h2>
+    <p class="eyebrow reveal">FAQ</p>
+    <h2 class="sec-title reveal">よくある質問</h2>
     <div class="faq">
-      <details><summary>勉強が苦手でもついていけますか？</summary><p>はい。今のつまずきにさかのぼって、その子のペースで進めるので大丈夫です。（仮）</p></details>
-      <details><summary>部活と両立できますか？</summary><p>曜日・時間は相談して決められます。自習スペースも活用できます。（仮）</p></details>
-      <details><summary>体験は本当に無料ですか？</summary><p>はい、面談と体験授業は無料です。むりな勧誘もいたしません。（仮）</p></details>
-      <details><summary>送り迎えはできますか？</summary><p>駐車場があり、送迎にもご利用いただけます。（仮）</p></details>
+      <details class="reveal"><summary>勉強が苦手でもついていけますか？</summary><p>はい。今のつまずきにさかのぼって、その子のペースで進めるので大丈夫です。（仮）</p></details>
+      <details class="reveal"><summary>部活と両立できますか？</summary><p>曜日・時間は相談して決められます。自習スペースも活用できます。（仮）</p></details>
+      <details class="reveal"><summary>体験は本当に無料ですか？</summary><p>はい、面談と体験授業は無料です。むりな勧誘もいたしません。（仮）</p></details>
+      <details class="reveal"><summary>送り迎えはできますか？</summary><p>駐車場があり、送迎にもご利用いただけます。（仮）</p></details>
     </div>
   </div>
 </section>
@@ -281,9 +332,9 @@
 <!-- ACCESS -->
 <section>
   <div class="wrap">
-    <p class="eyebrow">アクセス</p>
-    <h2 class="sec-title">教室のご案内</h2>
-    <div class="access-card">
+    <p class="eyebrow reveal">ACCESS</p>
+    <h2 class="sec-title reveal">教室のご案内</h2>
+    <div class="access-card reveal">
       <dl>
         <dt>教室名</dt><dd>個別指導塾 free</dd>
         <dt>住所</dt><dd>群馬県沼田市〇〇町 0-0-0（仮）</dd>
@@ -296,12 +347,13 @@
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- FINAL -->
 <section class="final" id="taiken">
   <div class="wrap">
-    <h2>まずは「無料体験」から。</h2>
-    <p>お子さまに合うかどうか、実際の授業で確かめてください。<br>しつこい勧誘はいたしません。</p>
-    <div class="cta">
+    <p class="eyebrow reveal" style="color:#9fd8cf">FREE TRIAL</p>
+    <h2 class="reveal">まずは「無料体験」から。</h2>
+    <p class="reveal">お子さまに合うかどうか、実際の授業で確かめてください。<br>しつこい勧誘はいたしません。</p>
+    <div class="cta reveal">
       <a href="#" class="btn btn-amber">無料体験を申し込む →</a>
       <a href="#" class="btn btn-line">LINEで相談する</a>
     </div>
@@ -314,5 +366,28 @@
   <div style="margin-top:10px;opacity:.6">© 個別指導塾 free（デモ・サンプル）</div>
 </footer>
 
+<div class="sticky-cta" id="stickyCta">
+  <a href="#taiken" class="btn btn-amber">無料体験を申し込む</a>
+  <a href="#" class="btn btn-line">LINE</a>
+</div>
+
+<script>
+  // progress bar
+  const bar = document.getElementById('bar');
+  const sticky = document.getElementById('stickyCta');
+  function onScroll(){
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (h.scrollTop / max * 100) + '%';
+    sticky.classList.toggle('show', h.scrollTop > 500);
+  }
+  document.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // reveal on scroll
+  const io = new IntersectionObserver((es)=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.14});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{ el.style.transitionDelay=(i%4*60)+'ms'; io.observe(el); });
+</script>
 </body>
 </html>
