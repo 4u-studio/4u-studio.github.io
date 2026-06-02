@@ -386,6 +386,24 @@
   .closing p{color:rgba(246,240,226,.8);font-size:.94rem;margin-bottom:22px}
   .closing .btn-primary{margin-bottom:14px}
   .closing .sublink{color:var(--ochre);font-size:.88rem;text-decoration:underline;text-underline-offset:3px}
+  .form-panel{margin-top:30px;background:rgba(255,255,255,.06);border:1px solid rgba(246,240,226,.18);border-radius:var(--radius);padding:24px 20px}
+  .form-panel h3{color:#fff;font-size:1.18rem;margin-bottom:8px}
+  .form-panel .form-lead{color:rgba(246,240,226,.82);font-size:.92rem;margin-bottom:18px}
+  .demo-form{display:flex;flex-direction:column;gap:14px}
+  .form-row{display:flex;flex-direction:column;gap:7px}
+  .form-row label{font-size:.82rem;font-weight:700;color:rgba(246,240,226,.9)}
+  .form-row label span{color:var(--ochre);font-size:.74rem;margin-left:.35em}
+  .demo-form input,.demo-form select,.demo-form textarea{
+    width:100%;border:1px solid rgba(246,240,226,.22);border-radius:12px;background:rgba(246,240,226,.96);
+    color:var(--ink);font:inherit;font-size:.95rem;padding:12px 13px;outline:none}
+  .demo-form textarea{min-height:118px;resize:vertical}
+  .demo-form input:focus,.demo-form select:focus,.demo-form textarea:focus{border-color:var(--ochre);box-shadow:0 0 0 3px rgba(212,162,76,.22)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .check-row{display:flex;gap:9px;align-items:flex-start;color:rgba(246,240,226,.82);font-size:.84rem;line-height:1.7}
+  .check-row input{width:18px;height:18px;margin-top:4px;flex:0 0 auto;accent-color:var(--ochre)}
+  .demo-form .btn[disabled]{opacity:.58;cursor:not-allowed;transform:none;box-shadow:none}
+  .form-status{min-height:1.7em;font-size:.86rem;color:var(--ochre);font-weight:700}
+  @media(max-width:520px){.form-grid{grid-template-columns:1fr}}
 
   footer{background:var(--green-900);color:rgba(246,240,226,.55);text-align:center;padding:30px 0 104px;font-size:.78rem;position:relative;overflow:hidden}
   footer .logo-text{font-size:.95rem;color:rgba(246,240,226,.8);margin-bottom:6px}
@@ -705,11 +723,6 @@
   <div class="wrap sec-head reveal">
     <span class="eyebrow apple">料金のご案内</span>
     <h2>料金プラン</h2>
-    <div class="price-summary">
-      <div class="ps"><small>制作費（導入モニター価格）</small><b>15,000<span class="u">円〜</span></b></div>
-      <div class="ps"><small>公開後サポート</small><b>月5,500<span class="u">円〜</span></b></div>
-    </div>
-    <p class="price-summary-note">無料デモで完成イメージを確認してから、本制作へ進むか決められます。</p>
     <div class="commit-note">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="#d4a24c" style="flex:0 0 auto;margin-top:2px"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3z"/></svg>
       <span><b style="color:var(--ochre)">先着5事業者さま限定。</b>導入モニター価格で制作できます。下記は通常制作費と、導入モニター価格の両方を表示しています。</span>
@@ -718,15 +731,16 @@
 
   <div class="wrap reveal">
     <div class="plan">
-      <span class="plan-tag">まずは1ページ型</span>
-      <h3>お店紹介スマホページ</h3>
-      <p class="pdesc">スマホで見られる、名刺代わりの1ページ。InstagramやGoogleマップから来た人に、お店をきちんと知ってもらえます。</p>
-      <span class="price-reg">通常制作費 30,000円</span>
-      <div class="price-row"><span class="price-mon"><span class="count" data-from="30000" data-count="15000">15,000</span><span class="yen">円</span></span><span class="price-label">導入モニター価格</span></div>
+      <span class="plan-tag">しっかり型（複数ページ）</span>
+      <h3>しっかり事業サイト</h3>
+      <p class="pdesc">サービス紹介・料金・会社概要・お問い合わせなどを分けて見せたい方へ。1ページだけでなく、複数ページのホームページ制作にも対応します。</p>
+      <span class="price-reg">通常制作費 60,000円〜</span>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="60000" data-count="30000">30,000</span><span class="yen">円〜</span></span><span class="price-label">導入モニター価格</span></div>
       <ul>
-        <li>基本情報・メニュー・営業時間を掲載</li>
-        <li>電話・LINE・Instagram・Googleマップなどの問い合わせ先を設置</li>
-        <li>スマホで見やすい1ページ構成</li>
+        <li>複数ページのホームページに対応</li>
+        <li>サービス・料金・会社概要などをページごとに整理</li>
+        <li>複数の問い合わせ導線を設計</li>
+        <li>内容に応じて個別にお見積もりします</li>
       </ul>
     </div>
 
@@ -746,16 +760,15 @@
     </div>
 
     <div class="plan">
-      <span class="plan-tag">しっかり型（複数ページ）</span>
-      <h3>しっかり事業サイト</h3>
-      <p class="pdesc">サービス紹介・料金・会社概要・お問い合わせなどを分けて見せたい方へ。1ページだけでなく、複数ページのホームページ制作にも対応します。</p>
-      <span class="price-reg">通常制作費 60,000円〜</span>
-      <div class="price-row"><span class="price-mon"><span class="count" data-from="60000" data-count="30000">30,000</span><span class="yen">円〜</span></span><span class="price-label">導入モニター価格</span></div>
+      <span class="plan-tag">まずは1ページ型</span>
+      <h3>お店紹介スマホページ</h3>
+      <p class="pdesc">スマホで見られる、名刺代わりの1ページ。InstagramやGoogleマップから来た人に、お店をきちんと知ってもらえます。</p>
+      <span class="price-reg">通常制作費 30,000円</span>
+      <div class="price-row"><span class="price-mon"><span class="count" data-from="30000" data-count="15000">15,000</span><span class="yen">円</span></span><span class="price-label">導入モニター価格</span></div>
       <ul>
-        <li>複数ページのホームページに対応</li>
-        <li>サービス・料金・会社概要などをページごとに整理</li>
-        <li>複数の問い合わせ導線を設計</li>
-        <li>内容に応じて個別にお見積もりします</li>
+        <li>基本情報・メニュー・営業時間を掲載</li>
+        <li>電話・LINE・Instagram・Googleマップなどの問い合わせ先を設置</li>
+        <li>スマホで見やすい1ページ構成</li>
       </ul>
     </div>
 
@@ -764,16 +777,16 @@
       <h4>プランの違いが一目で分かる比較表</h4>
       <table>
         <thead>
-          <tr><th>内容</th><th>お店<br>紹介</th><th class="hot">予約<br>につなげる</th><th>事業<br>サイト</th></tr>
+          <tr><th>内容</th><th>事業<br>サイト</th><th class="hot">予約<br>につなげる</th><th>お店<br>紹介</th></tr>
         </thead>
         <tbody>
-          <tr><td>ページ構成</td><td>1ページ</td><td class="hot" style="color:var(--ochre)">1ページ</td><td>複数ページ</td></tr>
+          <tr><td>ページ構成</td><td>複数ページ</td><td class="hot" style="color:var(--ochre)">1ページ</td><td>1ページ</td></tr>
           <tr><td>基本情報・メニュー・営業時間</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td>問い合わせ先の掲載</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>魅力・よくある質問の整理</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>予約・問い合わせ導線の設計</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>会社概要・サービス別ページ</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td>導入モニター価格</td><td>15,000円</td><td class="hot" style="color:var(--ochre)">20,000円</td><td>30,000円〜</td></tr>
+          <tr><td>魅力・よくある質問の整理</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="no">—</span></td></tr>
+          <tr><td>予約・問い合わせ導線の設計</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="no">—</span></td></tr>
+          <tr><td>会社概要・サービス別ページ</td><td><span class="yes">✓</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td></tr>
+          <tr><td>導入モニター価格</td><td>30,000円〜</td><td class="hot" style="color:var(--ochre)">20,000円</td><td>15,000円</td></tr>
         </tbody>
       </table>
     </div>
