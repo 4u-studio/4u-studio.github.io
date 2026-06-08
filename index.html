@@ -263,6 +263,29 @@
   .sample-body h3{font-size:1.08rem;color:var(--green-800);margin-bottom:8px}
   .sample-body p{font-size:.95rem;line-height:1.8;margin-bottom:16px}
 
+  /* WORKS / 制作実績 */
+  .works{background:var(--cream-2)}
+  .work-card{display:block;text-decoration:none;color:inherit;background:var(--paper);
+    border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+    position:relative;transition:.35s}
+  .work-card:hover{transform:translateY(-6px)}
+  .work-card::after{content:"";position:absolute;inset:0;border:2px solid var(--ochre);
+    border-radius:var(--radius);opacity:0;transition:.35s;pointer-events:none}
+  .work-card:hover::after{opacity:1}
+  .work-photo{height:170px;display:grid;place-items:center;position:relative;overflow:hidden;
+    color:rgba(255,255,255,.96);font-family:"Shippori Mincho",serif;font-size:1.16rem;letter-spacing:.1em;
+    background:linear-gradient(135deg,var(--green-600),var(--green-900))}
+  .work-photo span{position:relative;z-index:2;text-shadow:0 2px 10px rgba(19,36,26,.45)}
+  .work-photo::before{content:"";position:absolute;inset:0;opacity:.16;
+    background-image:radial-gradient(circle at 30% 30%,#fff 1px,transparent 1.5px);background-size:18px 18px}
+  .work-badge{position:absolute;top:12px;left:12px;z-index:3;font-family:"Zen Kaku Gothic New";
+    font-size:.66rem;font-weight:700;letter-spacing:.06em;color:var(--green-900);background:var(--ochre);
+    padding:5px 12px;border-radius:999px}
+  .work-body{padding:22px 24px 26px}
+  .work-body h3{font-size:1.18rem;color:var(--green-800);margin-bottom:4px}
+  .work-meta{font-size:.82rem;color:var(--ochre-deep);font-weight:700;letter-spacing:.04em;margin-bottom:12px}
+  .work-body p{font-size:.95rem;line-height:1.8;margin-bottom:18px}
+
   /* PRICING */
   .pricing{background:var(--green-900);color:var(--cream)}
   .pricing .eyebrow,.pricing .sec-num{color:var(--ochre)}
@@ -510,6 +533,7 @@
 <div class="progress" id="progress"></div>
 <nav class="dots" id="dots">
   <a href="#hero" data-s="hero" class="active"></a>
+  <a href="#works" data-s="works"></a>
   <a href="#samples" data-s="samples"></a>
   <a href="#pricing" data-s="pricing"></a>
   <a href="#flow" data-s="flow"></a>
@@ -577,7 +601,30 @@
   </svg>
 </header>
 
-<!-- ============ 5. SAMPLES ============ -->
+<!-- ============ 5. WORKS（制作実績） ============ -->
+<section class="works" id="works">
+  <div class="wrap sec-head reveal">
+    <span class="sec-num">制作実績</span>
+    <h2 class="nowrap-title">実際に作ったページ</h2>
+    <p class="lead" style="margin:14px 0 26px">サンプルだけでなく、いま運用中のページもご覧いただけます。</p>
+  </div>
+  <div class="wrap">
+    <a class="work-card reveal" href="https://4u-studio.github.io/juku-free/" target="_blank" rel="noopener">
+      <div class="work-photo">
+        <span class="work-badge">運用中の実績</span>
+        <span>学習塾</span>
+      </div>
+      <div class="work-body">
+        <h3>個別指導塾 free 様</h3>
+        <p class="work-meta">個別指導 ／ 小学生〜高校生</p>
+        <p>代表自身が運営する個別指導塾のLP。指導の特長や料金、体験の申し込みまでをスマホで分かりやすくまとめました。</p>
+        <span class="btn btn-primary btn-sm">実際のページを見る <span class="arrow">→</span></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ 5b. SAMPLES ============ -->
 <section class="samples" id="samples">
   <div class="wrap sec-head reveal">
     <span class="sec-num">制作事例</span>
