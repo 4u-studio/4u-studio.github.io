@@ -205,8 +205,8 @@
   .feat-ic{flex:0 0 auto;width:48px;height:48px;border-radius:14px;background:rgba(212,162,76,.16);
     display:grid;place-items:center;transition:.3s}
   .feat:hover .feat-ic{background:var(--ochre);transform:rotate(-6deg) scale(1.06)}
-  .feat:hover .feat-ic svg{stroke:#2b210a;fill:#2b210a}
-  .feat-ic svg{transition:.3s;fill:var(--ochre)}
+  .feat:hover .feat-ic svg{stroke:#2b210a}
+  .feat-ic svg{transition:.3s}
   .feat h3{font-size:1.06rem;color:#fff;margin-bottom:5px}
   .feat p{color:rgba(246,240,226,.82);font-size:.96rem;margin:0;line-height:1.8}
 
@@ -533,8 +533,6 @@
 <div class="progress" id="progress"></div>
 <nav class="dots" id="dots">
   <a href="#hero" data-s="hero" class="active"></a>
-  <a href="#worries" data-s="worries"></a>
-  <a href="#cando" data-s="cando"></a>
   <a href="#works" data-s="works"></a>
   <a href="#samples" data-s="samples"></a>
   <a href="#pricing" data-s="pricing"></a>
@@ -569,7 +567,6 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="mobile-menu" id="mobileMenu" aria-label="サイト内メニュー">
-        <a href="#cando">4Uの特徴</a>
         <a href="#samples">サンプル</a>
         <a href="#pricing">料金</a>
         <a href="#flow">制作の流れ</a>
@@ -603,111 +600,6 @@
     <path d="M0 88 L0 74 L90 60 L160 76 L240 58 L320 76 L400 60 L480 76 L560 62 L580 70 L580 88 Z" fill="#f6f0e2"/>
   </svg>
 </header>
-
-<!-- ============ 1. WORRIES（お悩み＋Before/After） ============ -->
-<section class="worries" id="worries">
-  <div class="wrap sec-head reveal">
-    <span class="sec-num">お悩み</span>
-    <h2 class="nowrap-title">こんなこと、ありませんか？</h2>
-    <p class="worry-intro lead">沼田・利根沼田でお店をされている方から、よくこんな声を聞きます。</p>
-  </div>
-  <div class="wrap reveal">
-    <ul class="worry-list">
-      <li>
-        <svg class="check" viewBox="0 0 24 24" fill="#c23b2c" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg>
-        ホームページがなくて、お店の信用にちょっと不安がある
-      </li>
-      <li>
-        <svg class="check" viewBox="0 0 24 24" fill="#c23b2c" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg>
-        チラシやSNSだけでは、なかなか新しいお客様が増えない
-      </li>
-      <li>
-        <svg class="check" viewBox="0 0 24 24" fill="#c23b2c" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg>
-        何から始めればいいか分からず、ずっと後回しにしている
-      </li>
-      <li>
-        <svg class="check" viewBox="0 0 24 24" fill="#c23b2c" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg>
-        業者に頼むと高そう・難しそうで、一歩が踏み出せない
-      </li>
-    </ul>
-
-    <!-- Before / After 図解 -->
-    <div class="ba">
-      <div class="ba-card ba-before">
-        <span class="ba-tag">Before｜今のまま</span>
-        <h4>良いお店なのに、伝わっていない</h4>
-        <div class="ba-icons">
-          <span class="ba-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c23b2c"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg>検索しても出てこない</span>
-          <span class="ba-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c23b2c"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg>情報が分かりにくい</span>
-          <span class="ba-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="#c23b2c"><path d="M19 6.4 17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg>問い合わせが来ない</span>
-        </div>
-        <p class="ba-note">気になって名前で検索しても、何も出てこない。それだけで、来店をあきらめてしまう人もいます。</p>
-      </div>
-
-      <div class="ba-arrow" aria-hidden="true">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="#b9842f"><path d="M12 3v14.2l-5.6-5.6L5 13l7 7 7-7-1.4-1.4-5.6 5.6V3z"/></svg>
-      </div>
-
-      <div class="ba-card ba-after">
-        <span class="ba-tag">After｜ページができると</span>
-        <h4>スマホで見つかって、伝わる</h4>
-        <div class="ba-icons">
-          <span class="ba-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="#d4a24c"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>スマホで見つかる</span>
-          <span class="ba-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="#d4a24c"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>魅力が伝わる</span>
-          <span class="ba-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="#d4a24c"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>予約・問い合わせUP</span>
-        </div>
-        <p class="ba-note">お店のことを、初めての人にも分かりやすく。次の一歩（予約・来店・問い合わせ）まで、自然に案内します。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 2. CAN DO（4Uの特徴） ============ -->
-<section class="cando" id="cando">
-  <div class="wrap sec-head reveal">
-    <span class="sec-num">選ばれる理由</span>
-    <h2 class="nowrap-title">4Uが大切にしていること</h2>
-    <p class="intro lead">ただ作るだけではなく、「お客様に伝わって、次につながる」ページを目指します。</p>
-  </div>
-  <div class="wrap reveal">
-    <div class="feat">
-      <div class="feat-ic">
-        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 012 2v16a2 2 0 01-2 2H7a2 2 0 01-2-2V4a2 2 0 012-2zm0 4v12h10V6H7zm5 13a1 1 0 100 2 1 1 0 000-2z"/></svg>
-      </div>
-      <div>
-        <h3>スマホで、見やすい</h3>
-        <p>見られ方の8割以上はスマホ。指でサッと読めて、迷わない作りにします。</p>
-      </div>
-    </div>
-    <div class="feat">
-      <div class="feat-ic">
-        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v9a2 2 0 01-2 2H9l-5 4V6a2 2 0 012-2zm3 5v2h10V9zm0 4v2h7v-2z"/></svg>
-      </div>
-      <div>
-        <h3>伝わる言葉で</h3>
-        <p>塾で培った「伝える力」で、専門用語を使わず、お客様に届く言葉に整えます。</p>
-      </div>
-    </div>
-    <div class="feat">
-      <div class="feat-ic">
-        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11 11 0 003.4.55 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11 11 0 00.55 3.4 1 1 0 01-.25 1z"/></svg>
-      </div>
-      <div>
-        <h3>問い合わせにつながる</h3>
-        <p>電話・LINE・地図への導線を分かりやすく配置。「見て終わり」にしません。</p>
-      </div>
-    </div>
-    <div class="feat">
-      <div class="feat-ic">
-        <svg width="26" height="26" viewBox="0 0 24 24"><path d="M12 6V3L8 7l4 4V8a4 4 0 11-4 4H6a6 6 0 106-6z"/></svg>
-      </div>
-      <div>
-        <h3>更新もおまかせ</h3>
-        <p>変えたい内容をLINEやメールで送るだけ。あとはこちらで対応します。</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============ 5. WORKS（制作実績） ============ -->
 <section class="works" id="works">
@@ -781,7 +673,7 @@
   <div class="wrap reveal">
     <div class="plan">
       <span class="plan-tag">A プレミアム｜複数ページ型</span>
-      <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--ochre)" style="vertical-align:-3px;margin-right:7px"><path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>しっかり事業サイト</h3>
+      <h3>しっかり事業サイト</h3>
       <p class="pdesc">サービス・料金・会社概要を、ページごとにしっかり見せたい方へ。</p>
       <span class="price-reg">通常制作費 60,000円〜</span>
       <div class="price-row"><span class="price-mon"><span class="count" data-from="60000" data-count="30000">30,000</span><span class="yen">円〜</span></span><span class="price-label">導入モニター価格</span></div>
@@ -795,7 +687,7 @@
     <div class="plan featured">
       <span class="badge">★ 一番おすすめ</span>
       <span class="plan-tag">B スタンダード｜予約・問い合わせ重視型</span>
-      <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--ochre)" style="vertical-align:-3px;margin-right:7px"><path d="M7 2v2H5a2 2 0 00-2 2v13a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2h-2V2h-2v2H9V2zm12 7v10H5V9zm-8.2 8.5 5.7-5.7-1.4-1.4-4.3 4.3-1.8-1.8L7.6 14z"/></svg>予約につなげるスマホページ</h3>
+      <h3>予約につなげるスマホページ</h3>
       <p class="pdesc">来た人を、予約・問い合わせまで案内したい方へ。</p>
       <span class="price-reg">通常制作費 40,000円</span>
       <div class="price-row"><span class="price-mon"><span class="count" data-from="40000" data-count="20000">20,000</span><span class="yen">円</span></span><span class="price-label">導入モニター価格</span></div>
@@ -808,7 +700,7 @@
 
     <div class="plan">
       <span class="plan-tag">C ライト｜1ページ型</span>
-      <h3><svg width="22" height="22" viewBox="0 0 24 24" fill="var(--ochre)" style="vertical-align:-3px;margin-right:7px"><path d="M6 2h8l4 4v16H6zm7 1.5V7h3.5zM8 11v2h8v-2zm0 4v2h8v-2z"/></svg>お店紹介スマホページ</h3>
+      <h3>お店紹介スマホページ</h3>
       <p class="pdesc">名刺代わりの1ページで、お店を知ってもらいたい方へ。</p>
       <span class="price-reg">通常制作費 30,000円</span>
       <div class="price-row"><span class="price-mon"><span class="count" data-from="30000" data-count="15000">15,000</span><span class="yen">円</span></span><span class="price-label">導入モニター価格</span></div>
@@ -1166,7 +1058,7 @@
   const dots = document.getElementById('dots');
   const dotLinks = [...dots.querySelectorAll('a')];
   const sections = dotLinks.map(a=>document.getElementById(a.dataset.s));
-  const darkSet = new Set(['hero','cando','pricing','flow','profile']);
+  const darkSet = new Set(['hero','pricing','flow','profile']);
 
   function onScroll(){
     const h = document.documentElement;
